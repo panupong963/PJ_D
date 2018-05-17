@@ -20,6 +20,10 @@ class home extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('test');
+		$this->load->view('start');
+		$this->load->view('Navigation');
+		$this->load->view('footer');
+		$this->load->view('End');
+		//$this->load->view('test');
 	}
 }
