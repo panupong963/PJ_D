@@ -17,6 +17,20 @@
   <!-- Custom styles for this template-->
   <link href="<?php echo base_url(); ?>assets/css/sb-admin.css" rel="stylesheet">
 
+<style> 
+textarea {
+    width: 400px;
+    height: 100px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+}
+</style>
+
 </head>
 
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
