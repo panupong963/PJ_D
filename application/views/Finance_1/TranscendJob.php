@@ -17,15 +17,14 @@
   <tr align="center">
     <th>1</th>
     <th>58888888</th>
-    <th>คิดเเล้ว คิดไม่ออก</th>
+    <th>จิตใจ แจ่มใส</th>
     <th>สารสนเทศ</th>
     <th>4.00</th>
     <th width="119">ขายของ</th>
     <th><button type="button" class="btn btn-warning">รายละเอียด</button></th>
         <th colspan="8">
-            <button type="button" class="btn btn-success">บันทึก</button>
-                    <button type="button" class="btn btn-primary">แก้ไข</button>
-                    <button type="button" class="btn btn-danger">ยกเลิก</button>
+            <button type="button" class="btn btn-success">ผ่าน</button>
+                    <button type="button" class="btn btn-danger">ไม่ผ่าน</button>
                     </th>
   </tr>
   <tr>

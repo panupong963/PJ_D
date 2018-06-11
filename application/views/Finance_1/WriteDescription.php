@@ -13,57 +13,38 @@
 <label class="radio-inline"><input type="radio" name="optradio">3</label></td>
   </tr>
 </table>
-<a>ชื่องาน  <input type="text" size="36"> &nbsp;&nbsp; ฝ่ายงาน <select>
+<br>
+<a>ชื่องาน  <input type="text" size="36"> &nbsp;&nbsp; ประเภทงาน <select>
   															<option value="volvo">ธุรการ</option>
   															<option value="saab">เชิงวิชาชีพ</option>
   															<option value="mercedes">เชิงบริการ</option>
   															<option value="audi">เชิงวิชาการ</option>
 															</select>
- 
-&nbsp;&nbsp;หน่วยงาน <select>
-  															<option value="volvo">ส่วนพัสดุ</option>
-  															<option value="saab">ศูนย์กิจการนานาชาติ</option>
-  															<option value="mercedes">หอพัก</option>
-  															<option value="audi">ศูนย์บริการการศึกษา</option>
-															</select>
+ &nbsp;&nbsp; สำนักวิชา <select>
+                                <option value="volvo">ไม่จำกัด</option>
+                                <option value="saab">สารสนเทศศาสตร์</option>
+                                <option value="mercedes">การจัดการ</option>
+                                <option value="audi">ศิลปศาสตร์</option>
+                              </select>
+&nbsp;&nbsp;
 <br>
 <br>
-เวลาเริ่มต้นทำงาน <select>
-  															<option value="volvo">01</option>
-  															<option value="saab">02</option>
-  															<option value="mercedes">03</option>
-  															<option value="audi">04</option>
-															</select>ชม.
-                                                            <select>
-  															<option value="volvo">30</option>
-  															<option value="saab">40</option>
-  															<option value="mercedes">45</option>
-  															<option value="audi">50</option>
-															</select>นาที
-&nbsp;&nbsp;เวลาสินสุดการทำงาน <select>
-  															<option value="volvo">01</option>
-  															<option value="saab">02</option>
-  															<option value="mercedes">03</option>
-  															<option value="audi">04</option>
-															</select>ชม.
-                                                            <select>
-  															<option value="volvo">30</option>
-  															<option value="saab">40</option>
-  															<option value="mercedes">45</option>
-  															<option value="audi">50</option>
-															</select>นาที
+ &nbsp;เพศ <select>
+                                <option value="volvo">ชาย</option>
+                                <option value="saab">หญิง</option>
+                                <option value="saab">ชาย/หญิง</option>
+                              </select>  
 &nbsp;&nbsp; จำนวนที่รับ <select>
   															<option value="volvo">1</option>
   															<option value="saab">2</option>
   															<option value="mercedes">5</option>
   															<option value="audi">10</option>
    														</select> คน 
+&nbsp;&nbsp; วันที่เริ่มต้นการทำงาน <input id="date" type="date">
 <br>
-<br>
-ช่วงเวลาทำงาน <input id="date" type="date"> ถึง <input id="date" type="date">
 <br>
 ลักษณะงาน : <input type="radio" name="gender" value="male"> ใช้เเรงงาน
-             <input type="radio" name="gender" value="female"> ความสามาถทางวิชาการ<br> 
+             <input type="radio" name="gender" value="female"> ความสามาถทางวิชาการ<br><br>
 รายละเอียดลักษณะงาน<br>
 <textarea name="textarea">Some text...</textarea>
 <br>
@@ -79,11 +60,11 @@
   <tr align="center">
     <th>ลำดับ</th>
     <th>ชื่องาน</th>
-    <th>ฝ่ายงาน</th>
+    <th>ประเภทงาน</th>
     <th>ช่วงเวลางาน</th>
-    <th>เวลาเริ่ม - สิ้นสุด </th>
+    <th>เพศ</th>
     <th>จำนวนรับ</th>
-    <th>ลักษณธงาน</th>
+    <th>ลักษณะงาน</th>
     <th>&nbsp;</th>
   </tr>
   </thead>
@@ -92,8 +73,8 @@
     <th>1</th>
     <th>ขายของ</th>
     <th>เชิงวิชาชีพ</th>
-    <th>02/06/60 - 03/07/60</th>
-    <th>10.30 - 12.30 น.</th>
+    <th>02/06/60</th>
+    <th>ชาย</th>
     <th>5</th>
     <th><button type="button" class="btn btn-warning">รายละเอียด</button></th>
     <th><button type="button" class="btn btn-primary">แก้ไข</button>

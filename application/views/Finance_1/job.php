@@ -14,13 +14,13 @@
   </tr>
   </thead>
     <tbody>
-  <tr align="content">
+    <tr align="content">
     <th>1</th>
     <th><a class="bg-success text-white" href="finance_SelectST_1">ขนของ</a></th>
     <th>10</th>
     <th>20</th>
     <th>4/10</th>
-  </tr>
+   </tr>
 </tbody>
 </table>
     </div>

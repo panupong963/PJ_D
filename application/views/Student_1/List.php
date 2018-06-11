@@ -7,15 +7,14 @@
   <option value="mercedes">ส่วนการเงิน</option>
   <option value="audi">หอพัก</option>
 </select>&nbsp;&nbsp; ประเภทงาน : <select>
+  <option value="volvo">ทั้งหมด</option>
   <option value="volvo">บริการ</option>
   <option value="saab">ธุรการ</option>
   <option value="mercedes">วิชาชีพ</option>
   <option value="audi">วิชาการ</option></select></a>
   &nbsp;&nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-warning">ค้นหา</button>
-
-            <br>
-            <hr color="#000000">
-              <br> 
+<br>
+<br>
 			
 <table class="table table-borderless">
   <thead>

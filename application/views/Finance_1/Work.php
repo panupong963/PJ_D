@@ -14,17 +14,11 @@
     <td><button type="button" class="btn btn-success">ตกลง</button></td>
   </tr>
 </table>
-
-
-            <br>
-            <hr color="#000000">
-              <br> 
-			<div>
-
+<br>
 <table class="table table-striped">
 
   <thead>  
-  <tr>
+  <tr align="center">
     <th>ลำดับ </th>
     <th>ชื่องาน</th>
     <th>ลักษณะงาน</th>
@@ -35,7 +29,7 @@
   </tr>
 </thead>
   <tbody>
-  <tr>
+  <tr align="center">
     <th>1</th>
     <th>ส่งเสริมการเรียนรู้</th>
     <th>จัดชั้นหนังสือ</th>
