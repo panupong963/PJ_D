@@ -7,9 +7,9 @@
     <th width="109">ชื่อ-นามสกุล</th>
     <th width="58">จำนวน ชม ที่ทำ</th>
     <th width="85">วันที่ทำงาน</th>
-    <th width="182">สถานะ</th>
-    <th width="82">แก้ไขข้อมูล</th>
-    <th width="300">เหตุผล ไม่รับรอง/เเก้ไขข้อมูล</th>
+    <th width="182">รายละเอียดงาน</th>
+    <th width="82">เหตุผล ไม่รับรอง/เเก้ไขข้อมูล</th>
+    <th width="300"></th>
   </tr>
 </thead>
 <tbody>
@@ -18,16 +18,11 @@
     <th>คิดเเล้ว คิดอีก</th>
     <th>2</th>
     <th>12/01/60</th>
-    <th><form>
-    <label class="radio-inline">
-      <input type="radio" name="optradio">รับรองผล
-    </label>
-    <label class="radio-inline">
-      <input type="radio" name="optradio">ไม่รับรอง
-    </label>
-  </form></th>
-    <th><button type="button" class="btn btn-primary">แก้ไข</button></th>
-    <th><input type="text"></th>
+    <th><button type="button" class="btn btn-warning">รายละเอียด</button></th>
+    <th><input type="text" name=""></th>
+    <th><button type="button" class="btn btn-success">ผ่าน</button>
+      <button type="button" class="btn btn-primary">แก้ไข</button>
+      <button type="button" class="btn btn-danger">ไม่ผ่าน</button></th>
   </tr>
   <tr>
     <td height="107">&nbsp;</td>

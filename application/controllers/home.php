@@ -68,6 +68,14 @@ class home extends CI_Controller {
 		$this->load->view('Authorities_2/End');		
 	}
 
+	public function Authorities_NoConfirm_2(){
+		$this->load->view('Authorities_2/start');
+		$this->load->view('Authorities_2/Navigation_N');
+		$this->load->view('Authorities_2/NoConfirm');
+		$this->load->view('Authorities_2/footer');
+		$this->load->view('Authorities_2/End');		
+	}
+
 	public function Authorities_job_2(){
 		$this->load->view('Authorities_2/start');
 		$this->load->view('Authorities_2/Navigation_N');
@@ -116,4 +124,45 @@ class home extends CI_Controller {
 		$this->load->view('Finance_2/End');		
 	}
 
+	public function JobOffering_edit_2(){
+		$this->load->view('JobOffering_2/start');
+		$this->load->view('JobOffering_2/Navigation_N');
+		$this->load->view('JobOffering_2/Edit');
+		$this->load->view('JobOffering_2/footer');
+		$this->load->view('JobOffering_2/End');		
+	}
+
+	public function JobOffering_confirm_2(){
+		$this->load->view('JobOffering_2/start');
+		$this->load->view('JobOffering_2/Navigation_N');
+		$this->load->view('JobOffering_2/Confirm');
+		$this->load->view('JobOffering_2/footer');
+		$this->load->view('JobOffering_2/End');		
+	}
+
+	public function JobOffering_job_2(){
+		$this->load->view('JobOffering_2/start');
+		$this->load->view('JobOffering_2/Navigation_N');
+		$this->load->view('JobOffering_2/job');
+		$this->load->view('JobOffering_2/footer');
+		$this->load->view('JobOffering_2/End');		
+	}
+
+	public function JobOffering_results_2(){
+		$this->load->view('JobOffering_2/start');
+		$this->load->view('JobOffering_2/Navigation_N');
+		$this->load->view('JobOffering_2/Results_work');
+		$this->load->view('JobOffering_2/footer');
+		$this->load->view('JobOffering_2/End');		
+	}
+
+	public function JobOffering_dataST_2(){
+		$this->load->view('JobOffering_2/start');
+		$this->load->view('JobOffering_2/Navigation_N');
+		$this->load->view('JobOffering_2/DataST');
+		$this->load->view('JobOffering_2/footer');
+		$this->load->view('JobOffering_2/End');		
+	}
+
 }
+
