@@ -19,7 +19,7 @@
     <th><a class="bg-success text-white" href="finance_SelectST_1">ขนของ</a></th>
     <th>10</th>
     <th>20</th>
-    <th>4/10</th>
+    <th><a class="bg-success text-white" href="finance_ST_1">4/10</a></th>
    </tr>
 </tbody>
 </table>

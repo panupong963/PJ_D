@@ -5,7 +5,7 @@
 <table class="table table-borderless">
   <thead>
     <tr>
-    <th colspan="3" bgcolor="#CCFFFF">1. ข้อมูลส่วนตัวนักศึกษา</th>
+    <th colspan="3" bgcolor="#CCFFFF">1. ข้อมูลงาน</th>
     </tr>
 </thead>
   <tbody>
@@ -14,6 +14,9 @@
     <th>ประเภทงาน <u>บริการ</u></th>
     <th>หน่วยงาน/สำนักวิชา <u>ศูนย์บรรณาสารเเละสื่อการศึกษา</u></th>
   </tr>
+    <tr>
+    <th colspan="3" bgcolor="#CCFFFF">2. ข้อมูลส่วนตัวนักศึกษา</th>
+    </tr>
   <tr>
     <th >ชื่อสกุล - สกุล <u>สมคิด ใจเย็น</u></th>
     <th >รหัสนักศึกษา <u>58122235</u></th>
@@ -52,7 +55,7 @@
   <tr>
   </tbody>
   <thead>
-    <th colspan="3" bgcolor="#CCFFFF">2. กรอกข้อมูลเพิ่มเติม</th>
+    <th colspan="3" bgcolor="#CCFFFF">3. กรอกข้อมูลเพิ่มเติม</th>
   </tr>
 </thead>
 <tbody>
