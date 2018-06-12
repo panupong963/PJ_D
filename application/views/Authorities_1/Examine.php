@@ -25,6 +25,7 @@
     <th width="92">จำนวน นศ</th>
     <th width="140">ผู้รับผิดชอบ</th>
     <th width="80">เบอร์ติดต่อ</th>
+    <th width="80">คำอธิบาย</th>
   </tr>
 </thead>
 <tbody>
@@ -37,7 +38,7 @@
     <th>5</th>
     <th>เก่งกล้า สามารถ</th>
     <th>0825869854</th>
-    <!--<th><input type="text"></th>-->
+    <th><input type="text"></th>
     <th><button type="button" class="btn btn-success">ผ่าน</button>
         <!--<button type="button" class="btn btn-primary">แก้ไข</button>-->
         <button type="button" class="btn btn-danger">ไม่ผ่าน</button></th>
@@ -51,7 +52,7 @@
     <th>10</th>
     <th>ชิงชัย ทองคำ</th>
     <th>0822222222</th>
-    <!--<th><input type="text"></th>-->
+    <th><input type="text"></th>
     <th><button type="button" class="btn btn-success">ผ่าน</button>
         <button type="button" class="btn btn-danger">ไม่ผ่าน</button></th>
   </tr>
