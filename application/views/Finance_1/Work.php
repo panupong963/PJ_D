@@ -1,5 +1,6 @@
 <div class="content-wrapper">
     <div class="container-fluid">
+<<<<<<< HEAD
       <h4>ประวัติการเสนองาน</h4>
 <table width="900" border="0">
   <tr>
@@ -16,9 +17,14 @@
   </tr>
 </table>
 <br>
+=======
+>>>>>>> d866babe6cedcec60bf67313057b18ba0aa121fc
 <table class="table table-striped">
 
-  <thead>  
+  <thead>
+  <tr align="center">
+    <th colspan="7" >ภาคเรียนที่ 3 ปีการศึกษา 2561</th>
+  </tr>  
   <tr align="center">
     <th>ลำดับ </th>
     <th>ชื่องาน</th>

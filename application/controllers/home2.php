@@ -122,5 +122,13 @@ class home2 extends CI_Controller {
 		$this->load->view('Finance_1/job');
 		$this->load->view('Finance_1/footer');
 		$this->load->view('Finance_1/End');
-	}		
+	}	
+
+	public function finance_ST_1(){
+		$this->load->view('Finance_1/start');
+		$this->load->view('Finance_1/Navigation_N');
+		$this->load->view('Finance_1/ST');
+		$this->load->view('Finance_1/footer');
+		$this->load->view('Finance_1/End');
+	}
 }
