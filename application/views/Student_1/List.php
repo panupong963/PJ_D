@@ -1,5 +1,7 @@
 <div class="content-wrapper">
     <div class="container-fluid">
+      <h4>รายชื่องานทุน</h4>
+      <br>
 <a>หน่วยงาน/สำนักวิชา <select>
   <option value="volvo">ศูนย์บรรณาสารเเละสื่อการศึกษา</option>
   <option value="volvo">ส่วนพัสดุ</option>
@@ -18,7 +20,7 @@
 			
 <table class="table table-borderless">
   <thead>
-  <tr>
+  <tr align="center">
   	<th>ลำดับ</th>
     <th>หน่วยงาน</th>
     <th>ประเภทงาน</th>
@@ -29,7 +31,7 @@
   </tr>
 </thead>
 <tbody>
-  <tr>
+  <tr align="center">
   	<th>1</th>
     <th>ศูนย์บรรณาสารเเละสื่อการศึกษา</th>
     <th>บริการ</th>
@@ -38,7 +40,7 @@
     <th>8</th>
     <th><a class="btn btn-info" href="Student_registration_1">เลือกงาน</a></th>
   </tr>
-  <tr>
+  <tr align="center">
   	<th>2</th>
     <th>ศูนย์บรรณาสารเเละสื่อการศึกษา</th>
     <th>เชิงธุรกิจ</th>

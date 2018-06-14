@@ -18,7 +18,7 @@
       <thead>
   <tr align="center">
     <th width="162">หน่วยงาน</th>
-    <th width="100">ฝ่ายงาน</th>
+    <th width="100">ปรเภทงาน</th>
     <th width="104">ลักษณะงาน</th>
     <th width="55">จำนวน นศ</th>
     <th width="155">ผู้รับผิดชอบ</th>

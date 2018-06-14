@@ -1,5 +1,6 @@
 <div class="content-wrapper">
     <div class="container-fluid">
+      <h4>ผลการสมัครของนักศึกษา</h4>
 <table class="table">
   <thead>
   <tr align="center">
@@ -14,7 +15,7 @@
   <tr align="center">
     <th>1</th>
     <th>58888888</th>
-    <th>คิดเเล้ว คิดอีก</th>
+    <th>สมบูรณ์ ใจเย็น</th>
     <th>เทคโนโลยีสารสนเทศ</th>
     <th>ผ่าน</th>
   </tr>

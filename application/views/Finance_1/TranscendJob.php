@@ -1,5 +1,6 @@
 <div class="content-wrapper">
     <div class="container-fluid">
+        <h4>จัดสรรงานคงเหลือ</h4>
 <table class="table table-striped">
   <thead>
   <tr align="center">
@@ -7,10 +8,10 @@
     <th width="88">รหัสนักศึกษา</th>
     <th width="160">ชื่อ - สกุล</th>
     <th width="159">สาขาวิชา</th>
-    <th width="73">เกรดเฉลี่ย</th>
+    <th width="90">เกรดเฉลี่ย</th>
     <th width="119">งาน</th>
-    <th width="125">รายละเอียด</th>
-    <th width="85">&nbsp;</th>
+    <th width="100">รายละเอียด</th>
+    <th width="110">&nbsp;</th>
   </tr>
   </thead>
     <tbody>
@@ -20,7 +21,7 @@
     <th>จิตใจ แจ่มใส</th>
     <th>สารสนเทศ</th>
     <th>4.00</th>
-    <th width="119">ขายของ</th>
+    <th width="119">จัดส่งเอกสาร</th>
     <th><button type="button" class="btn btn-warning">รายละเอียด</button></th>
         <th colspan="8">
             <button type="button" class="btn btn-success">ผ่าน</button>

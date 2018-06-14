@@ -1,5 +1,6 @@
 <div class="content-wrapper">
     <div class="container-fluid">
+      <h4>ประวัติการเสนองาน</h4>
 <table width="900" border="0">
   <tr>
     <td align="right">ปีการศึกษา : <select>
@@ -36,6 +37,15 @@
     <th>สามารถใช้คอมพิวเตอร์ได้ดี</th>
     <th>3</th>
     <th>ชาย</th>
+    <th><button type="button" class="btn btn-success">เลือก</button></th>
+  </tr>
+  <tr align="center">
+    <th>2</th>
+    <th>จัดชั้นหนังสือ</th>
+    <th>จัดหนังสือตามประเภท</th>
+    <th>สามารถใช้คอมพิวเตอร์ได้ดี</th>
+    <th>5</th>
+    <th>ชาย/หญิง</th>
     <th><button type="button" class="btn btn-success">เลือก</button></th>
   </tr>
 </tbody>

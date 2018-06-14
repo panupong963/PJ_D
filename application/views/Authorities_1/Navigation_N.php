@@ -21,13 +21,13 @@
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
           <a class="nav-link" href="authorities_Declare_1">
             <i class="fa fa-fw fa-dashboard"></i>
-            <span class="nav-link-text">ประกาศการรับสมัคร</span>
+            <span class="nav-link-text">รายชื่องานที่ผ่านการตรวจสอบ</span>
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
           <a class="nav-link" href="authorities_NewDeclare_1">
             <i class="fa fa-fw fa-area-chart"></i>
-            <span class="nav-link-text">ข่าวประกาศการสมัคร</span>
+            <span class="nav-link-text">ผลการสมัคร</span>
           </a>
         </li>
         <!--<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
