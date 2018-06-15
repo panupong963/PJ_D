@@ -17,6 +17,13 @@
   <!-- Custom styles for this template-->
   <link href="<?php echo base_url(); ?>assets/css/sb-admin.css" rel="stylesheet">
 
+  <link href="<?php echo base_url(); ?>assets/tab.css" rel="stylesheet" id="bootstrap-css">
+
+<link href="<?php echo base_url(); ?>assets/tab2.css" rel="stylesheet" id="bootstrap-css">
+
+
+
+
 
   
 
