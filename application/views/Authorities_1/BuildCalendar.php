@@ -12,7 +12,7 @@
 <table class="table">
   <thead>
   <tr align="center">
-    <th width="561">รายการ <font color="red">*</font></th>
+    <th width="561">กิจกรรม <font color="red">*</font></th>
     <th width="105">วันเเรก <font color="red">*</font></th>
     <th width="165">วันสุดท้าย <font color="red">*</font></th>
     <th></th>
@@ -32,7 +32,7 @@
   <thead>
   <tr align="center">
     <th width="58">ลำดับ</th>
-    <th width="420">รายการ</th>
+    <th width="420">กิจกรรม</th>
     <th width="109">วันเเรก</th>
     <th width="94">วันสุดท้าย</th>
     <th width="146"></th>

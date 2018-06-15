@@ -13,27 +13,9 @@
           </a>
         </li>-->
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
-          <a class="nav-link" href="Student_list_1">
+          <a class="nav-link" href="Boss_announced_1">
             <i class="fa fa-fw fa-table"></i>
-            <span class="nav-link-text">รายชื่องานทุน</span>
-          </a>
-        </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
-          <a class="nav-link" href="Student_registration_1">
-            <i class="fa fa-fw fa-dashboard"></i>
-            <span class="nav-link-text">กรอกรายละเอียดการสมัคร</span>
-          </a>
-        </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
-          <a class="nav-link" href="Student_announced_1">
-            <i class="fa fa-fw fa-area-chart"></i>
-            <span class="nav-link-text">ประกาศผลการสมัคร</span>
-          </a>
-        </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
-          <a class="nav-link" href="finance_TranscendJob_1">
-            <i class="fa fa-fw fa-dashboard"></i>
-            <span class="nav-link-text">ปฏิทินการดำเนินงาน</span>
+            <span class="nav-link-text">ผลการสมัครทุนทำงานพิเศษ</span>
           </a>
         </li>
         <!--<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
@@ -217,7 +199,7 @@
         <li class="nav-item">
           
           <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
-            นักศึกษา : สมคิด ใจเย็น
+            หัวหน้าส่วนกิจการนักศึกษา : ฉัตรชัย จริงใจ
             <i class="fa fa-fw fa-sign-out"></i>ออกจากระบบ</a>
         </li>
       </ul>

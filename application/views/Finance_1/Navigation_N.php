@@ -6,10 +6,10 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav navbar-sidenav " id="exampleAccordion">
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
+        <!--<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
           <a class="nav-link" href="finance_work_1">
             <i class="fa fa-fw fa-area-chart"></i>
-            <span class="nav-link-text">ประวัติการเสนองาน</span>
+            <span class="nav-link-text">ประวัติการเสนองาน</span>-->
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
@@ -28,6 +28,12 @@
           <a class="nav-link" href="finance_TranscendJob_1">
             <i class="fa fa-fw fa-dashboard"></i>
             <span class="nav-link-text">จัดสรรงานคงเหลือ</span>
+          </a>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+          <a class="nav-link" href="finance_TranscendJob_1">
+            <i class="fa fa-fw fa-dashboard"></i>
+            <span class="nav-link-text">ปฏิทินการดำเนินงาน</span>
           </a>
         </li>
 

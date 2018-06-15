@@ -1,6 +1,6 @@
 <div class="content-wrapper">
     <div class="container-fluid">
-      <h4>คัดเลือกผู้สมัครทุกทำงานพิเศษ</h4>
+      <h4>คัดเลือกผู้สมัครทุนทำงานพิเศษ</h4>
       <br>
   <table class="table table-striped">
   	<thead>
@@ -22,7 +22,7 @@
     <th><a >ขนของ</a></th>
     <th>10</th>
     <th>20</th>
-    <th>4/10</th>
+    <th><a class="btn btn-info" href="finance_Results_1">8/10</a></th>
     <th><a class="btn btn-info" href="finance_SelectST_1">เลือก</a></th>
     </tr>
     </tbody>
@@ -33,7 +33,7 @@
     <th><a >จัดเอกสาร</a></th>
     <th>10</th>
     <th>10</th>
-    <th>4/10</th>
+    <th><a class="btn btn-info" href="finance_Results_1">4/10</a></th>
     <th><a class="btn btn-info" href="Student_registration_1">เลือก</a></th>
     </tr>
     </tbody>
@@ -44,7 +44,7 @@
     <th><a >จัดชั้นหนังสือ</a></th>
     <th>10</th>
     <th>13</th>
-    <th>8/10</th>
+    <th><a class="btn btn-info" href="finance_Results_1">6/10</a></th>
     <th><a class="btn btn-info" href="Student_registration_1">เลือก</a></th>
    </tr>
 </tbody>

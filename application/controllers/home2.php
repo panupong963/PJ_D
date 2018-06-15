@@ -103,6 +103,13 @@ class home2 extends CI_Controller {
 		$this->load->view('Finance_1/footer');
 		$this->load->view('Finance_1/End');
 	}
+	public function finance_Results_1(){
+		$this->load->view('Finance_1/start');
+		$this->load->view('Finance_1/Navigation_N');
+		$this->load->view('Finance_1/Results');
+		$this->load->view('Finance_1/footer');
+		$this->load->view('Finance_1/End');
+	}
 
 	public function finance_TranscendJob_1(){
 		$this->load->view('Finance_1/start');
@@ -126,5 +133,20 @@ class home2 extends CI_Controller {
 		$this->load->view('Finance_1/job');
 		$this->load->view('Finance_1/footer');
 		$this->load->view('Finance_1/End');
-	}		
+	}
+
+	public function Advisors_announced_1(){
+		$this->load->view('Advisors_1/start');
+		$this->load->view('Advisors_1/Navigation_N');
+		$this->load->view('Advisors_1/Advisors_1');
+		$this->load->view('Advisors_1/footer');
+		$this->load->view('Advisors_1/End');
+	}
+	public function Boss_announced_1(){
+		$this->load->view('Boss_1/start');
+		$this->load->view('Boss_1/Navigation_N');
+		$this->load->view('Boss_1/Boss_1');
+		$this->load->view('Boss_1/footer');
+		$this->load->view('Boss_1/End');
+	}				
 }

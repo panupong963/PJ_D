@@ -31,8 +31,11 @@
     <th><button type="button" class="btn btn-primary">แก้ไข</button>
       <button type="button" class="btn btn-danger">ยกเลิก</button></th>
   </tr>
+  <tr align="center">
+  <th colspan="6"><button type="button" class="btn btn-primary" >ยืนยัน</button></th>
+  </tr>
 </tbody>
 </table>
-    <button type="button" class="btn btn-primary" >ยืนยัน</button>
+
 </div>
 </div>
