@@ -15,7 +15,7 @@
     <th>ธุรการ</th>
     <th>เอกสาร</th>
     <th>ส่วนพัสดุ</th>
-    <th><a class="btn btn-link" href="Authorities_NoConfirm_2">6</a></th>
+    <th><a class="btn btn-link" href="Authorities_YConfirm_2">6</a></th>
     <th><a class="btn btn-link" href="Authorities_NoConfirm_2">4</button> </th>
   </tr>
   <tr align="center">

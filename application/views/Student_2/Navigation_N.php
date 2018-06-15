@@ -6,12 +6,6 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav navbar-sidenav " id="exampleAccordion">
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
-          <a class="nav-link" href="tables.html">
-            <i class="fa fa-fw fa-table"></i>
-            <span class="nav-link-text">ปฏิทินการดำเนินงาน</span>
-          </a>
-        </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
           <a class="nav-link" href="Student_ConfirmJob_2">
             <i class="fa fa-fw fa-dashboard"></i>
@@ -28,6 +22,12 @@
           <a class="nav-link" href="Student_list_2">
             <i class="fa fa-fw fa-area-chart"></i>
             <span class="nav-link-text">รายการปฎิบัติงาน</span>
+          </a>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+          <a class="nav-link" href="tables.html">
+            <i class="fa fa-fw fa-table"></i>
+            <span class="nav-link-text">ปฏิทินการดำเนินงาน</span>
           </a>
         </li>
         <!--<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">

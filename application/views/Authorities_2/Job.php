@@ -17,7 +17,7 @@
     <th>1</th>
     <th>คิดเเล้ว คิดอีก</th>
     <th>2</th>
-    <th>12/01/60</th>
+    <th>12/ม.ค./60</th>
     <th><button type="button" class="btn btn-warning">รายละเอียด</button></th>
     <th><input type="text" name=""></th>
     <th><button type="button" class="btn btn-success">ผ่าน</button>

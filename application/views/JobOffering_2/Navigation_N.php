@@ -12,12 +12,7 @@
             <span class="nav-link-text">เเก้ไขข้อมูลส่วนตัว</span>
           </a>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
-          <a class="nav-link" href="tables.html">
-            <i class="fa fa-fw fa-table"></i>
-            <span class="nav-link-text">ปฏิทินการดำเนินงาน</span>
-          </a>
-        </li>
+
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
           <a class="nav-link" href="JobOffering_dataST_2">
             <i class="fa fa-fw fa-area-chart"></i>
@@ -34,6 +29,12 @@
           <a class="nav-link" href="JobOffering_results_2">
             <i class="fa fa-fw fa-area-chart"></i>
             <span class="nav-link-text">สรุปผลการทำงาน</span>
+          </a>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+          <a class="nav-link" href="tables.html">
+            <i class="fa fa-fw fa-table"></i>
+            <span class="nav-link-text">ปฏิทินการดำเนินงาน</span>
           </a>
         </li>
         <!--<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">

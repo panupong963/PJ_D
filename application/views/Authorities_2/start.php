@@ -17,6 +17,16 @@
   <!-- Custom styles for this template-->
   <link href="<?php echo base_url(); ?>assets/css/sb-admin.css" rel="stylesheet">
 
+
+  <SCRIPT LANGUAGE="JavaScript">
+function printPage() {
+if (window.print)
+window.print()
+else
+alert("Sorry, your browser doesn't support this feature.");
+}
+</SCRIPT>
+
 </head>
 
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">

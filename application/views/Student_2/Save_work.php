@@ -1,11 +1,15 @@
 <div class="content-wrapper">
 	<div class="container-fluid">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item active">บันทึกการทำงาน</li>
+        </ol>
+
 <table width="900" border="0" align="center">
   <tr align="center">
-    <td width="150">วัน/เดือน/ปี</td>
+    <td width="150">วัน/เดือน/ปี ปฎิบัติงาน</td>
     <td width="200">เวลาเข้า</td>
     <td width="200">เวลากลับ</td>
-    <td width="251">รายละเอียด</td>
+    <td width="251">รายละเอียดงานที่ทำ</td>
     <td width="77">&nbsp;</td>
   </tr>
   <tr align="center">
@@ -35,12 +39,12 @@
   <option value="audi">03</option>
 </select></td>
     <td valign="top"><textarea name="textarea">พิมพ์ข้อความ</textarea></td>
-    <td align="center" valign="top"><button type="button" class="btn btn-success btn-lg">+</button></td>
+    <td align="center" valign="top"><button type="button" class="btn btn-success btn-lg">บันทึก</button></td>
   </tr>
 </table>
 
            
-              <h5>ช่วงเวลาการบันทึกข้อมูลงานระหว่างวันที่ <font color="#FF0000" size="6">20/02/60 - 20/05/60 </font></h5>
+              <h5>ช่วงเวลาการบันทึกข้อมูลงานระหว่างวันที่ <font color="#FF0000" size="5">20/02/60 - 20/05/60 </font></h5>
             <hr color="#000000">
               <br>
               <div>

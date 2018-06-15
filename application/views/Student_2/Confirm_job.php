@@ -1,7 +1,14 @@
 <div class="content-wrapper">
 	<div class="container-fluid">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item active">ยืนยันการทำงาน</li>
+        </ol>
 		<table class="table table-bordered">
       <tbody>
+  <tr class="table-info">
+    <td><font size="3">ชื่องาน <u>ขนของ</u></font></td>
+    <td>&nbsp;</td>
+  </tr>
   <tr class="table-info">
 
     <td><font size="3">ชื่อผู้เสนองาน <u>มาลี สวยมาก</u></font></td>
@@ -17,12 +24,12 @@
   </tr>
     <tr align="center" class="table-info">
 	<td colspan="2"><button type="button" class="btn btn-success">ยืนยัน</button>
-    				<button type="button" class="btn btn-danger">ยกเลิก</button></td>
+    				<button type="button" class="btn btn-danger" onclick="myFunction()">ปฎิเสธ</button></td>
   </tr>
 </tbody>
 </table>
 
-            <h5>วันทีทำงาน <font color="#FF0000" size="6">20/02/60 - 20/05/60 </font></h5>
+            <h5>วันทีทำงาน <font color="#FF0000" size="5">20/02/60 - 20/05/60 </font></h5>
             <hr color="#000000">
               <br>
               <div>

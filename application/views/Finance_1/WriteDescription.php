@@ -148,7 +148,9 @@
                     <label class="control-label">Company Address</label>
                     <input maxlength="200" type="text" required="required" class="form-control" placeholder="Enter Company Address"  />
                 </div>-->
+                <button type="button" class="btn btn-default prev-step">Previous</button>
                 <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Next</button>
+                
             </div>
         </div>
     </div>

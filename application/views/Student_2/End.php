@@ -1,3 +1,16 @@
+<script>
+function myFunction() {
+    var txt;
+    var person = prompt("กรุณากรอกเหตุผลการยกเลิก");
+    if (person == null || person == "") {
+        txt = "User cancelled the prompt.";
+    } else {
+        txt = "Hello " + person + "! How are you today?";
+    }
+    document.getElementById("demo").innerHTML = txt;
+}
+</script>
+
     <!-- Bootstrap core JavaScript-->
     <script src="<?php echo base_url(); ?>assets/vendor/jquery/jquery.min.js"></script>
     <script src="<?php echo base_url(); ?>assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
