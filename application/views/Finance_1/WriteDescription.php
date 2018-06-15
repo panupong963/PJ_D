@@ -1,6 +1,6 @@
 <div class="content-wrapper">
     <div class="container-fluid">
-<<<<<<< HEAD
+
       <!--
 <table width="900" border="0">
   <tr>
@@ -143,10 +143,9 @@
 
 
 <!-- เเยก -->
-=======
+
 <button type="button" class="btn btn-success"> เพิ่ม</button>
 </a> <br><br>
->>>>>>> 20f897776eb0faa4b397b54e0370dc2be28b7905
 <table class="table table-striped">
   <thead>
   <tr align="center">
