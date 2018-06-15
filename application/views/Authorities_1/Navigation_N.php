@@ -30,12 +30,12 @@
             <span class="nav-link-text">ผลการสมัคร</span>
           </a>
         </li>
-        <!--<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
-          <a class="nav-link" href="Authorities_results2_2">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
+          <a class="nav-link" href="authorities_CA_1">
             <i class="fa fa-fw fa-area-chart"></i>
-            <span class="nav-link-text">สรุปผลการทำงาน</span>
+            <span class="nav-link-text">ปฏิทินการดำเนินงาน</span>
           </a>
-        </li>-->
+        </li>
         <!--<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-wrench"></i>

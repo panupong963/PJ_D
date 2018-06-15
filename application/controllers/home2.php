@@ -39,6 +39,14 @@ class home2 extends CI_Controller {
 		$this->load->view('Student_1/footer');
 		$this->load->view('Student_1/End');
 	}
+
+	public function Student_CA_1(){
+		$this->load->view('Student_1/start');
+		$this->load->view('Student_1/Navigation_N');
+		$this->load->view('Calendar');
+		$this->load->view('Student_1/footer');
+		$this->load->view('Student_1/End');
+	}
 	
 	public function Student_announced_1(){
 		$this->load->view('Student_1/start');
@@ -60,6 +68,14 @@ class home2 extends CI_Controller {
 		$this->load->view('Authorities_1/start');
 		$this->load->view('Authorities_1/Navigation_N');
 		$this->load->view('Authorities_1/BuildCalendar');
+		$this->load->view('Authorities_1/footer');
+		$this->load->view('Authorities_1/End');
+	}
+
+	public function authorities_CA_1(){
+		$this->load->view('Authorities_1/start');
+		$this->load->view('Authorities_1/Navigation_N');
+		$this->load->view('Calendar');
 		$this->load->view('Authorities_1/footer');
 		$this->load->view('Authorities_1/End');
 	}
@@ -92,6 +108,14 @@ class home2 extends CI_Controller {
 		$this->load->view('Finance_1/start');
 		$this->load->view('Finance_1/Navigation_N');
 		$this->load->view('Finance_1/WriteDescription');
+		$this->load->view('Finance_1/footer');
+		$this->load->view('Finance_1/End');
+	}
+
+	public function finance_CA_1(){
+		$this->load->view('Finance_1/start');
+		$this->load->view('Finance_1/Navigation_N');
+		$this->load->view('Calendar');
 		$this->load->view('Finance_1/footer');
 		$this->load->view('Finance_1/End');
 	}

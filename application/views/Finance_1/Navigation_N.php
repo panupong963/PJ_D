@@ -31,7 +31,7 @@
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
-          <a class="nav-link" href="finance_TranscendJob_1">
+          <a class="nav-link" href="finance_CA_1">
             <i class="fa fa-fw fa-dashboard"></i>
             <span class="nav-link-text">ปฏิทินการดำเนินงาน</span>
           </a>
