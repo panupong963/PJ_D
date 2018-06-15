@@ -6,30 +6,15 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav navbar-sidenav " id="exampleAccordion">
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
-          <a class="nav-link" href="authorities_BuildCalendar_1">
-            <i class="fa fa-fw fa-wrench"></i>
-            <span class="nav-link-text">กำหนดปฏิทิน</span>
-          </a>
-        </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
-          <a class="nav-link" href="authorities_Examine_1">
-            <i class="fa fa-fw fa-table"></i>
-            <span class="nav-link-text">ตรวจสอบงาน</span>
-          </a>
-        </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
-          <a class="nav-link" href="authorities_Declare_1">
-            <i class="fa fa-fw fa-dashboard"></i>
-            <span class="nav-link-text">รายชื่องานที่ผ่านการตรวจสอบ</span>
-          </a>
-        </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
-          <a class="nav-link" href="authorities_NewDeclare_1">
+          <a class="nav-link" href="finance_work_1">
             <i class="fa fa-fw fa-area-chart"></i>
-            <span class="nav-link-text">ผลการสมัคร</span>
+            <span class="nav-link-text">ผลการสมัครทุนทำงานพิเศษ</span>
           </a>
         </li>
+       
+
+
         <!--<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
           <a class="nav-link" href="Authorities_results2_2">
             <i class="fa fa-fw fa-area-chart"></i>
@@ -211,7 +196,7 @@
         <li class="nav-item">
           
           <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
-            เจ้าหน้าที่งานทุน : สมรัก เย็นใจ
+            อาจารย์ที่ปรึกษา : ชูใจ จิงใจ
             <i class="fa fa-fw fa-sign-out"></i>ออกจากระบบ</a>
         </li>
       </ul>

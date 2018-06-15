@@ -21,10 +21,10 @@
   <tr align="center">
     <th>1</th>
     
-    <th>คิดเเล้ว คิดไม่ออก</th>
+    <th>สมจิต ภัคดี</th>
     <th>สารสนเทศ</th>
     <th>4.00</th>
-    <th width="119">ขายของ</th>
+    <th width="119">ขนของ</th>
     <th><button type="button" class="btn btn-warning">รายละเอียด</button></th>
     <th><button type="button" class="btn btn-success">ผ่าน</button>
                     
