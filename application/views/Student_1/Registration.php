@@ -5,22 +5,10 @@
 <table class="table table-borderless">
   <thead>
     <tr>
-    <th colspan="3" bgcolor="#CCFFFF">1. ข้อมูลงาน</th>
+    <th colspan="3" bgcolor="#CCFFFF">1. ข้อมูลส่วนตัวนักศึกษา</th>
     </tr>
 </thead>
-<<<<<<< HEAD
   
-=======
-  <tbody>
-    <tr>
-    <th >ชื่องานที่สมัคร <u>ประชาสัมพันธ์</u></th>
-    <th>ประเภทงาน <u>บริการ</u></th>
-    <th>หน่วยงาน/สำนักวิชา <u>ศูนย์บรรณาสารเเละสื่อการศึกษา</u></th>
-  </tr>
-    <tr>
-    <th colspan="3" bgcolor="#CCFFFF">2. ข้อมูลส่วนตัวนักศึกษา</th>
-    </tr>
->>>>>>> d866babe6cedcec60bf67313057b18ba0aa121fc
   <tr>
     <th >ชื่อสกุล - สกุล <u>สมคิด ใจเย็น</u></th>
     <th >รหัสนักศึกษา <u>58122235</u></th>
@@ -59,7 +47,6 @@
   <tr>
   </tbody>
   <thead>
-<<<<<<< HEAD
     <tr>
     <th colspan="3" bgcolor="#CCFFFF">2. ข้อมูลงาน</th>
     </tr>
@@ -71,8 +58,6 @@
   </tr>
 </thead>
   <thead>
-=======
->>>>>>> d866babe6cedcec60bf67313057b18ba0aa121fc
     <th colspan="3" bgcolor="#CCFFFF">3. กรอกข้อมูลเพิ่มเติม</th>
   </tr>
 </thead>
