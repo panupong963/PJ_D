@@ -28,6 +28,10 @@ class home2 extends CI_Controller {
 		//$this->load->view('test');
 	}
 
+	public function login(){
+		$this->load->view('login_N');
+	}
+
 	public function Student_registration_1(){
 		$this->load->view('Student_1/start');
 		$this->load->view('Student_1/Navigation_N');
