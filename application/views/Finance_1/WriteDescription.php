@@ -192,6 +192,11 @@
                     <label class="control-label">Company Address</label>
                     <input maxlength="200" type="text" required="required" class="form-control" placeholder="Enter Company Address"  />
                 </div>-->
+<<<<<<< HEAD
+=======
+                <button type="button" class="btn btn-default prev-step">Previous</button>
+                <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Next</button>
+>>>>>>> f129f60656e2299a0036bffc063a22558ffab06a
                 
             </div>
         </div>

@@ -13,8 +13,8 @@
   <tr align="center">
     <td>1</td>
     <td>สารสนเทศศสาตร์</td>
-    <td><button type="button" class="btn btn-link">10</button></td>
-    <td><button type="button" class="btn btn-link">20</button></td>
+    <td><a class="btn btn-link" href="JobOffering_YConfirm_2">10</a></td>
+    <td><a class="btn btn-link" href="JobOffering_NoConfirm_2">20</a></td>
   </tr>
   <tr>
     <td>&nbsp;</td>

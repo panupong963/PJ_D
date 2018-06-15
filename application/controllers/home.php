@@ -28,10 +28,33 @@ class home extends CI_Controller {
 		//$this->load->view('test');
 	}
 
+	public function login(){
+		$this->load->view('Login_N');
+	}
+
+
+	public function CA()
+	{
+		$this->load->view('start');
+		$this->load->view('Navigation_N');
+		$this->load->view('Calendar');
+		$this->load->view('footer');
+		$this->load->view('End');
+		//$this->load->view('test');
+	}
+
 	public function Student_SaveJob_2(){
 		$this->load->view('Student_2/start');
 		$this->load->view('Student_2/Navigation_N');
 		$this->load->view('Student_2/Save_work');
+		$this->load->view('Student_2/footer');
+		$this->load->view('Student_2/End');
+	}
+
+	public function Student_CA_2(){
+		$this->load->view('Student_2/start');
+		$this->load->view('Student_2/Navigation_N');
+		$this->load->view('Calendar');
 		$this->load->view('Student_2/footer');
 		$this->load->view('Student_2/End');
 	}
@@ -68,10 +91,27 @@ class home extends CI_Controller {
 		$this->load->view('Authorities_2/End');		
 	}
 
+
+	public function Authorities_CA_2(){
+		$this->load->view('Authorities_2/start');
+		$this->load->view('Authorities_2/Navigation_N');
+		$this->load->view('Calendar');
+		$this->load->view('Authorities_2/footer');
+		$this->load->view('Authorities_2/End');		
+	}
+
 	public function Authorities_NoConfirm_2(){
 		$this->load->view('Authorities_2/start');
 		$this->load->view('Authorities_2/Navigation_N');
 		$this->load->view('Authorities_2/NoConfirm');
+		$this->load->view('Authorities_2/footer');
+		$this->load->view('Authorities_2/End');		
+	}
+
+	public function Authorities_YConfirm_2(){
+		$this->load->view('Authorities_2/start');
+		$this->load->view('Authorities_2/Navigation_N');
+		$this->load->view('Authorities_2/YConfirm');
 		$this->load->view('Authorities_2/footer');
 		$this->load->view('Authorities_2/End');		
 	}
@@ -116,6 +156,14 @@ class home extends CI_Controller {
 		$this->load->view('Finance_2/End');		
 	}
 
+	public function Finance_CA_2(){
+		$this->load->view('Finance_2/start');
+		$this->load->view('Finance_2/Navigation_N');
+		$this->load->view('Calendar');
+		$this->load->view('Finance_2/footer');
+		$this->load->view('Finance_2/End');		
+	}
+
 	public function Finance_results_2(){
 		$this->load->view('Finance_2/start');
 		$this->load->view('Finance_2/Navigation_N');
@@ -128,6 +176,14 @@ class home extends CI_Controller {
 		$this->load->view('JobOffering_2/start');
 		$this->load->view('JobOffering_2/Navigation_N');
 		$this->load->view('JobOffering_2/Edit');
+		$this->load->view('JobOffering_2/footer');
+		$this->load->view('JobOffering_2/End');		
+	}
+
+	public function JobOffering_CA_2(){
+		$this->load->view('JobOffering_2/start');
+		$this->load->view('JobOffering_2/Navigation_N');
+		$this->load->view('Calendar');
 		$this->load->view('JobOffering_2/footer');
 		$this->load->view('JobOffering_2/End');		
 	}
@@ -162,6 +218,31 @@ class home extends CI_Controller {
 		$this->load->view('JobOffering_2/DataST');
 		$this->load->view('JobOffering_2/footer');
 		$this->load->view('JobOffering_2/End');		
+	}
+
+	public function JobOffering_NoConfirm_2(){
+		$this->load->view('JobOffering_2/start');
+		$this->load->view('JobOffering_2/Navigation_N');
+		$this->load->view('JobOffering_2/NoConfirm');
+		$this->load->view('JobOffering_2/footer');
+		$this->load->view('JobOffering_2/End');		
+	}
+
+	public function JobOffering_YConfirm_2(){
+		$this->load->view('JobOffering_2/start');
+		$this->load->view('JobOffering_2/Navigation_N');
+		$this->load->view('JobOffering_2/YConfirm');
+		$this->load->view('JobOffering_2/footer');
+		$this->load->view('JobOffering_2/End');		
+	}
+
+
+	public function from_s(){
+		$this->load->view('Authorities_2/start');
+		$this->load->view('Authorities_2/Navigation_N');
+		$this->load->view('Authorities_2/from');
+		$this->load->view('Authorities_2/footer');
+		$this->load->view('Authorities_2/End');		
 	}
 
 }

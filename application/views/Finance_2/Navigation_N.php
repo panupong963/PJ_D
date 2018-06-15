@@ -13,7 +13,7 @@
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
-          <a class="nav-link" href="tables.html">
+          <a class="nav-link" href="Finance_CA_2">
             <i class="fa fa-fw fa-table"></i>
             <span class="nav-link-text">ปฏิทินการดำเนินงาน</span>
           </a>
@@ -211,7 +211,7 @@
         <li class="nav-item">
           
           <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
-            เจ้าหน้าที่การเงิน : สมใจ เเล้วสิ
+            เจ้าหน้าที่การเงิน/อาจารย์ที่ปรึกษา/หัวส่วนกิจ : สมใจ เเล้วสิ
             <i class="fa fa-fw fa-sign-out"></i>ออกจากระบบ</a>
         </li>
       </ul>

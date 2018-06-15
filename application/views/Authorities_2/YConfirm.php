@@ -6,7 +6,6 @@
     <th width="49">ลำดับ</th>
     <th width="277">ชื่อ - นามสกุล</th>
     <th width="333">ชื่องาน</th>
-    <th>เหตุผลยกเลิกยืนยันการทำงาน</th>
     <th width="213">ช่องทางติดต่อ</th>
   </tr>
 </thead>
@@ -15,12 +14,10 @@
     <td>1</td>
     <td>คิดเเล้วคิดอีก</td>
     <td>ขนของ</td>
-    <th>ชนกับตารางเรียน</th>
     <td>091-5145632</td>
   </tr>
   <tr>
     <td height="114">&nbsp;</td>
-    <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>

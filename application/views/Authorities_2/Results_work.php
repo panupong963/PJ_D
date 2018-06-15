@@ -2,16 +2,11 @@
     <div class="container-fluid">
 <table width="900" border="0" align="center">
   <tr align="center">
-    <td>ปีการศึกษา : <select>
-  <option value="volvo">2561</option>
+    <td>ชื่องาน : <select>
+  <option value="volvo">ขนของ</option>
   <option value="saab">2560</option>
   <option value="mercedes">2559</option>
   <option value="audi">2558</option>
-</select></td>
-    <td>ภาคเรียน : <select>
-  <option value="volvo">1</option>
-  <option value="saab">2</option>
-  <option value="mercedes">3</option>
 </select></td>
     <td>สำนักวิชา : <select>
   <option value="volvo">สารสนเทศศาสตร์</option>
@@ -32,7 +27,7 @@
     <th>ชื่อ-สกุล</th>
     <th>สำนักวิชา</th>
     <th>ชั่วโมงปฎิบัติงาน</th>
-    <th>คิดเป็นเงิน</th>
+    <th>คิดเป็นเงิน (บาท)</th>
   </tr>
 </thead>
 <tbody>
