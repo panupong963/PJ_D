@@ -14,13 +14,13 @@
         </li>
 
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
-          <a class="nav-link" href="JobOffering_dataST_2">
+          <a class="nav-link" href="JobOffering_confirm_2">
             <i class="fa fa-fw fa-area-chart"></i>
             <span class="nav-link-text">ข้อมูลยืนยันการทำงานนักศึกษา</span>
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
-          <a class="nav-link" href="JobOffering_confirm_2">
+          <a class="nav-link" href="JobOffering_dataST_2">
             <i class="fa fa-fw fa-link"></i>
             <span class="nav-link-text">งาน</span>
           </a>

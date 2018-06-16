@@ -1,5 +1,8 @@
 <div class="content-wrapper">
     <div class="container-fluid">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item active">งาน</li>
+        </ol> 
 <table class="table table-bordered">
   <thead>
   <tr align="center">

@@ -1,5 +1,8 @@
 <div class="content-wrapper">
     <div class="container-fluid">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item active">เเก้ไขข้อมูลส่วนตัว</li>
+        </ol> 
     	<table width="900" border="0" align="center">
   <tr align="center">
     <td width="328" align="right">ชื่อผู้ใช้งาน<font color="#FF0000">*</font> : </td>
