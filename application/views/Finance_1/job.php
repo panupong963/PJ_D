@@ -1,6 +1,8 @@
 <div class="content-wrapper">
     <div class="container-fluid">
       <h4>คัดเลือกผู้สมัครทุนทำงานพิเศษ</h4>
+      <td width="307" align="left"><font color="red">*ตรวจสอบงานภายในวันที่ 16/เม.ย/60</font>
+          </td>
       <br>
   <table class="table table-striped">
   	<thead>
@@ -12,6 +14,7 @@
     <th>จำนวนที่รับ</th>
     <th>จำนวนที่สมัคร</th>
     <th>ผลการคัดเลือก</th>
+    <th>&nbsp;&nbsp;</th>
   </tr>
   </thead>
 

@@ -8,34 +8,35 @@
       <ul class="navbar-nav navbar-sidenav " id="exampleAccordion">
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
           <a class="nav-link" href="authorities_BuildCalendar_1">
-            <i class="fa fa-fw fa-wrench"></i>
+            <font color="#FFFFFF"><i class="fa fa-fw fa-wrench"></i>
             <span class="nav-link-text">กำหนดปฏิทิน</span>
-          </a>
-        </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
-          <a class="nav-link" href="authorities_Examine_1">
-            <i class="fa fa-fw fa-table"></i>
-            <span class="nav-link-text">ตรวจสอบงาน</span>
-          </a>
-        </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
-          <a class="nav-link" href="authorities_Declare_1">
-            <i class="fa fa-fw fa-dashboard"></i>
-            <span class="nav-link-text">รายชื่องานที่ผ่านการตรวจสอบ</span>
-          </a>
-        </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
-          <a class="nav-link" href="authorities_NewDeclare_1">
-            <i class="fa fa-fw fa-area-chart"></i>
-            <span class="nav-link-text">ผลการสมัคร</span>
-          </a>
+          </a></font>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
           <a class="nav-link" href="authorities_CA_1">
-            <i class="fa fa-fw fa-area-chart"></i>
+            <font color="#FFFFFF"><i class="fa fa-fw fa-area-chart"></i>
             <span class="nav-link-text">ปฏิทินการดำเนินงาน</span>
-          </a>
+          </a></font>
         </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+          <a class="nav-link" href="authorities_Examine_1">
+            <font color="#FFFFFF"><i class="fa fa-fw fa-table"></i>
+            <span class="nav-link-text">ตรวจสอบงาน</span>
+          </a></font>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+          <a class="nav-link" href="authorities_Declare_1">
+            <font color="#FFFFFF"><i class="fa fa-fw fa-dashboard"></i>
+            <span class="nav-link-text">ผลการพิจารณางาน</span>
+          </a></font>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
+          <a class="nav-link" href="authorities_NewDeclare_1">
+            <font color="#FFFFFF"><i class="fa fa-fw fa-area-chart"></i>
+            <span class="nav-link-text">ผลการสมัคร</span>
+          </a></font>
+        </li>
+        
         <!--<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-wrench"></i>
@@ -211,8 +212,8 @@
         <li class="nav-item">
           
           <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
-            เจ้าหน้าที่งานทุน : สมรัก เย็นใจ
-            <i class="fa fa-fw fa-sign-out"></i>ออกจากระบบ</a>
+            <font color="#FFFFFF">เจ้าหน้าที่งานทุน : สมรัก เย็นใจ</font>
+             <font color="#FFFFFF"><i class="fa fa-fw fa-sign-out"></i>ออกจากระบบ</font></a>
         </li>
       </ul>
     </div>

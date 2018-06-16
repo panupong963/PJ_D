@@ -12,30 +12,31 @@
             <span class="nav-link-text">เเก้ไขข้อมูลส่วนตัว</span>
           </a>
         </li>-->
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+          <a class="nav-link" href="Student_CA_1">
+            <font color="#FFFFFF"> <i class="fa fa-fw fa-dashboard"></i>
+            <span class="nav-link-text">ปฏิทินการดำเนินงาน</span>
+          </a></font>
+        </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
           <a class="nav-link" href="Student_list_1">
-            <i class="fa fa-fw fa-table"></i>
+            <font color="#FFFFFF"> <i class="fa fa-fw fa-table"></i>
             <span class="nav-link-text">รายชื่องานทุน</span>
-          </a>
+          </a></font>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
           <a class="nav-link" href="Student_registration_1">
-            <i class="fa fa-fw fa-dashboard"></i>
+            <font color="#FFFFFF"> <i class="fa fa-fw fa-dashboard"></i>
             <span class="nav-link-text">กรอกรายละเอียดการสมัคร</span>
-          </a>
+          </a></font>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
           <a class="nav-link" href="Student_announced_1">
-            <i class="fa fa-fw fa-area-chart"></i>
+            <font color="#FFFFFF"> <i class="fa fa-fw fa-area-chart"></i>
             <span class="nav-link-text">ประกาศผลการสมัคร</span>
-          </a>
+          </a></font>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
-          <a class="nav-link" href="Student_CA_1">
-            <i class="fa fa-fw fa-dashboard"></i>
-            <span class="nav-link-text">ปฏิทินการดำเนินงาน</span>
-          </a>
-        </li>
+        
         <!--<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
           <a class="nav-link" href="Authorities_results2_2">
             <i class="fa fa-fw fa-area-chart"></i>
@@ -217,8 +218,8 @@
         <li class="nav-item">
           
           <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
-            นักศึกษา : สมคิด ใจเย็น
-            <i class="fa fa-fw fa-sign-out"></i>ออกจากระบบ</a>
+            <font color="#FFFFFF"> นักศึกษา : สมคิด ใจเย็น </font>
+            <font color="#FFFFFF"> <i class="fa fa-fw fa-sign-out"></i>ออกจากระบบ</a> </font>
         </li>
       </ul>
     </div>

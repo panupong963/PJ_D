@@ -7,10 +7,11 @@
   <tr align="center">
     <th width="51" align="center">ลำดับ</th>
     <th width="110" align="center">ประเภทงาน</th>
-    <th width="116" align="center">รหัสนักศึกษา</th>
-    <th width="275" align="center">ชื่อ - สกุล</th>
-    <th width="220" align="center">หลักสูตร</th>
-    <th width="136" align="center">ผลการพิจารณา</th>
+    <th width="140" align="center">รหัสนักศึกษา</th>
+    <th width="250" align="center">ชื่อ - สกุล</th>
+    <th width="180" align="center">หลักสูตร</th>
+    <th width="220" align="center">ชื่องาน</th>
+    <th width="150" align="center">ผลการพิจารณา</th>
   </tr>
 </thead>
 <tbody>
@@ -20,6 +21,7 @@
     <th align="center">58888888</th>
     <th align="center">สมหมาย ใจกล้า</th>
     <th align="center">สารสนเทศศาสตร์</th>
+    <th align="center">การจัดเอกสาร</th>
     <th align="center">ผ่าน</th>
   </tr>
 </tbody>
@@ -30,6 +32,7 @@
     <th align="center">58125855</th>
     <th align="center">สมจิต มากมาย</th>
     <th align="center">สารสนเทศศาสตร์</th>
+    <th align="center">พิมพ์งานเอกสาร</th>
     <th align="center">ไม่ผ่าน</th>
   </tr>
 </tbody>

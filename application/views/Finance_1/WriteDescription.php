@@ -71,15 +71,15 @@
     <div class="stepwizard-row setup-panel">
         <div class="stepwizard-step">
             <a href="#step-1" type="button" class="btn btn-primary btn-circle">1</a>
-            <p>ขั้นตอนที่ 1</p>
+            <p>ประวัติการเสนองาน</p>
         </div>
         <div class="stepwizard-step">
             <a href="#step-2" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
-            <p>ขั้นตอนที่ 2</p>
+            <p>กรอกรายละเอียดงาน</p>
         </div>
         <div class="stepwizard-step">
             <a href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
-            <p>ขั้นตอนที่ 3</p>
+            <p>รายชื่องานที่เสนอ</p>
         </div>
     </div>
 </div>
@@ -92,16 +92,7 @@
                 
                     <table width="900" border="0">
   <tr>
-    <td align="right">ปีการศึกษา : <select>
-  <option value="volvo">2561</option>
-  <option value="saab">2560</option>
-  <option value="mercedes">2559</option>
-  <option value="audi">2558</option>
-</select></td>
-    <td align="center">ภาคการศึกษา : <label class="radio-inline"><input type="radio" name="optradio">1</label>
-<label class="radio-inline"><input type="radio" name="optradio">2</label>
-<label class="radio-inline"><input type="radio" name="optradio">3</label></td>
-    <td><button type="button" class="btn btn-success">ค้นหา</button></td>
+    
     <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >ข้าม</button>
   </tr>
 </table>
@@ -168,8 +159,9 @@
                       <br>
                       <br>
                        &nbsp;เพศ <font color="red">* </font><select>
-                                                      <option value="volvo">ชาย</option>
                                                       <option value="saab">หญิง</option>
+                                                      <option value="volvo">ชาย</option>
+                                
                                                       <option value="saab">ชาย/หญิง</option>
                                                     </select>  
                       &nbsp;&nbsp; จำนวนที่รับ <font color="red">* </font><select>
@@ -181,10 +173,15 @@
                       &nbsp;&nbsp; วันที่เริ่มต้นการทำงาน <font color="red">* </font><input id="date" type="date">
                       <br><br>
                       คุณสมบัติผู้สมัคร <font color="red">* </font> : <input type="radio" name="gender" value="male"> มีความแข็งแรง/อดทน
-                  <input type="radio" name="gender" value="female"> ความรู้ความสามาถทางวิชาการ<br><br>
+                  <input type="radio" name="gender" value="female"> ความรู้ความสามาถทางวิชาการ
+                  <input type="radio" name="gender" value="female"> อื่นๆ...ระบุ <input type="text"><br>
+
+                  <br>
                   รายละเอียดลักษณะงาน <font color="red">* </font><br>
                   <textarea name="textarea">Some text...</textarea><br>
+                  
                   <button class="btn btn-success nextBtn btn-lg pull-right" type="button">บันทึก</button>
+
                   <button class="btn btn-primary btn-lg pull-right" type="button" <input type="button" onclick=window.location='http://localhost/PJ_D/index.php/home2/finance_WriteDescription_1'>ย้อนกลับ</button>
                   
                 </div>

@@ -1,6 +1,8 @@
 <div class="content-wrapper">
     <div class="container-fluid">
       <h4>งานที่ผ่านการตรวจสอบ</h4>
+      <td width="307" align="left"><font color="red">*ตรวจสอบงานภายในวันที่ 06/เม.ย/60</font>
+          </td>
 <table class="table table-striped">
   <thead>
   <tr align="center">
@@ -16,7 +18,7 @@
   <tr align="center">
     <th>1</th>
     <th>ส่วนกิจการนักศึกษา</th>
-    <th>ธุระการ</th>
+    <th>ธุรการ</th>
     <th>จัดชั้นหนังสือ</th>
     <th>5</th>
     <th><button type="button" class="btn btn-primary">แก้ไข</button>
