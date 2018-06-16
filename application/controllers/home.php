@@ -75,13 +75,6 @@ class home extends CI_Controller {
 		$this->load->view('Student_2/End');
 	}	
 
-	public function Student_1(){
-		$this->load->view('Student_1/start');
-		$this->load->view('Student_1/Navigation_N');
-		$this->load->view('Student_1/Job');
-		$this->load->view('Student_1/footer');
-		$this->load->view('Student_1/End');
-	}
 
 	public function Authorities_edit_2(){
 		$this->load->view('Authorities_2/start');
