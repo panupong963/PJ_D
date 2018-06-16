@@ -26,8 +26,8 @@
 <tbody>
     <tr align="center">
     <th align="center">2</th>
-    <th align="center">58888888</th>
-    <th align="center">สมหมาย ใจกล้า</th>
+    <th align="center">58999999</th>
+    <th align="center">เจ้าหญิง สร้อยทอง</th>
     <th align="center">พยาบาลศาสตร์</th>
     <th align="center">3.80</th>
     

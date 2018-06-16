@@ -176,10 +176,10 @@
             <a class="dropdown-item" href="#">
               <span class="text-success">
                 <strong>
-                  <i class="fa fa-long-arrow-up fa-fw"></i>Status Update</strong>
+                  <i class="fa fa-long-arrow-up fa-fw"></i>งานที่นำเสนอ</strong>
               </span>
               <span class="small float-right text-muted">11:21 AM</span>
-              <div class="dropdown-message small">This is an automated server response message. All systems are online.</div>
+              <div class="dropdown-message small">มีการตัดยอดจำนวนนักศึกษาที่ขอมาเพื่อให้เหมาะสมกับงาน</div>
             </a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#">

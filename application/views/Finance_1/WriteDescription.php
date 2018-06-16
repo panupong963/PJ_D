@@ -180,24 +180,18 @@
                                                     </select> คน 
                       &nbsp;&nbsp; วันที่เริ่มต้นการทำงาน <font color="red">* </font><input id="date" type="date">
                       <br><br>
-                      ลักษณะงาน <font color="red">* </font> : <input type="radio" name="gender" value="male"> ใช้เเรงงาน
-                  <input type="radio" name="gender" value="female"> ความสามาถทางวิชาการ<br><br>
+                      คุณสมบัติผู้สมัคร <font color="red">* </font> : <input type="radio" name="gender" value="male"> มีความแข็งแรง/อดทน
+                  <input type="radio" name="gender" value="female"> ความรู้ความสามาถทางวิชาการ<br><br>
                   รายละเอียดลักษณะงาน <font color="red">* </font><br>
                   <textarea name="textarea">Some text...</textarea><br>
                   <button class="btn btn-success nextBtn btn-lg pull-right" type="button">บันทึก</button>
-                  <button class="btn btn-primary btn-lg pull-right" type="button" <input type="button" value="ย้อนกลับ" onclick=window.location='http://localhost/PJ_D/index.php/home2/finance_WriteDescription_1'>ย้อนกลับ</button>
+                  <button class="btn btn-primary btn-lg pull-right" type="button" <input type="button" onclick=window.location='http://localhost/PJ_D/index.php/home2/finance_WriteDescription_1'>ย้อนกลับ</button>
                   
                 </div>
                 <!-- <div class="form-group">
                     <label class="control-label">Company Address</label>
                     <input maxlength="200" type="text" required="required" class="form-control" placeholder="Enter Company Address"  />
                 </div>-->
-<<<<<<< HEAD
-=======
-                <button type="button" class="btn btn-default prev-step">Previous</button>
-                <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Next</button>
->>>>>>> f129f60656e2299a0036bffc063a22558ffab06a
-                
             </div>
         </div>
     </div>

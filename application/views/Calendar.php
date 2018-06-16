@@ -11,14 +11,19 @@
       </thead>
     <tbody>
   <tr align="center">
-    <td align="left">เปิดรับสมัคร</td>
-    <td>26/03/60</td>
-    <td>4/04/60</td>
+    <td align="left">ช่วงเวลาเสนองาน</td>
+    <td>29/มี.ค/60</td>
+    <td>02/เม.ย/60</td>
   </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
+   <tr align="center">
+    <td align="left">ช่วงเวลาพิจรณางานที่หน่วยงานเสนอ</td>
+    <td>04/เม.ย/60</td>
+    <td>06/เม.ย/60</td>
+  </tr>
+   <tr align="center">
+    <td align="left">ช่วงเวลาการเปิดรับสมัคร</td>
+    <td>08/เม.ย/60</td>
+    <td>12/เม.ย/60</td>
   </tr>
 </tbody>
 </table>
