@@ -1,6 +1,6 @@
  <!-- Navigation-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-    <a class="navbar-brand" href="index"><img src="<?php echo base_url(); ?>assets/img/wu.png" width = “40” height="40">&nbsp;&nbsp;ระบบติดตามทุนทำงานพิเศษ</a>
+    <a class="navbar-brand" href="authorities_CA_1"><img src="<?php echo base_url(); ?>assets/img/wu.png" width = “40” height="40">&nbsp;&nbsp;ระบบติดตามทุนทำงานพิเศษ</a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -9,7 +9,7 @@
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
           <a class="nav-link" href="authorities_BuildCalendar_1">
             <font color="#FFFFFF"><i class="fa fa-fw fa-wrench"></i>
-            <span class="nav-link-text">กำหนดปฏิทิน</span>
+            <span class="nav-link-text">กำหนดปฏิทินการทำงาน</span>
           </a></font>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">

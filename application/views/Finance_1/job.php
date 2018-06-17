@@ -11,13 +11,15 @@
   	<thead>
   
   <tr align="center">
-    <th>ลำดับ</th>
-    <th>ประเภทงาน</th>
-    <th>งาน</th>
-    <th>จำนวนที่รับ</th>
-    <th>จำนวนที่สมัคร</th>
-    <th>ผลการคัดเลือก</th>
-    <th>&nbsp;&nbsp;</th>
+    <th width="100">ลำดับ</th>
+    <th width="130">ประเภทงาน</th>
+    <th width="160">ชื่องาน</th>
+    <th width="130">จำนวนที่รับ</th>
+    <th width="130">จำนวนที่สมัคร</th>
+    <th width="160">ผลการคัดเลือก</th>
+    <th >&nbsp;&nbsp;</th>
+    <th >&nbsp;&nbsp;</th>
+    <th >&nbsp;&nbsp;</th>
   </tr>
   </thead>
 
@@ -26,10 +28,12 @@
     <th>1</th>
     <th>บริการ</th>
     <th><a >ขนของ</a></th>
-    <th>10</th>
-    <th>20</th>
-    <th><a class="btn btn-info" href="finance_Results_1">8/10</a></th>
+    <th>5</th>
+    <th>8</th>
+    <th><a class="btn btn-info" href="finance_Results_1">3/5</a></th>
     <th><a class="btn btn-info" href="finance_SelectST_1">เลือก</a></th>
+    <th >&nbsp;&nbsp;</th>
+    <th >&nbsp;&nbsp;</th>
     </tr>
     </tbody>
     <tbody>
@@ -37,10 +41,12 @@
     <th>2</th>
     <th>ธุรการ</th>
     <th><a >จัดเอกสาร</a></th>
-    <th>10</th>
-    <th>10</th>
-    <th><a class="btn btn-info" href="finance_Results_1">4/10</a></th>
-    <th><a class="btn btn-info" href="Student_registration_1">เลือก</a></th>
+    <th>5</th>
+    <th>6</th>
+    <th><a class="btn btn-info" href="finance_Results_1">4/5</a></th>
+    <th><a class="btn btn-info" href="finance_SelectST_1">เลือก</a></th>
+    <th >&nbsp;&nbsp;</th>
+    <th >&nbsp;&nbsp;</th>
     </tr>
     </tbody>
     <tbody>
@@ -48,10 +54,12 @@
     <th>3</th>
     <th>ธุรการ</th>
     <th><a >จัดชั้นหนังสือ</a></th>
-    <th>10</th>
-    <th>13</th>
-    <th><a class="btn btn-info" href="finance_Results_1">6/10</a></th>
-    <th><a class="btn btn-info" href="Student_registration_1">เลือก</a></th>
+    <th>5</th>
+    <th>6</th>
+    <th><a class="btn btn-info" href="finance_Results_1">6/5</a></th>
+    <th><a class="btn btn-info" href="finance_SelectST_1">เลือก</a></th>
+    <th >&nbsp;&nbsp;</th>
+    <th >&nbsp;&nbsp;</th>
    </tr>
 </tbody>
 </table>

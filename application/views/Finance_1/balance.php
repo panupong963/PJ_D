@@ -1,8 +1,8 @@
 <div class="content-wrapper">
     <div class="container-fluid">
       <h4>รายชื่อนักศึกษาที่ผ่านการตรวจสอบ</h4>
-      <h5>งาน : ขนของ</h5><br>
-      
+      <h5>งาน : จัดชั้นวางหนังสือ</h5>
+      <br>
 <table class="table table-striped" >
   <thead>
   <tr align="center">

@@ -36,8 +36,8 @@
     <th>ศูนย์บรรณาสารเเละสื่อการศึกษา</th>
     <th>บริการ</th>
     <th>ขนของ</th>
-    <th>10</th>
-    <th>8</th>
+    <th>4</th>
+    <th>2</th>
     <th><a class="btn btn-info" href="Student_registration_1">เลือกงาน</a></th>
   </tr>
   <tr align="center">
@@ -45,9 +45,36 @@
     <th>ศูนย์บรรณาสารเเละสื่อการศึกษา</th>
     <th>เชิงธุรกิจ</th>
     <th>เอกสาร</th>
-    <th>10</th>
-    <th>6</th>
+    <th>5</th>
+    <th>1</th>
     <th><button type="button" class="btn btn-info">เลือกงาน</button></th>
+  </tr>
+  <tr align="center">
+    <th>3</th>
+    <th>ศูนณ์บรรณาสาร</th>
+    <th>บริการ</th>
+    <th>จัดหนังสือตามประเภท</th>
+    <th>5</th>
+    <th>2</th>
+    <th><a class="btn btn-info" href="Student_registration_1">เลือกงาน</a></th>
+  </tr>
+  <tr align="center">
+    <th>4</th>
+    <th>ศูนณ์เครื่องมือวิทยาศาสตร์และเทคโนโลยี</th>
+    <th>บริการ</th>
+    <th>พิมพ์เอกสาร</th>
+    <th>4</th>
+    <th>0</th>
+    <th><a class="btn btn-info" href="Student_registration_1">เลือกงาน</a></th>
+  </tr>
+  <tr align="center">
+    <th>5</th>
+    <th>ศูนณ์เทคโนโลยีดิจิทัล</th>
+    <th>บริการ</th>
+    <th>พิมพ์เอกสาร</th>
+    <th>3</th>
+    <th>2</th>
+    <th><a class="btn btn-info" href="Student_registration_1">เลือกงาน</a></th>
   </tr>
 </tbody>
 </table>

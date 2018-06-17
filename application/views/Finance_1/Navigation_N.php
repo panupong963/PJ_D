@@ -1,6 +1,6 @@
  <!-- Navigation-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-    <a class="navbar-brand" href="index"><img src="<?php echo base_url(); ?>assets/img/wu.png" width = “40” height="40">&nbsp;&nbsp;ระบบติดตามทุนทำงานพิเศษ</a>
+    <a class="navbar-brand" href="finance_CA_1"><img src="<?php echo base_url(); ?>assets/img/wu.png" width = “40” height="40">&nbsp;&nbsp;ระบบติดตามทุนทำงานพิเศษ</a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -35,6 +35,12 @@
           <a class="nav-link" href="finance_Remaining_1">
             <font color="#FFFFFF"><i class="fa fa-fw fa-dashboard"></i>
             <span class="nav-link-text">จัดสรรงานคงเหลือ</span>
+          </a></font>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+          <a class="nav-link" href="finance_Selection_Results_1">
+            <font color="#FFFFFF"><i class="fa fa-fw fa-dashboard"></i>
+            <span class="nav-link-text">ผลการคัดเลือกนักศึกษา</span>
           </a></font>
         </li>
        
@@ -177,7 +183,7 @@
             <a class="dropdown-item" href="#">
               <span class="text-success">
                 <strong>
-                  <i class="fa fa-long-arrow-up fa-fw"></i>งานที่นำเสนอ</strong>
+                  </i>งานที่นำเสนอ</strong>
               </span>
               <span class="small float-right text-muted">11:21 AM</span>
               <div class="dropdown-message small">มีการตัดยอดจำนวนนักศึกษาที่ขอมาเพื่อให้เหมาะสมกับงาน</div>
@@ -186,7 +192,7 @@
             <a class="dropdown-item" href="#">
               <span class="text-danger">
                 <strong>
-                  <i class="fa fa-long-arrow-down fa-fw"></i>Status Update</strong>
+                  </i>Status Update</strong>
               </span>
               <span class="small float-right text-muted">11:21 AM</span>
               <div class="dropdown-message small">This is an automated server response message. All systems are online.</div>
@@ -195,7 +201,7 @@
             <a class="dropdown-item" href="#">
               <span class="text-success">
                 <strong>
-                  <i class="fa fa-long-arrow-up fa-fw"></i>Status Update</strong>
+                 </i>Status Update</strong>
               </span>
               <span class="small float-right text-muted">11:21 AM</span>
               <div class="dropdown-message small">This is an automated server response message. All systems are online.</div>

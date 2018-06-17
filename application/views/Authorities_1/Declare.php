@@ -33,6 +33,36 @@
     <th><button type="button" class="btn btn-primary">แก้ไข</button>
       <button type="button" class="btn btn-danger">ยกเลิก</button></th>
   </tr>
+
+  <tr align="center">
+    <th>3</th>
+    <th>ศูนณ์บรรณาสาร</th>
+    <th>บริการ</th>
+    <th>จัดหนังสือตามประเภท</th>
+    <th>5</th>
+    <th><button type="button" class="btn btn-primary">แก้ไข</button>
+      <button type="button" class="btn btn-danger">ยกเลิก</button></th>
+  </tr>
+
+  <tr align="center">
+    <th>4</th>
+    <th>ศูนณ์เครื่องมือวิทยาศาสตร์และเทคโนโลยี</th>
+    <th>บริการ</th>
+    <th>พิมพ์เอกสาร</th>
+    <th>2</th>
+    <th><button type="button" class="btn btn-primary">แก้ไข</button>
+      <button type="button" class="btn btn-danger">ยกเลิก</button></th>
+  </tr>
+
+  <tr align="center">
+    <th>5</th>
+    <th>ศูนณ์เทคโนโลยีดิจิทัล</th>
+    <th>บริการ</th>
+    <th>พิมพ์เอกสาร</th>
+    <th>2</th>
+    <th><button type="button" class="btn btn-primary">แก้ไข</button>
+      <button type="button" class="btn btn-danger">ยกเลิก</button></th>
+  </tr>
   <tr align="center">
   <th colspan="6"><button type="button" class="btn btn-primary" >ยืนยัน</button></th>
   </tr>

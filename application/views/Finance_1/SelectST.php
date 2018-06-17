@@ -1,6 +1,7 @@
 <div class="content-wrapper">
     <div class="container-fluid">
-      งาน : ขนของ รับ 10 คน เหลือ 6 คน <br>
+      <h4>คัดเลือกผู้สมัคร</h4>
+      <h5>งาน : ขนของ</h5><br>
       
       
 
@@ -8,27 +9,75 @@
   <thead>
   <tr align="center">
     <th width="39">ลำดับ</th>
-    
-    <th width="160">ชื่อ - สกุล</th>
+    <th width="120">รหัสนักศึกษา</th>
+    <th width="180">ชื่อ - สกุล</th>
     <th width="159">สาขาวิชา</th>
-    <th width="73">เกรดเฉลี่ย</th>
-    <th width="119">งาน</th>
+    <th width="120">เกรดเฉลี่ย</th>
     <th width="125">รายละเอียด</th>
-    <th width="85">&nbsp;</th>
+    <th width="140">การพิจารณา</th>
+    <th>&nbsp;</th>
   </tr>
   </thead>
     <tbody>
   <tr align="center">
     <th>1</th>
-    
+    <th>58142222</th>
     <th>สมจิต ภัคดี</th>
     <th>สารสนเทศ</th>
     <th>4.00</th>
-    <th width="119">ขนของ</th>
     <th><button type="button" class="btn btn-warning">รายละเอียด</button></th>
-    <th><button type="button" class="btn btn-success">ผ่าน</button>
-                    
-                    <button type="button" class="btn btn-danger">ไม่ผ่าน</button></th>
+    <td width="320"><button class="btn btn-success" type="success" style="width:50px;height:38px">ผ่าน</button>
+   
+      <button type="button" class="btn btn-danger">ลบ</button></td>
+      <th>&nbsp;</th>
+  </tr>
+  <tr align="center">
+    <th>2</th>
+    <th>58134455</th>
+    <th>สมจิต มากมาย</th>
+    <th>สารสนเทศศาสตร์</th>
+    <th>3.88</th>
+    <th><button type="button" class="btn btn-warning">รายละเอียด</button></th>
+    <td width="320"><button class="btn btn-success" type="success" style="width:50px;height:38px">ผ่าน</button>
+    
+      <button type="button" class="btn btn-danger">ลบ</button></td>
+      <th>&nbsp;</th>
+  </tr>
+   <tr align="center">
+    <th>3</th>
+    <th>58135778</th>
+    <th>กนก มากมาย</th>
+    <th>พยาบาลศาสตร์</th>
+    <th>3.70</th>
+    <th><button type="button" class="btn btn-warning">รายละเอียด</button></th>
+    <td width="320"><button class="btn btn-success" type="success" style="width:50px;height:38px">ผ่าน</button>
+    
+      <button type="button" class="btn btn-danger">ลบ</button></td>
+      <th>&nbsp;</th>
+  </tr>
+  <tr align="center">
+    <th>4</th>
+    <th>58145778</th>
+    <th>นกแก้ว บินดี</th>
+    <th>สารสนเทศศาสตร์</th>
+    <th>3.68</th>
+    <th><button type="button" class="btn btn-warning">รายละเอียด</button></th>
+    <td width="320"><button class="btn btn-success" type="success" style="width:50px;height:38px">ผ่าน</button>
+  
+      <button type="button" class="btn btn-danger">ลบ</button></td>
+      <th>&nbsp;</th>
+  </tr>
+  <tr align="center">
+    <th>5</th>
+    <th>58155778</th>
+    <th>กรกนก เอนกชัย</th>
+    <th>สารสนเทศศาสตร์</th>
+    <th>3.50</th>
+    <th><button type="button" class="btn btn-warning">รายละเอียด</button></th>
+    <td width="320"><button class="btn btn-success" type="success" style="width:50px;height:38px">ผ่าน</button>
+   
+      <button type="button" class="btn btn-danger">ลบ</button></td>
+      <th>&nbsp;</th>
   </tr>
   <tr>
     <th>&nbsp;</th>

@@ -99,17 +99,12 @@
             <div class="col-md-12">
                 
                 <div class="form-group">
-                    <table width="900" border="0">
-                <tr>
-
-    
-          <button class="btn btn-info nextBtn btn-lg pull-right" type="button"  style="width:60px;height:40px" ><h6>ข้าม</h6></button>
-              </tr>
-          </table>
+                    
 <br>
-<table class="table table-striped">
+<table class="table table-striped" >
 
   <thead>  
+
   <tr align="center">
     <th width="60">ลำดับ </th>
     <th width="160">ปีการศึกษา</th>
@@ -117,6 +112,14 @@
     <th width="170">ชื่องาน</th>
     <th>&nbsp;</th>
     <th>&nbsp;</th>
+    
+    <td >
+          <button class="btn btn-info nextBtn btn-lg pull-right" type="button"  style="width:60px;height:40px" ><h6>ข้าม</h6></button></td>
+              
+    <th>&nbsp;</th>
+
+
+    
   </tr>
 </thead>
   <tbody>
@@ -126,8 +129,14 @@
     <th>2561</th>
     <th>1</th>
     <th>จัดชั้นหนังสือ</th>
+
     <th><button type="button" class="btn btn-warning">รายละเอียด</button></th>
+    <th>&nbsp;</th>
     <th><button type="button" class="btn btn-success">เลือก</button></th>
+    <th>&nbsp;</th>
+
+
+
   </tr>
   <tr align="center">
     <th>2</th>
@@ -135,7 +144,10 @@
     <th>1</th>
     <th>พิมพ์งาน</th>
     <th><button type="button" class="btn btn-warning">รายละเอียด</button></th>
+    <th>&nbsp;</th>
     <th><button type="button" class="btn btn-success">เลือก</button></th>
+    <th>&nbsp;</th>
+
   </tr>
   <tr align="center">
     <th>3</th>
@@ -143,7 +155,10 @@
     <th>3</th>
     <th>จัดส่งเอกสาร</th>
     <th><button type="button" class="btn btn-warning">รายละเอียด</button></th>
+    <th>&nbsp;</th>
     <th><button type="button" class="btn btn-success">เลือก</button></th>
+    <th>&nbsp;</th>
+
   </tr>
 </tbody>
 </table>
@@ -162,50 +177,66 @@
             <div class="col-md-12">
              
                 <!--<h3> กรอกรายละเอียดงาน</h3>-->
-
+                
+                
                 <tr>
                 <div class="form-group">
-                  <br>
-                      <a>ชื่องาน <font color="red">* </font> <input type="text" size="36" required> &nbsp;&nbsp; ประเภทงาน <font color="red">* </font> <select>
+                  <table>
+                    <tr>
+                     <td>ชื่องาน <font color="red">* </font> <input type="text" size="36" required>
+                     ประเภทงาน <font color="red">* </font> <select>
                                                       <option value="volvo">ธุรการ</option>
                                                       <option value="saab">เชิงวิชาชีพ</option>
                                                       <option value="mercedes">เชิงบริการ</option>
                                                       <option value="audi">เชิงวิชาการ</option>
                                                     </select>
-                       &nbsp;&nbsp; สำนักวิชา <font color="red">* </font> <select>
+                       สำนักวิชา <font color="red">* </font> <select>
                                                       <option value="volvo">ไม่จำกัด</option>
                                                       <option value="saab">สารสนเทศศาสตร์</option>
                                                       <option value="mercedes">การจัดการ</option>
                                                       <option value="audi">ศิลปศาสตร์</option>
-                                                    </select>
-                      &nbsp;&nbsp;
-                      <br>
-                      <br>
-                       &nbsp;เพศ <font color="red">* </font><select>
+                                                    </select></td>
+                      </tr>
+                      <tr>
+                       <td><br>เพศ <font color="red">* </font><select>
                                                       <option value="saab">หญิง</option>
                                                       <option value="volvo">ชาย</option>
                                 
-                                                      <option value="saab">ชาย/หญิง</option>
-                                                    </select>  
-                      &nbsp;&nbsp; จำนวนที่รับ <font color="red">* </font><select>
+                                                      <option value="saab">ไม่ระบุ</option>
+                                                    </select> 
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;จำนวนที่รับ <font color="red">* </font><select>
                                                       <option value="volvo">1</option>
                                                       <option value="saab">2</option>
                                                       <option value="mercedes">5</option>
                                                       <option value="audi">10</option>
                                                     </select> คน 
-                      &nbsp;&nbsp; วันที่เริ่มต้นการทำงาน <font color="red">* </font><input id="date" type="date">
-                      <br><br>
-                      คุณสมบัติผู้สมัคร <font color="red">* </font> : <input type="radio" name="gender" value="male"> มีความแข็งแรง/อดทน
-                  <input type="radio" name="gender" value="female"> ความรู้ความสามาถทางวิชาการ
-                  <input type="radio" name="gender" value="female"> อื่นๆ...ระบุ <input type="text"><br>
+                      
+                      &nbsp;&nbsp;&nbsp;&nbsp; วันที่เริ่มต้นการทำงาน <font color="red">* </font><input id="date" type="date"></td>
+                    </tr>
+                    <tr>
+                      <td colspan="2"><br>คุณสมบัติผู้สมัคร <font color="red">* </font> : <input type="radio" name="gender" value="male"> มีความแข็งแรง/อดทน
+                      <input type="radio" name="gender" value="female"> ความรู้ความสามาถทางวิชาการ
+                      <input type="radio" name="gender" value="female"> อื่นๆ...ระบุ <input type="text"></td>
 
-                  <br>
-                  รายละเอียดลักษณะงาน <font color="red">* </font><br>
-                  <textarea name="textarea">Some text...</textarea><br>
-            
-                   <button class="btn btn-info nextBtn btn-lg pull-right" type="button"  style="width:70px;height:40px" ><h6>ถัดไป</h6></button>
+                  </tr>
+                  <tr>
+                  <td colspan="3"><br>รายละเอียดลักษณะงาน <font color="red">* </font></td>
+                  
+                  </tr>
+                  <tr>
+                  <td colspan="3"><textarea name="textarea">Some text...</textarea></td>
+                  </tr>
 
-                  <button class="btn btn-info btn-lg pull-right" input type="button"<a href="localhost/PJ_D/index.php/home2/finance_WriteDescription_1" style="width:85px;height:40px"><h6>ย้อนกลับ</h6></button>
+                <tr>
+                <td><button class="btn btn-info btn-lg pull-right" type="button"  style="width:90px;height:40px"<a href="localhost/PJ_D/index.php/home2/finance_WriteDescription_1" ><h6>ย้อนกลับ</h6></button>
+
+                 </td><td>
+                 <button class="btn btn-info nextBtn btn-lg pull-right" type="button"  style="width:70px;height:40px" ><h6>ถัดไป</h6></button></td>
+             
+           
+                </tr>
+                </table>
+                    </table>
                 
                 </div>
                 <!-- <div class="form-group">
@@ -218,14 +249,8 @@
     <div class="row setup-content" id="step-3">
         <div class="col-xs-12">
             <div class="col-md-12">
-                <h3> รายชื่องานที่เสนอ</h3>
-                  
-                  <table width="900" border="0">
-  <tr>
-    
-     <button class="btn btn-success nextBtn btn-lg pull-right" type="success" style="width:70px;height:40px"><h6>ยืนยัน</h6></button>
-  </tr>
-</table> 
+                <!--<h3> รายชื่องานที่เสนอ</h3>-->
+                 <br>
             </div>
         </div>
         <br>
@@ -247,13 +272,26 @@
   <tbody>
   <tr align="center">
     <th>1</th>
-    <th>ขายของ</th>
-    <th>เชิงวิชาชีพ</th>
+    <th>จัดเรียงเอกสาร</th>
+    <th>ธุรการ</th>
     <th>02/มิ.ย/60</th>
     <th>ชาย</th>
-    <th>5</th>
+    <th>4</th>
     <th><button type="button" class="btn btn-warning">รายละเอียด</button></th>
-    <th><button type="button" class="btn btn-primary">แก้ไข</button>
+    <th><button class="btn btn-success" type="success" style="width:70px;height:38px">ยืนยัน</button>
+      <button type="button" class="btn btn-primary">แก้ไข</button>
+      <button type="button" class="btn btn-danger">ลบ</button></th>
+  </tr>
+  <tr align="center">
+    <th>2</th>
+    <th>พิมพ์งาน</th>
+    <th>ธุรการ</th>
+    <th>02/มิ.ย/60</th>
+    <th>หญิง</th>
+    <th>2</th>
+    <th><button type="button" class="btn btn-warning">รายละเอียด</button></th>
+    <th><button class="btn btn-success" type="success" style="width:70px;height:38px">ยืนยัน</button>
+      <button type="button" class="btn btn-primary">แก้ไข</button>
       <button type="button" class="btn btn-danger">ลบ</button></th>
   </tr>
   <tr align="center">
