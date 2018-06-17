@@ -1,6 +1,6 @@
  <!-- Navigation-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-    <a class="navbar-brand" href="index"><img src="<?php echo base_url(); ?>assets/img/wu.png" width = “40” height="40">&nbsp;&nbsp;ระบบติดตามทุนทำงานพิเศษ</a>
+    <a class="navbar-brand" href="print"><img src="<?php echo base_url(); ?>assets/img/wu.png" width = “40” height="40">&nbsp;&nbsp;ระบบติดตามทุนทำงานพิเศษ</a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -11,15 +11,15 @@
 
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
           <a class="nav-link" href="print">
-            <i class="fa fa-fw fa-area-chart"></i>
-            <span class="nav-link-text">รายงานสรุปผลการปฏิบัติงาน</span>
+            <font color="#FFFFFF"><i class="fa fa-fw fa-area-chart"></i>
+            <span class="nav-link-text">รายงานสรุปผลการปฏิบัติงาน</span></font>
           </a>
         </li>
 
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
-          <a class="nav-link" href="Authorities_CA_2">
-            <i class="fa fa-fw fa-table"></i>
-            <span class="nav-link-text">รายงานสรุปยอดทุนทำงานพิเศษ</span>
+          <a class="nav-link" href="print_l">
+            <font color="#FFFFFF"><i class="fa fa-fw fa-table"></i>
+            <span class="nav-link-text">รายงานสรุปยอดทุนทำงานพิเศษ</span></font>
           </a>
         </li>
         <!--<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
@@ -196,8 +196,8 @@
         <li class="nav-item">
           
           <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
-            ผู้ประสานงาน : สมคิด ใจเย็น
-            <i class="fa fa-fw fa-sign-out"></i>ออกจากระบบ</a>
+            <font color="#FFFFFF">ผู้ประสานงาน : สมคิด ใจเย็น
+            <i class="fa fa-fw fa-sign-out"></i>ออกจากระบบ</a></font>
         </li>
       </ul>
     </div>

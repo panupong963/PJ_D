@@ -1,3 +1,5 @@
+<br>
+<br>
 <h4 align="center">รายงานสรุปยอดเงินทุนทำงานพิเศษ</h4><br>
 <table class="table table-bordered">
     <thead>
@@ -43,5 +45,16 @@
         <td>8281478523</td>
         <td>1,500</td>
       </tr>
+      <tr align="center">
+        <td>2</td>
+        <td>58112848</td>
+        <td align="left">นายภาณุพงศ์ จันทมุณี</td>
+        <td align="left">วิศวกรรมศาสตร์เเละทรัพยากร</td>
+        <td>8281852473</td>
+        <td>2,500</td>
+      </tr>
+      <tr>
+      <td colspan="6" align="right">จำนวนนักศึกษาทั้งหมด 4 คน คิดเป็นยอดเงินทั้งหมด 7,615 บาท</td> 
+      </tr>  
     </tbody>
   </table>

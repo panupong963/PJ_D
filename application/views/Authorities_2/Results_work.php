@@ -40,24 +40,71 @@
   <tr align="center">
     <th>1</th>
     <th>58112235</th>
-    <th>คิดเเล้ว คิดอีก</th>
-    <th>100</th>
-    <th>3,000</th>
+    <td align="left"><b>ชวนัน ชาญอาวุธ</b></td>
+    <th>90</th>
+    <th>2,700</th>
   </tr>
   <tr align="center">
     <th>2</th>
     <th>58112848</th>
-    <th>ชวนัน คิดอีก</th>
+    <td align="left"><b>ชวนัน คิดอีก</b></td>
     <th>100</th>
     <th>3,000</th>
   </tr>
     <tr align="center">
     <th colspan="3">รวม </th>
-    <th>200</th>
-    <th>6,000</th>
+    <th>190</th>
+    <th>5,700</th>
   </tr>
   <tr bgcolor="#66FFCC">
     <th colspan="5">2. สำนักวิชา : ศิลป์ศาสตร์</th>
+  </tr>
+  <tr align="center">
+    <th>1</th>
+    <th>58112356</th>
+    <td align="left"><b>สมรัก หลงทาง</b></td>
+    <th>100</th>
+    <th>3,000</th>
+  </tr>
+  <tr align="center">
+    <th>2</th>
+    <th>58112458</th>
+    <td align="left"><b>ภาณุพงศ์ จันทมุณี</b></td>
+    <th>100</th>
+    <th>3,000</th>
+  </tr>
+  <tr align="center">
+    <th>3</th>
+    <th>58112569</th>
+    <td align="left"><b>หวนคิด คำนึง</b></td>
+    <th>50</th>
+    <th>1,500</th>
+  </tr>
+  <tr align="center">
+    <th>4</th>
+    <th>58112687</th>
+    <td align="left"><b>สมสี สีเหลือง</b></td>
+    <th>60</th>
+    <th>2,100</th>
+  </tr>
+  <tr align="center">
+    <th>5</th>
+    <th>58112987</th>
+    <td align="left"><b>ภาณุสหกิจ ยอดเยี่ยม</b></td>
+    <th>85</th>
+    <th>2,550</th>
+  </tr>
+  <tr align="center">
+    <th>6</th>
+    <th>58123658</th>
+    <td align="left"><b>ชวกิจ ราชการงานสร้าง</b></td>
+    <th>60</th>
+    <th>2,100</th>
+  </tr>
+    <tr align="center">
+    <th colspan="3">รวม </th>
+    <th>455</th>
+    <th>14,250</th>
   </tr>
 </tbody>
 </table>
