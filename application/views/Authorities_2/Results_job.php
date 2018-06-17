@@ -1,7 +1,7 @@
 <div class="content-wrapper">
     <div class="container-fluid">
         <ol class="breadcrumb">
-          <li class="breadcrumb-item active">งาน</li>
+          <li class="breadcrumb-item active">สรุปข้อมูลยืนยันการทำงาน</li>
         </ol>   
 <table class="table table-striped">
   <thead>
@@ -10,7 +10,7 @@
     <th>ชื่องาน</th>
     <th>ชื่อหน่วยงาน</th>
     <th>จำนวนนักศึกษาในงาน</th>
-    <th>จำนวนนักศึกษาที่ไม่ยืนยันการทำงาน</th>
+    <th>ข้อมูลยืนยันการทำงาน</th>
   </tr>
 </thead>
 <tbody>

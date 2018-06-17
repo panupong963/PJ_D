@@ -6,35 +6,20 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav navbar-sidenav " id="exampleAccordion">
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
-          <a class="nav-link" href="Authorities_edit_2">
-            <i class="fa fa-fw fa-wrench"></i>
-            <span class="nav-link-text">เเก้ไขข้อมูลส่วนตัว</span>
+
+
+
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
+          <a class="nav-link" href="print">
+            <i class="fa fa-fw fa-area-chart"></i>
+            <span class="nav-link-text">รายงานสรุปผลการปฏิบัติงาน</span>
           </a>
         </li>
 
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
-          <a class="nav-link" href="Authorities_confirm_2">
-            <i class="fa fa-fw fa-dashboard"></i>
-            <span class="nav-link-text">ยืนยันการทำงานนักศึกษา</span>
-          </a>
-        </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
-          <a class="nav-link" href="Authorities_results1_2">
-            <i class="fa fa-fw fa-area-chart"></i>
-            <span class="nav-link-text">สรุปข้อมูลยืนยันการทำงาน</span>
-          </a>
-        </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
-          <a class="nav-link" href="Authorities_results2_2">
-            <i class="fa fa-fw fa-area-chart"></i>
-            <span class="nav-link-text">สรุปผลการทำงาน</span>
-          </a>
-        </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
           <a class="nav-link" href="Authorities_CA_2">
             <i class="fa fa-fw fa-table"></i>
-            <span class="nav-link-text">ปฏิทินการดำเนินงาน</span>
+            <span class="nav-link-text">รายงานสรุปยอดทุนทำงานพิเศษ</span>
           </a>
         </li>
         <!--<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
@@ -152,7 +137,7 @@
           </div>
         </li>-->
 
-        <li class="nav-item dropdown">
+        <!--<li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle mr-lg-2" id="alertsDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="fa fa-fw fa-bell"></i>
             <span class="d-lg-none">Alerts
@@ -194,7 +179,7 @@
             <div class="dropdown-divider"></div>
             <a class="dropdown-item small" href="#">View all alerts</a>
           </div>
-        </li>
+        </li>-->
 
         <!-- <li class="nav-item">
           <form class="form-inline my-2 my-lg-0 mr-lg-2">
@@ -211,7 +196,7 @@
         <li class="nav-item">
           
           <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
-            เจ้าหน้าที่ : สมคิด ใจเย็น
+            ผู้ประสานงาน : สมคิด ใจเย็น
             <i class="fa fa-fw fa-sign-out"></i>ออกจากระบบ</a>
         </li>
       </ul>

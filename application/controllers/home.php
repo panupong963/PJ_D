@@ -231,12 +231,26 @@ class home extends CI_Controller {
 
 
 	public function from_s(){
-		$this->load->view('Authorities_2/start');
-		$this->load->view('Authorities_2/Navigation_N');
-		$this->load->view('Authorities_2/from');
-		$this->load->view('Authorities_2/footer');
-		$this->load->view('Authorities_2/End');		
+		$this->load->view('print/start');
+		$this->load->view('print/from_1');
+		$this->load->view('print/End');		
 	}
+
+	public function from_l(){
+		$this->load->view('print/start');
+		$this->load->view('print/from_2');
+		$this->load->view('print/End');		
+	}
+
+	public function print(){
+		$this->load->view('coordinate/start');
+		$this->load->view('coordinate/Navigation_N');
+		$this->load->view('coordinate/print');
+		$this->load->view('coordinate/footer');
+		$this->load->view('coordinate/End');		
+	}
+
+
 
 }
 

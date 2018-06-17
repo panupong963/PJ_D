@@ -5,21 +5,24 @@
         </ol>   
 <table class="table table-striped">
   <thead>
+    <tr align="center">
+      <th colspan="7">ชื่องาน : ขนของ</th>
+    </tr>
   <tr align="center">
-    <th width="38" height="66">ลำดับ</th>
-    <th width="109">ชื่อ-นามสกุล</th>
-    <th width="58">จำนวน ชม ที่ทำ</th>
-    <th width="85">วันที่ทำงาน</th>
-    <th width="182">รายละเอียดงาน</th>
-    <th width="82">เหตุผล ไม่รับรอง/เเก้ไขข้อมูล</th>
-    <th width="300"></th>
+    <th >ลำดับ</th>
+    <th>ชื่อ-นามสกุล</th>
+    <th>ช่วงเวลาปฏิบัติงาน</th>
+    <th>วันที่ทำงาน</th>
+    <th>รายละเอียดงาน</th>
+    <th>เหตุผล ไม่รับรอง/เเก้ไขข้อมูล</th>
+    <th></th>
   </tr>
 </thead>
 <tbody>
   <tr align="center">
     <th>1</th>
-    <th>คิดเเล้ว คิดอีก</th>
-    <th>2</th>
+    <th align="left">คิดเเล้ว คิดอีก</th>
+    <th>11.30 - 12.30</th>
     <th>12/ม.ค./60</th>
     <th><button type="button" class="btn btn-warning">รายละเอียด</button></th>
     <th><input type="text" name=""></th>

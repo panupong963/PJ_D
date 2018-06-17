@@ -25,7 +25,7 @@
   <tr align="center">
     <th>2</th>
     <th>จัดเอกสาร</th>
-    <th>5000</th>
+    <th>5,000</th>
     <th>0</th>
     <th><button type="button" class="btn btn-info">คลิก</button></th>
   </tr>

@@ -1,19 +1,19 @@
 <div class="content-wrapper">
     <div class="container-fluid">
         <ol class="breadcrumb">
-          <li class="breadcrumb-item active">สรุปผลการทำงาน</li>
+          <li class="breadcrumb-item active">สรุปผลการทำงาน/ ภาเรียนที่ 1 ปีการศึกษา 2560</li>
         </ol>   
 <table width="900" border="0" align="center">
   <tr align="center">
     <td>ชื่องาน : <select>
-  <option value="volvo">ขนของ</option>
-  <option value="saab">2560</option>
+  <option value="volvo">--- ทั้งหมด ---</option>
+  <option value="saab">ขนของ</option>
   <option value="mercedes">2559</option>
   <option value="audi">2558</option>
 </select></td>
     <td>สำนักวิชา : <select>
-  <option value="volvo">สารสนเทศศาสตร์</option>
-  <option value="saab">Saab</option>
+  <option value="volvo">--- ทั้งหมด ---</option>
+  <option value="saab">สารสนเทศศาสตร์</option>
   <option value="mercedes">Mercedes</option>
   <option value="audi">Audi</option>
 </select></td>
@@ -25,10 +25,13 @@
 			<div>
   <table class="table table-striped">
     <thead>
+      <tr bgcolor="#66FFCC">
+        <th colspan="5">1. สำนักวิชา : สารสนเทศศสาตร์</th>
+      </tr>
   <tr align="center">
     <th>ลำดับ</th>
+    <th>รหัสนักศึกษา</th>
     <th>ชื่อ-สกุล</th>
-    <th>สำนักวิชา</th>
     <th>ชั่วโมงปฎิบัติงาน</th>
     <th>คิดเป็นเงิน (บาท)</th>
   </tr>
@@ -36,15 +39,25 @@
 <tbody>
   <tr align="center">
     <th>1</th>
+    <th>58112235</th>
     <th>คิดเเล้ว คิดอีก</th>
-    <th>สารสนเทศศสาตร์</th>
     <th>100</th>
-    <th>3000</th>
+    <th>3,000</th>
+  </tr>
+  <tr align="center">
+    <th>2</th>
+    <th>58112848</th>
+    <th>ชวนัน คิดอีก</th>
+    <th>100</th>
+    <th>3,000</th>
   </tr>
     <tr align="center">
     <th colspan="3">รวม </th>
-    <th>100</th>
-    <th>3000</th>
+    <th>200</th>
+    <th>6,000</th>
+  </tr>
+  <tr bgcolor="#66FFCC">
+    <th colspan="5">2. สำนักวิชา : ศิลป์ศาสตร์</th>
   </tr>
 </tbody>
 </table>
