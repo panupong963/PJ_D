@@ -158,6 +158,14 @@ class home2 extends CI_Controller {
 		$this->load->view('Finance_1/footer');
 		$this->load->view('Finance_1/End');
 	}
+	public function finance_Remaining_1(){
+		$this->load->view('Finance_1/start');
+		$this->load->view('Finance_1/Navigation_N');
+		$this->load->view('Finance_1/Remaining');
+		$this->load->view('Finance_1/footer');
+		$this->load->view('Finance_1/End');
+	}
+
 
 	public function Advisors_announced_1(){
 		$this->load->view('Advisors_1/start');

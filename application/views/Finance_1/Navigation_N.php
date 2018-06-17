@@ -11,32 +11,33 @@
             <i class="fa fa-fw fa-area-chart"></i>
             <span class="nav-link-text">ประวัติการเสนองาน</span>-->
           </a>
+           <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+          <a class="nav-link" href="finance_CA_1">
+            <font color="#FFFFFF"><i class="fa fa-fw fa-dashboard"></i>
+            <span class="nav-link-text">ปฏิทินการดำเนินงาน</span>
+          </a></font>
+        </li>
+
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
           <a class="nav-link" href="finance_WriteDescription_1">
-            <i class="fa fa-fw fa-wrench"></i>
+            <font color="#FFFFFF"><i class="fa fa-fw fa-wrench"></i>
             <span class="nav-link-text">กรอกรายละเอียดงาน</span>
-          </a>
+          </a></font>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
           <a class="nav-link" href="finance_job_1">
-            <i class="fa fa-fw fa-table"></i>
+            <font color="#FFFFFF"><i class="fa fa-fw fa-table"></i>
             <span class="nav-link-text">คัดเลือกผู้สมัคร</span>
-          </a>
+          </a></font>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
-          <a class="nav-link" href="finance_TranscendJob_1">
-            <i class="fa fa-fw fa-dashboard"></i>
+          <a class="nav-link" href="finance_Remaining_1">
+            <font color="#FFFFFF"><i class="fa fa-fw fa-dashboard"></i>
             <span class="nav-link-text">จัดสรรงานคงเหลือ</span>
-          </a>
+          </a></font>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
-          <a class="nav-link" href="finance_CA_1">
-            <i class="fa fa-fw fa-dashboard"></i>
-            <span class="nav-link-text">ปฏิทินการดำเนินงาน</span>
-          </a>
-        </li>
-
+       
 
         <!--<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
           <a class="nav-link" href="Authorities_results2_2">
@@ -162,14 +163,14 @@
         <!-- เเจ้งเตือน -->
        <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle mr-lg-2" id="alertsDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="fa fa-fw fa-bell"></i>
+           <font color="#FFFFFF">  <i class="fa fa-fw fa-bell"></i>
             <span class="d-lg-none">Alerts
               <span class="badge badge-pill badge-warning">6 New</span>
             </span>
             <span class="indicator text-warning d-none d-lg-block">
               <i class="fa fa-fw fa-circle"></i>
             </span>
-          </a>
+          </a></font>
           <div class="dropdown-menu" aria-labelledby="alertsDropdown">
             <h6 class="dropdown-header">New Alerts:</h6>
             <div class="dropdown-divider"></div>
@@ -219,8 +220,8 @@
         <li class="nav-item">
           
           <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
-            ผู้เสนองาน : ใจรัก เย็นชา
-            <i class="fa fa-fw fa-sign-out"></i>ออกจากระบบ</a>
+           <font color="#FFFFFF">  ผู้เสนองาน : ใจรัก เย็นชา </font>
+           <font color="#FFFFFF">  <i class="fa fa-fw fa-sign-out"></i>ออกจากระบบ</a></font>
         </li>
       </ul>
     </div>

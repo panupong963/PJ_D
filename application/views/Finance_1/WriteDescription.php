@@ -67,44 +67,45 @@
 
 
 <div class="container">
+  <br>
+  <h3>กรอกรายละเอียดงาน</h3>
 <div class="stepwizard">
     <div class="stepwizard-row setup-panel">
+
         <div class="stepwizard-step">
-            <a href="#step-1" type="button" class="btn btn-primary btn-circle">1</a>
-            <p>ขั้นตอนที่ 1</p>
+
+            <a href="#step-1" type="button" class="btn btn-primary btn-circle"><h6>1</h6></a>
+            
+            <h5><p>ประวัติการเสนองาน</p></h5>
         </div>
+
         <div class="stepwizard-step">
-            <a href="#step-2" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
-            <p>ขั้นตอนที่ 2</p>
+            <a href="#step-2" type="button" class="btn btn-default btn-circle" disabled="disabled"><h6>2</h6></a>
+            <h5><p>เพิ่มข้อมูลงาน</p></h5>
         </div>
+
         <div class="stepwizard-step">
-            <a href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
-            <p>ขั้นตอนที่ 3</p>
+            <a href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled"><h6>3</h6></a>
+            <h5><p>รายชื่องานที่เสนอ</p></h5>
         </div>
+
     </div>
+
 </div>
+
 <form role="form">
     <div class="row setup-content" id="step-1">
         <div class="col-xs-12">
             <div class="col-md-12">
-                <h3>ประวัติการเสนองาน</h3>
-                <div class="form-group">
                 
+                <div class="form-group">
                     <table width="900" border="0">
-  <tr>
-    <td align="right">ปีการศึกษา : <select>
-  <option value="volvo">2561</option>
-  <option value="saab">2560</option>
-  <option value="mercedes">2559</option>
-  <option value="audi">2558</option>
-</select></td>
-    <td align="center">ภาคการศึกษา : <label class="radio-inline"><input type="radio" name="optradio">1</label>
-<label class="radio-inline"><input type="radio" name="optradio">2</label>
-<label class="radio-inline"><input type="radio" name="optradio">3</label></td>
-    <td><button type="button" class="btn btn-success">ค้นหา</button></td>
-    <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >ข้าม</button>
-  </tr>
-</table>
+                <tr>
+
+    
+          <button class="btn btn-info nextBtn btn-lg pull-right" type="button"  style="width:60px;height:40px" ><h6>ข้าม</h6></button>
+              </tr>
+          </table>
 <br>
 <table class="table table-striped">
 
@@ -119,6 +120,7 @@
   </tr>
 </thead>
   <tbody>
+
   <tr align="center">
     <th>1</th>
     <th>2561</th>
@@ -132,6 +134,14 @@
     <th>2561</th>
     <th>1</th>
     <th>พิมพ์งาน</th>
+    <th><button type="button" class="btn btn-warning">รายละเอียด</button></th>
+    <th><button type="button" class="btn btn-success">เลือก</button></th>
+  </tr>
+  <tr align="center">
+    <th>3</th>
+    <th>2560</th>
+    <th>3</th>
+    <th>จัดส่งเอกสาร</th>
     <th><button type="button" class="btn btn-warning">รายละเอียด</button></th>
     <th><button type="button" class="btn btn-success">เลือก</button></th>
   </tr>
@@ -150,8 +160,12 @@
     <div class="row setup-content" id="step-2">
         <div class="col-xs-12">
             <div class="col-md-12">
-                <h3> กรอกรายละเอียดงาน</h3>
+             
+                <!--<h3> กรอกรายละเอียดงาน</h3>-->
+
+                <tr>
                 <div class="form-group">
+                  <br>
                       <a>ชื่องาน <font color="red">* </font> <input type="text" size="36" required> &nbsp;&nbsp; ประเภทงาน <font color="red">* </font> <select>
                                                       <option value="volvo">ธุรการ</option>
                                                       <option value="saab">เชิงวิชาชีพ</option>
@@ -168,8 +182,9 @@
                       <br>
                       <br>
                        &nbsp;เพศ <font color="red">* </font><select>
-                                                      <option value="volvo">ชาย</option>
                                                       <option value="saab">หญิง</option>
+                                                      <option value="volvo">ชาย</option>
+                                
                                                       <option value="saab">ชาย/หญิง</option>
                                                     </select>  
                       &nbsp;&nbsp; จำนวนที่รับ <font color="red">* </font><select>
@@ -181,12 +196,17 @@
                       &nbsp;&nbsp; วันที่เริ่มต้นการทำงาน <font color="red">* </font><input id="date" type="date">
                       <br><br>
                       คุณสมบัติผู้สมัคร <font color="red">* </font> : <input type="radio" name="gender" value="male"> มีความแข็งแรง/อดทน
-                  <input type="radio" name="gender" value="female"> ความรู้ความสามาถทางวิชาการ<br><br>
+                  <input type="radio" name="gender" value="female"> ความรู้ความสามาถทางวิชาการ
+                  <input type="radio" name="gender" value="female"> อื่นๆ...ระบุ <input type="text"><br>
+
+                  <br>
                   รายละเอียดลักษณะงาน <font color="red">* </font><br>
                   <textarea name="textarea">Some text...</textarea><br>
-                  <button class="btn btn-success nextBtn btn-lg pull-right" type="button">บันทึก</button>
-                  <button class="btn btn-primary btn-lg pull-right" type="button" <input type="button" onclick=window.location='http://localhost/PJ_D/index.php/home2/finance_WriteDescription_1'>ย้อนกลับ</button>
-                  
+            
+                   <button class="btn btn-info nextBtn btn-lg pull-right" type="button"  style="width:70px;height:40px" ><h6>ถัดไป</h6></button>
+
+                  <button class="btn btn-info btn-lg pull-right" input type="button"<a href="localhost/PJ_D/index.php/home2/finance_WriteDescription_1" style="width:85px;height:40px"><h6>ย้อนกลับ</h6></button>
+                
                 </div>
                 <!-- <div class="form-group">
                     <label class="control-label">Company Address</label>
@@ -199,9 +219,17 @@
         <div class="col-xs-12">
             <div class="col-md-12">
                 <h3> รายชื่องานที่เสนอ</h3>
-                   
+                  
+                  <table width="900" border="0">
+  <tr>
+    
+     <button class="btn btn-success nextBtn btn-lg pull-right" type="success" style="width:70px;height:40px"><h6>ยืนยัน</h6></button>
+  </tr>
+</table> 
             </div>
         </div>
+        <br>
+ 
 
 <table class="table table-striped">
   <thead>

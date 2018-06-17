@@ -5,7 +5,7 @@
   <thead>
   <tr align="center">
     <th width="39">ลำดับ</th>
-    <th width="88">รหัสนักศึกษา</th>
+    <th width="105">รหัสนักศึกษา</th>
     <th width="160">ชื่อ - สกุล</th>
     <th width="159">สาขาวิชา</th>
     <th width="90">เกรดเฉลี่ย</th>

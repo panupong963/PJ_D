@@ -14,9 +14,9 @@
         </li>-->
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
           <a class="nav-link" href="Advisors_announced_1">
-            <i class="fa fa-fw fa-table"></i>
+            <font color="#FFFFFF"><i class="fa fa-fw fa-table"></i>
             <span class="nav-link-text">ผลการสมัครทุนทำงานพิเศษ</span>
-          </a>
+          </a></font>
         </li>
         <!--<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
           <a class="nav-link" href="Authorities_results2_2">
@@ -199,8 +199,8 @@
         <li class="nav-item">
           
           <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
-            อาจารย์ที่ปรึกษา : ขวัญใจ ศรีไทย
-            <i class="fa fa-fw fa-sign-out"></i>ออกจากระบบ</a>
+            <font color="#FFFFFF"> อาจารย์ที่ปรึกษา : ขวัญใจ ศรีไทย </font>
+           <font color="#FFFFFF"> <i class="fa fa-fw fa-sign-out"></i>ออกจากระบบ</a> </font>
         </li>
       </ul>
     </div>
