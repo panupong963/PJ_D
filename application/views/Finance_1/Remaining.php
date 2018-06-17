@@ -1,9 +1,10 @@
 <div class="content-wrapper">
     <div class="container-fluid">
       <h4>จัดสรรงานคงเหลือ</h4>
-      <td width="307" align="left"><font color="red">*ตรวจสอบงานภายในวันที่ 20/เม.ย/60</font>
+      <td width="307" align="left"><font color="red"><b>*ตรวจสอบงานภายในวันที่ 20/เม.ย/60</b></font>
           </td>
-      <br>
+
+      <br><br>
   <table class="table table-striped">
   	<thead>
   
@@ -20,7 +21,7 @@
     <tr align="center">
     <th>1</th>
     <th>บริการ</th>
-    <th><a >ขนของ</a></th>
+    <th><a >จัดชั้นวางหนังสือ</a></th>
     <th><a class="btn btn-info" href="finance_Results_1">2/10</a></th>
     <th><a class="btn btn-info" href="finance_TranscendJob_1">เลือก</a></th>
     </tr>
@@ -29,7 +30,7 @@
     <tr align="center">
     <th>2</th>
     <th>ธุรการ</th>
-    <th><a >จัดเอกสาร</a></th>
+    <th><a >จัดเรียงเอกสาร</a></th>
     <th><a class="btn btn-info" href="finance_Results_1">1/10</a></th>
     <th><a class="btn btn-info" href="finance_TranscendJob_1">เลือก</a></th>
     </tr>
@@ -38,7 +39,7 @@
     <tr align="center">
     <th>3</th>
     <th>ธุรการ</th>
-    <th><a >จัดชั้นหนังสือ</a></th>
+    <th><a >พิมพ์เอกสาร</a></th>
     <th><a class="btn btn-info" href="finance_Results_1">0/10</a></th>
     <th><a class="btn btn-info" href="finance_TranscendJob_1">เลือก</a></th>
    </tr>

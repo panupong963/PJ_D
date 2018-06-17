@@ -4,9 +4,9 @@
     <br>
       
         
-          <td width="214" align="left">ปีการศึกษา : 2561</td>
-          <td width="307" align="left">ภาคการศึกษา : 1</td>&nbsp;&nbsp;
-          <td width="307" align="left"><font color="red">*ตรวจสอบงานภายในวันที่ 06/เม.ย/60</font>
+          <b><td width="214" align="left">ปีการศึกษา : 2561</td></b>
+          <b><td width="307" align="left">ภาคการศึกษา : 1</td></b>&nbsp;&nbsp;
+          <b><td width="307" align="left"><font color="red">*ตรวจสอบงานภายในวันที่ 06/เม.ย/60</font></b>
           </td>
       
    

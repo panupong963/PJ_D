@@ -1,7 +1,7 @@
 <div class="content-wrapper">
     <div class="container-fluid">
       <h4>งานที่ผ่านการตรวจสอบ</h4>
-      <td width="307" align="left"><font color="red">*ตรวจสอบงานภายในวันที่ 06/เม.ย/60</font>
+      <td width="307" align="left"><font color="red"><b>*ตรวจสอบงานภายในวันที่ 06/เม.ย/60</b></font>
           </td>
 <table class="table table-striped">
   <thead>

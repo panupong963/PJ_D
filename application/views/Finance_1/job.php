@@ -1,9 +1,12 @@
 <div class="content-wrapper">
     <div class="container-fluid">
       <h4>คัดเลือกผู้สมัครทุนทำงานพิเศษ</h4>
-      <td width="307" align="left"><font color="red">*ตรวจสอบงานภายในวันที่ 16/เม.ย/60</font>
+      <font color="red"><b>*ตรวจสอบงานภายในวันที่ 16/เม.ย/60</b></font>
+        </div>
+      <!--<td width="307" align="left"><font color="red">*ตรวจสอบงานภายในวันที่ 16/เม.ย/60</font>-->
           </td>
-      <br>
+          <br>
+      
   <table class="table table-striped">
   	<thead>
   

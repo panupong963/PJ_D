@@ -67,32 +67,43 @@
 
 
 <div class="container">
+  <br>
+  <h3>กรอกรายละเอียดงาน</h3>
 <div class="stepwizard">
     <div class="stepwizard-row setup-panel">
+
         <div class="stepwizard-step">
-            <a href="#step-1" type="button" class="btn btn-primary btn-circle">1</a>
-            <p>ประวัติการเสนองาน</p>
+
+            <a href="#step-1" type="button" class="btn btn-primary btn-circle"><h6>1</h6></a>
+            
+            <h5><p>ประวัติการเสนองาน</p></h5>
         </div>
+
         <div class="stepwizard-step">
-            <a href="#step-2" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
-            <p>กรอกรายละเอียดงาน</p>
+            <a href="#step-2" type="button" class="btn btn-default btn-circle" disabled="disabled"><h6>2</h6></a>
+            <h5><p>เพิ่มข้อมูลงาน</p></h5>
         </div>
+
         <div class="stepwizard-step">
-            <a href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
-            <p>รายชื่องานที่เสนอ</p>
+            <a href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled"><h6>3</h6></a>
+            <h5><p>รายชื่องานที่เสนอ</p></h5>
         </div>
+
     </div>
+
 </div>
+
 <form role="form">
     <div class="row setup-content" id="step-1">
         <div class="col-xs-12">
             <div class="col-md-12">
-                <h3>ประวัติการเสนองาน</h3>
+                
                 <div class="form-group">
                     <table width="900" border="0">
                 <tr>
+
     
-          <button class="btn btn-primary nextBtn btn-lg pull-right" type="button"  style="width:60px;height:40px" ><h6>ข้าม</h6></button>
+          <button class="btn btn-info nextBtn btn-lg pull-right" type="button"  style="width:60px;height:40px" ><h6>ข้าม</h6></button>
               </tr>
           </table>
 <br>
@@ -109,6 +120,7 @@
   </tr>
 </thead>
   <tbody>
+
   <tr align="center">
     <th>1</th>
     <th>2561</th>
@@ -149,10 +161,11 @@
         <div class="col-xs-12">
             <div class="col-md-12">
              
-                <h3> กรอกรายละเอียดงาน</h3>
+                <!--<h3> กรอกรายละเอียดงาน</h3>-->
 
                 <tr>
                 <div class="form-group">
+                  <br>
                       <a>ชื่องาน <font color="red">* </font> <input type="text" size="36" required> &nbsp;&nbsp; ประเภทงาน <font color="red">* </font> <select>
                                                       <option value="volvo">ธุรการ</option>
                                                       <option value="saab">เชิงวิชาชีพ</option>
@@ -190,9 +203,9 @@
                   รายละเอียดลักษณะงาน <font color="red">* </font><br>
                   <textarea name="textarea">Some text...</textarea><br>
             
-                   <button class="btn btn-primary nextBtn btn-lg pull-right" type="button"  style="width:70px;height:40px" ><h6>ถัดไป</h6></button>
+                   <button class="btn btn-info nextBtn btn-lg pull-right" type="button"  style="width:70px;height:40px" ><h6>ถัดไป</h6></button>
 
-                  <button class="btn btn-warning btn-lg pull-right" <input type="button" onclick=window.location='http://localhost/PJ_D/index.php/home2/finance_WriteDescription_1' style="width:85px;height:40px"><h6>ย้อนกลับ</h6></button>
+                  <button class="btn btn-info btn-lg pull-right" input type="button"<a href="localhost/PJ_D/index.php/home2/finance_WriteDescription_1" style="width:85px;height:40px"><h6>ย้อนกลับ</h6></button>
                 
                 </div>
                 <!-- <div class="form-group">

@@ -5,10 +5,10 @@
 <table class="table table-bordered">
   <thead>
   <tr align="center">
-     <td width="50">ลำดับ</td>
-    <td width="566">กิจกรรม</td>
-    <td width="156">วันเริ่มต้น</td>
-    <td width="156">วันสิ้นสุด</td>
+     <td width="50"><b>ลำดับ</b></td>
+    <td width="566"><b>กิจกรรม</b></td>
+    <td width="156"><b>วันเริ่มต้น</b></td>
+    <td width="156"><b>วันสิ้นสุด</b></td>
 
   </tr>
       </thead>
