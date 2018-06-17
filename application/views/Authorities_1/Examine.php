@@ -18,11 +18,11 @@
     <th width="130">หน่วยงาน</th>
     
     <th width="200">ชื่องาน</th>
-    <th width="115">จำนวนรับ</th>
-    <th width="50">เพศ</th>
+    <th width="120">จำนวนรับ</th>
+    <th width="55">เพศ</th>
      <th width="75">ลักษณะงาน</th>
-     <th width="180">ผู้เสนองาน</th>
-    <th width="115">การพิจารณา</th>
+     <th width="190">ผู้เสนองาน</th>
+    <th width="105">การพิจารณา</th>
     <th width="60">คำแนะนำ</th>
 
   </tr>
@@ -39,7 +39,7 @@
     <th>ชาเย็น ใจเย็น</th>
     
     <td width="320"><button class="btn btn-success" type="success" style="width:50px;height:38px">ผ่าน</button>
-      <button type="button" class="btn btn-primary" style="width:60px;">แก้ไข</button>
+      <button type="button" class="btn btn-primary" style="width:55px;">แก้ไข</button>
       <button type="button" class="btn btn-danger">ลบ</button></td>
       <th><input type="text" input name="textarea" size="12"></th>
   </tr>
@@ -55,7 +55,7 @@
     
 
     <th><button class="btn btn-success" type="success" style="width:50px;height:38px">ผ่าน</button>
-      <button type="button" class="btn btn-primary" style="width:60px;">แก้ไข</button>
+      <button type="button" class="btn btn-primary" style="width:55px;">แก้ไข</button>
       <button type="button" class="btn btn-danger">ลบ</button></th>
       <th><input type="text" input name="textfield" size="12"></th>
 
@@ -72,7 +72,7 @@
     
 
     <th><button class="btn btn-success" type="success" style="width:50px;height:38px">ผ่าน</button>
-      <button type="button" class="btn btn-primary" style="width:60px;">แก้ไข</button>
+      <button type="button" class="btn btn-primary" style="width:55px;">แก้ไข</button>
       <button type="button" class="btn btn-danger">ลบ</button></th>
       <th><input type="text" input name="textfield" size="12"></th>
 
@@ -89,7 +89,7 @@
     
 
     <th><button class="btn btn-success" type="success" style="width:50px;height:38px">ผ่าน</button>
-      <button type="button" class="btn btn-primary" style="width:60px;">แก้ไข</button>
+      <button type="button" class="btn btn-primary" style="width:55px;">แก้ไข</button>
       <button type="button" class="btn btn-danger">ลบ</button></th>
       <th><input type="text" input name="textfield" size="12"></th>
 
@@ -106,7 +106,7 @@
     
 
     <th><button class="btn btn-success" type="success" style="width:50px;height:38px">ผ่าน</button>
-      <button type="button" class="btn btn-primary" style="width:60px;">แก้ไข</button>
+      <button type="button" class="btn btn-primary" style="width:55px;">แก้ไข</button>
       <button type="button" class="btn btn-danger">ลบ</button></th>
       <th><input type="text" input name="textfield" size="12"></th>
 
