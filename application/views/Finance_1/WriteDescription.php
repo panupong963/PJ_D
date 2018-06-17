@@ -89,13 +89,12 @@
             <div class="col-md-12">
                 <h3>ประวัติการเสนองาน</h3>
                 <div class="form-group">
-                
                     <table width="900" border="0">
-  <tr>
+                <tr>
     
-    <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >ข้าม</button>
-  </tr>
-</table>
+          <button class="btn btn-primary nextBtn btn-lg pull-right" type="button"  style="width:60px;height:40px" ><h6>ข้าม</h6></button>
+              </tr>
+          </table>
 <br>
 <table class="table table-striped">
 
@@ -123,6 +122,14 @@
     <th>2561</th>
     <th>1</th>
     <th>พิมพ์งาน</th>
+    <th><button type="button" class="btn btn-warning">รายละเอียด</button></th>
+    <th><button type="button" class="btn btn-success">เลือก</button></th>
+  </tr>
+  <tr align="center">
+    <th>3</th>
+    <th>2560</th>
+    <th>3</th>
+    <th>จัดส่งเอกสาร</th>
     <th><button type="button" class="btn btn-warning">รายละเอียด</button></th>
     <th><button type="button" class="btn btn-success">เลือก</button></th>
   </tr>
@@ -179,11 +186,12 @@
                   <br>
                   รายละเอียดลักษณะงาน <font color="red">* </font><br>
                   <textarea name="textarea">Some text...</textarea><br>
-                  
-                  <button class="btn btn-success nextBtn btn-lg pull-right" type="button">บันทึก</button>
 
-                  <button class="btn btn-primary btn-lg pull-right" type="button" <input type="button" onclick=window.location='http://localhost/PJ_D/index.php/home2/finance_WriteDescription_1'>ย้อนกลับ</button>
-                  
+                   <button class="btn btn-primary nextBtn btn-lg pull-right" type="button"  style="width:70px;height:40px" ><h6>ถัดไป</h6></button>
+                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                  <button class="btn btn-primary btn-lg pull-right" type="button" <input type="button" onclick=window.location='http://localhost/PJ_D/index.php/home2/finance_WriteDescription_1' style="width:80px;height:40px"><h6>ย้อนกลับ</h6></button>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 </div>
                 <!-- <div class="form-group">
                     <label class="control-label">Company Address</label>
@@ -196,9 +204,17 @@
         <div class="col-xs-12">
             <div class="col-md-12">
                 <h3> รายชื่องานที่เสนอ</h3>
-                   
+                  
+                  <table width="900" border="0">
+  <tr>
+    
+     <button class="btn btn-success nextBtn btn-lg pull-right" type="success" style="width:70px;height:40px"><h6>ยืนยัน</h6></button>
+  </tr>
+</table> 
             </div>
         </div>
+        <br>
+ 
 
 <table class="table table-striped">
   <thead>

@@ -4,13 +4,13 @@
       <br>
 <table width="900" border="0">
   <tr>
-    <td width="214" align="left">ปีการศึกษา : <select>
+    <td width="214" align="left">ปีการศึกษา :<font color="red">* </font><select>
   <option value="volvo">2561</option>
   <option value="saab">2562</option>
   <option value="opel">2563</option>
   <option value="audi">2564</option>
 </select></td>
-    <td width="307" align="left">ภาคการศึกษา : <label class="radio-inline"><input type="radio" name="optradio">1</label>
+    <td width="307" align="left">ภาคการศึกษา :<font color="red">* </font><label class="radio-inline"><input type="radio" name="optradio">1</label>
 <label class="radio-inline"><input type="radio" name="optradio">2</label>
 <label class="radio-inline"><input type="radio" name="optradio">3</label></td>
   </tr>
