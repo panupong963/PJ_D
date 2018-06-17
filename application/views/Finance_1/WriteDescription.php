@@ -148,7 +148,10 @@
     <div class="row setup-content" id="step-2">
         <div class="col-xs-12">
             <div class="col-md-12">
+             
                 <h3> กรอกรายละเอียดงาน</h3>
+
+                <tr>
                 <div class="form-group">
                       <a>ชื่องาน <font color="red">* </font> <input type="text" size="36" required> &nbsp;&nbsp; ประเภทงาน <font color="red">* </font> <select>
                                                       <option value="volvo">ธุรการ</option>
@@ -186,12 +189,11 @@
                   <br>
                   รายละเอียดลักษณะงาน <font color="red">* </font><br>
                   <textarea name="textarea">Some text...</textarea><br>
-
+            
                    <button class="btn btn-primary nextBtn btn-lg pull-right" type="button"  style="width:70px;height:40px" ><h6>ถัดไป</h6></button>
-                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-                  <button class="btn btn-primary btn-lg pull-right" type="button" <input type="button" onclick=window.location='http://localhost/PJ_D/index.php/home2/finance_WriteDescription_1' style="width:80px;height:40px"><h6>ย้อนกลับ</h6></button>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <button class="btn btn-warning btn-lg pull-right" <input type="button" onclick=window.location='http://localhost/PJ_D/index.php/home2/finance_WriteDescription_1' style="width:85px;height:40px"><h6>ย้อนกลับ</h6></button>
+                
                 </div>
                 <!-- <div class="form-group">
                     <label class="control-label">Company Address</label>
