@@ -1,36 +1,46 @@
 <div class="content-wrapper">
     <div class="container-fluid">
         <ol class="breadcrumb">
-          <li class="breadcrumb-item active">งาน</li>
-        </ol> 
-<table class="table table-bordered">
+          <li class="breadcrumb-item active">สรุปข้อมูลยืนยันการทำงาน</li>
+        </ol>   
+<table class="table table-striped">
   <thead>
   <tr align="center">
-    <td width="58">ลำดับ</td>
-    <td width="416">สำนักวิชา</td>
-    <td width="185">จำนวน นศ. ที่ยืนยัน</td>
-    <td width="213">จำนวน นศ. ที่ไม่ยืนยัน</td>
+    <th>ประเภทงาน</th>
+    <th>ชื่องาน</th>
+    <th>ชื่อหน่วยงาน</th>
+    <th>จำนวนนักศึกษาในงาน</th>
+    <th>ข้อมูลยืนยันการทำงาน</th>
   </tr>
 </thead>
 <tbody>
   <tr align="center">
-    <td>1</td>
-    <td>สารสนเทศศสาตร์</td>
-    <td><a class="btn btn-link" href="JobOffering_YConfirm_2">10</a></td>
-    <td><a class="btn btn-link" href="JobOffering_NoConfirm_2">20</a></td>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
+    <th>ธุรการ</th>
+    <td align ="left"><b>เอกสาร</b></td>
+    <th>ส่วนพัสดุ</th>
+    <th><a class="btn btn-link" href="JobOffering_YConfirm_2">6</a></th>
+    <th><a class="btn btn-link" href="JobOffering_NoConfirm_2">4</button> </th>
   </tr>
   <tr align="center">
-    <td colspan="2">รวม</td>
-    <td>10</td>
-    <td>20</td>
+    <th>ธุรการ</th>
+    <td align ="left"><b>นักศึกษาปะชาสัมพันธ์หลักสูตร IT</b></td>
+    <th>ส่วนพัสดุ</th>
+    <th><a class="btn btn-link" href="JobOffering_YConfirm_2">4</a></th>
+    <th><a class="btn btn-link" href="JobOffering_NoConfirm_2">2</button> </th>
   </tr>
-</tbody>
+  <tr align="center">
+    <th>&nbsp;</th>
+    <th>&nbsp;</th>
+    <th>&nbsp;</th>
+    <th>&nbsp;</th>
+    <th>&nbsp;</th>
+  </tr>
+    <tr align="center">
+    <th colspan="3">รวม</th>
+    <th>10</th>
+    <th>6</th>
+  </tr>
 </table>
-</div>
+</tbody>
+    </div>
 </div>

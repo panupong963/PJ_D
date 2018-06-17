@@ -6,7 +6,7 @@
 <table class="table table-striped">
   <thead>
     <tr align="center">
-      <th colspan="7">ชื่องาน : ขนของ</th>
+      <th colspan="7">ชื่องาน : จัดเอกสาร</th>
     </tr>
   <tr align="center">
     <th >ลำดับ</th>
@@ -52,28 +52,7 @@
       <button type="button" class="btn btn-primary">แก้ไข</button>
       <button type="button" class="btn btn-danger">ไม่ผ่าน</button></th>
   </tr>
-  <tr align="center">
-    <th>4</th>
-    <td align="left"><b>สมจิต ยิ่งยง</b></td>
-    <th>11.30 - 12.30</th>
-    <th>8/ม.ค./60</th>
-    <th><button type="button" class="btn btn-warning">รายละเอียด</button></th>
-    <th><input type="text" name=""></th>
-    <th><button type="button" class="btn btn-success">ผ่าน</button>
-      <button type="button" class="btn btn-primary">แก้ไข</button>
-      <button type="button" class="btn btn-danger">ไม่ผ่าน</button></th>
-  </tr>
-  <tr align="center">
-    <th>5</th>
-    <td align="left"><b>สมนึก คงคิด</b></td>
-    <th>11.30 - 12.30</th>
-    <th>5/ม.ค./60</th>
-    <th><button type="button" class="btn btn-warning">รายละเอียด</button></th>
-    <th><input type="text" name=""></th>
-    <th><button type="button" class="btn btn-success">ผ่าน</button>
-      <button type="button" class="btn btn-primary">แก้ไข</button>
-      <button type="button" class="btn btn-danger">ไม่ผ่าน</button></th>
-  </tr>
+
   <tr>
     <td height="107">&nbsp;</td>
     <td>&nbsp;</td>

@@ -1,6 +1,6 @@
  <!-- Navigation-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-    <a class="navbar-brand" href="index"><img src="<?php echo base_url(); ?>assets/img/wu.png" width = “40” height="40">&nbsp;&nbsp;ระบบติดตามทุนทำงานพิเศษ</a>
+    <a class="navbar-brand" href="Finance_results_2"><img src="<?php echo base_url(); ?>assets/img/wu.png" width = “40” height="40">&nbsp;&nbsp;ระบบติดตามทุนทำงานพิเศษ</a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -8,8 +8,8 @@
       <ul class="navbar-nav navbar-sidenav " id="exampleAccordion">
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
           <a class="nav-link" href="Finance_edit_2">
-            <i class="fa fa-fw fa-wrench"></i>
-            <span class="nav-link-text">เเก้ไขข้อมูลส่วนตัว</span>
+            <font color="#FFFFFF"><i class="fa fa-fw fa-wrench"></i>
+            <span class="nav-link-text">เเก้ไขข้อมูลส่วนตัว</span></font>
           </a>
         </li>
 
@@ -27,14 +27,14 @@
         </li>-->
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
           <a class="nav-link" href="Finance_results_2">
-            <i class="fa fa-fw fa-area-chart"></i>
-            <span class="nav-link-text">สรุปผลการทำงาน</span>
+            <font color="#FFFFFF"><i class="fa fa-fw fa-area-chart"></i>
+            <span class="nav-link-text">สรุปผลการทำงาน</span></font>
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
           <a class="nav-link" href="Finance_CA_2">
-            <i class="fa fa-fw fa-table"></i>
-            <span class="nav-link-text">ปฏิทินการดำเนินงาน</span>
+            <font color="#FFFFFF"><i class="fa fa-fw fa-table"></i>
+            <span class="nav-link-text">ปฏิทินการดำเนินงาน</span></font>
           </a>
         </li>
         <!--<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
@@ -212,8 +212,8 @@
         <li class="nav-item">
           
           <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
-            เจ้าหน้าที่การเงิน/อาจารย์ที่ปรึกษา/หัวส่วนกิจ : สมใจ เเล้วสิ
-            <i class="fa fa-fw fa-sign-out"></i>ออกจากระบบ</a>
+            <font color="#FFFFFF">เจ้าหน้าที่การเงิน/อาจารย์ที่ปรึกษา/หัวส่วนกิจ : สมใจ เเล้วสิ
+            <i class="fa fa-fw fa-sign-out"></i>ออกจากระบบ</a></font>
         </li>
       </ul>
     </div>

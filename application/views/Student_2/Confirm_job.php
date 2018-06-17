@@ -6,7 +6,7 @@
 		<table class="table table-bordered">
       <tbody>
   <tr class="table-info">
-    <td><font size="3">ชื่องาน <u>ขนของ</u></font></td>
+    <td><font size="3">ชื่องาน <u>จัดชั้นหนังสือ</u></font></td>
     <td>&nbsp;</td>
   </tr>
   <tr class="table-info">
@@ -35,7 +35,7 @@
               <div>
               <table width="900" border="0" align="center">
   <tr>
-    <td colspan="3" align="center">แก้ไขข้อมูลเพิ่มเติม</td>
+    <td colspan="3" align="center">แก้ไขข้อมูล</td>
   </tr>
   <tr>
     <td width="276" align="right">E-mail : </td>
@@ -43,14 +43,23 @@
     <td width="317">&nbsp;</td>
   </tr>
   <tr>
-    <td align="right">เบอร์โทรศัพท์ :</td>
+    <td colspan="3">&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="right">โทรศัพท์ :</td>
     <td><input type="text" class="form-control"></td>
     <td>(ตัวอย่าง : 0958489698)</td>
+  </tr>
+  <tr>
+    <td colspan="3">&nbsp;</td>
   </tr>
   <tr align="center">
     <td align="right">ชื่อบัญชี : </td>
     <td><input type="radio" name="gender" value="male"> ธนาคารกรุงไทย
         <input type="radio" name="gender" value="female"> ธนาคารออมสิน</td>
+  </tr>
+  <tr>
+    <td colspan="3">&nbsp;</td>
   </tr>
   <tr>
     <td align="right">เลขบัญชี : </td>
@@ -67,6 +76,8 @@
                     <button type="button" class="btn btn-danger">ยกเลิก</button></td>
   </tr>
 </table>
+
+
 
 
             </div>

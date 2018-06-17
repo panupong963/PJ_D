@@ -1,40 +1,25 @@
  <!-- Navigation-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-    <a class="navbar-brand" href="JobOffering_confirm_2"><img src="<?php echo base_url(); ?>assets/img/wu.png" width = “40” height="40">&nbsp;&nbsp;ระบบติดตามทุนทำงานพิเศษ</a>
+    <a class="navbar-brand" href="print"><img src="<?php echo base_url(); ?>assets/img/wu.png" width = “40” height="40">&nbsp;&nbsp;ระบบติดตามทุนทำงานพิเศษ</a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav navbar-sidenav " id="exampleAccordion">
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
-          <a class="nav-link" href="JobOffering_edit_2">
-           <font color="#FFFFFF"><i class="fa fa-fw fa-wrench"></i>
-            <span class="nav-link-text">เเก้ไขข้อมูลส่วนตัว</span></font>
+
+
+
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
+          <a class="nav-link" href="print">
+            <font color="#FFFFFF"><i class="fa fa-fw fa-area-chart"></i>
+            <span class="nav-link-text">รายงานสรุปผลการปฏิบัติงาน</span></font>
           </a>
         </li>
 
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
-          <a class="nav-link" href="JobOffering_confirm_2">
-            <font color="#FFFFFF"><i class="fa fa-fw fa-area-chart"></i>
-            <span class="nav-link-text">รับรองการทำงานนักศึกษา</span></font>
-          </a>
-        </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
-          <a class="nav-link" href="JobOffering_dataST_2">
-            <font color="#FFFFFF"><i class="fa fa-fw fa-link"></i>
-            <span class="nav-link-text">สรุปข้อมูลยืนยันการทำงาน</span></font>
-          </a>
-        </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
-          <a class="nav-link" href="JobOffering_results_2">
-            <font color="#FFFFFF"><i class="fa fa-fw fa-area-chart"></i>
-            <span class="nav-link-text">สรุปผลการทำงาน</span></font>
-          </a>
-        </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
-          <a class="nav-link" href="JobOffering_CA_2">
+          <a class="nav-link" href="print_l">
             <font color="#FFFFFF"><i class="fa fa-fw fa-table"></i>
-            <span class="nav-link-text">ปฏิทินการดำเนินงาน</span></font>
+            <span class="nav-link-text">รายงานสรุปยอดทุนทำงานพิเศษ</span></font>
           </a>
         </li>
         <!--<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
@@ -152,10 +137,9 @@
           </div>
         </li>-->
 
-        <!-- เเจ้งเตือน -->
-        <li class="nav-item dropdown">
+        <!--<li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle mr-lg-2" id="alertsDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <font color="#FFFFFF"><i class="fa fa-fw fa-bell"></i></font>
+            <i class="fa fa-fw fa-bell"></i>
             <span class="d-lg-none">Alerts
               <span class="badge badge-pill badge-warning">6 New</span>
             </span>
@@ -195,7 +179,7 @@
             <div class="dropdown-divider"></div>
             <a class="dropdown-item small" href="#">View all alerts</a>
           </div>
-        </li>
+        </li>-->
 
         <!-- <li class="nav-item">
           <form class="form-inline my-2 my-lg-0 mr-lg-2">
@@ -212,7 +196,7 @@
         <li class="nav-item">
           
           <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
-            <font color="#FFFFFF">ผู้เสนองาน : สมคิด ใจเย็น
+            <font color="#FFFFFF">ผู้ประสานงาน : สมคิด ใจเย็น
             <i class="fa fa-fw fa-sign-out"></i>ออกจากระบบ</a></font>
         </li>
       </ul>

@@ -231,12 +231,80 @@ class home extends CI_Controller {
 
 
 	public function from_s(){
+		$this->load->view('print/start');
+		$this->load->view('print/from_1');
+		$this->load->view('print/End');		
+	}
+
+	public function from_l(){
+		$this->load->view('print/start');
+		$this->load->view('print/from_2');
+		$this->load->view('print/End');		
+	}
+
+	public function print(){
+		$this->load->view('coordinate/start');
+		$this->load->view('coordinate/Navigation_N');
+		$this->load->view('coordinate/print');
+		$this->load->view('coordinate/footer');
+		$this->load->view('coordinate/End');		
+	}
+
+	public function print_l(){
+		$this->load->view('coordinate/start');
+		$this->load->view('coordinate/Navigation_N');
+		$this->load->view('coordinate/print_2');
+		$this->load->view('coordinate/footer');
+		$this->load->view('coordinate/End');		
+	}
+
+
+	public function JobOffering_job2_2(){
+		$this->load->view('JobOffering_2/start');
+		$this->load->view('JobOffering_2/Navigation_N');
+		$this->load->view('JobOffering_2/job2');
+		$this->load->view('JobOffering_2/footer');
+		$this->load->view('JobOffering_2/End');		
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+	public function Authorities_job2_2(){
 		$this->load->view('Authorities_2/start');
 		$this->load->view('Authorities_2/Navigation_N');
-		$this->load->view('Authorities_2/from');
+		$this->load->view('Authorities_2/job2');
 		$this->load->view('Authorities_2/footer');
 		$this->load->view('Authorities_2/End');		
 	}
+
+	public function Authorities_job3_2(){
+		$this->load->view('Authorities_2/start');
+		$this->load->view('Authorities_2/Navigation_N');
+		$this->load->view('Authorities_2/job3');
+		$this->load->view('Authorities_2/footer');
+		$this->load->view('Authorities_2/End');		
+	}
+
+	public function Authorities_job4_2(){
+		$this->load->view('Authorities_2/start');
+		$this->load->view('Authorities_2/Navigation_N');
+		$this->load->view('Authorities_2/job4');
+		$this->load->view('Authorities_2/footer');
+		$this->load->view('Authorities_2/End');		
+	}
+
+
+
 
 }
 
