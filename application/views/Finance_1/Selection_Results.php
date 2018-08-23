@@ -1,6 +1,6 @@
 <div class="content-wrapper">
     <div class="container-fluid">
-      <h4>ผลการคัดเลือกนักศึกษา</h4>
+      <h4>สรุปผลการคัดเลือกนักศึกษา</h4>
 
 
       <br>

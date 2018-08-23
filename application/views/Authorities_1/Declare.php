@@ -18,8 +18,9 @@
   <tr align="center">
     <th>1</th>
     <th>ส่วนกิจการนักศึกษา</th>
-    <th>ธุรการ</th>
-    <th>จัดชั้นหนังสือ</th>
+    <th>บริการ</th>
+    <td align="left"><b>จัดชั้นหนังสือ</b></td>
+    
     <th>5</th>
     <th><button type="button" class="btn btn-primary">แก้ไข</button>
     	<button type="button" class="btn btn-danger">ยกเลิก</button></th>
@@ -28,7 +29,8 @@
     <th>2</th>
     <th>ศูนณ์บรรณาสาร</th>
     <th>บริการ</th>
-    <th>ตรวจสอบหนังสือ</th>
+    <td align="left"><b>จัดหนังสือตามประเภท</b></td>
+    
     <th>10</th>
     <th><button type="button" class="btn btn-primary">แก้ไข</button>
       <button type="button" class="btn btn-danger">ยกเลิก</button></th>
@@ -38,7 +40,8 @@
     <th>3</th>
     <th>ศูนณ์บรรณาสาร</th>
     <th>บริการ</th>
-    <th>จัดหนังสือตามประเภท</th>
+    <td align="left"><b>ตรวจสอบหนังสือ</b></td>
+    
     <th>5</th>
     <th><button type="button" class="btn btn-primary">แก้ไข</button>
       <button type="button" class="btn btn-danger">ยกเลิก</button></th>
@@ -48,7 +51,8 @@
     <th>4</th>
     <th>ศูนณ์เครื่องมือวิทยาศาสตร์และเทคโนโลยี</th>
     <th>บริการ</th>
-    <th>พิมพ์เอกสาร</th>
+    <td align="left"><b>พิมพ์เอกสาร</b></td>
+    
     <th>2</th>
     <th><button type="button" class="btn btn-primary">แก้ไข</button>
       <button type="button" class="btn btn-danger">ยกเลิก</button></th>
@@ -57,8 +61,9 @@
   <tr align="center">
     <th>5</th>
     <th>ศูนณ์เทคโนโลยีดิจิทัล</th>
-    <th>บริการ</th>
-    <th>พิมพ์เอกสาร</th>
+    <th>ธุรการ</th>
+    <td align="left"><b>พิมพ์เอกสาร</b></td>
+    
     <th>2</th>
     <th><button type="button" class="btn btn-primary">แก้ไข</button>
       <button type="button" class="btn btn-danger">ยกเลิก</button></th>

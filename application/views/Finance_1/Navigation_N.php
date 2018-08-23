@@ -6,18 +6,25 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav navbar-sidenav " id="exampleAccordion">
+        
         <!--<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
           <a class="nav-link" href="finance_work_1">
             <i class="fa fa-fw fa-area-chart"></i>
-            <span class="nav-link-text">ประวัติการเสนองาน</span>-->
-          </a>
+            <span class="nav-link-text">ประวัติการเสนองาน</span>
+          </a>-->
+          
            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
           <a class="nav-link" href="finance_CA_1">
             <font color="#FFFFFF"><i class="fa fa-fw fa-dashboard"></i>
             <span class="nav-link-text">ปฏิทินการดำเนินงาน</span>
           </a></font>
         </li>
-
+<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+          <a class="nav-link" href="finance_work_1">
+            <font color="#FFFFFF"><i class="fa fa-fw fa-table"></i>
+            <span class="nav-link-text">ประวัติการเสนองาน</span>
+          </a></font>
+        </li>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
           <a class="nav-link" href="finance_WriteDescription_1">
@@ -40,7 +47,7 @@
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
           <a class="nav-link" href="finance_Selection_Results_1">
             <font color="#FFFFFF"><i class="fa fa-fw fa-dashboard"></i>
-            <span class="nav-link-text">ผลการคัดเลือกนักศึกษา</span>
+            <span class="nav-link-text">สรุปผลการคัดเลือกนักศึกษา</span>
           </a></font>
         </li>
        

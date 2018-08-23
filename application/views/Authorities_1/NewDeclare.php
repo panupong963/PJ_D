@@ -19,9 +19,9 @@
     <th align="center">1</th>
     <th align="center">บริการ</th>
     <th align="center">58123333</th>
-    <th align="center">สมหมาย ใจกล้า</th>
+    <th align="center">สมคิด ใจเย็น</th>
     <th align="center">สารสนเทศศาสตร์</th>
-    <th align="center">การจัดเอกสาร</th>
+    <td align="left"><b>การจัดเอกสาร</b></td>
     <th align="center">ผ่าน</th>
   </tr>
 </tbody>
@@ -32,7 +32,7 @@
     <th align="center">58134455</th>
     <th align="center">สมจิต มากมาย</th>
     <th align="center">สารสนเทศศาสตร์</th>
-    <th align="center">พิมพ์งานเอกสาร</th>
+    <td align="left"><b>พิมพ์งานเอกสาร</b></td>
     <th align="center">ไม่ผ่าน</th>
   </tr>
 </tbody>
@@ -43,7 +43,7 @@
     <th align="center">58135778</th>
     <th align="center">กนก มากมาย</th>
     <th align="center">พยาบาลศาสตร์</th>
-    <th align="center">พิมพ์งานเอกสาร</th>
+    <td align="left"><b>พิมพ์งานเอกสาร</b></td>
     <th align="center">ผ่าน</th>
   </tr>
 </tbody>
@@ -54,7 +54,7 @@
     <th align="center">58145778</th>
     <th align="center">นกแก้ว บินดี</th>
     <th align="center">สารสนเทศศาสตร์</th>
-    <th align="center">จัดชั้นหนังสือ</th>
+    <td align="left"><b>จัดชั้นหนังสือ</b></td>
     <th align="center">ผ่าน</th>
   </tr>
 </tbody>
@@ -65,7 +65,7 @@
     <th align="center">58155778</th>
     <th align="center">กรกนก เอนกชัย</th>
     <th align="center">สารสนเทศศาสตร์</th>
-    <th align="center">พิมพ์งานเอกสาร</th>
+    <td align="left"><b>พิมพ์งานเอกสาร</b></td>
     <th align="center">ไม่ผ่าน</th>
   </tr>
 </tbody>
@@ -76,7 +76,7 @@
     <th align="center">58165778</th>
     <th align="center">ดวงกมล สุขจันทร์</th>
     <th align="center">บริหารธุรกิจ</th>
-    <th align="center">พิมพ์งานเอกสาร</th>
+    <td align="left"><b>พิมพ์งานเอกสาร</b></td>
     <th align="center">ผ่าน</th>
   </tr>
 </tbody>
@@ -87,7 +87,7 @@
     <th align="center">58168778</th>
     <th align="center">เมธินี แก้วเรือง</th>
     <th align="center">เทคโนโลยีการเกษตร</th>
-    <th align="center">จัดเรียงเอกสาร</th>
+    <td align="left"><b>จัดเรียงเอกสาร</b></td>
     <th align="center">ผ่าน</th>
   </tr>
 </tbody>
@@ -98,7 +98,7 @@
     <th align="center">58169778</th>
     <th align="center">วนิดา ศรีสุข</th>
     <th align="center">ศิลปศาสตร์</th>
-    <th align="center">จัดเรียงเอกสาร</th>
+    <td align="left"><b>จัดเรียงเอกสาร</b></td>
     <th align="center">ผ่าน</th>
   </tr>
 </tbody>
@@ -109,7 +109,7 @@
     <th align="center">58169999</th>
     <th align="center">ธิดารัตน์ ชูชาติ</th>
     <th align="center">ศิลปศาสตร์</th>
-    <th align="center">จัดส่งเอกสาร</th>
+    <td align="left"><b>จัดส่งเอกสาร</b></td>
     <th align="center">ไม่ผ่าน</th>
   </tr>
 </tbody>

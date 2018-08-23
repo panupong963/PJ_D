@@ -21,63 +21,58 @@
     <tbody>
   <tr align="center">
     <th>1</th>
-    <th>58142222</th>
-    <th>สมจิต ภัคดี</th>
+    <th>58134455</th>
+    <th>สมคิด ใจเย็น</th>
     <th>สารสนเทศ</th>
     <th>4.00</th>
     <th><button type="button" class="btn btn-warning">รายละเอียด</button></th>
     <td width="320"><button class="btn btn-success" type="success" style="width:50px;height:38px">ผ่าน</button>
-   
-      <button type="button" class="btn btn-danger">ลบ</button></td>
-      <th>&nbsp;</th>
+   <th>&nbsp;</th>
+     </td>
   </tr>
   <tr align="center">
     <th>2</th>
-    <th>58134455</th>
+    <th>58144455</th>
     <th>สมจิต มากมาย</th>
     <th>สารสนเทศศาสตร์</th>
     <th>3.88</th>
     <th><button type="button" class="btn btn-warning">รายละเอียด</button></th>
     <td width="320"><button class="btn btn-success" type="success" style="width:50px;height:38px">ผ่าน</button>
-    
-      <button type="button" class="btn btn-danger">ลบ</button></td>
       <th>&nbsp;</th>
+</td>
   </tr>
    <tr align="center">
     <th>3</th>
-    <th>58135778</th>
+    <th>58155778</th>
     <th>กนก มากมาย</th>
     <th>พยาบาลศาสตร์</th>
     <th>3.70</th>
     <th><button type="button" class="btn btn-warning">รายละเอียด</button></th>
     <td width="320"><button class="btn btn-success" type="success" style="width:50px;height:38px">ผ่าน</button>
-    
-      <button type="button" class="btn btn-danger">ลบ</button></td>
       <th>&nbsp;</th>
+</td>
   </tr>
   <tr align="center">
     <th>4</th>
-    <th>58145778</th>
+    <th>58155790</th>
     <th>นกแก้ว บินดี</th>
     <th>สารสนเทศศาสตร์</th>
     <th>3.68</th>
     <th><button type="button" class="btn btn-warning">รายละเอียด</button></th>
     <td width="320"><button class="btn btn-success" type="success" style="width:50px;height:38px">ผ่าน</button>
-  
-      <button type="button" class="btn btn-danger">ลบ</button></td>
       <th>&nbsp;</th>
+</td>
   </tr>
   <tr align="center">
     <th>5</th>
-    <th>58155778</th>
+    <th>58155795</th>
     <th>กรกนก เอนกชัย</th>
     <th>สารสนเทศศาสตร์</th>
     <th>3.50</th>
     <th><button type="button" class="btn btn-warning">รายละเอียด</button></th>
     <td width="320"><button class="btn btn-success" type="success" style="width:50px;height:38px">ผ่าน</button>
-   
-      <button type="button" class="btn btn-danger">ลบ</button></td>
       <th>&nbsp;</th>
+</td>
   </tr>
   <tr>
     <th>&nbsp;</th>

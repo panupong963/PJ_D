@@ -32,82 +32,83 @@
     <th>1</th>
     <th>ส่วนกิจการนักศึกษา</th>
     
-    <th>จัดชั้นหนังสือ</th>
+    <td align="left"><b>จัดชั้นหนังสือ</b></td>
     <th>10</th>
     <th>ชาย</th>
     <th><button type="button" class="btn btn-warning">รายละเอียด</button></th>
-    <th>ชาเย็น ใจเย็น</th>
+    <th>ชาเย็น<br> ใจเย็น</th>
     
     <td width="320"><button class="btn btn-success" type="success" style="width:50px;height:38px">ผ่าน</button>
       <button type="button" class="btn btn-primary" style="width:55px;">แก้ไข</button>
-      <button type="button" class="btn btn-danger">ลบ</button></td>
+      <button type="button" class="btn btn-danger">ไม่ผ่าน</button></td>
       <th><input type="text" input name="textarea" size="12"></th>
   </tr>
   <tr align="center">
     <th>2</th>
     <th>ศูนณ์บรรณาสาร</th>
+    <td align="left"><b>จัดหนังสือตามประเภท</b></td>
     
-    <th>ตรวจสอบหนังสือ</th>
     <th>8</th>
     <th>หญิง</th>
     <th><button type="button" class="btn btn-warning">รายละเอียด</button></th>
-    <th>ศรีสมร ย้อมใจ</th>
+    <th>ศรีสมร<br> ย้อมใจ</th>
     
 
     <th><button class="btn btn-success" type="success" style="width:50px;height:38px">ผ่าน</button>
       <button type="button" class="btn btn-primary" style="width:55px;">แก้ไข</button>
-      <button type="button" class="btn btn-danger">ลบ</button></th>
+      <button type="button" class="btn btn-danger">ไม่ผ่าน</button></th>
       <th><input type="text" input name="textfield" size="12"></th>
 
   </tr>
   <tr align="center">
     <th>3</th>
     <th>ศูนณ์บรรณาสาร</th>
+    <td align="left"><b>ตรวจสอบหนังสือ</b></td>
     
-    <th>จัดหนังสือตามประเภท</th>
+    
     <th>5</th>
     <th>หญิง</th>
     <th><button type="button" class="btn btn-warning">รายละเอียด</button></th>
-    <th>ศรีสมร ย้อมใจ</th>
+    <th>ศรีสมร<br> ย้อมใจ</th>
     
 
     <th><button class="btn btn-success" type="success" style="width:50px;height:38px">ผ่าน</button>
       <button type="button" class="btn btn-primary" style="width:55px;">แก้ไข</button>
-      <button type="button" class="btn btn-danger">ลบ</button></th>
+      <button type="button" class="btn btn-danger">ไม่ผ่าน</button></th>
       <th><input type="text" input name="textfield" size="12"></th>
 
   </tr>
   <tr align="center">
     <th>4</th>
     <th>ศูนณ์เครื่องมือวิทยาศาสตร์และเทคโนโลยี</th>
+    <td align="left"><b>พิมพ์เอกสาร</b></td>
     
-    <th>พิมพ์เอกสาร</th>
     <th>2</th>
     <th>หญิง</th>
     <th><button type="button" class="btn btn-warning">รายละเอียด</button></th>
-    <th>สมรส ใจดี</th>
+    <th>สมรส<br> ใจดี</th>
     
 
     <th><button class="btn btn-success" type="success" style="width:50px;height:38px">ผ่าน</button>
       <button type="button" class="btn btn-primary" style="width:55px;">แก้ไข</button>
-      <button type="button" class="btn btn-danger">ลบ</button></th>
+      <button type="button" class="btn btn-danger">ไม่ผ่าน</button></th>
       <th><input type="text" input name="textfield" size="12"></th>
 
   </tr>
   <tr align="center">
     <th>5</th>
     <th>ศูนณ์เทคโนโลยีดิจิทัล</th>
+    <td align="left"><b>พิมพ์เอกสาร</b></td>
     
-    <th>พิมพ์เอกสาร</th>
     <th>2</th>
     <th>ไม่ระบุ</th>
     <th><button type="button" class="btn btn-warning">รายละเอียด</button></th>
-    <th>ขวัญใจ ศรีเมือง</th>
+    <th>ขวัญใจ<br> ศรีเมือง</th>
     
 
     <th><button class="btn btn-success" type="success" style="width:50px;height:38px">ผ่าน</button>
       <button type="button" class="btn btn-primary" style="width:55px;">แก้ไข</button>
-      <button type="button" class="btn btn-danger">ลบ</button></th>
+      <button type="button" class="btn btn-danger">ไม่ผ่าน</button></th>
       <th><input type="text" input name="textfield" size="12"></th>
 
   </tr>
