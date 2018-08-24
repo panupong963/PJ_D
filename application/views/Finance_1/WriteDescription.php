@@ -181,9 +181,9 @@
 
                       <tr>
                        <td ><br>เพศ <font color="red">* </font><select>
-                                                      <option value="saab">ไม่ระบุ</option>
                                                       <option value="saab">หญิง</option>
-                                                      <option value="volvo">ชาย</option>
+                                                      <option value="saab" >ชาย</option>
+                                                      <option value="volvo">ไม่ระบุ</option>
                                 
                                                     </select> 
                                                     &nbsp;&nbsp;&nbsp;&nbsp;จำนวนที่รับ <font color="red">* </font><select>
@@ -197,13 +197,56 @@
 
                                       <form action="/action_page.php">
                       คุณสมบัติผู้สมัคร <font color="red">* </font> : 
-                       <input type="checkbox" name="vehicle" value="Bike">มีความอดทน
-                       <input type="checkbox" name="vehicle" value="Bike">สามารถใช้คอมพิวเตอร์ได้ดี
-                       <input type="checkbox" name="vehicle" value="Bike">มีคสามขยัน
-                       <input type="checkbox" name="vehicle" value="Bike">มีความรับผิดชอบ<br>
-                       <input type="checkbox" name="vehicle" value="Bike">ใช้ภาษาอังกฤษได้เป็นอย่างดี<br>
-                        <input type="checkbox" name="vehicle" value="Car" checked>สามารถใช้ Microsoft office ได้<br>
+                       
+                       
+                       
+                       
+
+
+                       <table border="0" class="table table-striped">
+                        <tr>
+                          <td>
+                            <input type="checkbox" name="vehicle" value="Bike">มีความขยัน
+                          </td>
+                          <td>
+                            <input type="checkbox" name="vehicle" value="Bike">มีความรับผิดชอบ<br>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                          <input type="checkbox" name="vehicle" value="Bike">มีความอดทน
+                          </td>
+                          <td>
+                            <input type="checkbox" name="vehicle" value="Bike">สามารถใช้คอมพิวเตอร์ได้ดี
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                       <input type="checkbox" name="vehicle" value="Bike">ใช้ภาษาอังกฤษได้เป็นอย่างดี
+                     </td>
+                     <td>
+                        <input type="checkbox" name="vehicle" value="Car" >สามารถใช้ Microsoft office ได้
+                      </td>
+                      </tr>
+                        <tr>
+                          <td>
+                       <input type="checkbox" name="vehicle" value="Bike">ตรงต่อเวลา
+                     </td>
+                     <td>
+                        <input type="checkbox" name="vehicle" value="Car" >สามารถทำงานร่วมกับผู้อื่นได้
+                      </td>
+                      </tr> 
+                       <tr>
+                          <td>
+                       <input type="checkbox" name="vehicle" value="Bike">มีความเเข็งเเรงทำงานหนักได้
+                     </td>
+                     <td>
+                        <input type="checkbox" name="vehicle" value="Car" >เรียนรู้ได้เร็ว
+                      </td>
+                      </tr>                                            
+                        </table>
                       </form>
+
                     </td>
                     </tr>
                     </tbody>
@@ -213,15 +256,39 @@
                   <td colspan="3"><br>รายละเอียดลักษณะงาน <font color="red">* </font></td>
                   
                   </tr>
-                  <tr>
-                  <td colspan="3"><textarea name="textarea">Some text...</textarea></td>
-                  </tr>
+                       <table border="0" class="table table-striped">
+                        <tr>
+                          <td>
+                            <input type="checkbox" name="vehicle" value="Bike">จัดเอกสาร
+                          </td>
+                          <td>
+                            <input type="checkbox" name="vehicle" value="Bike">พิมพ์งาน / ถ่ายเอกสาร<br>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                          <input type="checkbox" name="vehicle" value="Bike">ค้นหาข้อมูล
+                          </td>
+                          <td>
+                            <input type="checkbox" name="vehicle" value="Bike">จัดชั้นหนังสือ
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                       <input type="checkbox" name="vehicle" value="Bike">คีย์ข้อมูล
+                     </td>
+                     <td>
+                        <input type="checkbox" name="vehicle" value="Bike">เเล้วเเต่หน่วยงานจะมอบหมาย
+                      </td>
+                      </tr>
+                                                                    
+                        </table>
 
                 <tr>
                 <td><button class="btn btn-info btn-lg pull-right" type="button"  style="width:90px;height:40px"<a href="localhost/PJ_D/index.php/home2/finance_WriteDescription_1" ><h6>ย้อนกลับ</h6></button>
 
                  </td><td>
-                 <button class="btn btn-info nextBtn btn-lg pull-right" type="button"  style="width:70px;height:40px" ><h6>ถัดไป</h6></button></td>
+                 <button class="btn btn-info nextBtn btn-lg pull-right" type="button"  style="width:70px;height:40px" ><h6>บันทึก</h6></button></td>
              
            
                 </tr>
@@ -337,9 +404,7 @@
     <th>ชาย</th>
     <th>4</th>
     <th><button type="button" class="btn btn-warning">รายละเอียด</button></th>
-    <th><button class="btn btn-success" type="success" style="width:70px;height:38px">ยืนยัน</button>
-      <button type="button" class="btn btn-primary">แก้ไข</button>
-      <button type="button" class="btn btn-danger">ลบ</button></th>
+
   </tr>
   <tr align="center">
     <th>2</th>
@@ -349,9 +414,7 @@
     <th>หญิง</th>
     <th>2</th>
     <th><button type="button" class="btn btn-warning">รายละเอียด</button></th>
-    <th><button class="btn btn-success" type="success" style="width:70px;height:38px">ยืนยัน</button>
-      <button type="button" class="btn btn-primary">แก้ไข</button>
-      <button type="button" class="btn btn-danger">ลบ</button></th>
+
   </tr>
   <tr align="center">
     <td height="80">&nbsp;</td>
@@ -361,7 +424,7 @@
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
-    <td>&nbsp;</td>
+
   </tr>
 </tbody>
 </table>

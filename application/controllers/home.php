@@ -18,20 +18,93 @@ class home extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-	public function index()
-	{
-		$this->load->view('start');
-		$this->load->view('Navigation_N');
-		$this->load->view('New');
-		$this->load->view('footer');
-		$this->load->view('End');
-		//$this->load->view('test');
-	}
+    public function index()
+    {
+        $user_login  =  $this -> session -> userdata ( 'user_login' );
+        
+        if($user_login==null){
+            //echo "xxxxx";
+            $this->loginfrom();
+            
+        }else {
+            echo "yyyy";
+        }
+       
+    }
+    public function loginfrom()
+    {
+        $this->load->view('Login_N');
+        
+    }
+    
+    public function checklogin()
+    {
+        $username = $this -> input -> post ( 'username' );
+        $password =$this -> input -> post ( 'password' );
+        $ST = $this -> input -> post ( 'ST' );
+
+        
+        // if($u=="admin" && $p=="admin"){
+        //     $this -> session -> set_userdata ( 'user_login' ,  true );
+        //     $this -> session -> set_userdata ( 'user_autority' ,  1 );
+        //     redirect("createq/indexad");
+        // }
+        // if($u=="na" && $p=="14"){
+        //     $this -> session -> set_userdata ( 'user_login' ,  true );
+        //     $this -> session -> set_userdata ( 'user_autority' ,  2 );
+        //     redirect("createq/indexqm");
+        // }
+        $this->load->model('Login_model');
+        $chk = $this->Login_model->checkLogin($username,$password);
+
+        $s = $this->Login_model->checkLogin($ST);
+
+        if($chk){
+        	if($s == 1){
+           //redirect("createq/indexqm");
+        	redirect("home/Student_SaveJob_2");
+        	}
+        	if("SELECT * FROM login where username='$username' and password='$password' and 'ST' = 2  "){
+           //redirect("createq/indexqm");
+        	redirect("home/Authorities_CA_2");
+        	}
+        }else{
+
+            echo "XXXXXXXXXXXXXXXXXX===Not OK";
+
+        }
+
+        
+    }
+    
+    public function logout()
+    {
+        $this -> session -> set_userdata ( 'userlogin' ,  FALSE );
+        $this->loginfrom();
+        
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	public function login(){
 		$this->load->view('Login_N');
 	}
 
+	public function register(){
+		$this->load->view('register');
+	}
 
 	public function CA()
 	{

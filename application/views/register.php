@@ -29,16 +29,14 @@
 				<div class="login100-pic js-tilt" data-tilt>
 					<img src="<?php echo base_url(); ?>assets/login/images/wu.png" alt="IMG" width="200">
 				</div>
-<form action="<?php echo site_url("home/checklogin");?>" method="post">
+
 				<form class="login100-form validate-form">
 					<span class="login100-form-title">
 						<h3>ระบบทุนทำงานพิเศษ</h3>
 					</span>
 
-                    
-
 					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-						<input class="input100" type="text" name="username" placeholder="รหัสนักศึกษา">
+						<input class="input100" type="text" name="email" placeholder="รหัสนักศึกษา">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-envelope" aria-hidden="true"></i>
@@ -46,7 +44,7 @@
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate = "Password is required">
-						<input class="input100" type="password" name="password" placeholder="รหัสจาก ศบศ.">
+						<input class="input100" type="password" name="pass" placeholder="รหัสจาก ศบศ.">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-lock" aria-hidden="true"></i>
@@ -55,10 +53,12 @@
 					
 					<div class="container-login100-form-btn">
 						<button class="login100-form-btn">
-							<h3>เข้าสู่ระบบ</h3>
+							<h3>ยืนยัน</h3>
+						</button>
+						<button class="login100-form-btn">
+							<h3>ย้อนกลับ</h3>
 						</button>
 					</div>
-				</form>
 
 					<!--<div class="text-center p-t-12">
 						<span class="txt1">
