@@ -62,7 +62,7 @@ class home2 extends CI_Controller {
         if($chk){
         	
            //redirect("createq/indexqm");
-        	redirect("home2/Student_list_1");
+        	redirect("home2/Student_CA_1");
         	
         
         	
