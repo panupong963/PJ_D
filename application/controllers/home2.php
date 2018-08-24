@@ -19,14 +19,77 @@ class home2 extends CI_Controller {
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
 	public function index()
-	{
-		$this->load->view('start');
-		$this->load->view('Navigation_N');
-		$this->load->view('New');
-		$this->load->view('footer');
-		$this->load->view('End');
-		//$this->load->view('test');
-	}
+    {
+        $user_login  =  $this -> session -> userdata ( 'user_login' );
+        
+        if($user_login==null){
+            //echo "xxxxx";
+            $this->loginfrom();
+            
+        }else {
+            echo "yyyy";
+        }
+       
+    }
+    public function loginfrom()
+    {
+        $this->load->view('Login_M');
+        
+    }
+    
+    public function checklogin()
+    {
+        $username = $this -> input -> post ( 'username' );
+        $password =$this -> input -> post ( 'password' );
+        
+
+        
+        // if($u=="admin" && $p=="admin"){
+        //     $this -> session -> set_userdata ( 'user_login' ,  true );
+        //     $this -> session -> set_userdata ( 'user_autority' ,  1 );
+        //     redirect("createq/indexad");
+        // }
+        // if($u=="na" && $p=="14"){
+        //     $this -> session -> set_userdata ( 'user_login' ,  true );
+        //     $this -> session -> set_userdata ( 'user_autority' ,  2 );
+        //     redirect("createq/indexqm");
+        // }
+        $this->load->model('Login_model');
+        $chk = $this->Login_model->checkLogin($username,$password);
+
+      
+
+        if($chk){
+        	
+           //redirect("createq/indexqm");
+        	redirect("home2/Student_list_1");
+        	
+        
+        	
+        }else{
+
+            echo "XXXXXXXXXXXXXXXXXX===Not OK";
+
+        }
+
+        
+    }
+    
+    public function logout()
+    {
+        $this -> session -> set_userdata ( 'userlogin' ,  FALSE );
+        $this->loginfrom();
+        
+    }
+
+
+
+
+
+
+
+
+
 
 	public function login(){
 		$this->load->view('login_N');

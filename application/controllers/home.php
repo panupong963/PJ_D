@@ -41,7 +41,7 @@ class home extends CI_Controller {
     {
         $username = $this -> input -> post ( 'username' );
         $password =$this -> input -> post ( 'password' );
-        $ST = $this -> input -> post ( 'ST' );
+        
 
         
         // if($u=="admin" && $p=="admin"){
@@ -57,17 +57,12 @@ class home extends CI_Controller {
         $this->load->model('Login_model');
         $chk = $this->Login_model->checkLogin($username,$password);
 
-        $s = $this->Login_model->checkLogin($ST);
+        
 
         if($chk){
-        	if($s == 1){
+        	
            //redirect("createq/indexqm");
         	redirect("home/Student_SaveJob_2");
-        	}
-        	if("SELECT * FROM login where username='$username' and password='$password' and 'ST' = 2  "){
-           //redirect("createq/indexqm");
-        	redirect("home/Authorities_CA_2");
-        	}
         }else{
 
             echo "XXXXXXXXXXXXXXXXXX===Not OK";
