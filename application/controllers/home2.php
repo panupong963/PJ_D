@@ -61,11 +61,12 @@ class home2 extends CI_Controller {
 
         if($chk){
         	
+        	if($this -> session -> userdata ( 'ST' )=="1") {
            //redirect("createq/indexqm");
-        	redirect("home2/Student_list_1");
-        	
-        
-        	
+        	redirect("home2/Student_CA_1");
+        	}else if($this -> session -> userdata ( 'ST' )=="2"){
+        	redirect("home2/authorities_BuildCalendar_1");
+        	}
         }else{
 
             echo "XXXXXXXXXXXXXXXXXX===Not OK";
