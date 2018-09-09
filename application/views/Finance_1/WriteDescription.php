@@ -65,7 +65,7 @@
 <hr color="#000000">
 <br>-->
 
-
+<form action="<?php echo site_url("home2/insertjob");?>" method="post">
 <div class="container">
   <br>
   <h3>กรอกรายละเอียดงาน</h3>
@@ -161,39 +161,40 @@
   </tr>
 </tbody>
 </table>-->
+
 <table>
                     <tbody>
                     <tr>
-                     <td>ชื่องาน <font color="red">* </font> <input type="text" size="36" required>
-                     ประเภทงาน <font color="red">* </font> <select>
-                                                      <option value="volvo">ธุรการ</option>
-                                                      <option value="saab">เชิงวิชาชีพ</option>
-                                                      <option value="mercedes">เชิงบริการ</option>
-                                                      <option value="audi">เชิงวิชาการ</option>
+                     <td>ชื่องาน <font color="red">* </font> <input type="text" name="Job_Name" size="36" required>
+                     ประเภทงาน <font color="red">* </font> <select name="Category">
+                                                      <option value="ธุรการ">ธุรการ</option>
+                                                      <option value="เชิงวิชาชีพ">เชิงวิชาชีพ</option>
+                                                      <option value="เชิงบริการ">เชิงบริการ</option>
+                                                      <option value="เชิงวิชาการ">เชิงวิชาการ</option>
                                                     </select>
                        สำนักวิชา <font color="red">* </font> <select>
-                                                      <option value="volvo">ไม่จำกัด</option>
-                                                      <option value="saab">สารสนเทศศาสตร์</option>
-                                                      <option value="mercedes">การจัดการ</option>
-                                                      <option value="audi">ศิลปศาสตร์</option>
+                                                      <option value="ไม่จำกัด">ไม่จำกัด</option>
+                                                      <option value="สารสนเทศศาสตร์">สารสนเทศศาสตร์</option>
+                                                      <option value="การจัดการ">การจัดการ</option>
+                                                      <option value="ศิลปศาสตร์">ศิลปศาสตร์</option>
                                                     </select></td>
                       </tr>
 
                       <tr>
-                       <td ><br>เพศ <font color="red">* </font><select>
-                                                      <option value="saab">หญิง</option>
-                                                      <option value="saab" >ชาย</option>
-                                                      <option value="volvo">ไม่ระบุ</option>
+                       <td ><br>เพศ <font color="red">* </font><select name="Sex">
+                                                      <option value="F">หญิง</option>
+                                                      <option value="M" >ชาย</option>
+                                                      <option value="X">ไม่ระบุ</option>
                                 
                                                     </select> 
-                                                    &nbsp;&nbsp;&nbsp;&nbsp;จำนวนที่รับ <font color="red">* </font><select>
-                                                      <option value="volvo">1</option>
-                                                      <option value="saab">2</option>
-                                                      <option value="mercedes">5</option>
-                                                      <option value="audi">10</option>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;จำนวนที่รับ <font color="red">* </font><select name="Receiving_number">
+                                                      <option value="1">1</option>
+                                                      <option value="2">2</option>
+                                                      <option value="5">5</option>
+                                                      <option value="10">10</option>
                                                     </select> คน 
                       
-                      &nbsp;&nbsp;&nbsp;&nbsp; วันที่เริ่มต้นการทำงาน <font color="red">* </font><input id="date" type="date"> <br><br>
+                      &nbsp;&nbsp;&nbsp;&nbsp; วันที่เริ่มต้นการทำงาน <font color="red">* </font><input id="date" name="Frist_date" type="date"> <br><br>
 
                                       <form action="/action_page.php">
                       คุณสมบัติผู้สมัคร <font color="red">* </font> : 
@@ -206,42 +207,42 @@
                        <table border="0" class="table table-striped">
                         <tr>
                           <td>
-                            <input type="checkbox" name="vehicle" value="Bike">มีความขยัน
+                            <input type="checkbox" name="Attribute_applicants" value="มีความขยัน">มีความขยัน
                           </td>
                           <td>
-                            <input type="checkbox" name="vehicle" value="Bike">มีความรับผิดชอบ<br>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                          <input type="checkbox" name="vehicle" value="Bike">มีความอดทน
-                          </td>
-                          <td>
-                            <input type="checkbox" name="vehicle" value="Bike">สามารถใช้คอมพิวเตอร์ได้ดี
+                            <input type="checkbox" name="Attribute_applicants" value="มีความรับผิดชอบ">มีความรับผิดชอบ<br>
                           </td>
                         </tr>
                         <tr>
                           <td>
-                       <input type="checkbox" name="vehicle" value="Bike">ใช้ภาษาอังกฤษได้เป็นอย่างดี
+                          <input type="checkbox" name="Attribute_applicants" value="มีความอดทน">มีความอดทน
+                          </td>
+                          <td>
+                            <input type="checkbox" name="Attribute_applicants" value="สามารถใช้คอมพิวเตอร์ได้ดี">สามารถใช้คอมพิวเตอร์ได้ดี
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                       <input type="checkbox" name="Attribute_applicants" value="ใช้ภาษาอังกฤษได้เป็นอย่างดี">ใช้ภาษาอังกฤษได้เป็นอย่างดี
                      </td>
                      <td>
-                        <input type="checkbox" name="vehicle" value="Car" >สามารถใช้ Microsoft office ได้
+                        <input type="checkbox" name="Attribute_applicants" value="สามารถใช้ Microsoft office ได้" >สามารถใช้ Microsoft office ได้
                       </td>
                       </tr>
                         <tr>
                           <td>
-                       <input type="checkbox" name="vehicle" value="Bike">ตรงต่อเวลา
+                       <input type="checkbox" name="Attribute_applicants" value="ตรงต่อเวลา">ตรงต่อเวลา
                      </td>
                      <td>
-                        <input type="checkbox" name="vehicle" value="Car" >สามารถทำงานร่วมกับผู้อื่นได้
+                        <input type="checkbox" name="Attribute_applicants" value="สามารถทำงานร่วมกับผู้อื่นได้" >สามารถทำงานร่วมกับผู้อื่นได้
                       </td>
                       </tr> 
                        <tr>
                           <td>
-                       <input type="checkbox" name="vehicle" value="Bike">มีความเเข็งเเรงทำงานหนักได้
+                       <input type="checkbox" name="Attribute_applicants" value="มีความเเข็งเเรงทำงานหนักได้">มีความเเข็งเเรงทำงานหนักได้
                      </td>
                      <td>
-                        <input type="checkbox" name="vehicle" value="Car" >เรียนรู้ได้เร็ว
+                        <input type="checkbox" name="Attribute_applicants" value="เรียนรู้ได้เร็ว" >เรียนรู้ได้เร็ว
                       </td>
                       </tr>                                            
                         </table>
@@ -259,26 +260,26 @@
                        <table border="0" class="table table-striped">
                         <tr>
                           <td>
-                            <input type="checkbox" name="vehicle" value="Bike">จัดเอกสาร
+                            <input type="checkbox" name="Job_description" value="จัดเอกสาร">จัดเอกสาร
                           </td>
                           <td>
-                            <input type="checkbox" name="vehicle" value="Bike">พิมพ์งาน / ถ่ายเอกสาร<br>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                          <input type="checkbox" name="vehicle" value="Bike">ค้นหาข้อมูล
-                          </td>
-                          <td>
-                            <input type="checkbox" name="vehicle" value="Bike">จัดชั้นหนังสือ
+                            <input type="checkbox" name="Job_description" value="พิมพ์งาน / ถ่ายเอกสาร">พิมพ์งาน / ถ่ายเอกสาร<br>
                           </td>
                         </tr>
                         <tr>
                           <td>
-                       <input type="checkbox" name="vehicle" value="Bike">คีย์ข้อมูล
+                          <input type="checkbox" name="Job_description" value="ค้นหาข้อมูล">ค้นหาข้อมูล
+                          </td>
+                          <td>
+                            <input type="checkbox" name="Job_description" value="จัดชั้นหนังสือ">จัดชั้นหนังสือ
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                       <input type="checkbox" name="Job_description" value="คีย์ข้อมูล">คีย์ข้อมูล
                      </td>
                      <td>
-                        <input type="checkbox" name="vehicle" value="Bike">เเล้วเเต่หน่วยงานจะมอบหมาย
+                        <input type="checkbox" name="Job_description" value="เเล้วเเต่หน่วยงานจะมอบหมาย">เเล้วเเต่หน่วยงานจะมอบหมาย
                       </td>
                       </tr>
                                                                     
@@ -288,7 +289,7 @@
                 <td><button class="btn btn-info btn-lg pull-right" type="button"  style="width:90px;height:40px"<a href="localhost/PJ_D/index.php/home2/finance_WriteDescription_1" ><h6>ย้อนกลับ</h6></button>
 
                  </td><td>
-                 <button class="btn btn-info nextBtn btn-lg pull-right" type="button"  style="width:70px;height:40px" ><h6>บันทึก</h6></button></td>
+                 <button class="btn btn-info nextBtn btn-lg pull-right" type="submit"  style="width:70px;height:40px" ><h6>บันทึก</h6></button></td>
              
            
                 </tr>
@@ -299,9 +300,10 @@
                     <label class="control-label">Last Name</label>
                     <input maxlength="100" type="text" required="required" class="form-control" placeholder="Enter Last Name" />
                 </div>-->
-                
+                </form>
                 
             </div>
+
         </div>
     </div>
 
@@ -428,6 +430,7 @@
   </tr>
 </tbody>
 </table>
+
 </div>
 
                 <!-- <div class="form-group">
@@ -506,8 +509,6 @@
 
 
 <!-- เเยก -->
-
-
 
 
 </div>

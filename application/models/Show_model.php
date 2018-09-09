@@ -33,5 +33,10 @@ class Show_model extends CI_Model {
         
         $this->db->update('entries', $this, array('id' => $_POST['id']));
     }
+
+    public function insert_job($data)
+    {
+        $this->db->insert('job', $data);
+    }
     
 }

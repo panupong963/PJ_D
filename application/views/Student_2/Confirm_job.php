@@ -34,7 +34,7 @@ foreach ($student_res as $row) {
   <tr class="table-info">
     <td><font size="3">ช่องทางติดต่อ <u><?php echo $Contact; ?></u></font></td>
     <td>&nbsp;</td>
-    <?php if($Re_status == 0){ ?>
+    <?php if($Re_status == '0'){ ?>
   </tr>
     <tr align="center" class="table-info">
 	<td colspan="2"><button type="button" class="btn btn-success">ยืนยัน</button>
