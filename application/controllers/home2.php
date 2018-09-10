@@ -103,9 +103,13 @@ class home2 extends CI_Controller {
 	}
 
 	public function Student_registration_1(){
+		$this->load->model('Show_model');
+        $res = $this->Show_model->get_student();
+        $data['student_res'] = $res;  
+
 		$this->load->view('Student_1/start');
 		$this->load->view('Student_1/Navigation_N');
-		$this->load->view('Student_1/Registration');
+		$this->load->view('Student_1/Registration', $data);
 		$this->load->view('Student_1/footer');
 		$this->load->view('Student_1/End');
 	}

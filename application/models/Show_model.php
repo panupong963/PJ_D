@@ -38,5 +38,9 @@ class Show_model extends CI_Model {
     {
         $this->db->insert('job', $data);
     }
+    public function insert_work($data)
+    {
+        $this->db->insert('work', $data);
+    }   
     
 }
