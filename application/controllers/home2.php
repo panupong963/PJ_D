@@ -61,11 +61,18 @@ class home2 extends CI_Controller {
 
         if($chk){
         	
+        	if($this -> session -> userdata ( 'ST' )=="1") {
            //redirect("createq/indexqm");
         	redirect("home2/Student_CA_1");
-        	
-        
-        	
+
+        	}else if($this -> session -> userdata ( 'ST' )=="2"){
+        	redirect("home2/authorities_BuildCalendar_1");
+        	}else if($this -> session -> userdata ( 'ST' )=="3"){
+        	redirect("home2/finance_CA_1");
+        	}else if($this -> session -> userdata ( 'ST' )=="4"){
+        	redirect("home2/Advisors_announced_1");
+        	}
+
         }else{
 
             echo "XXXXXXXXXXXXXXXXXX===Not OK";
@@ -96,9 +103,13 @@ class home2 extends CI_Controller {
 	}
 
 	public function Student_registration_1(){
+		$this->load->model('Show_model');
+        $res = $this->Show_model->get_student();
+        $data['student_res'] = $res;  
+
 		$this->load->view('Student_1/start');
 		$this->load->view('Student_1/Navigation_N');
-		$this->load->view('Student_1/Registration');
+		$this->load->view('Student_1/Registration', $data);
 		$this->load->view('Student_1/footer');
 		$this->load->view('Student_1/End');
 	}
@@ -265,5 +276,23 @@ class home2 extends CI_Controller {
 		$this->load->view('Boss_1/Boss_1');
 		$this->load->view('Boss_1/footer');
 		$this->load->view('Boss_1/End');
-	}				
+	}	
+
+
+
+
+    public function  insertjob(){
+        $data["Job_Name"] = $_POST["Job_Name"];
+        $data["Category"] = $_POST["Category"];
+        $data["Job_description"] = $_POST["Job_description"];
+        $data["Attribute_applicants"] = $_POST["Attribute_applicants"];
+        $data["Frist_date"] = $_POST["Frist_date"];
+        $data["Sex"] = $_POST["Sex"];
+        $data["Job_status"] = '0';
+        
+        $this->load->model('Show_model');
+        $res = $this->Show_model->insert_job($data);
+        redirect('home2/finance_WriteDescription_1');
+        
+    }				
 }

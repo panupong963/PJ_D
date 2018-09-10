@@ -4,6 +4,8 @@
           <li class="breadcrumb-item active">บันทึกการทำงาน</li>
         </ol>
 
+<form action="<?php echo site_url("home/insertwork");?>" method="post">
+
 <table width="900" border="0" align="center">
   <tr align="center">
     <td width="150">วัน/เดือน/ปี ปฎิบัติงาน</td>
@@ -13,8 +15,8 @@
     <td width="77">&nbsp;</td>
   </tr>
   <tr align="center">
-    <td height="156" valign="top"><input type="date" name=""></td>
-    <td valign="top"><select>
+    <td height="156" valign="top"><input type="date" name="Work_Date"></td>
+    <td valign="top"><!-- <select>
   <option value="volvo">ชม.</option>
   <option value="saab">01</option>
   <option value="opel">02</option>
@@ -25,8 +27,8 @@
   <option value="saab">01</option>
   <option value="opel">02</option>
   <option value="audi">03</option>
-</select></td>
-    <td valign="top"><select>
+</select> --> <input type="time" name="Work_Start"></td>
+    <td valign="top"><!-- <select>
   <option value="volvo">ชม.</option>
   <option value="saab">01</option>
   <option value="opel">02</option>
@@ -37,13 +39,14 @@
   <option value="saab">01</option>
   <option value="opel">02</option>
   <option value="audi">03</option>
-</select></td>
-    <td valign="top"><textarea name="textarea">พิมพ์ข้อความ</textarea></td>
-    <td align="center"><button type="button" class="btn btn-success">บันทึก</button></td>
+</select> --> <input type="time" name="Work_Finish"></td>
+    <td valign="top"><textarea name="Job_Description">พิมพ์ข้อความ</textarea></td>
+    <td align="center"><button type="submit" class="btn btn-success">บันทึก</button></td>
   </tr>
 </table>
 
-           
+</form>    
+
               <h5>ช่วงเวลาการบันทึกข้อมูลงานระหว่างวันที่ <font color="#FF0000" size="5">1/ม.ค./60 - 20/พ.ค./60 </font></h5>
             <hr color="#000000">
               <br>

@@ -1,3 +1,18 @@
+<?php
+foreach ($student_res as $row) {
+  $STUDENTCODE = $row->STUDENTCODE;
+  $STUDENTNAME = $row->STUDENTNAME;
+  $FACULTYNAME = $row->FACULTYNAME;
+  $PROGRAMNAME = $row->PROGRAMNAME;
+  $GPAX = $row->GPAX;
+  $PARENTPHONENO = $row->PARENTPHONENO;
+  $HOMEADDRESS1 = $row->HOMEADDRESS1;
+  $HOMEDISTRICT = $row->HOMEDISTRICT;
+  $PROVINCENAME = $row->PROVINCENAME;
+  $STUDENTEMAIL = $row->STUDENTEMAIL;
+
+} 
+?>
 <div class="content-wrapper">
     <div class="container-fluid">
 <h4>ใบสมัครทุนทำงานพิเศษ : เลขที่ใบสมัคร 001</h4>
@@ -10,19 +25,19 @@
 </thead>
   
   <tr>
-    <th >รหัสนักศึกษา <u>58122235</u></th>
-    <th >ชื่อสกุล - สกุล <u>สมคิด ใจเย็น</u></th> 
-    <th>สำนักวิชา <u> สารสนเทศศาสตร์</u></th>
+    <th >รหัสนักศึกษา <u><?php echo $STUDENTCODE; ?></u></th>
+    <th >ชื่อสกุล - สกุล <u><?php echo $STUDENTNAME; ?></u></th> 
+    <th>สำนักวิชา <u> <?php echo $FACULTYNAME; ?></u></th>
   </tr>
   <tr>
-    <th >สาขา <u> เทคโนโลยีสารสนเทศ</u></th>
-    <th colspan="3">เกรดเฉลี่ย <u> 4.00</u></th>
+    <th >สาขา <u> <?php echo $PROGRAMNAME; ?></u></th>
+    <th colspan="3">เกรดเฉลี่ย <u> <?php echo $GPAX; ?></u></th>
     
   </tr>
   <tr>
     <th>วัน/เดือน/ปี เกิด <u> 19/12/2529</u></th>
-    <th >E-mail <u> fainaja@hotmail.com</u></th>
-    <th colspan="3">เบอร์โทรศัพท์ <u> 0888888888</u></th>
+    <th >E-mail <u> <?php echo $STUDENTEMAIL; ?></u></th>
+    <th colspan="3">เบอร์โทรศัพท์ <u> <?php echo $PARENTPHONENO; ?></u></th>
 
   </tr>
   <tr>

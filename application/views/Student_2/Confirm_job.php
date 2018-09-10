@@ -1,3 +1,16 @@
+<?php
+$ST = $this -> session -> userdata ( 'ST' );
+foreach ($job_res as $row) {
+  $Job_ID = $row->Job_ID;
+  $Job_Name = $row->Job_Name;
+  $job_name_ss = $row->job_name_ss;
+  $Contact = $row->Contact;
+  $ss = $row->ss;
+}
+foreach ($student_res as $row) {
+  $Re_status = $row->Re_status;
+}
+?>
 <div class="content-wrapper">
 	<div class="container-fluid">
         <ol class="breadcrumb">
@@ -6,26 +19,28 @@
 		<table class="table table-bordered">
       <tbody>
   <tr class="table-info">
-    <td><font size="3">ชื่องาน <u>จัดชั้นหนังสือ</u></font></td>
+    <td><font size="3">ชื่องาน <u><?php echo $Job_Name; ?></u></font></td>
     <td>&nbsp;</td>
   </tr>
   <tr class="table-info">
 
-    <td><font size="3">ชื่อผู้เสนองาน <u>มาลี สวยมาก</u></font></td>
+    <td><font size="3">ชื่อผู้เสนองาน <u><?php echo $job_name_ss; ?></u></font></td>
     <td></td>
   </tr>
   <tr class="table-info">
-    <td><font size="3">สถานที่ทำงาน <u>วิชาการ 3</u></font></td>
+    <td><font size="3">สถานที่ทำงาน <u><?php echo $ss; ?></u></font></td>
     <td>&nbsp;</td>
   </tr>
   <tr class="table-info">
-    <td><font size="3">ช่องทางติดต่อ <u>095-5848786</u></font></td>
+    <td><font size="3">ช่องทางติดต่อ <u><?php echo $Contact; ?></u></font></td>
     <td>&nbsp;</td>
+    <?php if($Re_status == '0'){ ?>
   </tr>
     <tr align="center" class="table-info">
 	<td colspan="2"><button type="button" class="btn btn-success">ยืนยัน</button>
     				<button type="button" class="btn btn-danger" onclick="myFunction()">ปฎิเสธ</button></td>
   </tr>
+<?php } ?>
 </tbody>
 </table>
 

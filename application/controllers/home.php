@@ -60,9 +60,19 @@ class home extends CI_Controller {
         
 
         if($chk){
-        	
+        	if($this -> session -> userdata ( 'ST' )=="1") {
            //redirect("createq/indexqm");
-        	redirect("home/Student_SaveJob_2");
+        	redirect("home/Student_ConfirmJob_2");
+        	}else if($this -> session -> userdata ( 'ST' )=="2"){
+        	redirect("home/Authorities_CA_2");
+        	}else if($this -> session -> userdata ( 'ST' )=="3"){
+        	redirect("home/Finance_CA_2");
+        	}else if($this -> session -> userdata ( 'ST' )=="4"){
+        	redirect("home/JobOffering_CA_2");
+        	}else if($this -> session -> userdata ( 'ST' )=="5"){
+        	redirect("home/print");
+        	}
+
         }else{
 
             echo "XXXXXXXXXXXXXXXXXX===Not OK";
@@ -80,6 +90,18 @@ class home extends CI_Controller {
     }
 
 
+    public function  insertwork(){
+        $data["Work_Date"] = $_POST["Work_Date"];
+        $data["Work_Start"] = $_POST["Work_Start"];
+        $data["Work_Finish"] = $_POST["Work_Finish"];
+        $data["Job_Description"] = $_POST["Job_Description"];
+
+        
+        $this->load->model('Show_model');
+        $res = $this->Show_model->insert_work($data);
+        redirect('home/Student_SaveJob_2');
+        
+    }	
 
 
 
@@ -89,8 +111,9 @@ class home extends CI_Controller {
 
 
 
-
-
+public function testlog(){
+	$this->load->view('login');
+}
 
 
 	public function login(){
@@ -128,9 +151,19 @@ class home extends CI_Controller {
 	}
 
 	public function Student_ConfirmJob_2(){
+
+		$this->load->model('Show_model');
+        $res = $this->Show_model->get_job();
+        $data['job_res'] = $res;
+
+		$this->load->model('Show_model');
+        $res = $this->Show_model->get_student();
+        $data['student_res'] = $res;       
+
+
 		$this->load->view('Student_2/start');
 		$this->load->view('Student_2/Navigation_N');
-		$this->load->view('Student_2/Confirm_job');
+		$this->load->view('Student_2/Confirm_job', $data);
 		$this->load->view('Student_2/footer');
 		$this->load->view('Student_2/End');
 	}
