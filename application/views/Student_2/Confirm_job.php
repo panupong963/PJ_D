@@ -52,9 +52,10 @@ foreach ($student_res as $row) {
   <tr>
     <td colspan="3" align="center">แก้ไขข้อมูล</td>
   </tr>
-  <tr>
-    <td width="276" align="right">E-mail : </td>
-    <td width="293"><input type="text" class="form-control"></td>
+  <tr> 
+    
+    <td width="276" align="right" >E-mail : </td>
+    <td width="293"><input type="text" class="form-control" placeholder = "<?php echo $this -> session -> userdata ( 'STUDENTEMAIL' ); ?>"></td>
     <td width="317">&nbsp;</td>
   </tr>
   <tr>
@@ -62,23 +63,29 @@ foreach ($student_res as $row) {
   </tr>
   <tr>
     <td align="right">โทรศัพท์ :</td>
-    <td><input type="text" class="form-control"></td>
-    <td>(ตัวอย่าง : 0958489698)</td>
+    <td><input type="text" class="form-control" placeholder = "<?php echo $this -> session -> userdata ( 'PARENTPHONENO' ); ?>"></td>
+    <td>(ตัวอย่าง : 0958489698 )</td>
   </tr>
   <tr>
     <td colspan="3">&nbsp;</td>
   </tr>
   <tr align="center">
     <td align="right">ชื่อบัญชี : </td>
-    <td><input type="radio" name="gender" value="male"> ธนาคารกรุงไทย
+    <td>
+      <?php if($this -> session -> userdata ( 'Bank_Name' )=="1"){ ?>
+        <input type="radio" name="gender" value="male" checked> ธนาคารกรุงไทย
         <input type="radio" name="gender" value="female"> ธนาคารออมสิน</td>
+      <?php }else if($this -> session -> userdata ( 'Bank_Name' )=="2"){ ?>
+        <input type="radio" name="gender" value="male" > ธนาคารกรุงไทย
+        <input type="radio" name="gender" value="female" checked> ธนาคารออมสิน</td>
+      <?php } ?>
   </tr>
   <tr>
     <td colspan="3">&nbsp;</td>
   </tr>
   <tr>
     <td align="right">เลขบัญชี : </td>
-    <td><input type="text" class="form-control"></td>
+    <td><input type="text" class="form-control" placeholder = "<?php echo $this -> session -> userdata ( 'BANKACCOUNT' ); ?>"></td>
     <td>(ตัวอย่าง : xxx-x-xxxxx-x)</td>
   </tr>
   <tr>

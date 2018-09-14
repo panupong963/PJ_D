@@ -14,6 +14,20 @@ class Login_model extends CI_Model {
  				$this -> session -> set_userdata('userid',$row->login_id);
  				$this -> session -> set_userdata('username',$row->username);
                 $this -> session -> set_userdata('ST',$row->ST);
+                $this -> session -> set_userdata('student_code',$row->student_code);
+
+ 				$this->db->where('student_code', $row->student_code);
+ 				$query2 = $this->db->get('student'); 
+ 				$row2 = $query2->row();
+
+ 				$this->session->set_userdata('STUDENTNAME', $row2->STUDENTNAME);
+ 				$this->session->set_userdata('STUDENTEMAIL', $row2->STUDENTEMAIL);
+ 				$this->session->set_userdata('PARENTPHONENO', $row2->PARENTPHONENO);
+ 				$this->session->set_userdata('BANKACCOUNT', $row2->BANKACCOUNT);
+ 				$this->session->set_userdata('Bank_Name', $row2->Bank_Name);
+ 				
+ 				
+
  				/*$this -> session -> set_userdata('userautority',$row->autority=1);
  				$this -> session -> set_userdata('userofficeid',$row->officerid);
  				

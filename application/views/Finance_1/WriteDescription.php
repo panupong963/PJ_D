@@ -65,7 +65,7 @@
 <hr color="#000000">
 <br>-->
 
-<form action="<?php echo site_url("home2/insertjob");?>" method="post">
+<form action="<?php echo site_url("home2/insertjob");?>" method="post" >
 <div class="container">
   <br>
   <h3>กรอกรายละเอียดงาน</h3>
