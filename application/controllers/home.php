@@ -101,7 +101,22 @@ class home extends CI_Controller {
         $res = $this->Show_model->insert_work($data);
         redirect('home/Student_SaveJob_2');
         
-    }	
+    }
+
+    public function update_student(){
+        $data["STUDENTEMAIL"] = $_POST["STUDENTEMAIL"];
+        $data["PARENTPHONENO"] = $_POST["PARENTPHONENO"];
+        $data["Bank_Name"] = $_POST["Bank_Name"];
+        $data["BANKACCOUNT"] = $_POST["BANKACCOUNT"];
+         
+         //$id1 = $this->input->post('id');
+         $id = $_POST["id"];
+         $this->load->model('Show_model');   
+         $this->Show_model->update_student($data,$id); 
+        
+         //redirect('customer/index');
+         redirect("home/Student_ConfirmJob_2");
+    }
 
 
 

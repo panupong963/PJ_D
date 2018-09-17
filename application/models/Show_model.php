@@ -25,13 +25,33 @@ class Show_model extends CI_Model {
         $this->db->insert('offices', $data);
     }
     
-    public function update_entry()
+    public function update_studet($id)
     {
-        $this->title    = $_POST['title'];
-        $this->content  = $_POST['content'];
-        $this->date     = time();
+    /*$data=array(
+        //$this->STUDENTEMAIL    = $_POST['STUDENTEMAIL'];
+        //$this->PARENTPHONENO  = $_POST['PARENTPHONENO'];
+        //$this->Bank_Name  = $_POST['Bank_Name'];
+        //$this->BANKACCOUNT  = $_POST['BANKACCOUNT'];
+        //$this->date     = time();
+        'STUDENTEMAIL' => $this->input->post('STUDENTEMAIL'),
+        'PARENTPHONENO' => $this->input->post('PARENTPHONENO'),
+        'Bank_Name' => $this->input->post('Bank_Name'),
+        'BANKACCOUNT' => $this->input->post('BANKACCOUNT')
+    );
+        $this->db->where('student_code', $this->input->post('id'));
+        $query=$this->db->update('student', $data); 
+        if($query) {
+            redirect("home/Student_ConfirmJob_2");
+            return TRUE;
+        } else {
+            return FALSE;
+        }     
+  
         
-        $this->db->update('entries', $this, array('id' => $_POST['id']));
+        $this->db->update('student', $this, array('student_code' => $_POST['id']));*/
+         $this->db->set($data); 
+         $this->db->where("id", $id); 
+         $this->db->update("student", $data);
     }
 
     public function insert_job($data)
@@ -41,6 +61,11 @@ class Show_model extends CI_Model {
     public function insert_work($data)
     {
         $this->db->insert('work', $data);
-    }   
+    } 
+    public function update_student($data, $id){
+         $this->db->set($data); 
+         $this->db->where("student_code", $id); 
+         $this->db->update("student", $data);
+    }  
     
 }

@@ -15,7 +15,7 @@
     <td width="77">&nbsp;</td>
   </tr>
   <tr align="center">
-    <td height="156" valign="top"><input type="date" name="Work_Date"></td>
+    <td height="156" valign="top"><input type="date" name="Work_Date" required></td>
     <td valign="top"><!-- <select>
   <option value="volvo">ชม.</option>
   <option value="saab">01</option>
@@ -27,7 +27,7 @@
   <option value="saab">01</option>
   <option value="opel">02</option>
   <option value="audi">03</option>
-</select> --> <input type="time" name="Work_Start"></td>
+</select> --> <input type="time" name="Work_Start" required></td>
     <td valign="top"><!-- <select>
   <option value="volvo">ชม.</option>
   <option value="saab">01</option>
@@ -39,8 +39,8 @@
   <option value="saab">01</option>
   <option value="opel">02</option>
   <option value="audi">03</option>
-</select> --> <input type="time" name="Work_Finish"></td>
-    <td valign="top"><textarea name="Job_Description">พิมพ์ข้อความ</textarea></td>
+</select> --> <input type="time" name="Work_Finish" required></td>
+    <td valign="top"><textarea name="Job_Description" placeholder = "พิพ์ข้อความ" required></textarea></td>
     <td align="center"><button type="submit" class="btn btn-success">บันทึก</button></td>
   </tr>
 </table>

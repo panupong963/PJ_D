@@ -15,6 +15,7 @@ class Login_model extends CI_Model {
  				$this -> session -> set_userdata('username',$row->username);
                 $this -> session -> set_userdata('ST',$row->ST);
                 $this -> session -> set_userdata('student_code',$row->student_code);
+                
 
  				$this->db->where('student_code', $row->student_code);
  				$query2 = $this->db->get('student'); 
@@ -25,9 +26,16 @@ class Login_model extends CI_Model {
  				$this->session->set_userdata('PARENTPHONENO', $row2->PARENTPHONENO);
  				$this->session->set_userdata('BANKACCOUNT', $row2->BANKACCOUNT);
  				$this->session->set_userdata('Bank_Name', $row2->Bank_Name);
+ 				$this->session->set_userdata('Job_ID',$row2->Job_ID);
  				
- 				
+ 				$this->db->where('Job_ID', $row2->Job_ID);
+ 				$query3 = $this->db->get('Job'); 
+ 				$row3 = $query3->row();
 
+ 				$this->session->set_userdata('job_name_ss', $row3->job_name_ss);
+ 				$this->session->set_userdata('Job_Name', $row3->Job_Name);
+ 				$this->session->set_userdata('ss', $row3->ss);
+ 				$this->session->set_userdata('Contact', $row3->Contact);
  				/*$this -> session -> set_userdata('userautority',$row->autority=1);
  				$this -> session -> set_userdata('userofficeid',$row->officerid);
  				
