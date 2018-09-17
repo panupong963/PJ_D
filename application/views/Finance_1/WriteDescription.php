@@ -64,8 +64,13 @@
 <br>
 <hr color="#000000">
 <br>-->
+<script language="JavaScript">
+  function nn(){
+    clik.submit();
+  }
+  </script>
 
-<form action="<?php echo site_url("home2/insertjob");?>" method="post">
+<form action="<?php echo site_url("home2/insertjob");?>" method="post" name = "clik">
 <div class="container">
   <br>
   <h3>กรอกรายละเอียดงาน</h3>
@@ -290,8 +295,9 @@
                 <td>
                  <!--<button class="btn btn-info nextBtn btn-lg pull-right" type="button"  style="width:68px;height:40px" ><h6>บันทึก</h6></button></td>-->
 <td>
-                 <button class="btn btn-info nextBtn btn-lg pull-right" type="submit"  style="width:70px;height:40px" ><h6>บันทึก</h6></button></td> 
-             <td><button class="btn btn-info btn-lg pull-right" type="button"  style="width:88px;height:40px"<a href="localhost/PJ_D/index.php/home2/finance_WriteDescription_1" ><h6>ย้อนกลับ</h6></button>
+                 <button class="btn btn-info nextBtn btn-lg pull-right" type="button"  style="width:85px;height:40px" ><h6>หน้าถัดไป</h6></button></td> 
+             <td><!--<button class="btn btn-info btn-lg pull-right" type="button"  style="width:88px;height:40px"<a href="localhost/PJ_D/index.php/home2/finance_WriteDescription_1" ><h6>ย้อนกลับ</h6></button>-->
+               <button class="btn btn-info nextBtn btn-lg pull-right" type="button"  style="width:70px;height:40px" OnClick="nn()"><h6>บันทึก</h6></button>
 
                  </td>
 
