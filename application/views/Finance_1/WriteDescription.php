@@ -70,7 +70,11 @@
   }
   </script>
 
+<<<<<<< HEAD
 <form action="<?php echo site_url("home2/insertjob");?>" method="post" name = "clik">
+=======
+<form action="<?php echo site_url("home2/insertjob");?>" method="post" >
+>>>>>>> 61df6d2ca8fd64ba2769797bc0870ed375d26606
 <div class="container">
   <br>
   <h3>กรอกรายละเอียดงาน</h3>
