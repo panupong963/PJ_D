@@ -1,7 +1,8 @@
 <?php
 $ST = $this -> session -> userdata ( 'ST' );
 $id = $this -> session -> userdata ( 'student_code' );
-$test = "1414";
+
+
 foreach ($student_res as $row) {
   if ($row->student_code == $id) {
     # code...
@@ -19,6 +20,7 @@ foreach ($student_res as $row) {
         <ol class="breadcrumb">
           <li class="breadcrumb-item active">ยืนยันการทำงาน</li>
         </ol>
+        <form action="<?php echo site_url("home/update_student2");?>" method="post">  
 		<table class="table table-bordered">
       <tbody>
   <tr class="table-info">
@@ -40,13 +42,13 @@ foreach ($student_res as $row) {
     <?php if($Re_status == '0'){ ?>
   </tr>
     <tr align="center" class="table-info">
-	<td colspan="2"><button type="button" class="btn btn-success">ยืนยัน</button>
-    				<button type="button" class="btn btn-danger" onclick="myFunction()">ปฎิเสธ</button></td>
+	<td colspan="2"><button type="submit" class="btn btn-success" name="id" value="<?php echo $this -> session -> userdata ( 'student_code' ); ?>">ยืนยัน</button>
+    				<button type="submit" name="id2" value="<?php echo $this -> session -> userdata ( 'student_code' ); ?>" class="btn btn-danger" onclick="myFunction()">ปฎิเสธ</button></td>
   </tr>
 <?php } ?>
 </tbody>
 </table>
-
+</form>
             <h5>วันทีทำงาน <font color="#FF0000" size="5">20/02/60 - 20/05/60 </font></h5>
             <hr color="#000000">
               <br>

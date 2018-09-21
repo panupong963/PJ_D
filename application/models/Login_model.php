@@ -36,6 +36,7 @@ class Login_model extends CI_Model {
  				$this->session->set_userdata('Job_Name', $row3->Job_Name);
  				$this->session->set_userdata('ss', $row3->ss);
  				$this->session->set_userdata('Contact', $row3->Contact);
+ 				
  				/*$this -> session -> set_userdata('userautority',$row->autority=1);
  				$this -> session -> set_userdata('userofficeid',$row->officerid);
  				

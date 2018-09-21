@@ -18,6 +18,12 @@ class Show_model extends CI_Model {
         $query = $this->db->query('select * from job');
         return $query->result();
     }
+    public function get_work()
+    {
+        //$query = $this->db->query('select * from offices ORDER BY officeCode ');
+        $query = $this->db->query('select * from work');
+        return $query->result();
+    }
 
     
     public function insert_entry($data)
@@ -54,18 +60,24 @@ class Show_model extends CI_Model {
          $this->db->update("student", $data);
     }
 
-    public function insert_job($data)
+    public function insert_job($data) //insert ตาราง job
     {
         $this->db->insert('job', $data);
     }
-    public function insert_work($data)
+    public function insert_work($data) // insert ตาราง work
     {
         $this->db->insert('work', $data);
     } 
-    public function update_student($data, $id){
+
+    public function update_student($data, $id){ // update เเก้ไขข้อมูล นศห
          $this->db->set($data); 
          $this->db->where("student_code", $id); 
          $this->db->update("student", $data);
-    }  
+    }
+    public function update_student2($data, $id){ // update เเก้ไขข้อมูล นศห
+         $this->db->set($data); 
+         $this->db->where("student_code", $id); 
+         $this->db->update("student", $data);
+    }   
     
 }

@@ -1,3 +1,4 @@
+
 <div class="content-wrapper">
 	<div class="container-fluid">
         <ol class="breadcrumb">
@@ -16,30 +17,49 @@
   </tr>
   <tr align="center">
     <td height="156" valign="top"><input type="date" name="Work_Date" required></td>
-    <td valign="top"><!-- <select>
-  <option value="volvo">ชม.</option>
-  <option value="saab">01</option>
-  <option value="opel">02</option>
-  <option value="audi">03</option>
+    <td valign="top">
+      <select name="Work_Start"> 
+     
+  <option value="0">ชม.</option>
+  <?php for($i=1; $i < 10; $i++){ ?> 
+  <option value="<?php echo $i; ?>"><?php echo "0".$i; ?></option>
+  <?php } ?>
+  <?php for($i=10; $i <= 24; $i++){ ?> 
+  <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+  <?php } ?>
+</select> 
+
+<select name="Work_Start2">
+
+  <option value="0">นาที</option>
+  <?php for($i=0; $i < 10; $i++){ ?>
+  <option value="<?php echo $i; ?>"><?php echo "0".$i; ?></option>
+  <?php } ?>
+  <?php for($i=10; $i <= 59; $i++){ ?> 
+  <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+  <?php } ?>
+</select>ชั่วโมง / นาที <!--  <input type="time" name="Work_Start" required>--></td>
+    
+    <td valign="top"> 
+    <select name="Work_Finish">
+  <option value="0">ชม.</option>
+  <?php for($i=1; $i < 10; $i++){ ?> 
+  <option value="<?php echo $i; ?>"><?php echo "0".$i; ?></option>
+  <?php } ?>
+  <?php for($i=10; $i <= 24; $i++){ ?> 
+  <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+  <?php } ?>
 </select>
-<select>
-  <option value="volvo">นาที</option>
-  <option value="saab">01</option>
-  <option value="opel">02</option>
-  <option value="audi">03</option>
-</select> --> <input type="time" name="Work_Start" required></td>
-    <td valign="top"><!-- <select>
-  <option value="volvo">ชม.</option>
-  <option value="saab">01</option>
-  <option value="opel">02</option>
-  <option value="audi">03</option>
-</select>
-<select>
-  <option value="volvo">นาที</option>
-  <option value="saab">01</option>
-  <option value="opel">02</option>
-  <option value="audi">03</option>
-</select> --> <input type="time" name="Work_Finish" required></td>
+
+<select name="Work_Finish2">
+  <option value="0">นาที</option>
+  <?php for($i=0; $i < 10; $i++){ ?>
+  <option value="<?php echo $i; ?>"><?php echo "0".$i; ?></option>
+  <?php } ?>
+  <?php for($i=10; $i <= 59; $i++){ ?> 
+  <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+  <?php } ?>
+</select>ชั่วโมง / นาที  <!--<input type="time" name="Work_Finish" required>--></td>
     <td valign="top"><textarea name="Job_Description" placeholder = "พิพ์ข้อความ" required></textarea></td>
     <td align="center"><button type="submit" class="btn btn-success">บันทึก</button></td>
   </tr>
@@ -50,15 +70,26 @@
               <h5>ช่วงเวลาการบันทึกข้อมูลงานระหว่างวันที่ <font color="#FF0000" size="5">1/ม.ค./60 - 20/พ.ค./60 </font></h5>
             <hr color="#000000">
               <br>
-              <div>
-
+ <div>
+ <?php
+ $id = $this -> session -> userdata ( 'student_code' ); 
+ $n = 0;         
+foreach ($work_res as $row) {
+  if($row->STUDENTCODE == $id){
+    if($row->Work_Status == "1"){
+      $n += $row->Work_Hour;
+    }
+  }
+}
+$sum = $n / 60;
+ ?>
 <table class="table">
   <thead>
     <tr align="center">
-      <th colspan="5">ชื่องาน : จัดชั้นหนังสือ</th>
+      <th colspan="5">ชื่องาน : <?php echo $this -> session -> userdata ( 'Job_Name' ); ?></th>
     </tr>
       <tr align="center">
-    <th colspan="5">ชั่วโมงสะสมทั้งหมด : 20 ชั่วโมง</th>
+    <th colspan="5">ชั่วโมงสะสมทั้งหมด : <?php echo floor($sum); ?> ชั่วโมง</th>
   </tr>
   <tr align="center">
     <th width="55">ลำดับ</th>
@@ -69,7 +100,25 @@
   </tr>
 </thead>
 <tbody>
+  <?php $i= 1; foreach ($work_res as $row) { 
+    if($row->STUDENTCODE == $id){
+      if($row->Work_Status == "0"){
+  ?>
   <tr align="center">
+    <th><?php echo $i++; ?></th>
+    <th><?php echo $row->Work_Date; ?></th>
+    <th><?php echo $row->Work_Start.".".$row->Work_Start2." - ".$row->Work_Finish.".".$row->Work_Finish2." น." ?></th>
+    <th><button type="button" class="btn btn-warning">รายละเอียด</button></th>
+    <th><button type="button" class="btn btn-danger">ลบ</button>
+    <button type="button" class="btn btn-primary">แก้ไข</button></th>
+  </tr>
+<?php 
+    }
+  }
+}
+?>
+
+  <!-- <tr align="center">
     <th>1</th>
     <th>16/ม.ค./60</th>
     <th>14.30 - 15.30 น.</th>
@@ -116,7 +165,8 @@
     <th><button type="button" class="btn btn-warning">รายละเอียด</button></th>
     <th><button type="button" class="btn btn-danger">ลบ</button>
     <button type="button" class="btn btn-primary">แก้ไข</button></th>
-  </tr>
+  </tr> -->
+
   <tr align="content">
     <th colspan="5"> <ul class="pagination justify-content-center">
     <li class="page-item"><a class="page-link" href="#">1</a></li>
