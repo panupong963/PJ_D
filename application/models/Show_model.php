@@ -78,6 +78,13 @@ class Show_model extends CI_Model {
          $this->db->set($data); 
          $this->db->where("student_code", $id); 
          $this->db->update("student", $data);
-    }   
+    }
+
+
+    public function update_job($data, $id){ // update เลือกงาน
+         $this->db->set($data); 
+         $this->db->where("student_code", $id); 
+         $this->db->update("student", $data);
+    }      
     
 }
