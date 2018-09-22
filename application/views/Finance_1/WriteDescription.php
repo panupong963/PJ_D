@@ -197,7 +197,7 @@
                       &nbsp;&nbsp;&nbsp;&nbsp; วันที่เริ่มต้นการทำงาน <font color="red">* </font><input id="date" name="Frist_date" type="date"> <br><br>
 
                                       <form action="/action_page.php">
-                      คุณสมบัติผู้สมัคร <font color="red">* </font> : 
+                      คุณสมบัติผู้สมัคร <font color="red">* </font> ประเภทงาน
                        
                        
                        
