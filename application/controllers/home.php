@@ -190,10 +190,10 @@ public function testlog(){
 	}
 
 	public function Student_SaveJob_2(){
+
 		$this->load->model('Show_model');
         $res = $this->Show_model->get_work();
         $data['work_res'] = $res;
-
 
 		$this->load->view('Student_2/start');
 		$this->load->view('Student_2/Navigation_N');
@@ -229,6 +229,7 @@ public function testlog(){
 	}
 
 	public function Student_list_2(){
+
 		$this->load->model('Show_model');
         $res = $this->Show_model->get_work();
         $data['work_res'] = $res;

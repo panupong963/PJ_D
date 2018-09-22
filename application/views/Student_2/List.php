@@ -28,10 +28,71 @@
 <tr align="center">
     <th><?php echo $i++; ?></th>
     <th><?php echo $row->Work_Date; ?></th>
-    <th><?php echo $row->Work_Start.".".$row->Work_Start2." - ".$row->Work_Finish.".".$row->Work_Finish2." น." ?></th>
-    <th><?php echo $row->Work_Hour/60; ?></th>
+    <th><?php 
+            if($row->Work_Start >= 10){
+            if($row->Work_Start2 >= 10){
+              echo $row->Work_Start.".".$row->Work_Start2." - ";
+              }
+            }
+            if($row->Work_Start < 10){
+            if($row->Work_Start2 < 10){  
+            echo "0".$row->Work_Start."."."0".$row->Work_Start2." - ";
+            }
+          }
+            if($row->Work_Start < 10){
+            if($row->Work_Start2 >= 10){  
+            echo "0".$row->Work_Start.".".$row->Work_Start2." - ";
+            }
+          }
+            if($row->Work_Start >= 10 ){
+            if($row->Work_Start2 < 10){  
+            echo $row->Work_Start."."."0".$row->Work_Start2." - ";
+            }
+          }          
+
+
+
+
+
+
+
+
+
+          if($row->Work_Finish >= 10 ){
+          if($row->Work_Finish2 >= 10){
+           echo  $row->Work_Finish.".".$row->Work_Finish2." น.";
+         }
+       }
+          if($row->Work_Finish < 10 ){
+          if($row->Work_Finish2 < 10){
+           echo  "0".$row->Work_Finish."."."0".$row->Work_Finish2." น.";
+         }
+       }  
+          if($row->Work_Finish < 10 ){
+          if($row->Work_Finish2 >= 10){
+           echo  "0".$row->Work_Finish.".".$row->Work_Finish2." น.";
+         }
+       }
+          if($row->Work_Finish >= 10 ){
+          if($row->Work_Finish2 < 10){
+           echo  $row->Work_Finish."."."0".$row->Work_Finish2." น.";
+         }
+       }
+    ?>
+        
+    </th>
+    <th><?php
+         if($row->Work_Hour >= 60){
+         echo floor($row->Work_Hour/60);
+        }else {
+            echo floor($row->Work_Hour)." นาที";
+        }
+         ?>
+       
+            
+        </th>
    
-    <th><?php echo $row->Work_Hour*30; ?></th>
+    <th><?php echo $row->Work_Hour/60*30; ?></th>
     <th>
         <?php if($row->Work_Status == "0"){ ?>
             <u>รอรับรองผล</u>

@@ -167,7 +167,7 @@ foreach ($student_res as $row) {
    <tr align="center">
   <th colspan="3">
             <?php if($row->Bank_Name && $row->BANKACCOUNT && $row->Expenses && $row->Talent && $row->Necessary != NULL){ ?>
-  					<button type="submit" value="<?php echo $this -> session -> userdata ( 'student_code' ); ?>" class="btn btn-primary">เเก้ไข</button>
+  					<button type="submit" value="<?php echo $this -> session -> userdata ( 'student_code' ); ?>" class="btn btn-success">[บันทึก]</button>
             <button type="reset" class="btn btn-danger">ยกเลิก</button></th>
             <?php }else {  ?>
             <button type="submit" value="<?php echo $this -> session -> userdata ( 'student_code' ); ?>" class="btn btn-success">บันทึก</button>

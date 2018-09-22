@@ -127,9 +127,17 @@ class home2 extends CI_Controller {
 	}
 	
 	public function Student_announced_1(){
+		$this->load->model('Show_model');
+        $res = $this->Show_model->get_student();
+        $data['student_res'] = $res;
+
+		$this->load->model('Show_model');
+        $res = $this->Show_model->get_job();
+        $data['job_res'] = $res; 		
+
 		$this->load->view('Student_1/start');
 		$this->load->view('Student_1/Navigation_N');
-		$this->load->view('Student_1/Announced');
+		$this->load->view('Student_1/Announced', $data);
 		$this->load->view('Student_1/footer');
 		$this->load->view('Student_1/End');
 	}
@@ -328,7 +336,8 @@ class home2 extends CI_Controller {
         $data["Expenses"] = $_POST["Expenses"];
         $data["Talent"] = $_POST["Talent"];
         $data["Necessary"] = $_POST["Necessary"];
-         
+        $data["Re_status"] = "0";
+
          //$id1 = $this->input->post('id');
          $id = $this -> session -> userdata ( 'student_code' );
          $this->load->model('Show_model');   

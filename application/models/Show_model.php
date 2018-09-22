@@ -21,7 +21,12 @@ class Show_model extends CI_Model {
     public function get_work()
     {
         //$query = $this->db->query('select * from offices ORDER BY officeCode ');
-        $query = $this->db->query('select * from work');
+
+        //$this->db->order_by('updated', 'desc');
+        //$query = $this->db->query('select * from work'); 
+        // ASC เรียงจากน้อยไปหามาก
+        //DESC เรียงจากมากไปหาน้อย 
+        $query = $this->db->query('select * from work ORDER BY Work_Date DESC');
         return $query->result();
     }
 

@@ -161,7 +161,7 @@ $sum = $n / 60;
               ?></th>
     <th><button type="button" class="btn btn-warning">รายละเอียด</button></th>
     <th><button type="button" class="btn btn-danger">ลบ</button>
-    <a href="<?= base_url('home/Student_SaveJob_2/'.$row->Work_ID); ?>" class="btn btn-primary">แก้ไข</a></th>
+    <a href="<?= base_url('home/Student_list_2/'.$row->Work_ID); ?>" class="btn btn-primary">แก้ไข</a></th>
   </tr>
 <?php 
     }
