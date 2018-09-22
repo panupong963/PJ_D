@@ -13,24 +13,99 @@
     <th width="119">วันที่ปฎิบัติงาน</th>
     <th width="130">เวลาปฎิบัติงาน</th>
     <th width="138">จำนวน ชม. ทำงาน</th>
-    <th width="120">จำนวน ชม. สะสม</th>
+    
     <th width="62">ยอดเงิน</th>
     <th width="88">สถานะ</th>
     <th width="143">หมายเหตุ</th>
   </tr>
 </thead>
 <tbody>
+  <?php 
+    $id = $this -> session -> userdata ( 'student_code' ); 
+    $i= 1; foreach ($work_res as $row) { 
+    if($row->STUDENTCODE == $id){
+  ?>
 <tr align="center">
-    <th>1</th>
-    <th>12/ม.ค./60</th>
-    <th>11.30 - 13.30 น.</th>
-    <th>2</th>
-    <th>20</th>
-    <th>150</th>
-    <th><font color="red"><u>ไม่ผ่านการรับรองผล</u></font></th>
-    <th>ไม่ได้มาทำงานจริง</th>
-  </tr>
-    <tr align="center">
+    <th><?php echo $i++; ?></th>
+    <th><?php echo $row->Work_Date; ?></th>
+    <th><?php 
+            if($row->Work_Start >= 10){
+            if($row->Work_Start2 >= 10){
+              echo $row->Work_Start.".".$row->Work_Start2." - ";
+              }
+            }
+            if($row->Work_Start < 10){
+            if($row->Work_Start2 < 10){  
+            echo "0".$row->Work_Start."."."0".$row->Work_Start2." - ";
+            }
+          }
+            if($row->Work_Start < 10){
+            if($row->Work_Start2 >= 10){  
+            echo "0".$row->Work_Start.".".$row->Work_Start2." - ";
+            }
+          }
+            if($row->Work_Start >= 10 ){
+            if($row->Work_Start2 < 10){  
+            echo $row->Work_Start."."."0".$row->Work_Start2." - ";
+            }
+          }          
+
+
+
+
+
+
+
+
+
+          if($row->Work_Finish >= 10 ){
+          if($row->Work_Finish2 >= 10){
+           echo  $row->Work_Finish.".".$row->Work_Finish2." น.";
+         }
+       }
+          if($row->Work_Finish < 10 ){
+          if($row->Work_Finish2 < 10){
+           echo  "0".$row->Work_Finish."."."0".$row->Work_Finish2." น.";
+         }
+       }  
+          if($row->Work_Finish < 10 ){
+          if($row->Work_Finish2 >= 10){
+           echo  "0".$row->Work_Finish.".".$row->Work_Finish2." น.";
+         }
+       }
+          if($row->Work_Finish >= 10 ){
+          if($row->Work_Finish2 < 10){
+           echo  $row->Work_Finish."."."0".$row->Work_Finish2." น.";
+         }
+       }
+    ?>
+        
+    </th>
+    <th><?php
+         if($row->Work_Hour >= 60){
+         echo floor($row->Work_Hour/60);
+        }else {
+            echo floor($row->Work_Hour)." นาที";
+        }
+         ?>
+       
+            
+        </th>
+   
+    <th><?php echo $row->Work_Hour/60*30; ?></th>
+    <th>
+        <?php if($row->Work_Status == "0"){ ?>
+            <u>รอรับรองผล</u>
+        <?php }else if($row->Work_Status == "1"){ ?>
+            <font color="green"><u>ผ่านการรับรองผล</u></font>
+        <?php }else if($row->Work_Status == "2"){?>
+            <font color="red"><u>ไม่ผ่านการรับรองผล</u></font>
+        <?php } ?>
+    </th>
+    <th><?php echo $row->Reason_certifying; ?></th>
+ </tr>
+<?php }} ?>
+     <!--<tr align="center">
     <th>2</th>
     <th>25/ธ.ค./59</th>
     <th>11.30 - 12.30 น.</th>
@@ -61,7 +136,7 @@
     <th></th>
     <th></th>
     <th><u></u></th>
-  </tr>
+  </tr>-->
 </tbody>
 </table>
 </div>

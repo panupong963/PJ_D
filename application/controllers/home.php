@@ -94,16 +94,71 @@ class home extends CI_Controller {
         $data["Work_Date"] = $_POST["Work_Date"];
         $data["Work_Start"] = $_POST["Work_Start"];
         $data["Work_Finish"] = $_POST["Work_Finish"];
+        $data["Work_Start2"] = $_POST["Work_Start2"];
+        $data["Work_Finish2"] = $_POST["Work_Finish2"];
         $data["Job_Description"] = $_POST["Job_Description"];
+        $data["Work_Status"] = "0";
+        if($_POST["Work_Start"] <= $_POST["Work_Finish"]){
+        $sum = $_POST["Work_Finish"] - $_POST["Work_Start"];
+    	}else{
+    	$sum = $_POST["Work_Start"] - $_POST["Work_Finish"];
+    	}
+        $sum = $sum * 60;
+        if($_POST["Work_Start2"] <= $_POST["Work_Finish2"]){
+        	$sum2 = $_POST["Work_Finish2"] - $_POST["Work_Start2"];
+        }else{
+        	$sum2 = $_POST["Work_Start2"] - $_POST["Work_Finish2"];
+        }
+        $sum3 = $sum + $sum2;
+        $data["Work_Hour"] = $sum3;
+        
+        $data["Job_ID"] =  $this -> session -> userdata ( 'Job_ID' );
+        $data["STUDENTCODE"] =  $this -> session -> userdata ( 'student_code' );
+
+
+        
 
         
         $this->load->model('Show_model');
         $res = $this->Show_model->insert_work($data);
         redirect('home/Student_SaveJob_2');
         
-    }	
+    }
 
+    public function update_student(){ // update เเก้ไขข้อมูล
+        $data["STUDENTEMAIL"] = $_POST["STUDENTEMAIL"];
+        $data["PARENTPHONENO"] = $_POST["PARENTPHONENO"];
+        $data["Bank_Name"] = $_POST["Bank_Name"];
+        $data["BANKACCOUNT"] = $_POST["BANKACCOUNT"];
+         
+         //$id1 = $this->input->post('id');
+         $id = $_POST["id"];
+         $this->load->model('Show_model');   
+         $this->Show_model->update_student($data,$id); 
+        
+         //redirect('customer/index');
+         redirect("home/Student_ConfirmJob_2");
+    }
 
+    public function update_student2(){ // update ยืนยันข้อมูล
+    	if($_POST["txt"] == Null){
+    		$data["Re_status"] = "1";
+    	}else{
+    		$data["Re_status"] = "2";
+    		$data["Reason_ST"] = $_POST["txt"];
+    	}	
+
+        
+
+         
+         //$id1 = $this->input->post('id');
+         $id = $_POST["id"];
+         $this->load->model('Show_model');   
+         $this->Show_model->update_student2($data,$id); 
+        
+         //redirect('customer/index');
+         redirect("home/Student_ConfirmJob_2");
+    }
 
 
 
@@ -135,9 +190,14 @@ public function testlog(){
 	}
 
 	public function Student_SaveJob_2(){
+
+		$this->load->model('Show_model');
+        $res = $this->Show_model->get_work();
+        $data['work_res'] = $res;
+
 		$this->load->view('Student_2/start');
 		$this->load->view('Student_2/Navigation_N');
-		$this->load->view('Student_2/Save_work');
+		$this->load->view('Student_2/Save_work', $data);
 		$this->load->view('Student_2/footer');
 		$this->load->view('Student_2/End');
 	}
@@ -169,9 +229,14 @@ public function testlog(){
 	}
 
 	public function Student_list_2(){
+
+		$this->load->model('Show_model');
+        $res = $this->Show_model->get_work();
+        $data['work_res'] = $res;
+
 		$this->load->view('Student_2/start');
 		$this->load->view('Student_2/Navigation_N');
-		$this->load->view('Student_2/List');
+		$this->load->view('Student_2/List', $data);
 		$this->load->view('Student_2/footer');
 		$this->load->view('Student_2/End');
 	}	

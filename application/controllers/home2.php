@@ -105,7 +105,11 @@ class home2 extends CI_Controller {
 	public function Student_registration_1(){
 		$this->load->model('Show_model');
         $res = $this->Show_model->get_student();
-        $data['student_res'] = $res;  
+        $data['student_res'] = $res;
+
+		$this->load->model('Show_model');
+        $res = $this->Show_model->get_job();
+        $data['job_res'] = $res;          
 
 		$this->load->view('Student_1/start');
 		$this->load->view('Student_1/Navigation_N');
@@ -123,17 +127,34 @@ class home2 extends CI_Controller {
 	}
 	
 	public function Student_announced_1(){
+		$this->load->model('Show_model');
+        $res = $this->Show_model->get_student();
+        $data['student_res'] = $res;
+
+		$this->load->model('Show_model');
+        $res = $this->Show_model->get_job();
+        $data['job_res'] = $res; 		
+
 		$this->load->view('Student_1/start');
 		$this->load->view('Student_1/Navigation_N');
-		$this->load->view('Student_1/Announced');
+		$this->load->view('Student_1/Announced', $data);
 		$this->load->view('Student_1/footer');
 		$this->load->view('Student_1/End');
 	}
 
 	public function Student_list_1(){
+
+		$this->load->model('Show_model');
+        $res = $this->Show_model->get_job();
+        $data['job_res'] = $res;
+
+        $this->load->model('Show_model');
+        $res = $this->Show_model->get_student();
+        $data['student_res'] = $res;  
+
 		$this->load->view('Student_1/start');
 		$this->load->view('Student_1/Navigation_N');
-		$this->load->view('Student_1/List');
+		$this->load->view('Student_1/List' , $data);
 		$this->load->view('Student_1/footer');
 		$this->load->view('Student_1/End');
 	}	
@@ -294,5 +315,36 @@ class home2 extends CI_Controller {
         $res = $this->Show_model->insert_job($data);
         redirect('home2/finance_WriteDescription_1');
         
-    }				
+    }
+
+    public function update_job(){ // update เลือกงาน
+        $data["Job_ID"] = $_POST["Job_ID"];
+         
+         //$id1 = $this->input->post('id');
+         $id = $this -> session -> userdata ( 'student_code' );
+         $this->load->model('Show_model');   
+         $this->Show_model->update_job($data,$id); 
+        
+         //redirect('customer/index');
+         redirect("home2/Student_registration_1");
+    }	
+
+
+    public function update_student(){ // update เเก้ไขข้อมูล
+        $data["Bank_Name"] = $_POST["Bank_Name"];
+        $data["BANKACCOUNT"] = $_POST["BANKACCOUNT"];
+        $data["Expenses"] = $_POST["Expenses"];
+        $data["Talent"] = $_POST["Talent"];
+        $data["Necessary"] = $_POST["Necessary"];
+        $data["Re_status"] = "0";
+
+         //$id1 = $this->input->post('id');
+         $id = $this -> session -> userdata ( 'student_code' );
+         $this->load->model('Show_model');   
+         $this->Show_model->update_job($data,$id); 
+        
+         //redirect('customer/index');
+         redirect("home2/Student_registration_1");
+    }	
+
 }
