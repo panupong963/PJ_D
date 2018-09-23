@@ -343,13 +343,13 @@ public function testlog(){
 		$this->load->view('print/End');		
 	}
 
-	public function print(){
+	/*public function print(){
 		$this->load->view('coordinate/start');
 		$this->load->view('coordinate/Navigation_N');
 		$this->load->view('coordinate/print');
 		$this->load->view('coordinate/footer');
 		$this->load->view('coordinate/End');		
-	}
+	}*/
 
 	public function print_l(){
 		$this->load->view('coordinate/start');

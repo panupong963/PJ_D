@@ -65,7 +65,7 @@
 <hr color="#000000">
 <br>-->
 
-<form action="<?php echo site_url("home2/insertjob");?>" method="post">
+<form action="<?php echo site_url("home2/insertjob");?>" method="post" class="nextBtn btn-lg pull-right">
 <div class="container">
   <br>
   <h3>กรอกรายละเอียดงาน</h3>
@@ -207,10 +207,10 @@
                        <table border="0" class="table table-striped">
                         <tr>
                           <td>
-                            <input type="checkbox" name="Attribute_applicants" value="มีความขยัน">มีความขยัน
+                            <input type="checkbox" name="Attribute_applicants" value="มีความขยัน" required>มีความขยัน
                           </td>
                           <td>
-                            <input type="checkbox" name="Attribute_applicants" value="มีความรับผิดชอบ">มีความรับผิดชอบ<br>
+                            <input type="checkbox" name="Attribute_applicants" value="มีความรับผิดชอบ" required>มีความรับผิดชอบ<br>
                           </td>
                         </tr>
                         <tr>
