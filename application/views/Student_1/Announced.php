@@ -44,7 +44,7 @@
   <tr align="center">
     <th align="center"><?php echo $i++; ?></th>
     <th align="center"><?php echo $row->student_code; ?></th>
-    <th align="center"><?php echo $row->STUDENTNAME; ?></th>
+    <td align="left"><b><?php echo $row->STUDENTNAME; ?></b></td>
     <th align="center"><?php echo $row->FACULTYNAME; ?></th>
     <th align="center">ผ่าน</th>
   </tr>
