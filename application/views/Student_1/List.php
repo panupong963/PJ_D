@@ -17,7 +17,7 @@
   &nbsp;&nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-warning">ค้นหา</button>
 <br>
 <br>
-			
+<form action="<?php echo site_url("home2/update_job");?>" method="post">   		
 <table class="table table-borderless">
   <thead>
   <tr align="center">
@@ -32,17 +32,25 @@
   </tr>
 </thead>
 <tbody>
+  <?php $i= 1; foreach ($job_res as $row) { 
+  $n = $row->Job_ID; ?>
   <tr align="center">
-  	<th>1</th>
-    <th>ศูนย์บรรณาสารเเละสื่อการศึกษา</th>
-    <th>บริการ</th>
-     <td align="left"><b>ขนของ</b></td>
-     <th>สมใจ ใจสะอาด</th>
-    <th>4</th>
-    <th>2</th>
-    <th><a class="btn btn-info" href="Student_registration_1">เลือกงาน</a></th>
+  	<th><?php echo $i++; ?></th>
+    <th><?php echo $row->Department; ?></th>
+    <th><?php echo $row->Category; ?></th>
+     <td align="left"><b><?php echo $row->Job_Name; ?></b></td>
+     <th><?php echo $row->job_name_ss; ?></th>
+    <th><?php echo $row->Receiving_number; ?></th>
+    <th><?php $j = 0; foreach ($student_res as $row) { 
+        if($row->Job_ID == $n){
+          $j += 1;
+        }
+        } 
+        echo $j; ?></th>
+    <th><button type="submit" class="btn btn-info" name="Job_ID" value="<?php echo $n; ?>">เลือกงาน</button></th>
   </tr>
-  <tr align="center">
+<?php } ?>
+  <!-- <tr align="center">
   	<th>2</th>
     <th>ศูนย์บรรณาสารเเละสื่อการศึกษา</th>
     <th>บริการ</th>
@@ -82,8 +90,9 @@
     <th>3</th>
     <th>2</th>
     <th><a class="btn btn-info" href="Student_registration_1">เลือกงาน</a></th>
-  </tr>
+  </tr>-->
 </tbody>
 </table>
+</form>
 </div>
 </div>

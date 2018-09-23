@@ -205,7 +205,7 @@
         <li class="nav-item">
           
           <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
-            <font color="#FFFFFF">นักศึกษา : ชวนัท ชาญอาวุธ
+            <font color="#FFFFFF">นักศึกษา : <?php echo $this -> session -> userdata ( 'STUDENTNAME' ); ?>
             <i class="fa fa-fw fa-sign-out"></i>ออกจากระบบ</a></font>
         </li>
       </ul>
