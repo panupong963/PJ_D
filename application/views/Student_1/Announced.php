@@ -48,7 +48,18 @@
     <th align="center"><?php echo $row->FACULTYNAME; ?></th>
     <th align="center">ผ่าน</th>
   </tr>
-<?php }
+<?php }else if($row->Re_status == "2"){ ?>
+  <tr align="center">
+    <th align="center"><?php echo $i++; ?></th>
+    <th align="center"><?php echo $row->student_code; ?></th>
+    <td align="left"><b><?php echo $row->STUDENTNAME; ?></b></td>
+    <th align="center"><?php echo $row->FACULTYNAME; ?></th>
+    <th align="center">ไม่ผ่าน</th>
+  </tr>
+
+
+<?php
+}
 } 
 }?>
 </tbody>
