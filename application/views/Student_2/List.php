@@ -27,7 +27,7 @@
   ?>
 <tr align="center">
     <th><?php echo $i++; ?></th>
-    <th><?php echo $row->Work_Date; ?></th>
+    <th><?php echo date("d/m/Y", strtotime($row->Work_Date)); ?></th>
     <th><?php 
             if($row->Work_Start >= 10){
             if($row->Work_Start2 >= 10){
