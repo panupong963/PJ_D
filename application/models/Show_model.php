@@ -4,11 +4,19 @@ class Show_model extends CI_Model {
     public $title;
     public $content;
     public $date;
-    
+    private $table = 'work';
+
     public function get_student()
     {
         //$query = $this->db->query('select * from offices ORDER BY officeCode ');
-        $query = $this->db->query('select * from student');
+        $query = $this->db->query('select * from student ');
+        return $query->result();
+    }
+
+    public function get_student2()//ของ ผู้เสนองาน 
+    {
+        //$query = $this->db->query('select * from offices ORDER BY officeCode ');
+        $query = $this->db->query('select * from student ORDER BY student_code asc');
         return $query->result();
     }
 
@@ -18,6 +26,63 @@ class Show_model extends CI_Model {
         $query = $this->db->query('select * from job');
         return $query->result();
     }
+
+    public function get_edit($id)
+    {
+        //$query = $this->db->query('select * from offices ORDER BY officeCode ');
+        //$query = $this->db->query('select * from job');
+        //$query = $this->db->get_where("work",array("Work_ID"=>$id));
+        //$data = $query->result();
+
+        //return $data;
+        //return $query->result();
+        //$query = $this->db->query('select * from work where Work_ID = '.$id2);
+        //return $query->result();
+        //return $this->db->get_where($this->table, ['Work_ID' => $id2])->row();
+        $this->db->select('*');
+        $this->db->from('work');
+        $this->db->where('Work_ID', $id);
+        $query = $this->db->get();
+        $result = $query->result();
+        return $result;
+    }
+
+    public function get_edit_JO($id){
+        $this->db->select('*');
+        $this->db->from('job');
+        $this->db->where('Job_ID', $id);
+        $query = $this->db->get();
+        $result = $query->result();
+        return $result;
+    }
+
+    public function get_JO($id){
+        $this->db->select('*');
+        $this->db->from('student');
+        $this->db->where('Job_ID', $id);
+        $query = $this->db->get();
+        $result = $query->result();
+        return $result;
+    }
+
+    public function get_JO2($id){
+        $this->db->select('*');
+        $this->db->from('job');
+        $this->db->where('Job_ID', $id);
+        $query = $this->db->get();
+        $result = $query->result();
+        return $result;
+    }    
+
+    public function get_JO3($id){
+        $this->db->select('*');
+        $this->db->from('work');
+        $this->db->where('Job_ID', $id);
+        $query = $this->db->get();
+        $result = $query->result();
+        return $result;
+    }    
+
     public function get_work()
     {
         //$query = $this->db->query('select * from offices ORDER BY officeCode ');
@@ -65,6 +130,11 @@ class Show_model extends CI_Model {
          $this->db->update("student", $data);
     }
 
+    public function delete_work($id){
+        $this->db->where('Work_ID', $id);
+        $this->db->delete('work');
+    }
+
     public function insert_job($data) //insert ตาราง job
     {
         $this->db->insert('job', $data);
@@ -85,6 +155,11 @@ class Show_model extends CI_Model {
          $this->db->update("student", $data);
     }
 
+    public function update_work($data, $id){ // update เเก้ไขข้อมูล นศห
+         $this->db->set($data); 
+         $this->db->where("Work_ID", $id); 
+         $this->db->update("work", $data);
+    }
 
     public function update_job($data, $id){ // update เลือกงาน
          $this->db->set($data); 

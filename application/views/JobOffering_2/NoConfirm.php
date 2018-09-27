@@ -2,9 +2,13 @@
     <div class="container-fluid">
 <table class="table table-bordered">
   <thead>
+      <?php foreach ($job_res as $row) {
+    
+    ?>
   <tr align="center" bgcolor="#FF9900">
-    <th colspan="6">ชื่องาน : เอกสาร</th>
+    <th colspan="6">ชื่องาน : <?php echo $row->Job_Name; ?></th>
   </tr>
+  <?php } ?>
   <tr align="center">
     <th width="49">ลำดับ</th>
     <th>รหัสนักศึกษา</th>
@@ -15,46 +19,32 @@
   </tr>
 </thead>
 <tbody>
+    <?php $i=1;foreach ($student_res as $row) {
+    if($row->Re_status != "1"){
+      $n = $row->student_code;
+      $PARENTPHONENO = $row->PARENTPHONENO;
+  ?>
   <tr align="center">
-    <td>1</td>
-    <td>58112848</td>
-    <td align="left">คิดเเล้ว คิดอีก</td>
-    <th>ชนกับตารางเรียน</th>
-    <td>091-5145632</td>
-    <td><font color="#FF9900"><u>ปฏิเสธ</u></font></td>
+    <td><?php echo $i++; ?></td>
+    <td><?php echo $row->student_code; ?></td>
+    <td align="left"><?php echo $row->STUDENTNAME; ?></td>
+    <th><?php echo $row->Reason_ST; ?></th>
+    <td><?php echo $PARENTPHONENO; ?></td>
+    <td>
+      <?php if($row->Re_status == "0"){ ?>
+        <font color="#CCCC00"><u>เพิกเฉย</u></font>
+      <?php } ?>
+      <?php if($row->Re_status == "2"){ ?>
+      <font color="#FF9900"><u>ปฏิเสธ</u></font>
+      <?php } ?>
+    </td>
   </tr>
-  <tr align="center">
-    <td>2</td>
-    <td>58118696</td>
-    <td align="left">สมใจ อยากเป็น</td>
-    <th>-</th>
-    <td>061-1253658</td>
-    <td><font color="#CCCC00"><u>เพิกเฉย</u></font></td>
-  </tr>
-  <tr align="center">
-    <td>3</td>
-    <td>58119686</td>
-    <td align="left">สมรัก คำนั้น</td>
-    <th>-</th>
-    <td>089-1478526</td>
-    <td><font color="red"><u>ละทิ้งงาน</u></font></td>
-  </tr>
-  <tr align="center">
-    <td>4</td>
-    <td>58129686</td>
-    <td align="left">สมชาย เข็มนิ</td>
-    <th>ติดกิจกกรมทางมหาลัย</th>
-    <td>062-1458596</td>
-    <td><font color="#FF9900"><u>ปฏิเสธ</u></font></td>
-  </tr>
-  <tr>
-    <td height="114">&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
+
+
+
+<?php }
+} ?>
+
 </tbody>
 </table>
 </div>

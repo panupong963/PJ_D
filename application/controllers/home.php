@@ -140,6 +140,18 @@ class home extends CI_Controller {
          redirect("home/Student_ConfirmJob_2");
     }
 
+    public function update_student_confirm(){ // update เเก้ไขข้อมูล ไม่ผาน
+        $data["Reason_certifying"] = $_POST["Reason_certifying"];
+        $data["Work_Status"] = 2;
+         //$id1 = $this->input->post('id');
+         $id = $_POST["id"];
+         $this->load->model('Show_model');   
+         $this->Show_model->update_work($data,$id); 
+        
+         //redirect('customer/index');
+         redirect("home/JobOffering_confirm_2");
+    }
+
     public function update_student2(){ // update ยืนยันข้อมูล
     	if($_POST["txt"] == Null){
     		$data["Re_status"] = "1";
@@ -160,7 +172,34 @@ class home extends CI_Controller {
          redirect("home/Student_ConfirmJob_2");
     }
 
+    public function update_edit(){
+    	$data["Work_Date"] = $_POST["Work_Date"];
+        $data["Work_Start"] = $_POST["Work_Start"];
+        $data["Work_Finish"] = $_POST["Work_Finish"];
+        $data["Work_Start2"] = $_POST["Work_Start2"];
+        $data["Work_Finish2"] = $_POST["Work_Finish2"];
+        $data["Job_Description"] = $_POST["Job_Description"];
+        if($_POST["Work_Start"] <= $_POST["Work_Finish"]){
+        $sum = $_POST["Work_Finish"] - $_POST["Work_Start"];
+    	}else{
+    	$sum = $_POST["Work_Start"] - $_POST["Work_Finish"];
+    	}
+        $sum = $sum * 60;
+        if($_POST["Work_Start2"] <= $_POST["Work_Finish2"]){
+        	$sum2 = $_POST["Work_Finish2"] - $_POST["Work_Start2"];
+        }else{
+        	$sum2 = $_POST["Work_Start2"] - $_POST["Work_Finish2"];
+        }
+        $sum3 = $sum + $sum2;
+        $data["Work_Hour"] = $sum3;
+        
 
+        $id = $_POST["id"];
+         $this->load->model('Show_model');   
+         $this->Show_model->update_work($data,$id); 
+         //redirect('customer/index');
+         redirect("home/Student_ConfirmJob_2");
+    }
 
 
 
@@ -188,8 +227,30 @@ public function testlog(){
 		$this->load->view('End');
 		//$this->load->view('test');
 	}
+	public function Student_Save(){
+		$id = $this->uri->segment('3');
+
+		$this->load->model('Show_model');
+        $res = $this->Show_model->get_edit($id);
+        $data['edit_res'] = $res;
+
+		/*$this->load->model('Show_model');
+        $res = $this->Show_model->get_work();
+        $data['work_res'] = $res;*/
+
+		$this->load->view('Student_2/start');
+		$this->load->view('Student_2/Navigation_edit');
+		$this->load->view('Student_2/Save', $data);
+		$this->load->view('Student_2/footer');
+		$this->load->view('Student_2/End');
+
+	}
 
 	public function Student_SaveJob_2(){
+		$id = $this->uri->segment('3');
+
+		$this->load->model('Show_model');
+        $this->Show_model->delete_work($id);		
 
 		$this->load->model('Show_model');
         $res = $this->Show_model->get_work();
@@ -324,9 +385,17 @@ public function testlog(){
 	}
 
 	public function Finance_results_2(){
+		$this->load->model('Show_model');
+        $res = $this->Show_model->get_student2();
+        $data['student_res'] = $res;
+
+        $this->load->model('Show_model');
+        $res = $this->Show_model->get_work();
+        $data['work_res'] = $res; 
+
 		$this->load->view('Finance_2/start');
 		$this->load->view('Finance_2/Navigation_N');
-		$this->load->view('Finance_2/Results_work');
+		$this->load->view('Finance_2/Results_work' ,$data);
 		$this->load->view('Finance_2/footer');
 		$this->load->view('Finance_2/End');		
 	}
@@ -348,49 +417,121 @@ public function testlog(){
 	}
 
 	public function JobOffering_confirm_2(){
+		$this->load->model('Show_model');
+        $res = $this->Show_model->get_job();
+        $data['job_res'] = $res;
+
+		$this->load->model('Show_model');
+        $res = $this->Show_model->get_student();
+        $data['student_res'] = $res;
+
+        $this->load->model('Show_model');
+        $res = $this->Show_model->get_work();
+        $data['work_res'] = $res; 
+
 		$this->load->view('JobOffering_2/start');
 		$this->load->view('JobOffering_2/Navigation_N');
-		$this->load->view('JobOffering_2/Confirm');
+		$this->load->view('JobOffering_2/Confirm', $data);
 		$this->load->view('JobOffering_2/footer');
 		$this->load->view('JobOffering_2/End');		
 	}
 
 	public function JobOffering_job_2(){
+		$id = $this->uri->segment('3');
+		//exit($id);
+		//$this->load->model('Show_model');
+        //$this->Show_model->delete_work($id);		
+
+		$this->load->model('Show_model');
+        $res = $this->Show_model->get_edit_JO($id);
+        $data['job_res'] = $res;
+
+ 		$this->load->model('Show_model');
+        $res = $this->Show_model->get_student();
+        $data['student_res'] = $res; 
+
+         $this->load->model('Show_model');
+        $res = $this->Show_model->get_work();
+        $data['work_res'] = $res;      
+
 		$this->load->view('JobOffering_2/start');
 		$this->load->view('JobOffering_2/Navigation_N');
-		$this->load->view('JobOffering_2/job');
+		$this->load->view('JobOffering_2/job', $data);
 		$this->load->view('JobOffering_2/footer');
 		$this->load->view('JobOffering_2/End');		
 	}
 
 	public function JobOffering_results_2(){
+		$this->load->model('Show_model');
+        $res = $this->Show_model->get_student2();
+        $data['student_res'] = $res;
+
+        $this->load->model('Show_model');
+        $res = $this->Show_model->get_work();
+        $data['work_res'] = $res; 
+
 		$this->load->view('JobOffering_2/start');
 		$this->load->view('JobOffering_2/Navigation_N');
-		$this->load->view('JobOffering_2/Results_work');
+		$this->load->view('JobOffering_2/Results_work', $data);
 		$this->load->view('JobOffering_2/footer');
 		$this->load->view('JobOffering_2/End');		
 	}
 
 	public function JobOffering_dataST_2(){
+		$this->load->model('Show_model');
+        $res = $this->Show_model->get_job();
+        $data['job_res'] = $res;  
+
+        $this->load->model('Show_model');
+        $res = $this->Show_model->get_student();
+        $data['student_res'] = $res;  
 		$this->load->view('JobOffering_2/start');
-		$this->load->view('JobOffering_2/Navigation_N');
+		$this->load->view('JobOffering_2/Navigation_N' , $data);
 		$this->load->view('JobOffering_2/DataST');
 		$this->load->view('JobOffering_2/footer');
 		$this->load->view('JobOffering_2/End');		
 	}
 
 	public function JobOffering_NoConfirm_2(){
+		$id = $this->uri->segment('3');
+
+		$this->load->model('Show_model');
+        $res = $this->Show_model->get_JO($id);
+        $data['student_res'] = $res;
+
+		$this->load->model('Show_model');
+        $res = $this->Show_model->get_JO2($id);
+        $data['job_res'] = $res; 
+
+        $this->load->model('Show_model');
+        $res = $this->Show_model->get_JO3($id);
+        $data['work_res'] = $res;        
+
 		$this->load->view('JobOffering_2/start');
 		$this->load->view('JobOffering_2/Navigation_N');
-		$this->load->view('JobOffering_2/NoConfirm');
+		$this->load->view('JobOffering_2/NoConfirm', $data);
 		$this->load->view('JobOffering_2/footer');
 		$this->load->view('JobOffering_2/End');		
 	}
 
 	public function JobOffering_YConfirm_2(){
+		$id = $this->uri->segment('3');
+
+		$this->load->model('Show_model');
+        $res = $this->Show_model->get_JO($id);
+        $data['student_res'] = $res;
+
+		$this->load->model('Show_model');
+        $res = $this->Show_model->get_JO2($id);
+        $data['job_res'] = $res; 
+
+        $this->load->model('Show_model');
+        $res = $this->Show_model->get_JO3($id);
+        $data['work_res'] = $res;   
+
 		$this->load->view('JobOffering_2/start');
 		$this->load->view('JobOffering_2/Navigation_N');
-		$this->load->view('JobOffering_2/YConfirm');
+		$this->load->view('JobOffering_2/YConfirm', $data);
 		$this->load->view('JobOffering_2/footer');
 		$this->load->view('JobOffering_2/End');		
 	}
@@ -408,13 +549,13 @@ public function testlog(){
 		$this->load->view('print/End');		
 	}
 
-	/*public function print(){
+	public function print(){
 		$this->load->view('coordinate/start');
 		$this->load->view('coordinate/Navigation_N');
 		$this->load->view('coordinate/print');
 		$this->load->view('coordinate/footer');
 		$this->load->view('coordinate/End');		
-	}*/
+	}
 
 	public function print_l(){
 		$this->load->view('coordinate/start');

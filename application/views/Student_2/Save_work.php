@@ -70,7 +70,10 @@
               <h5>ช่วงเวลาการบันทึกข้อมูลงานระหว่างวันที่ <font color="#FF0000" size="5">1/ม.ค./60 - 20/พ.ค./60 </font></h5>
             <hr color="#000000">
               <br>
+
  <div>
+  <form action="<?php echo site_url("home/Student_Save");?>" method="post">
+  
  <?php
  $id = $this -> session -> userdata ( 'student_code' ); 
  $n = 0;         
@@ -160,8 +163,9 @@ $sum = $n / 60;
 
               ?></th>
     <th><button type="button" class="btn btn-warning">รายละเอียด</button></th>
-    <th><button type="button" class="btn btn-danger">ลบ</button>
-    <a href="<?= base_url('home/Student_SaveJob_2/'.$row->Work_ID); ?>" class="btn btn-primary">แก้ไข</a></th>
+    <th><a  href="<?= site_url("home/Student_SaveJob_2/{$row->Work_ID}"); ?>" class="btn btn-danger">ลบ</a>
+    <!-- <a href="<?php //echo base_url("home/Student_Save/{$row->Work_ID}"); ?>" class="btn btn-primary">แก้ไข</a>-->
+    <a href="<?= site_url("home/Student_Save/{$row->Work_ID}"); ?>" class="btn btn-primary">แก้ไข</a> </th>
   </tr>
 <?php 
     }
@@ -230,7 +234,9 @@ $sum = $n / 60;
 </table>
 
 <h6><font color="#FF0000">*หมายเหตุ </font>นักศึกษาสามารถเเก้ไขข้อมูลการทำงานก่อน ผู้เสนองานรับรองผล</h6>
+</form>
 </div>
+
 		
 	</div>
 </div>
