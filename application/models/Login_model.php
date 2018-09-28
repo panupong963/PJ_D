@@ -54,6 +54,15 @@ class Login_model extends CI_Model {
  				$row4 = $query4->row();
 
  				$this->session->set_userdata('OFFICERNAME', $row4->OFFICERNAME);
+                $this->session->set_userdata('Jobs', $row4->Jobs);
+                $this->session->set_userdata('contact', $row4->contact);
+
+                $this->db->where('Schedule_ID', '1');
+                $query5 = $this->db->get('calendar'); 
+                $row5 = $query5->row();
+
+                $this->session->set_userdata('semester', $row5->semester);
+                $this->session->set_userdata('Year', $row5->Year);
 				//$this->session->set_userdata('job_name_ss', $row4->job_name_ss);
  				
  				/*$this -> session -> set_userdata('userautority',$row->autority=1);

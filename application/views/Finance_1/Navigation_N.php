@@ -233,7 +233,7 @@
         <li class="nav-item">
           
           <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
-           <font color="#FFFFFF">  ผู้เสนองาน : ใจรัก เย็นชา </font>
+           <font color="#FFFFFF">  ผู้เสนองาน : <?php echo $this -> session -> userdata ( 'OFFICERNAME' ); ?> </font>
            <font color="#FFFFFF">  <i class="fa fa-fw fa-sign-out"></i>ออกจากระบบ</a></font>
         </li>
       </ul>

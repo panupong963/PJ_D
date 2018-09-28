@@ -12,43 +12,21 @@
     <th width="200" align="center">สำนักวิชา</th>
     <th width="275" align="center">เกรดเฉลี่ย</th>
     <th width="275" align="center">การพิจารณา</th>
-    
   </tr>
 </thead>
 <tbody>
-    <tr align="center">
-    <th align="center">1</th>
-    <th align="center">58888888</th>
-    <th align="center">สมหมาย ใจกล้า</th>
-    <th align="center">สารสนเทศศาสตร์</th>
-    <th align="center">4.00</th>
-    <th><button type="button" class="btn btn-danger">ลบ</button><th>
+  <?php $i=1;foreach ($student_res as $row) { 
+    if($row->Re_status == "1"){ ?>
+  <tr align="center">
+    <th align="center"><?php echo $i++; ?></th>
+    <th align="center"><?php echo $row->student_code; ?></th>
+    <th align="center"><?php echo $row->STUDENTNAME; ?></th>
+    <th align="center"><?php echo $row->FACULTYNAME; ?></th>
+    <th align="center"><?php echo $row->GPAX; ?></th>
+    <th><a href="<?= site_url("home2/update_st/{$row->student_code}"); ?>" class="btn btn-danger">ลบ</a><th>
     <th>
   </tr>
-</tbody>
-<tbody>
-    <tr align="center">
-    <th align="center">2</th>
-    <th align="center">58999999</th>
-    <th align="center">เจ้าหญิง สร้อยทอง</th>
-    <th align="center">พยาบาลศาสตร์</th>
-    <th align="center">3.80</th>
-    <th><button type="button" class="btn btn-danger">ลบ</button><th>
-    <th>
-    
-  </tr>
-</tbody>
-<tbody>
-    <tr align="center">
-    <th align="center">3</th>
-    <th align="center">58135778</th>
-    <th align="center">กนก มากมาย</th>
-    <th align="center">พยาบาลศาสตร์</th>
-    <th align="center">3.70</th>
-    <th><button type="button" class="btn btn-danger">ลบ</button><th>
-    <th>
-    
-  </tr>
+<?php }} ?>
 </tbody>
 </table>
 </table>

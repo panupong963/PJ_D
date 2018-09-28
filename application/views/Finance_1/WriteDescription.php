@@ -196,46 +196,46 @@
                        <table border="0" class="table table-striped">
                         <tr>
                           <td>
-                            <input type="checkbox" name="Attribute_applicants" value="มีความขยัน">มีความขยัน
+                            <input type="checkbox" name="Attribute_applicants[]" value="มีความขยัน">มีความขยัน
                           </td>
                           <td>
-<<<<<<< HEAD
-                            <input type="checkbox" name="Attribute_applicants" value="มีความรับผิดชอบ">มีความรับผิดชอบ<br>
-=======
-                            <input type="checkbox" name="Attribute_applicants2" value="มีความรับผิดชอบ" required>มีความรับผิดชอบ<br>
->>>>>>> c7b4ca591cfe294170e2f573b8495ecac7300343
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                          <input type="checkbox" name="Attribute_applicants3" value="มีความอดทน">มีความอดทน
-                          </td>
-                          <td>
-                            <input type="checkbox" name="Attribute_applicants4" value="สามารถใช้คอมพิวเตอร์ได้ดี">สามารถใช้คอมพิวเตอร์ได้ดี
+
+                            <input type="checkbox" name="Attribute_applicants[]" value="มีความรับผิดชอบ">มีความรับผิดชอบ<br>
+
+                            
+
                           </td>
                         </tr>
                         <tr>
                           <td>
-                       <input type="checkbox" name="Attribute_applicants5" value="ใช้ภาษาอังกฤษได้เป็นอย่างดี">ใช้ภาษาอังกฤษได้เป็นอย่างดี
+                          <input type="checkbox" name="Attribute_applicants[]" value="มีความอดทน">มีความอดทน
+                          </td>
+                          <td>
+                            <input type="checkbox" name="Attribute_applicants[]" value="สามารถใช้คอมพิวเตอร์ได้ดี">สามารถใช้คอมพิวเตอร์ได้ดี
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                       <input type="checkbox" name="Attribute_applicants[]" value="ใช้ภาษาอังกฤษได้เป็นอย่างดี">ใช้ภาษาอังกฤษได้เป็นอย่างดี
                      </td>
                      <td>
-                        <input type="checkbox" name="Attribute_applicants6" value="สามารถใช้ Microsoft office ได้" >สามารถใช้ Microsoft office ได้
+                        <input type="checkbox" name="Attribute_applicants[]" value="สามารถใช้ Microsoft office ได้" >สามารถใช้ Microsoft office ได้
                       </td>
                       </tr>
                         <tr>
                           <td>
-                       <input type="checkbox" name="Attribute_applicants7" value="ตรงต่อเวลา">ตรงต่อเวลา
+                       <input type="checkbox" name="Attribute_applicants[]" value="ตรงต่อเวลา">ตรงต่อเวลา
                      </td>
                      <td>
-                        <input type="checkbox" name="Attribute_applicants8" value="สามารถทำงานร่วมกับผู้อื่นได้" >สามารถทำงานร่วมกับผู้อื่นได้
+                        <input type="checkbox" name="Attribute_applicants[]" value="สามารถทำงานร่วมกับผู้อื่นได้" >สามารถทำงานร่วมกับผู้อื่นได้
                       </td>
                       </tr> 
                        <tr>
                           <td>
-                       <input type="checkbox" name="Attribute_applicants9" value="มีความเเข็งเเรงทำงานหนักได้">มีความเเข็งเเรงทำงานหนักได้
+                       <input type="checkbox" name="Attribute_applicants[]" value="มีความเเข็งเเรงทำงานหนักได้">มีความเเข็งเเรงทำงานหนักได้
                      </td>
                      <td>
-                        <input type="checkbox" name="Attribute_applicants10" value="เรียนรู้ได้เร็ว" >เรียนรู้ได้เร็ว
+                        <input type="checkbox" name="Attribute_applicants[]" value="เรียนรู้ได้เร็ว" >เรียนรู้ได้เร็ว
                       </td>
                       </tr>                                            
                         </table>
@@ -253,26 +253,26 @@
                        <table border="0" class="table table-striped">
                         <tr>
                           <td>
-                            <input type="checkbox" name="Job_description" value="จัดเอกสาร">จัดเอกสาร
+                            <input type="checkbox" name="Job_description[]" value="จัดเอกสาร">จัดเอกสาร
                           </td>
                           <td>
-                            <input type="checkbox" name="Job_description2" value="พิมพ์งาน / ถ่ายเอกสาร">พิมพ์งาน / ถ่ายเอกสาร<br>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                          <input type="checkbox" name="Job_description3" value="ค้นหาข้อมูล">ค้นหาข้อมูล
-                          </td>
-                          <td>
-                            <input type="checkbox" name="Job_description4" value="จัดชั้นหนังสือ">จัดชั้นหนังสือ
+                            <input type="checkbox" name="Job_description[]" value="พิมพ์งาน / ถ่ายเอกสาร">พิมพ์งาน / ถ่ายเอกสาร<br>
                           </td>
                         </tr>
                         <tr>
                           <td>
-                       <input type="checkbox" name="Job_description5" value="คีย์ข้อมูล">คีย์ข้อมูล
+                          <input type="checkbox" name="Job_description[]" value="ค้นหาข้อมูล">ค้นหาข้อมูล
+                          </td>
+                          <td>
+                            <input type="checkbox" name="Job_description[]" value="จัดชั้นหนังสือ">จัดชั้นหนังสือ
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                       <input type="checkbox" name="Job_description[]" value="คีย์ข้อมูล">คีย์ข้อมูล
                      </td>
                      <td>
-                        <input type="checkbox" name="Job_description6" value="เเล้วเเต่หน่วยงานจะมอบหมาย">เเล้วเเต่หน่วยงานจะมอบหมาย
+                        <input type="checkbox" name="Job_description[]" value="เเล้วเเต่หน่วยงานจะมอบหมาย">เเล้วเเต่หน่วยงานจะมอบหมาย
                       </td>
                       </tr>
                                                                     
@@ -386,17 +386,30 @@
   </tr>
   </thead>
   <tbody>
+    <?php 
+    $id = $this -> session -> userdata ( 'OFFICERID' );
+    $i=1;
+    foreach ($job_res as $row) { 
+      if($row->OFFICERID == $id){?>
   <tr align="center">
-    <th>1</th>
-    <th>จัดเรียงเอกสาร</th>
-    <th>ธุรการ</th>
-    <th>02/มิ.ย/60</th>
-    <th>ชาย</th>
-    <th>4</th>
+    <th><?php echo $i++; ?></th>
+    <th><?php echo $row->Job_Name; ?></th>
+    <th><?php echo $row->Category; ?></th>
+    <th><?php echo date("d/m/Y", strtotime($row->Frist_date)); ?></th>
+    <th><?php if($row->Sex == "M"){
+                echo "ชาย";
+              }else if($row->Sex == "Y"){
+                echo "หญิง";
+              }else{
+                echo "ชาย/หญิง";
+              } ?>
+        </th>
+    <th><?php echo $row->Receiving_number; ?></th>
     <th><button type="button" class="btn btn-warning">รายละเอียด</button></th>
 
   </tr>
-  <tr align="center">
+<?php }} ?>
+  <!--<tr align="center">
     <th>2</th>
     <th>พิมพ์งาน</th>
     <th>ธุรการ</th>
@@ -415,7 +428,7 @@
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 
-  </tr>
+  </tr>-->
 </tbody>
 </table>
 

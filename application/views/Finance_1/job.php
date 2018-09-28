@@ -24,44 +24,38 @@
   </thead>
 
     <tbody>
+    <?php 
+    $id = $this -> session -> userdata ( 'OFFICERID' );
+    $i=1;
+    foreach ($job_res as $row) { 
+      if($row->OFFICERID == $id){ ?>
+
     <tr align="center">
-    <th>1</th>
-    <th>บริการ</th>
-    <th><a >ขนของ</a></th>
-    <th>5</th>
-    <th>8</th>
-    <th><a class="btn btn-info" href="finance_Results_1">3/5</a></th>
-    <th><a class="btn btn-info" href="finance_SelectST_1">เลือก</a></th>
+    <th><?php echo $i++; ?></th>
+    <th><?php echo $row->Category; ?></th>
+    <th><a ><?php echo $row->Job_Name; ?></a></th>
+    <th><?php echo $row->Receiving_number; ?></th>
+    <th><?php $j=0;foreach ($student_res as $row2) { 
+        if($row->Job_ID == $row2->Job_ID){
+            $j++;
+        }
+    }
+       echo $j; ?></th>
+    <th><a class="btn btn-info" href="<?= site_url("home2/finance_Results_1/{$row->Job_ID}"); ?>"><?php
+                                                             $k=0;foreach ($student_res as $row3) { 
+                                                                if($row->Job_ID == $row3->Job_ID){
+                                                                    if($row3->Re_status == "1"){
+                                                                    $k++;  
+                                                                    }
+                                                                }
+                                                            }
+                                                             echo $k."/".$row->Receiving_number; ?></a></th>
+    <th><a class="btn btn-info" href="<?= site_url("home2/finance_SelectST_1/{$row->Job_ID}"); ?>">เลือก</a></th>
     <th >&nbsp;&nbsp;</th>
     <th >&nbsp;&nbsp;</th>
     </tr>
+<?php } } ?>
     </tbody>
-    <tbody>
-    <tr align="center">
-    <th>2</th>
-    <th>ธุรการ</th>
-    <th><a >จัดเอกสาร</a></th>
-    <th>5</th>
-    <th>6</th>
-    <th><a class="btn btn-info" href="finance_Results_1">4/5</a></th>
-    <th><a class="btn btn-info" href="finance_SelectST_1">เลือก</a></th>
-    <th >&nbsp;&nbsp;</th>
-    <th >&nbsp;&nbsp;</th>
-    </tr>
-    </tbody>
-    <tbody>
-    <tr align="center">
-    <th>3</th>
-    <th>ธุรการ</th>
-    <th><a >จัดชั้นหนังสือ</a></th>
-    <th>5</th>
-    <th>6</th>
-    <th><a class="btn btn-info" href="finance_Results_1">6/5</a></th>
-    <th><a class="btn btn-info" href="finance_SelectST_1">เลือก</a></th>
-    <th >&nbsp;&nbsp;</th>
-    <th >&nbsp;&nbsp;</th>
-   </tr>
-</tbody>
 </table>
     
 </table>
