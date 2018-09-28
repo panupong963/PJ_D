@@ -20,6 +20,13 @@ class Show_model extends CI_Model {
         return $query->result();
     }
 
+    public function get_employees()
+    {
+        //$query = $this->db->query('select * from offices ORDER BY officeCode ');
+        $query = $this->db->query('select * from employees ');
+        return $query->result();
+    }
+
     public function get_student2()//ของ ผู้เสนองาน 
     {
         //$query = $this->db->query('select * from offices ORDER BY officeCode ');
@@ -85,6 +92,15 @@ class Show_model extends CI_Model {
         $this->db->select('*');
         $this->db->from('work');
         $this->db->where('Job_ID', $id);
+        $query = $this->db->get();
+        $result = $query->result();
+        return $result;
+    } 
+
+    public function get_AU($id){
+        $this->db->select('*');
+        $this->db->from('calendar');
+        $this->db->where('Schedule_ID', $id);
         $query = $this->db->get();
         $result = $query->result();
         return $result;
@@ -178,5 +194,10 @@ class Show_model extends CI_Model {
          $this->db->where("student_code", $id); 
          $this->db->update("student", $data);
     }      
-    
+    public function update_job2($data, $id){ // update เลือกงาน
+         $this->db->set($data); 
+         $this->db->where("Job_ID", $id); 
+         $this->db->update("job", $data);
+    }  
+
 }

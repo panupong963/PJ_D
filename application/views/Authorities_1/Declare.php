@@ -15,17 +15,20 @@
   </tr>
   </thead>
   <tbody>
+    <?php $i=1;foreach ($job_res as $row) {
+      if($row->Job_status == "1"){?>
   <tr align="center">
-    <th>1</th>
-    <th>ส่วนกิจการนักศึกษา</th>
-    <th>บริการ</th>
-    <td align="left"><b>จัดชั้นหนังสือ</b></td>
+    <th><?php echo $i++; ?></th>
+    <th><?php echo $row->Department; ?></th>
+    <th><?php echo $row->Category; ?></th>
+    <td align="left"><b><?php echo $row->Job_Name; ?></b></td>
     
     <th>5</th>
     <th><button type="button" class="btn btn-primary">แก้ไข</button>
     	<button type="button" class="btn btn-danger">ยกเลิก</button></th>
   </tr>
-  <tr align="center">
+<?php }} ?>
+ <!-- <tr align="center">
     <th>2</th>
     <th>ศูนณ์บรรณาสาร</th>
     <th>บริการ</th>
@@ -70,7 +73,7 @@
   </tr>
   <tr align="center">
   <th colspan="6"><button type="button" class="btn btn-primary" >ยืนยัน</button></th>
-  </tr>
+  </tr>-->
 </tbody>
 </table>
 

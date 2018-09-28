@@ -15,17 +15,30 @@
   </tr>
 </thead>
 <tbody>
+    <?php $i=1;foreach ($student_res as $row) {
+        if($row->Re_status != "0"){
+        $Job_ID = $row->Job_ID;
+        ?>
     <tr align="center">
-    <th align="center">1</th>
-    <th align="center">บริการ</th>
-    <th align="center">58123333</th>
-    <th align="center">สมคิด ใจเย็น</th>
-    <th align="center">สารสนเทศศาสตร์</th>
-    <td align="left"><b>การจัดเอกสาร</b></td>
-    <th align="center">ผ่าน</th>
+    <th align="center"><?php echo $i++; ?></th>
+    <?php foreach ($job_res as $row2) {
+        if($row2->Job_ID == $Job_ID){?>
+    <th align="center"><?php echo $row2->Category; ?></th>
+        <?php }} ?> 
+    <th align="center"><?php echo $row->student_code; ?></th>
+    <th align="center"><?php echo $row->STUDENTNAME; ?></th>
+    <th align="center"><?php echo $row->PROGRAMNAME; ?></th>
+    <td align="left"><b><?php echo $row->FACULTYNAME; ?></b></td>
+    <th align="center"><?php if($row->Re_status == "1"){
+                        echo "ผ่าน";
+                         }else if($row->Re_status == "2"){
+                            echo "ไม่ผ่าน";
+                         }
+                         ?></th>
   </tr>
+<?php }} ?>
 </tbody>
-<tbody>
+<!--<tbody>
     <tr align="center">
     <th align="center">2</th>
     <th align="center">บริการ</th>
@@ -112,7 +125,7 @@
     <td align="left"><b>จัดส่งเอกสาร</b></td>
     <th align="center">ไม่ผ่าน</th>
   </tr>
-</tbody>
+</tbody>-->
 
 </table>
 </table>

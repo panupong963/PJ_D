@@ -210,39 +210,39 @@
                             <input type="checkbox" name="Attribute_applicants" value="มีความขยัน" required>มีความขยัน
                           </td>
                           <td>
-                            <input type="checkbox" name="Attribute_applicants" value="มีความรับผิดชอบ" required>มีความรับผิดชอบ<br>
+                            <input type="checkbox" name="Attribute_applicants2" value="มีความรับผิดชอบ" required>มีความรับผิดชอบ<br>
                           </td>
                         </tr>
                         <tr>
                           <td>
-                          <input type="checkbox" name="Attribute_applicants" value="มีความอดทน">มีความอดทน
+                          <input type="checkbox" name="Attribute_applicants3" value="มีความอดทน">มีความอดทน
                           </td>
                           <td>
-                            <input type="checkbox" name="Attribute_applicants" value="สามารถใช้คอมพิวเตอร์ได้ดี">สามารถใช้คอมพิวเตอร์ได้ดี
+                            <input type="checkbox" name="Attribute_applicants4" value="สามารถใช้คอมพิวเตอร์ได้ดี">สามารถใช้คอมพิวเตอร์ได้ดี
                           </td>
                         </tr>
                         <tr>
                           <td>
-                       <input type="checkbox" name="Attribute_applicants" value="ใช้ภาษาอังกฤษได้เป็นอย่างดี">ใช้ภาษาอังกฤษได้เป็นอย่างดี
+                       <input type="checkbox" name="Attribute_applicants5" value="ใช้ภาษาอังกฤษได้เป็นอย่างดี">ใช้ภาษาอังกฤษได้เป็นอย่างดี
                      </td>
                      <td>
-                        <input type="checkbox" name="Attribute_applicants" value="สามารถใช้ Microsoft office ได้" >สามารถใช้ Microsoft office ได้
+                        <input type="checkbox" name="Attribute_applicants6" value="สามารถใช้ Microsoft office ได้" >สามารถใช้ Microsoft office ได้
                       </td>
                       </tr>
                         <tr>
                           <td>
-                       <input type="checkbox" name="Attribute_applicants" value="ตรงต่อเวลา">ตรงต่อเวลา
+                       <input type="checkbox" name="Attribute_applicants7" value="ตรงต่อเวลา">ตรงต่อเวลา
                      </td>
                      <td>
-                        <input type="checkbox" name="Attribute_applicants" value="สามารถทำงานร่วมกับผู้อื่นได้" >สามารถทำงานร่วมกับผู้อื่นได้
+                        <input type="checkbox" name="Attribute_applicants8" value="สามารถทำงานร่วมกับผู้อื่นได้" >สามารถทำงานร่วมกับผู้อื่นได้
                       </td>
                       </tr> 
                        <tr>
                           <td>
-                       <input type="checkbox" name="Attribute_applicants" value="มีความเเข็งเเรงทำงานหนักได้">มีความเเข็งเเรงทำงานหนักได้
+                       <input type="checkbox" name="Attribute_applicants9" value="มีความเเข็งเเรงทำงานหนักได้">มีความเเข็งเเรงทำงานหนักได้
                      </td>
                      <td>
-                        <input type="checkbox" name="Attribute_applicants" value="เรียนรู้ได้เร็ว" >เรียนรู้ได้เร็ว
+                        <input type="checkbox" name="Attribute_applicants10" value="เรียนรู้ได้เร็ว" >เรียนรู้ได้เร็ว
                       </td>
                       </tr>                                            
                         </table>
@@ -263,23 +263,23 @@
                             <input type="checkbox" name="Job_description" value="จัดเอกสาร">จัดเอกสาร
                           </td>
                           <td>
-                            <input type="checkbox" name="Job_description" value="พิมพ์งาน / ถ่ายเอกสาร">พิมพ์งาน / ถ่ายเอกสาร<br>
+                            <input type="checkbox" name="Job_description2" value="พิมพ์งาน / ถ่ายเอกสาร">พิมพ์งาน / ถ่ายเอกสาร<br>
                           </td>
                         </tr>
                         <tr>
                           <td>
-                          <input type="checkbox" name="Job_description" value="ค้นหาข้อมูล">ค้นหาข้อมูล
+                          <input type="checkbox" name="Job_description3" value="ค้นหาข้อมูล">ค้นหาข้อมูล
                           </td>
                           <td>
-                            <input type="checkbox" name="Job_description" value="จัดชั้นหนังสือ">จัดชั้นหนังสือ
+                            <input type="checkbox" name="Job_description4" value="จัดชั้นหนังสือ">จัดชั้นหนังสือ
                           </td>
                         </tr>
                         <tr>
                           <td>
-                       <input type="checkbox" name="Job_description" value="คีย์ข้อมูล">คีย์ข้อมูล
+                       <input type="checkbox" name="Job_description5" value="คีย์ข้อมูล">คีย์ข้อมูล
                      </td>
                      <td>
-                        <input type="checkbox" name="Job_description" value="เเล้วเเต่หน่วยงานจะมอบหมาย">เเล้วเเต่หน่วยงานจะมอบหมาย
+                        <input type="checkbox" name="Job_description6" value="เเล้วเเต่หน่วยงานจะมอบหมาย">เเล้วเเต่หน่วยงานจะมอบหมาย
                       </td>
                       </tr>
                                                                     
@@ -510,6 +510,6 @@
 
 <!-- เเยก -->
 
-
+</form>
 </div>
 </div>
