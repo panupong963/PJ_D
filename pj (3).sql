@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 28, 2018 at 06:09 PM
+-- Generation Time: Sep 29, 2018 at 01:09 AM
 -- Server version: 10.1.35-MariaDB
 -- PHP Version: 7.2.9
 
@@ -75,7 +75,7 @@ CREATE TABLE `employees` (
   `OFFICERID` int(8) NOT NULL COMMENT 'เลขที่พนักงาน',
   `OFFICERNAME` varchar(100) NOT NULL COMMENT 'ชื่อพนักงาน',
   `Position` varchar(20) NOT NULL COMMENT 'ตำแหน่งงาน',
-  `Jobs` varchar(20) NOT NULL COMMENT 'สังกัดงาน',
+  `Jobs` varchar(255) NOT NULL COMMENT 'สังกัดงาน',
   `contact` varchar(20) NOT NULL COMMENT 'ช่องทางการติดต่อ'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -84,10 +84,10 @@ CREATE TABLE `employees` (
 --
 
 INSERT INTO `employees` (`OFFICERID`, `OFFICERNAME`, `Position`, `Jobs`, `contact`) VALUES
-(147852, 'ชวนัน หารกล้า', '', '', ''),
-(11223344, 'กล้า ไม่ทำงาน ', '', '', ''),
-(12345678, 'อรนี ไม่รอด', '', '', ''),
-(741852963, 'มนเสก จันเเก้ว\r\n', '', '', '');
+(147852, 'ชวนัน หารกล้า', '', 'ศูนย์บรรณาสารเเละสื่อการศึกษา', '0915586987'),
+(11223344, 'กล้า ไม่ทำงาน ', '', 'ศูนย์เครื่องมือวิทยาศาสตร์และเทคโนโลยี', '0814785236'),
+(12345678, 'อรนี ไม่รอด', '', 'ศูนย์บรรณาสารเเละสื่อการศึกษา', '0874587496'),
+(741852963, 'มนเสก จันเเก้ว\r\n', '', 'ศูนย์บรรณาสารเเละสื่อการศึกษา', '0812365844');
 
 -- --------------------------------------------------------
 
@@ -114,25 +114,11 @@ CREATE TABLE `job` (
   `Job_Name` varchar(20) DEFAULT NULL COMMENT 'ชื่องาน',
   `Category` text COMMENT 'ประเภทงาน',
   `Job_description` text COMMENT 'ลักษณะงาน',
-  `Job_description2` text,
-  `Job_description3` text,
-  `Job_description4` text,
-  `Job_description5` text,
-  `Job_description6` text CHARACTER SET utf16,
   `term` int(1) DEFAULT NULL COMMENT 'ภาคเรียน',
   `year` int(4) DEFAULT NULL COMMENT 'ปีการศึกษา',
   `Remaining` int(3) DEFAULT NULL COMMENT 'ตำแหน่งงานคงเหลือ',
   `STUDENTCODE` varchar(16) DEFAULT NULL COMMENT 'รหัสนักศึกษา',
   `Attribute_applicants` text COMMENT 'คุณสมบัติผู้สมัคร',
-  `Attribute_applicants2` text,
-  `Attribute_applicants3` text,
-  `Attribute_applicants4` text,
-  `Attribute_applicants5` text CHARACTER SET utf32,
-  `Attribute_applicants6` text,
-  `Attribute_applicants7` text,
-  `Attribute_applicants8` text,
-  `Attribute_applicants9` text,
-  `Attribute_applicants10` text,
   `Frist_date` date DEFAULT NULL COMMENT 'วันที่ทำงานวันแรก',
   `Sex` varchar(1) DEFAULT NULL COMMENT 'เพศ',
   `Working_time` date DEFAULT NULL COMMENT 'เวลาการทำงาน(เริ่มต้น-สิ้นสุดงาน)',
@@ -150,10 +136,11 @@ CREATE TABLE `job` (
 -- Dumping data for table `job`
 --
 
-INSERT INTO `job` (`Job_ID`, `job_name_ss`, `Job_Name`, `Category`, `Job_description`, `Job_description2`, `Job_description3`, `Job_description4`, `Job_description5`, `Job_description6`, `term`, `year`, `Remaining`, `STUDENTCODE`, `Attribute_applicants`, `Attribute_applicants2`, `Attribute_applicants3`, `Attribute_applicants4`, `Attribute_applicants5`, `Attribute_applicants6`, `Attribute_applicants7`, `Attribute_applicants8`, `Attribute_applicants9`, `Attribute_applicants10`, `Frist_date`, `Sex`, `Working_time`, `Receiving_number`, `Job_history`, `Job_status`, `Department`, `Reason_job`, `Contact`, `ss`, `OFFICERID`) VALUES
-(1, 'จารุวรรณ บัวเเย้ม', 'ขนของ', 'ธุรการ', 'ขนของ', NULL, NULL, NULL, NULL, NULL, 1, 2561, 8, '58118696', 'เเข็งเเรง', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2018-09-08', 'Y', '2018-09-30', 10, 'ทำงานดี', '1', 'ศูนย์บรรณาสารเเละสื่อการศึกษา', '', 955848786, 'อาคารวิชาการ5', 12345678),
-(2, 'จิตรา การแก้ว', 'ถ่ายเอกสาร', 'บริการ', 'ถ่ายเอกสารต่างๆ', NULL, NULL, NULL, NULL, NULL, 1, 2561, NULL, '58118696', 'เเข็งเเรง', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2018-09-22', 'M', '2018-09-29', 20, 'ทำงานดี', '1', 'ศูนณ์เครื่องมือวิทยาศาสตร์และเทคโนโลยี', '', 622426715, 'อาคารวิชาการ3', 12345678),
-(3, 'อามิต ก้านเเก้ว', 'ประกอบคอมพิวเตอร์', 'บริการ', 'ซ่อมคอม', NULL, NULL, NULL, NULL, NULL, 1, 2561, NULL, '58118696', 'เเข็งเเรง มีความรู้ทางด้านคอมพิวเตอร์', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2018-09-22', 'M', '2018-09-29', 20, 'ทำงานดี', '2', 'ศูนณ์เครื่องมือวิทยาศาสตร์และเทคโนโลยี', 'ไม่ผ่าน', 622426715, 'อาคารวิชาการ7', 12345678);
+INSERT INTO `job` (`Job_ID`, `job_name_ss`, `Job_Name`, `Category`, `Job_description`, `term`, `year`, `Remaining`, `STUDENTCODE`, `Attribute_applicants`, `Frist_date`, `Sex`, `Working_time`, `Receiving_number`, `Job_history`, `Job_status`, `Department`, `Reason_job`, `Contact`, `ss`, `OFFICERID`) VALUES
+(1, 'จารุวรรณ บัวเเย้ม', 'ขนของ', 'ธุรการ', 'ขนของ', 1, 2561, 8, '58118696', 'เเข็งเเรง', '2018-09-08', 'Y', '2018-09-30', 10, 'ทำงานดี', '1', 'ศูนย์บรรณาสารเเละสื่อการศึกษา', '', 955848786, 'อาคารวิชาการ5', 12345678),
+(2, 'จิตรา การแก้ว', 'ถ่ายเอกสาร', 'บริการ', 'ถ่ายเอกสารต่างๆ', 1, 2561, NULL, '58118696', 'เเข็งเเรง', '2018-09-22', 'M', '2018-09-29', 20, 'ทำงานดี', '1', 'ศูนณ์เครื่องมือวิทยาศาสตร์และเทคโนโลยี', '', 622426715, 'อาคารวิชาการ3', 12345678),
+(3, 'อามิต ก้านเเก้ว', 'ประกอบคอมพิวเตอร์', 'บริการ', 'ซ่อมคอม', 1, 2561, NULL, '58118696', 'เเข็งเเรง มีความรู้ทางด้านคอมพิวเตอร์', '2018-09-22', 'M', '2018-09-29', 20, 'ทำงานดี', '2', 'ศูนณ์เครื่องมือวิทยาศาสตร์และเทคโนโลยี', 'ไม่ผ่าน', 622426715, 'อาคารวิชาการ7', 12345678),
+(25, 'ชวนัน หารกล้า', 'ช่วยอาจารย์ตรวจงาน', 'เชิงวิชาการ', 'จัดเอกสาร,พิมพ์งาน / ถ่ายเอกสาร', 1, 2561, NULL, NULL, 'มีความขยัน,มีความรับผิดชอบ', '2018-09-30', 'F', NULL, 5, NULL, '1', 'ศูนย์บรรณาสารเเละสื่อการศึกษา', '', 915586987, NULL, 147852);
 
 -- --------------------------------------------------------
 
@@ -249,7 +236,7 @@ CREATE TABLE `student` (
 INSERT INTO `student` (`student_code`, `STUDENTNAME`, `FACULTYNAME`, `PROGRAMNAME`, `GPAX`, `PARENTPHONENO`, `BANKACCOUNT`, `HOMEADDRESS1`, `Moo`, `district`, `Road`, `HOMEDISTRICT`, `PROVINCENAME`, `Zip_code`, `Expenses`, `Talent`, `Necessary`, `Re_status`, `STUDENTSEX`, `RELIGIONNAME`, `Nationality`, `STUDENTEMAIL`, `Status`, `Bank_Name`, `Tele_Number_update`, `Bank_id_update`, `Bank_Name_update16`, `Career_History`, `Reason_ST`, `Job_ID`) VALUES
 (58112233, 'จิตใจ เเซ่ตั้ง', 'เทคนิคการเเพทย์', 'เเพทย์', '2.00', '0887854125', '581128484125', '37/5', '1', 'หนองหง', '-', 'นาหลวงเสน', 'พัทลุง', 80145, 3000, 'เเก้ไข', 'ลอง', '1', 'M', 'พุทธ', 'ไทย', '', '', '2', '', '', '', NULL, '', 1),
 (58112848, 'นายชวนัท ชาญอาวุธ', 'ส่่ิอไ', 'ิ่สิ้บ่ลางส่ยนี', '2.00', '51615', '1314125', '153', NULL, NULL, NULL, 'หงกมๆบ', 'วืย', NULL, 5, 'หฟืดยแยื', '', '2', 'ส', 'สืย', NULL, 'สืสส', 'สืืยืย', '1', 'สืสืย', 'สืืืยบ', 'สืสยย', NULL, '', 1),
-(58118696, 'ภาณุพงศ์ จันทมุณี', 'สารสนเทศศาสตร์', 'เทคโนโลยีสารสนเทศ', '4.00', '0915241383', '828147852369', '107', '5', 'ชะมาย', '-', 'ทุ่งสง', 'นครศรีธรรมราช', 80110, 15000, 'กินเก่ง', 'เดือนร้อนทางการเงิน', '1', 'M', 'พุทธ', 'ไทย', 'panupong_963@hotmail.com', 'ดี', '2', '0622426715', '8281464785003', 'panupong jantamunee', '0', '', 1),
+(58118696, 'ภาณุพงศ์ จันทมุณี', 'สารสนเทศศาสตร์', 'เทคโนโลยีสารสนเทศ', '4.00', '0915241383', '828147852369', '107', '5', 'ชะมาย', '-', 'ทุ่งสง', 'นครศรีธรรมราช', 80110, 15000, 'กินเก่ง', 'เดือนร้อนทางการเงิน', '1', 'M', 'พุทธ', 'ไทย', 'panupong_963@hotmail.com', 'ดี', '2', '0622426715', '8281464785003', 'panupong jantamunee', '0', '', 25),
 (58122235, 'นางสาวสุรีพร สุขะวัลลิ', 'สารสนเทศศาสตร์', 'เทคโนโลยีสารสนเทศ', '3.99', '0622426715', '', '107 ม.5 ต.ชะม้อย', NULL, NULL, NULL, 'เมือง', 'นครศรีธรรมราช', NULL, 0, '', '', '1', '-', '--', NULL, 'Panda@hotmail.com', '-', '1', '-', '-', '-', NULL, '', 2),
 (58142597, '----', '---------', '--------', '4.0', '----', '-----', '------', NULL, NULL, NULL, '---------', '-------', NULL, 1, '-ส้น', '', '1', '-', '----', NULL, '----', '----', '2', '----', '----', '-----', NULL, '', 2);
 
@@ -400,7 +387,7 @@ ALTER TABLE `working_hours`
 -- AUTO_INCREMENT for table `job`
 --
 ALTER TABLE `job`
-  MODIFY `Job_ID` int(8) NOT NULL AUTO_INCREMENT COMMENT 'รหัสเลขที่งาน', AUTO_INCREMENT=4;
+  MODIFY `Job_ID` int(8) NOT NULL AUTO_INCREMENT COMMENT 'รหัสเลขที่งาน', AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT for table `login`
