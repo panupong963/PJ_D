@@ -62,11 +62,11 @@
   <?php $k=1;foreach ($calendar_res as $row) { ?>
   <tr align="center">
     <th><?php echo $k++; ?></th>
-    <td align="left"><input type="text" readonly class="form-control" name="Create_Data" value="<?php echo $row->Create_Data; ?>"></td>
-    <th><input type="date" readonly value="<?php echo $row->Start_Date; ?>" name="Start_Date" placeholder="<?php echo $row->Start_Date; ?>" required></th>
-    <th><input type="date" readonly value="<?php echo $row->End_Date; ?>" name="End_Date" placeholder="<?php echo $row->End_Date; ?>" required></th>
-    <th><a href="<?= site_url("home2/authorities_CA_2/{$row->Schedule_ID}"); ?>" class="btn btn-primary" >แก้ไข</a>
-        <!--<button type="reset" class="btn btn-danger">ยกเลิก</button>--></th>
+    <td align="left"><input type="text"  class="form-control" name="Create_Data" value="<?php echo $row->Create_Data; ?>"></td>
+    <th><input type="date"  value="<?php echo $row->Start_Date; ?>" name="Start_Date" placeholder="<?php echo $row->Start_Date; ?>" required></th>
+    <th><input type="date"  value="<?php echo $row->End_Date; ?>" name="End_Date" placeholder="<?php echo $row->End_Date; ?>" required></th>
+    <th><button type="submit" name="id" value="<?php echo $row->Schedule_ID;?>"  class="btn btn-primary" >แก้ไข</button>
+        <button type="reset" class="btn btn-danger">ยกเลิก</button></th>
   </tr>
 <?php } ?>
  <!--<tr align="center">

@@ -8,7 +8,7 @@ class Login_model extends CI_Model {
 		$query = $this->db->get('login'); 
 		if ($query->num_rows() == 1) {
 			$row = $query->row();
-			if($row->username == $username && $row->password==$password && $row->ST == 1){
+			if($row->username == $username && $row->password==$password && $row->ST == "1"){
 				//set session
  				$this -> session -> set_userdata('userlogin',true);
  				$this -> session -> set_userdata('userid',$row->login_id);
@@ -37,10 +37,12 @@ class Login_model extends CI_Model {
  				$this->session->set_userdata('Job_Name', $row3->Job_Name);
  				$this->session->set_userdata('ss', $row3->ss);
  				$this->session->set_userdata('Contact', $row3->Contact);
+
+
  				return true;
 
 
- 				}else if($row->username == $username && $row->password==$password && $row->ST != 1){
+ 				}else if($row->username == $username && $row->password==$password && $row->ST != "1"){
  				$this -> session -> set_userdata('userlogin',true);
  				$this -> session -> set_userdata('userid',$row->login_id);
  				$this -> session -> set_userdata('username',$row->username);
@@ -52,7 +54,7 @@ class Login_model extends CI_Model {
  				$row4 = $query4->row();
 
  				$this->session->set_userdata('OFFICERNAME', $row4->OFFICERNAME);
-				$this->session->set_userdata('job_name_ss', $row4->job_name_ss);
+				//$this->session->set_userdata('job_name_ss', $row4->job_name_ss);
  				
  				/*$this -> session -> set_userdata('userautority',$row->autority=1);
  				$this -> session -> set_userdata('userofficeid',$row->officerid);

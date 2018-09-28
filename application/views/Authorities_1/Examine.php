@@ -1,5 +1,6 @@
 <div class="content-wrapper">
     <div class="container-fluid">
+      <form action="<?php echo site_url("home2/update_job3");?>" method="post">
     <h4>ตรวจสอบงาน</h4>
     <br>
       
@@ -28,22 +29,33 @@
   </tr>
 </thead>
 <tbody>
+  <?php $i=1; foreach ($job_res as $row) {
+    if($row->Job_status == 0){?>
   <tr align="center">
-    <th>1</th>
-    <th>ส่วนกิจการนักศึกษา</th>
+    <th><?php echo $i; ?></th>
+    <th><?php echo $row->Department; ?></th>
     
-    <td align="left"><b>จัดชั้นหนังสือ</b></td>
-    <th>10</th>
-    <th>ชาย</th>
+    <td align="left"><b><?php echo $row->Job_Name; ?></b></td>
+    <th><?php echo $row->Receiving_number; ?></th>
+    <th><?php if($row->Sex == "M"){ 
+              echo "ชาย";
+              }else {
+                echo "หญิง";
+              }?> </th>
     <th><button type="button" class="btn btn-warning">รายละเอียด</button></th>
-    <th>ชาเย็น<br> ใจเย็น</th>
+    <th><?php foreach ($employees_res as $row2) {
+      if($row->OFFICERID == $row2->OFFICERID){
+        echo $row2->OFFICERNAME;
+      }
+    } ?></th>
     
-    <td width="320"><button class="btn btn-success" type="success" style="width:50px;height:38px">ผ่าน</button>
+    <td width="320"><a class="btn btn-success" href="<?= site_url("home2/update_job2/{$row->Job_ID}"); ?>" style="width:50px;height:38px">ผ่าน</a>
       <button type="button" class="btn btn-primary" style="width:55px;">แก้ไข</button>
-      <button type="button" class="btn btn-danger">ไม่ผ่าน</button></td>
-      <th><input type="text" input name="textarea" size="12"></th>
+      <button type="submit" name="id" value="<?php echo $row->Job_ID; ?>" class="btn btn-danger">ไม่ผ่าน</button></td>
+      <th><input type="text" input name="Reason_job" size="12" required></th>
   </tr>
-  <tr align="center">
+<?php }} ?>
+ <!-- <tr align="center">
     <th>2</th>
     <th>ศูนณ์บรรณาสาร</th>
     <td align="left"><b>จัดหนังสือตามประเภท</b></td>
@@ -111,9 +123,9 @@
       <button type="button" class="btn btn-danger">ไม่ผ่าน</button></th>
       <th><input type="text" input name="textfield" size="12"></th>
 
-  </tr>
+  </tr> -->
 </tbody>
 </table>
-
+</form>
 </div>
 </div>
