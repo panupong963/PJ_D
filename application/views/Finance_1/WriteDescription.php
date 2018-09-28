@@ -20,16 +20,15 @@
 =======
       <h4>กรอกรายละเอียดงาน</h4>
       <br>
-
     <td width="214" align="left">ปีการศึกษา : 2561</td>
     <td width="307" align="left">ภาคการศึกษา : 1</td>
 <br><br>
 <a>ชื่องาน <font color="red">* </font> <input type="text" size="36"> &nbsp;&nbsp; ประเภทงาน <font color="red">* </font> <select>
-  															<option value="volvo">ธุรการ</option>
-  															<option value="saab">เชิงวิชาชีพ</option>
-  															<option value="mercedes">เชิงบริการ</option>
-  															<option value="audi">เชิงวิชาการ</option>
-															</select>
+                                <option value="volvo">ธุรการ</option>
+                                <option value="saab">เชิงวิชาชีพ</option>
+                                <option value="mercedes">เชิงบริการ</option>
+                                <option value="audi">เชิงวิชาการ</option>
+                              </select>
  &nbsp;&nbsp; สำนักวิชา <font color="red">* </font> <select>
                                 <option value="volvo">ไม่จำกัด</option>
                                 <option value="saab">สารสนเทศศาสตร์</option>
@@ -45,11 +44,11 @@
                                 <option value="saab">ชาย/หญิง</option>
                               </select>  
 &nbsp;&nbsp; จำนวนที่รับ <font color="red">* </font><select>
-  															<option value="volvo">1</option>
-  															<option value="saab">2</option>
-  															<option value="mercedes">5</option>
-  															<option value="audi">10</option>
-   														</select> คน 
+                                <option value="volvo">1</option>
+                                <option value="saab">2</option>
+                                <option value="mercedes">5</option>
+                                <option value="audi">10</option>
+                              </select> คน 
 &nbsp;&nbsp; วันที่เริ่มต้นการทำงาน <font color="red">* </font><input id="date" type="date">
 <br>
 <br>
@@ -58,14 +57,13 @@
 รายละเอียดลักษณะงาน <font color="red">* </font><br>
 <textarea name="textarea">Some text...</textarea>
 <br>
-
 <button type="button" class="btn btn-success">+ เพิ่ม</button>
 </a>
 <br>
 <hr color="#000000">
 <br>-->
 
-<form action="<?php echo site_url("home2/insertjob");?>" method="post" class="nextBtn btn-lg pull-right">
+<form action="<?php echo site_url("home2/insertjob");?>" method="post">
 <div class="container">
   <br>
   <h3>กรอกรายละเอียดงาน</h3>
@@ -115,26 +113,19 @@
           <button class="btn btn-info nextBtn btn-lg pull-right" type="button"  style="width:60px;height:40px" ><h6>ข้าม</h6></button></td>
               
     <th>&nbsp;</th>
-
-
     
   </tr>
 </thead>
   <tbody>
-
   <tr align="center">
     <th>1</th>
     <th>2561</th>
     <th>1</th>
     <th>จัดชั้นหนังสือ</th>
-
     <th><button type="button" class="btn btn-warning">รายละเอียด</button></th>
     <th>&nbsp;</th>
     <th><button type="button" class="btn btn-success">เลือก</button></th>
     <th>&nbsp;</th>
-
-
-
   </tr>
   <tr align="center">
     <th>2</th>
@@ -146,7 +137,6 @@
     <th>&nbsp;</th>
     <th><button type="button" class="btn btn-success">เลือก</button></th>
     <th>&nbsp;</th>
-
   </tr>
   <tr align="center">
     <th>3</th>
@@ -157,7 +147,6 @@
     <th>&nbsp;</th>
     <th><button type="button" class="btn btn-success">เลือก</button></th>
     <th>&nbsp;</th>
-
   </tr>
 </tbody>
 </table>-->
@@ -207,10 +196,10 @@
                        <table border="0" class="table table-striped">
                         <tr>
                           <td>
-                            <input type="checkbox" name="Attribute_applicants" value="มีความขยัน" required>มีความขยัน
+                            <input type="checkbox" name="Attribute_applicants" value="มีความขยัน">มีความขยัน
                           </td>
                           <td>
-                            <input type="checkbox" name="Attribute_applicants" value="มีความรับผิดชอบ" required>มีความรับผิดชอบ<br>
+                            <input type="checkbox" name="Attribute_applicants" value="มีความรับผิดชอบ">มีความรับผิดชอบ<br>
                           </td>
                         </tr>
                         <tr>
@@ -287,7 +276,6 @@
 
                 <tr>
                 <!-- <td><button class="btn btn-info btn-lg pull-right" type="button"  style="width:90px;height:40px"<a href="localhost/PJ_D/index.php/home2/finance_WriteDescription_1" ><h6>ย้อนกลับ</h6></button>
-
                  </td>--><td>
                  <button class="btn btn-info nextBtn btn-lg pull-right" type="submit"  style="width:70px;height:40px" ><h6>บันทึก</h6></button></td> 
              
@@ -333,7 +321,6 @@
                                                       <option value="audi">ศิลปศาสตร์</option>
                                                     </select></td>
                       </tr>
-
                       <tr>
                        <td ><br>เพศ <font color="red">* </font><select>
                                                       <option value="saab">ไม่ระบุ</option>
@@ -349,7 +336,6 @@
                                                     </select> คน 
                       
                       &nbsp;&nbsp;&nbsp;&nbsp; วันที่เริ่มต้นการทำงาน <font color="red">* </font><input id="date" type="date"> <br><br>
-
                                       <form action="/action_page.php">
                       คุณสมบัติผู้สมัคร <font color="red">* </font> : 
                        <input type="checkbox" name="vehicle" value="Bike">มีความอดทน
@@ -371,10 +357,8 @@
                   <tr>
                   <td colspan="3"><textarea name="textarea">Some text...</textarea></td>
                   </tr>
-
                 <tr>
                 <td><button class="btn btn-info btn-lg pull-right" type="button"  style="width:90px;height:40px"<a href="localhost/PJ_D/index.php/home2/finance_WriteDescription_1" ><h6>ย้อนกลับ</h6></button>
-
                  </td><td>
                  <button class="btn btn-info nextBtn btn-lg pull-right" type="button"  style="width:70px;height:40px" ><h6>ถัดไป</h6></button></td>
              
@@ -500,8 +484,6 @@
   </tr>
 </tbody>
 </table>
-
-
     </div>
 </form>
 </div>
