@@ -1,21 +1,34 @@
 <div class="content-wrapper">
     <div class="container-fluid">
+      <form action="<?php echo site_url("home2/update_calendar");?>" method="post">
       <h4>กำหนดปฏิทินการทำงาน</h4>
       <br>
 <table width="900" border="0">
-  <tr>
-    <td width="214" align="left">ปีการศึกษา :<font color="red">* </font><select>
-  <option value="volvo">2561</option>
-  <option value="saab">2562</option>
-  <option value="opel">2563</option>
-  <option value="audi">2564</option>
-</select></td>
-    <td width="307" align="left">ภาคการศึกษา :<font color="red">* </font><label class="radio-inline"><input type="radio" name="optradio">1</label>
-<label class="radio-inline"><input type="radio" name="optradio">2</label>
-<label class="radio-inline"><input type="radio" name="optradio">3</label></td>
+  <?php foreach ($calendar_res as $row) {
+      $Year = $row->Year;
+      $semester = $row->semester;
+  } ?>
+  <tr>    
+    <td width="214" align="left">ปีการศึกษา :<font color="red">* </font><select name="Year">
+      <?php for($i=2561; $i<=2580; $i++){ 
+        if($i == $Year){?>
+      <option value="<?php echo $i; ?>" selected><?php echo $i; ?></option>
+    <?php }else {?>
+      <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+      <?php }} ?>
+</select><!--<input type="text" id="datepicker" />--></td>
+
+    <td width="307" align="left">ภาคการศึกษา :<font color="red">* </font>
+      <?php for ($j=1; $j <= 3 ; $j++) {  
+        if($j == $semester){?>
+<label class="radio-inline"><input type="radio" name="semester" value="<?php echo $j; ?>" checked><?php echo $j; ?></label>
+<?php }else{ ?>
+<label class="radio-inline"><input type="radio" name="semester" value="<?php echo $j; ?>"><?php echo $j; ?></label>
+<?php }} ?>
   </tr>
 </table>
 <br>
+<!--
 <table class="table">
   <thead>
   <tr align="center">
@@ -34,7 +47,7 @@
   </tr>
 </tbody>
 </table>
-
+-->
 <table class="table">
   <thead>
   <tr align="center">
@@ -46,15 +59,17 @@
   </tr>
 </thead>
 <tbody>
+  <?php $k=1;foreach ($calendar_res as $row) { ?>
   <tr align="center">
-    <th>1</th>
-    <td align="left"><b>ผู้เสนองานทำการเสนองาน</b></td>
-    <th>29/มี.ค/60</th>
-    <th>02/เม.ย/60</th>
-    <th><button type="button" class="btn btn-primary">แก้ไข</button>
-        <button type="button" class="btn btn-danger">ยกเลิก</button></th>
+    <th><?php echo $k++; ?></th>
+    <td align="left"><input type="text" readonly class="form-control" name="Create_Data" value="<?php echo $row->Create_Data; ?>"></td>
+    <th><input type="date" readonly value="<?php echo $row->Start_Date; ?>" name="Start_Date" placeholder="<?php echo $row->Start_Date; ?>" required></th>
+    <th><input type="date" readonly value="<?php echo $row->End_Date; ?>" name="End_Date" placeholder="<?php echo $row->End_Date; ?>" required></th>
+    <th><button type="submit" name="id" value="<?php echo $row->Schedule_ID;?>" class="btn btn-primary" >แก้ไข</button>
+        <button type="reset" class="btn btn-danger">ยกเลิก</button></th>
   </tr>
-  <tr align="center">
+<?php } ?>
+ <!--<tr align="center">
     <th>2</th>
     <td align="left"><b>เจ้าหน้าที่งานทุนพิจรณางานที่หน่วยงานเสนอ</b></td>
     <th>04/เม.ย/60</th>
@@ -93,8 +108,9 @@
     <th>25/เม.ย/60</th>
     <th><button type="button" class="btn btn-primary">แก้ไข</button>
         <button type="button" class="btn btn-danger">ยกเลิก</button></th>
-  </tr>
+  </tr>-->
 </tbody>
 </table>
+</form>
 </div>
 </div>

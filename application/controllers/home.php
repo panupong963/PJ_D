@@ -125,6 +125,18 @@ class home extends CI_Controller {
         
     }
 
+    public function update_JO(){ // update เเก้ไขข้อมูล
+    	$id = $this->uri->segment('3');
+		$data["Work_Status"] = 1;
+         
+         //$id1 = $this->input->post('id');
+         $this->load->model('Show_model');   
+         $this->Show_model->update_work($data,$id); 
+        
+         //redirect('customer/index');
+         redirect("home/JobOffering_confirm_2");
+    }    
+
     public function update_student(){ // update เเก้ไขข้อมูล
         $data["STUDENTEMAIL"] = $_POST["STUDENTEMAIL"];
         $data["PARENTPHONENO"] = $_POST["PARENTPHONENO"];

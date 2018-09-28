@@ -123,8 +123,8 @@
 
     <th><button type="button" class="btn btn-warning">รายละเอียด</button></th>
     <th><input type="text" name="Reason_certifying"></th>
-    <th><button type="button" class="btn btn-success">ผ่าน</button>
-      <button type="button" class="btn btn-primary">แก้ไข</button>
+    <th><a class="btn btn-success" href="<?= site_url("home/update_JO/{$row->Work_ID}"); ?>">ผ่าน</a>
+      <a class="btn btn-primary" href="<?= site_url("home/Student_Save/{$row->Work_ID}"); ?>">แก้ไข</a>
       <button type="submit" class="btn btn-danger" name="id" value="<?php echo $row->Work_ID; ?>">ไม่ผ่าน</button></th>
   </tr>
 <?php 

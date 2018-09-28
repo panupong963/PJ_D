@@ -40,7 +40,7 @@ class Login_model extends CI_Model {
  				return true;
 
 
- 				}else if($row->username == $username && $row->password==$password && $row->ST == 4 || 5){
+ 				}else if($row->username == $username && $row->password==$password && $row->ST != 1){
  				$this -> session -> set_userdata('userlogin',true);
  				$this -> session -> set_userdata('userid',$row->login_id);
  				$this -> session -> set_userdata('username',$row->username);
@@ -71,7 +71,7 @@ class Login_model extends CI_Model {
  				$this -> session -> set_userdata('userprefixname',$row3->Prefixname);
  				*/
          		
-             	
+             	return true;
 				   
 			}else{
 				 				$this -> session -> set_userdata('user_login',false);

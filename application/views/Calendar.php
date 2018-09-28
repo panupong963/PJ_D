@@ -13,13 +13,15 @@
   </tr>
       </thead>
     <tbody>
+    <?php $i=1;foreach ($calendar_res as $row) { ?>
   <tr align="center">
-     <th>1</th>
-    <td align="left">ผู้เสนองานทำการเสนองาน</td>
-     <th>29/มี.ค/60</th>
-    <th>02/เม.ย/60</th>
+     <th><?php echo $i++; ?></th>
+    <td align="left"><?php echo $row->Create_Data.$row->Schedule_ID; ?></td>
+     <th><?php echo date("d/m/Y", strtotime($row->Start_Date)); ?></th>
+    <th><?php echo date("d/m/Y", strtotime($row->End_Date)); ?></th>
   </tr>
-   <tr align="center">
+<?php } ?>
+ <!--  <tr align="center">
     <th>2</th>
     <td align="left">เจ้าหน้าที่งานทุนพิจรณางานที่หน่วยงานเสนอ</td>
    <th>04/เม.ย/60</th>
@@ -46,7 +48,7 @@
     <td align="left">ประกาศผลการสมัคร</td>
      <th>22/เม.ย/60</th>
     <th>25/เม.ย/60</th>
-  </tr>
+  </tr>-->
 </tbody>
 </table>
 </div>

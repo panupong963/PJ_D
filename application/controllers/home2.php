@@ -161,17 +161,26 @@ class home2 extends CI_Controller {
 		
 
 	public function authorities_BuildCalendar_1(){
+		
+		$this->load->model('Show_model');
+        $res = $this->Show_model->get_calendar();
+        $data['calendar_res'] = $res;
+
 		$this->load->view('Authorities_1/start');
 		$this->load->view('Authorities_1/Navigation_N');
-		$this->load->view('Authorities_1/BuildCalendar');
+		$this->load->view('Authorities_1/BuildCalendar', $data);
 		$this->load->view('Authorities_1/footer');
 		$this->load->view('Authorities_1/End');
 	}
 
 	public function authorities_CA_1(){
+		$this->load->model('Show_model');
+        $res = $this->Show_model->get_calendar();
+        $data['calendar_res'] = $res;		
+
 		$this->load->view('Authorities_1/start');
 		$this->load->view('Authorities_1/Navigation_N');
-		$this->load->view('Calendar');
+		$this->load->view('Calendar', $data);
 		$this->load->view('Authorities_1/footer');
 		$this->load->view('Authorities_1/End');
 	}
@@ -345,6 +354,23 @@ class home2 extends CI_Controller {
         
          //redirect('customer/index');
          redirect("home2/Student_registration_1");
+    }
+
+    public function update_calendar(){ // update เเก้ไขข้อมูล
+    	//$id = $this->uri->segment('3');
+        $data["semester"] = $_POST["semester"];
+        $data["Year"] = $_POST["Year"];
+        $data["Start_Date"] = $_POST["Start_Date"];
+        $data["End_Date"] = $_POST["End_Date"];
+        $data["Create_Data"] = $_POST["Create_Data"];
+         
+         $id = $this->input->post('id');
+         //exit($id. $_POST["semester"]);
+         $this->load->model('Show_model');   
+         $this->Show_model->update_calendar($data,$id); 
+        
+         //redirect('customer/index');
+         redirect("home2/authorities_BuildCalendar_1");
     }	
 
 }

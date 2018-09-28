@@ -13,6 +13,13 @@ class Show_model extends CI_Model {
         return $query->result();
     }
 
+    public function get_calendar()
+    {
+        //$query = $this->db->query('select * from offices ORDER BY officeCode ');
+        $query = $this->db->query('select * from calendar ');
+        return $query->result();
+    }
+
     public function get_student2()//ของ ผู้เสนองาน 
     {
         //$query = $this->db->query('select * from offices ORDER BY officeCode ');
@@ -148,6 +155,11 @@ class Show_model extends CI_Model {
          $this->db->set($data); 
          $this->db->where("student_code", $id); 
          $this->db->update("student", $data);
+    }
+    public function update_calendar($data, $id){ // update เเก้ไขข้อมูล นศห
+         $this->db->set($data); 
+         $this->db->where("Schedule_ID", $id); 
+         $this->db->update("calendar", $data);
     }
     public function update_student2($data, $id){ // update เเก้ไขข้อมูล นศห
          $this->db->set($data); 
