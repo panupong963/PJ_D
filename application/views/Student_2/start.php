@@ -29,6 +29,11 @@ textarea {
     font-size: 16px;
     resize: none;
 }
+$("#datepicker").datepicker( {
+    format: " yyyy",
+    viewMode: "years", 
+    minViewMode: "years"
+});
 </style>
 </head>
 

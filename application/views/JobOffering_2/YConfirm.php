@@ -1,13 +1,19 @@
+
+
 <div class="content-wrapper">
     <div class="container-fluid">
 <table class="table table-bordered">
   <thead>
+    <?php foreach ($job_res as $row) {
+    
+    ?>
   <tr align="center" bgcolor="#FF9900">
-    <th colspan="5">ชื่องาน : เอกสาร</th>
+    <th colspan="5">ชื่องาน : <?php echo $row->Job_Name; ?></th>
   </tr>
   <tr>
-    <th colspan="5">วันที่ปฏิบัติงาน : 12/ม.ค./61</th>
+    <th colspan="5">วันที่ปฏิบัติงาน : <?php echo date("d/m/Y", strtotime($row->Frist_date)); ?></th>
   </tr>
+<?php } ?>
   <tr align="center">
     <th width="49">ลำดับ</th>
     <th width="150">รหัสนักศึกษา</th>
@@ -17,55 +23,31 @@
   </tr>
 </thead>
 <tbody>
+  <?php $i=1;foreach ($student_res as $row) {
+    if($row->Re_status == "1"){
+      $n = $row->student_code;
+      $PARENTPHONENO = $row->PARENTPHONENO;
+  ?>
   <tr align="center">
-    <td>1</td>
-    <td>58112235</td>
-    <td align="left">คิดเเล้ว คิดอีก</td>
-    <td>20</td>
-    <td>091-5145632</td>
+    <td><?php echo $i++; ?></td>
+    <td><?php echo $row->student_code; ?></td>
+    <td align="left"><?php echo $row->STUDENTNAME; ?></td>
+    <td><?php 
+    $sum =0; foreach ($work_res as $row) {
+                if($row->STUDENTCODE == $n){
+                  if($row->Work_Status == "1"){
+                    $sum += $row->Work_Hour;
+                  }
+                }
+               } 
+              echo floor($sum/60); 
+              ?></td>
+    <td><?php echo $PARENTPHONENO; ?></td>
   </tr>
-  <tr align="center">
-    <td>2</td>
-    <td>58112848</td>
-    <td align="left">เเพนด้า น่ะจ่ะ</td>
-    <td>10</td>
-    <td>091-1489698</td>
-  </tr>
-  <tr align="center">
-    <td>3</td>
-    <td>58112935</td>
-    <td align="left">ชวนัท ชาญอาวุธ</td>
-    <td>5</td>
-    <td>062-1453685</td>
-  </tr>
-  <tr align="center">
-    <td>4</td>
-    <td>58113848</td>
-    <td align="left">ภาณุพงศ์ จันทมุณี</td>
-    <td>50</td>
-    <td>062-2426715</td>
-  </tr>
-  <tr align="center">
-    <td>5</td>
-    <td>58114235</td>
-    <td align="left">หวนคิด คำนึง</td>
-    <td>15</td>
-    <td>089-9098461</td>
-  </tr>
-  <tr align="center">
-    <td>6</td>
-    <td>58116848</td>
-    <td align="left">สมชาย เข็มกลัด</td>
-    <td>2</td>
-    <td>087-0843862</td>
-  </tr>
-  <tr>
-    <td height="114">&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
+<?php }
+} 
+?>
+
 </tbody>
 </table>
 </div>

@@ -1,38 +1,31 @@
  <!-- Navigation-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-    <a class="navbar-brand" href="JobOffering_confirm_2"><img src="<?php echo base_url(); ?>assets/img/wu.png" width = “40” height="40">&nbsp;&nbsp;ระบบติดตามทุนทำงานพิเศษ</a>
+    <a class="navbar-brand" href="Student_ConfirmJob_2"><img src="<?php echo base_url(); ?>assets/img/wu.png" width = “40” height="40">&nbsp;&nbsp;ระบบติดตามทุนทำงานพิเศษ</a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav navbar-sidenav " id="exampleAccordion">
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
-          <a class="nav-link" href="JobOffering_edit_2">
-           <font color="#FFFFFF"><i class="fa fa-fw fa-wrench"></i>
-            <span class="nav-link-text">เเก้ไขข้อมูลส่วนตัว</span></font>
-          </a>
-        </li>
-
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
-          <a class="nav-link" href="JobOffering_confirm_2">
-            <font color="#FFFFFF"><i class="fa fa-fw fa-area-chart"></i>
-            <span class="nav-link-text">รับรองการทำงานนักศึกษา</span></font>
-          </a>
-        </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
-          <a class="nav-link" href="JobOffering_dataST_2">
-            <font color="#FFFFFF"><i class="fa fa-fw fa-link"></i>
-            <span class="nav-link-text">สรุปข้อมูลยืนยันการทำงาน</span></font>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+          <a class="nav-link" href="<?php site_url("home/Student_ConfirmJob_2"); ?>">
+            <font color="#FFFFFF"><i class="fa fa-fw fa-dashboard"></i>
+            <span class="nav-link-text">ยืนยันการทำงาน</span></font>
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
-          <a class="nav-link" href="JobOffering_results_2">
+          <a class="nav-link" href="<?php site_url("home/Student_SaveJob_2"); ?>">
             <font color="#FFFFFF"><i class="fa fa-fw fa-area-chart"></i>
-            <span class="nav-link-text">สรุปผลการทำงาน</span></font>
+            <span class="nav-link-text">บันทึกการทำงาน</span></font>
+          </a>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
+          <a class="nav-link" href="<?php site_url("home/Student_list_2"); ?>">
+            <font color="#FFFFFF"><i class="fa fa-fw fa-area-chart"></i>
+            <span class="nav-link-text">รายการปฎิบัติงาน</span></font>
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
-          <a class="nav-link" href="JobOffering_CA_2">
+          <a class="nav-link" href="<?php site_url("home/Student_CA_2"); ?>">
             <font color="#FFFFFF"><i class="fa fa-fw fa-table"></i>
             <span class="nav-link-text">ปฏิทินการดำเนินงาน</span></font>
           </a>
@@ -169,28 +162,28 @@
             <a class="dropdown-item" href="#">
               <span class="text-danger">
                 <strong>
-                  สมใจ เย็นชา</strong>
+                   1 สัปดาห์ ก่อนหมดเวลาบัทึกข้อมูลการทำงาน</strong>
               </span>
               <span class="small float-right text-muted">12/ม.ค./61</span>
-              <div class="dropdown-message small">ยืนยันการทำงาน</div>
+              <div class="dropdown-message small">&nbsp;</div>
             </a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#">
               <span class="text-danger">
                 <strong>
-                  ชวนัน ชาญอาวุธ</strong>
+                   1 เดือน ก่อนหมดเวลาบัทึกข้อมูลการทำงาน</strong>
               </span>
               <span class="small float-right text-muted">11/ม.ค./61</span>
-              <div class="dropdown-message small">ยืนยันการทำงาน</div>
+              <div class="dropdown-message small">&nbsp;</div>
             </a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#">
               <span class="text-danger">
                 <strong>
-                  ภาณุพงศ์ จันทมุณี</strong>
+                  บันทึกข้อมูลการทำงานภายในวันที่</strong>
               </span>
               <span class="small float-right text-muted">05/ม.ค./61</span>
-              <div class="dropdown-message small">ยืนยันการทำงาน</div>
+              <div class="dropdown-message small">&nbsp;</div>
             </a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item small" href="#">View all alerts</a>
@@ -212,7 +205,7 @@
         <li class="nav-item">
           
           <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
-            <font color="#FFFFFF">ผู้เสนองาน : <?php echo $this -> session -> userdata ( 'OFFICERNAME' ); ?>
+            <font color="#FFFFFF">นักศึกษา : <?php echo $this -> session -> userdata ( 'STUDENTNAME' ); ?>
             <i class="fa fa-fw fa-sign-out"></i>ออกจากระบบ</a></font>
         </li>
       </ul>

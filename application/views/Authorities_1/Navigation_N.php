@@ -212,7 +212,7 @@
         <li class="nav-item">
           
           <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
-            <font color="#FFFFFF">เจ้าหน้าที่งานทุน : สมรัก เย็นใจ</font>
+            <font color="#FFFFFF">เจ้าหน้าที่งานทุน : <?php echo $this -> session -> userdata ( 'OFFICERNAME' ); ?></font>
              <font color="#FFFFFF"><i class="fa fa-fw fa-sign-out"></i>ออกจากระบบ</font></a>
         </li>
       </ul>

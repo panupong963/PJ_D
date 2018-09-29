@@ -25,8 +25,11 @@
       <div>
   <table class="table table-striped">
     <thead>
+      <?php $i=1; $j = 1;foreach ($student_res as $row) {
+        $FACULTYNAME = $row->FACULTYNAME;
+      ?>
       <tr bgcolor="#66FFCC">
-        <th colspan="5">1. สำนักวิชา : สารสนเทศศสาตร์</th>
+        <th colspan="5"><?php echo $i++."."; ?> สำนักวิชา : <?php echo $FACULTYNAME; ?></th>
       </tr>
   <tr align="center">
     <th>ลำดับ</th>
@@ -37,14 +40,29 @@
   </tr>
 </thead>
 <tbody>
+  <?php 
+    if($row->FACULTYNAME == $FACULTYNAME){ 
+      $id = $row->student_code;
+  ?>
   <tr align="center">
-    <th>1</th>
-    <th>58112235</th>
-    <td align="left"><b>ชวนัน ชาญอาวุธ</b></td>
-    <th>90</th>
-    <th>2,700</th>
+    <th><?php echo $j++; ?></th>
+    <th><?php echo $row->student_code; ?></th>
+    <td align="left"><b><?php echo $row->STUDENTNAME; ?></b></td>
+    <?php $sum = 0; foreach ($work_res as $row) {
+      if($row->STUDENTCODE == $id){
+        if($row->Work_Status == "1"){
+          $sum += $row->Work_Hour;
+        }
+      }
+    }
+       ?>
+    <th><?php echo floor($sum/60); ?></th>
+    <th><?php echo floor($sum/60*30); ?></th>
   </tr>
-  <tr align="center">
+<?php 
+ }
+ } ?>
+  <!-- <tr align="center">
     <th>2</th>
     <th>58112848</th>
     <td align="left"><b>ชวนัน คิดอีก</b></td>
@@ -105,7 +123,7 @@
     <th colspan="3">รวม </th>
     <th>455</th>
     <th>14,250</th>
-  </tr>
+  </tr>-->
 </tbody>
 </table>
 

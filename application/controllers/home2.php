@@ -119,9 +119,13 @@ class home2 extends CI_Controller {
 	}
 
 	public function Student_CA_1(){
+		$this->load->model('Show_model');
+        $res = $this->Show_model->get_calendar();
+        $data['calendar_res'] = $res;
+
 		$this->load->view('Student_1/start');
 		$this->load->view('Student_1/Navigation_N');
-		$this->load->view('Calendar');
+		$this->load->view('Calendar' ,$data);
 		$this->load->view('Student_1/footer');
 		$this->load->view('Student_1/End');
 	}
@@ -161,72 +165,136 @@ class home2 extends CI_Controller {
 		
 
 	public function authorities_BuildCalendar_1(){
+		
+		$this->load->model('Show_model');
+        $res = $this->Show_model->get_calendar();
+        $data['calendar_res'] = $res;
+
 		$this->load->view('Authorities_1/start');
 		$this->load->view('Authorities_1/Navigation_N');
-		$this->load->view('Authorities_1/BuildCalendar');
+		$this->load->view('Authorities_1/BuildCalendar', $data);
 		$this->load->view('Authorities_1/footer');
 		$this->load->view('Authorities_1/End');
 	}
 
 	public function authorities_CA_1(){
+		$this->load->model('Show_model');
+        $res = $this->Show_model->get_calendar();
+        $data['calendar_res'] = $res;		
+
 		$this->load->view('Authorities_1/start');
 		$this->load->view('Authorities_1/Navigation_N');
-		$this->load->view('Calendar');
+		$this->load->view('Calendar', $data);
 		$this->load->view('Authorities_1/footer');
 		$this->load->view('Authorities_1/End');
 	}
 
-	public function authorities_Examine_1(){
+	public function authorities_CA_2(){
+		$id = $this->uri->segment('3');
+
+		$this->load->model('Show_model');
+        $res = $this->Show_model->get_AU($id);
+        $data['calendar_res'] = $res;		
+
 		$this->load->view('Authorities_1/start');
 		$this->load->view('Authorities_1/Navigation_N');
-		$this->load->view('Authorities_1/Examine');
+		$this->load->view('edit', $data);
+		$this->load->view('Authorities_1/footer');
+		$this->load->view('Authorities_1/End');
+	}	
+
+	public function authorities_Examine_1(){
+		$this->load->model('Show_model');
+        $res = $this->Show_model->get_job();
+        $data['job_res'] = $res;
+
+ 		$this->load->model('Show_model');
+        $res = $this->Show_model->get_employees();
+        $data['employees_res'] = $res;
+       	
+
+		$this->load->view('Authorities_1/start');
+		$this->load->view('Authorities_1/Navigation_N');
+		$this->load->view('Authorities_1/Examine', $data);
 		$this->load->view('Authorities_1/footer');
 		$this->load->view('Authorities_1/End');
 	}	
 
 	public function authorities_Declare_1(){
+		$this->load->model('Show_model');
+        $res = $this->Show_model->get_job();
+        $data['job_res'] = $res;
+
 		$this->load->view('Authorities_1/start');
 		$this->load->view('Authorities_1/Navigation_N');
-		$this->load->view('Authorities_1/Declare');
+		$this->load->view('Authorities_1/Declare', $data);
 		$this->load->view('Authorities_1/footer');
 		$this->load->view('Authorities_1/End');
 	}
 
 	public function authorities_NewDeclare_1(){
+		$this->load->model('Show_model');
+        $res = $this->Show_model->get_job();
+        $data['job_res'] = $res;
+
+        $this->load->model('Show_model');
+        $res = $this->Show_model->get_student();
+        $data['student_res'] = $res;  
+
 		$this->load->view('Authorities_1/start');
 		$this->load->view('Authorities_1/Navigation_N');
-		$this->load->view('Authorities_1/NewDeclare');
+		$this->load->view('Authorities_1/NewDeclare', $data);
 		$this->load->view('Authorities_1/footer');
 		$this->load->view('Authorities_1/End');
 	}
 
 	public function finance_WriteDescription_1(){
+		$this->load->model('Show_model');
+        $res = $this->Show_model->get_job();
+        $data['job_res'] = $res;
+
 		$this->load->view('Finance_1/start');
 		$this->load->view('Finance_1/Navigation_N');
-		$this->load->view('Finance_1/WriteDescription');
+		$this->load->view('Finance_1/WriteDescription', $data);
 		$this->load->view('Finance_1/footer');
 		$this->load->view('Finance_1/End');
 	}
 
 	public function finance_CA_1(){
+		$this->load->model('Show_model');
+        $res = $this->Show_model->get_calendar();
+        $data['calendar_res'] = $res;
+
 		$this->load->view('Finance_1/start');
 		$this->load->view('Finance_1/Navigation_N');
-		$this->load->view('Calendar');
+		$this->load->view('Calendar', $data);
 		$this->load->view('Finance_1/footer');
 		$this->load->view('Finance_1/End');
 	}
 
 	public function finance_SelectST_1(){
+		$id = $this->uri->segment('3');
+
+		$this->load->model('Show_model');
+        $res = $this->Show_model->get_JO($id);
+        $data['student_res'] = $res;
+
 		$this->load->view('Finance_1/start');
 		$this->load->view('Finance_1/Navigation_N');
-		$this->load->view('Finance_1/SelectST');
+		$this->load->view('Finance_1/SelectST', $data);
 		$this->load->view('Finance_1/footer');
 		$this->load->view('Finance_1/End');
 	}
 	public function finance_Results_1(){
+		$id = $this->uri->segment('3');
+
+		$this->load->model('Show_model');
+        $res = $this->Show_model->get_JO($id);
+        $data['student_res'] = $res;
+
 		$this->load->view('Finance_1/start');
 		$this->load->view('Finance_1/Navigation_N');
-		$this->load->view('Finance_1/Results');
+		$this->load->view('Finance_1/Results', $data);
 		$this->load->view('Finance_1/footer');
 		$this->load->view('Finance_1/End');
 	}
@@ -248,9 +316,16 @@ class home2 extends CI_Controller {
 	}	
 
 	public function finance_job_1(){
+		$this->load->model('Show_model');
+        $res = $this->Show_model->get_job();
+        $data['job_res'] = $res;
+
+		$this->load->model('Show_model');
+        $res = $this->Show_model->get_student();
+        $data['student_res'] = $res;  
 		$this->load->view('Finance_1/start');
 		$this->load->view('Finance_1/Navigation_N');
-		$this->load->view('Finance_1/job');
+		$this->load->view('Finance_1/job',$data);
 		$this->load->view('Finance_1/footer');
 		$this->load->view('Finance_1/End');
 	}
@@ -305,12 +380,23 @@ class home2 extends CI_Controller {
     public function  insertjob(){
         $data["Job_Name"] = $_POST["Job_Name"];
         $data["Category"] = $_POST["Category"];
-        $data["Job_description"] = $_POST["Job_description"];
-        $data["Attribute_applicants"] = $_POST["Attribute_applicants"];
+        $n1 = implode(",", $_POST["Job_description"]);
+        $n2 = implode(",", $_POST["Attribute_applicants"]);
+        $data["Job_description"] = $n1;
+        $data["Attribute_applicants"] = $n2;
         $data["Frist_date"] = $_POST["Frist_date"];
         $data["Sex"] = $_POST["Sex"];
         $data["Job_status"] = '0';
+        $data["Receiving_number"] = $_POST["Receiving_number"];
+
+        $data["term"] = $this -> session -> userdata ( 'semester' );
+        $data["year"] = $this -> session -> userdata ( 'Year' );
+        $data["Contact"] = $this -> session -> userdata ( 'contact' );
+        $data["Department"] = $this -> session -> userdata ( 'Jobs' );
+        $data["job_name_ss"] = $this -> session -> userdata ( 'OFFICERNAME' ); 
+        $data["OFFICERID"] = $this -> session -> userdata ( 'OFFICERID' ); 
         
+
         $this->load->model('Show_model');
         $res = $this->Show_model->insert_job($data);
         redirect('home2/finance_WriteDescription_1');
@@ -319,7 +405,7 @@ class home2 extends CI_Controller {
 
     public function update_job(){ // update เลือกงาน
         $data["Job_ID"] = $_POST["Job_ID"];
-         
+         $data["Re_status"] = "0";
          //$id1 = $this->input->post('id');
          $id = $this -> session -> userdata ( 'student_code' );
          $this->load->model('Show_model');   
@@ -345,6 +431,92 @@ class home2 extends CI_Controller {
         
          //redirect('customer/index');
          redirect("home2/Student_registration_1");
-    }	
+    }
+
+    public function update_calendar(){ // update เเก้ไขข้อมูล
+    	//$id = $this->uri->segment('3');
+        $data["semester"] = $_POST["semester"];
+        $data["Year"] = $_POST["Year"];
+        $data["Start_Date"] = $_POST["Start_Date"];
+        $data["End_Date"] = $_POST["End_Date"];
+        $data["Create_Data"] = $_POST["Create_Data"];
+         
+         $id = $this->input->post('id');
+         //exit($id. $_POST["semester"]);
+         $this->load->model('Show_model');   
+         $this->Show_model->update_calendar($data,$id); 
+        
+         //redirect('customer/index');
+         redirect("home2/authorities_BuildCalendar_1");
+    }
+    public function update_calendar2(){ // update เเก้ไขข้อมูล
+    	$id = $this->uri->segment('3');
+        $data["semester"] = $_POST["semester"];
+        $data["Year"] = $_POST["Year"];
+        $data["Start_Date"] = $_POST["Start_Date"];
+        $data["End_Date"] = $_POST["End_Date"];
+        $data["Create_Data"] = $_POST["Create_Data"];
+         
+         //$id = $this->input->post('id');
+         //exit($id. $_POST["semester"]);
+         $this->load->model('Show_model');   
+         $this->Show_model->update_calendar($data,$id); 
+        
+         //redirect('customer/index');
+         redirect("home2/authorities_BuildCalendar_1");
+    }
+
+    public function update_st(){ // update เเก้ไขข้อมูล
+    	$id = $this->uri->segment('3');
+
+		$data["Re_status"] = "0";
+         
+         //$id = $this->input->post('id');
+         //exit($id. $_POST["semester"]);
+         $this->load->model('Show_model');   
+         $this->Show_model->update_student($data,$id); 
+        
+         //redirect('customer/index');
+         redirect("home2/finance_job_1");
+    }
+
+    public function update_st2(){ // update เเก้ไขข้อมูล
+    	$id = $this->uri->segment('3');
+
+		$data["Re_status"] = "1";
+         
+         //$id = $this->input->post('id');
+         //exit($id. $_POST["semester"]);
+         $this->load->model('Show_model');   
+         $this->Show_model->update_student($data,$id); 
+        
+         //redirect('customer/index');
+         redirect("home2/finance_job_1");
+    }
+
+    public function update_job2(){ // update เเก้ไขข้อมูล
+    	$id = $this->uri->segment('3');
+        $data["Job_status"] = "1";
+         
+         //$id = $this->input->post('id');
+         //exit($id. $_POST["semester"]);
+         $this->load->model('Show_model');   
+         $this->Show_model->update_job2($data,$id); 
+        
+         //redirect('customer/index');
+         redirect("home2/authorities_Examine_1");
+    }
+    public function update_job3(){ // update เเก้ไขข้อมูล
+    	//$id = $this->uri->segment('3');
+        $data["Reason_job"] = $_POST["Reason_job"];;
+        $data["Job_status"] = "2"; 
+         $id = $this->input->post('id');
+         //exit($id. $_POST["semester"]);
+         $this->load->model('Show_model');   
+         $this->Show_model->update_job2($data,$id); 
+        
+         //redirect('customer/index');
+         redirect("home2/authorities_Examine_1");
+    }
 
 }

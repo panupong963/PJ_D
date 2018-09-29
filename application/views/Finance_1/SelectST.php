@@ -19,71 +19,21 @@
   </tr>
   </thead>
     <tbody>
+  <?php $i=1;foreach ($student_res as $row) { 
+    if($row->Re_status == "0"){ ?>
   <tr align="center">
-    <th>1</th>
-    <th>58134455</th>
-    <th>สมคิด ใจเย็น</th>
-    <th>สารสนเทศ</th>
-    <th>4.00</th>
+    <th><?php echo $i++; ?></th>
+    <th><?php echo $row->student_code; ?></th>
+    <th><?php echo $row->STUDENTNAME; ?></th>
+    <th><?php echo $row->PROGRAMNAME; ?></th>
+    <th><?php echo $row->GPAX; ?></th>
     <th><button type="button" class="btn btn-warning">รายละเอียด</button></th>
-    <td width="320"><button class="btn btn-success" type="success" style="width:50px;height:38px">ผ่าน</button>
+    <td width="320"><a href="<?= site_url("home2/update_st2/{$row->student_code}"); ?>" class="btn btn-success" style="width:50px;height:38px">ผ่าน</a>
    <th>&nbsp;</th>
      </td>
   </tr>
-  <tr align="center">
-    <th>2</th>
-    <th>58144455</th>
-    <th>สมจิต มากมาย</th>
-    <th>สารสนเทศศาสตร์</th>
-    <th>3.88</th>
-    <th><button type="button" class="btn btn-warning">รายละเอียด</button></th>
-    <td width="320"><button class="btn btn-success" type="success" style="width:50px;height:38px">ผ่าน</button>
-      <th>&nbsp;</th>
-</td>
-  </tr>
-   <tr align="center">
-    <th>3</th>
-    <th>58155778</th>
-    <th>กนก มากมาย</th>
-    <th>พยาบาลศาสตร์</th>
-    <th>3.70</th>
-    <th><button type="button" class="btn btn-warning">รายละเอียด</button></th>
-    <td width="320"><button class="btn btn-success" type="success" style="width:50px;height:38px">ผ่าน</button>
-      <th>&nbsp;</th>
-</td>
-  </tr>
-  <tr align="center">
-    <th>4</th>
-    <th>58155790</th>
-    <th>นกแก้ว บินดี</th>
-    <th>สารสนเทศศาสตร์</th>
-    <th>3.68</th>
-    <th><button type="button" class="btn btn-warning">รายละเอียด</button></th>
-    <td width="320"><button class="btn btn-success" type="success" style="width:50px;height:38px">ผ่าน</button>
-      <th>&nbsp;</th>
-</td>
-  </tr>
-  <tr align="center">
-    <th>5</th>
-    <th>58155795</th>
-    <th>กรกนก เอนกชัย</th>
-    <th>สารสนเทศศาสตร์</th>
-    <th>3.50</th>
-    <th><button type="button" class="btn btn-warning">รายละเอียด</button></th>
-    <td width="320"><button class="btn btn-success" type="success" style="width:50px;height:38px">ผ่าน</button>
-      <th>&nbsp;</th>
-</td>
-  </tr>
-  <tr>
-    <th>&nbsp;</th>
-    
-    <th>&nbsp;</th>
-    <th>&nbsp;</th>
-    <th>&nbsp;</th>
-    <th>&nbsp;</th>
-    <th>&nbsp;</th>
-	<th>&nbsp;</th>
-  </tr>
+<?php }} ?>
+
 </tbody>
 </table>
 </div>
