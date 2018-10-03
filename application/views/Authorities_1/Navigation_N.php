@@ -9,7 +9,7 @@
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
           <a class="nav-link" href="authorities_BuildCalendar_1">
             <font color="#FFFFFF"><i class="fa fa-fw fa-wrench"></i>
-            <span class="nav-link-text">กำหนดปฏิทินการทำงาน</span>
+            <span class="nav-link-text">กำหนดปฏิทินการดำเนินงาน</span>
           </a></font>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">

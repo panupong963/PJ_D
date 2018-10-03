@@ -1,7 +1,7 @@
 <div class="content-wrapper">
     <div class="container-fluid">
       <form action="<?php echo site_url("home2/update_calendar");?>" method="post">
-      <h4>กำหนดปฏิทินการทำงาน</h4>
+      <h4>กำหนดปฏิทินการดำเนินงาน</h4>
       <br>
 <table width="900" border="0">
   <?php foreach ($calendar_res as $row) {
