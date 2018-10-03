@@ -2,11 +2,11 @@
     <div class="container-fluid">
         <ol class="breadcrumb">
           <li class="breadcrumb-item active">สรุปผลการทำงาน/ ภาเรียนที่ 1 ปีการศึกษา 2560</li>
-        </ol>  
-<form action="<?php echo site_url("home/JobOffering_results_23");?>" method="post">  
+        </ol>   
+<form action="<?php echo site_url("home/Finance_results_23");?>" method="post">  
 <table width="900" border="0" align="center">
-  <tr align="center">
-   <!-- <td>ชื่องาน : <select name="">
+   <tr align="center">
+   <!--tr <td>ชื่องาน : <select name="">
   <option value="volvo">--- ทั้งหมด ---</option>
   <?php //foreach ($job_res as $row3) { ?>
 
@@ -37,7 +37,7 @@
     <thead>
       <?php 
       $FACULTYNAME1 = 1;
-        $i=1; $j = 1;foreach ($student_res as $row) {
+        $i=1; $j = 1;foreach ($student_res2 as $row) {
         $FACULTYNAME = $row->FACULTYNAME;
         if($FACULTYNAME != $FACULTYNAME1){
           $FACULTYNAME1 = $FACULTYNAME;
@@ -55,7 +55,7 @@
 </thead>
 <tbody>
   <?php 
-    foreach ($student_res as $row2) {
+    foreach ($student_res2 as $row2) {
     if($row2->FACULTYNAME == $FACULTYNAME){ 
       $id = $row2->student_code;
   ?>

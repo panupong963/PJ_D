@@ -18,35 +18,25 @@
   </tr>
   </thead>
     <tbody>
+        <?php $i=1;foreach ($student_res as $row) { 
+            foreach ($job_res as $row2) {
+                if($row->Job_ID == $row2->Job_ID){
+                    $name = $row2->Job_Name;
+                }
+            }
+            ?>
   <tr align="center">
-    <th>1</th>
-    <th >จัดส่งเอกสาร</th>
-    <th>58888888</th>
-    <th>จิตใจ แจ่มใส</th>
-    <th>สารสนเทศศาสตร์</th>
-    <th>4.00</th>
+    <th><?php echo $i++; ?></th>
+    <th ><?php echo $name; ?></th>
+    <th><?php echo $row->student_code; ?></th>
+    <th><?php echo $row->STUDENTNAME; ?></th>
+    <th><?php echo $row->PROGRAMNAME; ?></th>
+    <th><?php echo $row->GPAX; ?></th>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
   </tr>
-    <tr align="center">
-    <th>2</th>
-    <th>จัดชั้นหนังสือ</th>
-    <th>58899568</th>
-    <th>กรกนก เอนกชัย</th>
-    <th>พยาบาลศาสตร์</th>
-    <th>3.88</th>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-	<td>&nbsp;</td>
+<?php } ?>
+
 </tbody>
 </table>
 </div>

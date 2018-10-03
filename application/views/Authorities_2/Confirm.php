@@ -15,34 +15,39 @@
 </thead>
 <tbody>
 <tbody>
+  <?php $i=1 ; foreach ($job_res as $row) { 
+        $Job_ID2 = $row->Job_ID;?>
+      
+    
   <tr align="center">
-    <th>1</th>
-    <td align="left"><b>ขนของ</b></td>
-    <th>30,000</th>
-    <th>5</th>
-    <th><a class="btn btn-info" href = "Authorities_job_2">คลิก</a></th>
+    <th><?php echo $i++; ?></th>
+    <td align="left"><b><?php echo $row->Job_Name; ?></b></td>
+    <?php $j = 0; foreach($student_res as $row){ 
+          if($row->Job_ID == $Job_ID2){
+            if($row->Re_status == 1){
+              $j++;
+              }
+            }
+          }
+          $sum = $j*100*30;
+          ?>
+    <th><?php echo $sum; ?></th>
+
+    <?php $k = 0; foreach($work_res as $row){ 
+          if($row->Job_ID == $Job_ID2){
+            if($row->Work_Status == 0){
+              $k++;
+              }
+            }
+          }
+          ?>
+          <th><?php echo $k; ?></th>
+    <th><a class="btn btn-info" href = "<?= site_url("home/Authorities_job_2/{$Job_ID2}"); ?>">คลิก</a></th>
   </tr>
-  <tr align="center">
-    <th>2</th>
-    <td align="left"><b>จัดเอกสาร</b></td>
-    <th>9,000</th>
-    <th>3</th>
-    <th><a class="btn btn-info" href = "Authorities_job2_2">คลิก</a></th>
-  </tr>
-  <tr align="center">
-    <th>3</th>
-    <td align="left"><b>นักศึกษาช่วยงานรายวิชา ITE - 106 </b></td>
-    <th>21,000</th>
-    <th>1</th>
-    <th><a class="btn btn-info" href = "Authorities_job3_2">คลิก</a></th>
-  </tr>
-  <tr align="center">
-    <th>4</th>
-    <td align="left"><b>นักศึกษาปะชาสัมพันธ์หลักสูตร IT </b></td>
-    <th>24,000</th>
-    <th>0</th>
-    <th><a  class="btn btn-info" href="Authorities_job4_2">คลิก</a></th>
-  </tr>
+<?php 
+}
+       ?>
+  
 </tbody>
 </table>
 

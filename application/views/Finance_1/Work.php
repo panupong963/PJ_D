@@ -2,7 +2,7 @@
     <div class="container-fluid">
       <h4>ประวัติการเสนองาน</h4>
 
-
+<form action="<?php echo site_url("home2/finance_WriteDescription_12");?>" method="post">
 <br>
 <table class="table table-striped">
 
@@ -14,28 +14,25 @@
     <th width="130">ภาคการศึกษา</th>
     <th width="220">ชื่องาน</th>
     <th width="220">ลักษณะงาน</th>
-    <th>&nbsp;</th>
+
     <th>&nbsp;</th>
   </tr>
 </thead>
   <tbody>
+    <?php $i=1;foreach ($job_res as $row) { 
+      if($this -> session -> userdata ( 'semester' ) != $row->term || $this -> session -> userdata ( 'Year' ) != $row->year){
+      ?>
   <tr align="center">
-    <th>1</th>
-    <th>2561</th>
-    <th>1</th>
-    <th>พิมพ์งาน</th>
-<th>สามารถใช้คอมพิวเตอร์ได้ดี</th>
-    <th><button type="button" class="btn btn-success">เลือก</button></th>
+    <th><?php echo $i++; ?></th>
+    <th><?php echo $row->year; ?></th>
+    <th><?php echo $row->term; ?></th>
+    <th><?php echo $row->Job_Name; ?></th>
+<th><?php echo $row->Job_description; ?></th>
+    <th><button type="submit" name="id" value="<?php echo $row->Job_ID; ?>" class="btn btn-success">เลือก</button></th>
   </tr>
-  <tr align="center">
-    <th>2</th>
-    <th>2561</th>
-    <th>1</th>
-    <th>ตรวจสอบหนังสือ</th>
-<th>สามารถใช้คอมพิวเตอร์ได้ดี</th>
-    <th><button type="button" class="btn btn-success">เลือก</button></th>
-  </tr>
+<?php }} ?>
 </tbody>
 </table>
+</form>
 </div>
 </div>

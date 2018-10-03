@@ -6,13 +6,14 @@
     
     ?>
   <tr align="center" bgcolor="#FF9900">
-    <th colspan="6">ชื่องาน : <?php echo $row->Job_Name; ?></th>
+    <th colspan="7">ชื่องาน : <?php echo $row->Job_Name; ?></th>
   </tr>
   <?php } ?>
   <tr align="center">
     <th width="49">ลำดับ</th>
     <th>รหัสนักศึกษา</th>
     <th>ชื่อ - นามสกุล</th>
+    <th>สำนักวิชา</th>
     <th>เหตุผลยกเลิกยืนยันการทำงาน</th>
     <th>ช่องทางติดต่อ</th>
     <th>สถานะ</th>
@@ -28,6 +29,7 @@
     <td><?php echo $i++; ?></td>
     <td><?php echo $row->student_code; ?></td>
     <td align="left"><?php echo $row->STUDENTNAME; ?></td>
+    <td align="left"><?php echo $row->FACULTYNAME; ?></td>
     <th><?php echo $row->Reason_ST; ?></th>
     <td><?php echo $PARENTPHONENO; ?></td>
     <td>

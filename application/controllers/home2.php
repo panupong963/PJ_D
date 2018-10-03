@@ -260,6 +260,19 @@ class home2 extends CI_Controller {
 		$this->load->view('Finance_1/End');
 	}
 
+	public function finance_WriteDescription_12(){
+		$id = $_POST["id"];
+		$this->load->model('Show_model');
+        $res = $this->Show_model->get_edit_WD($id);
+        $data['job_res'] = $res;
+
+		$this->load->view('Finance_1/start');
+		$this->load->view('Finance_1/Navigation_N');
+		$this->load->view('Finance_1/WriteDescription2', $data);
+		$this->load->view('Finance_1/footer');
+		$this->load->view('Finance_1/End');
+	}	
+
 	public function finance_CA_1(){
 		$this->load->model('Show_model');
         $res = $this->Show_model->get_calendar();
@@ -308,9 +321,13 @@ class home2 extends CI_Controller {
 	}
 
 	public function finance_work_1(){
+		$this->load->model('Show_model');
+        $res = $this->Show_model->get_job();
+        $data['job_res'] = $res;
+
 		$this->load->view('Finance_1/start');
 		$this->load->view('Finance_1/Navigation_N');
-		$this->load->view('Finance_1/Work');
+		$this->load->view('Finance_1/Work', $data);
 		$this->load->view('Finance_1/footer');
 		$this->load->view('Finance_1/End');
 	}	
@@ -330,6 +347,7 @@ class home2 extends CI_Controller {
 		$this->load->view('Finance_1/End');
 	}
 	public function finance_Remaining_1(){
+
 		$this->load->view('Finance_1/start');
 		$this->load->view('Finance_1/Navigation_N');
 		$this->load->view('Finance_1/Remaining');
@@ -337,16 +355,34 @@ class home2 extends CI_Controller {
 		$this->load->view('Finance_1/End');
 	}
 	public function finance_Selection_Results_1(){
+		$this->load->model('Show_model');
+        $res = $this->Show_model->get_job();
+        $data['job_res'] = $res;
+
+		$this->load->model('Show_model');
+        $res = $this->Show_model->get_student();
+        $data['student_res'] = $res; 
+
 		$this->load->view('Finance_1/start');
 		$this->load->view('Finance_1/Navigation_N');
-		$this->load->view('Finance_1/Selection_Results');
+		$this->load->view('Finance_1/Selection_Results',$data);
 		$this->load->view('Finance_1/footer');
 		$this->load->view('Finance_1/End');
 	}
 	public function finance_Selection_1(){
+		$id = $this->uri->segment('3');
+
+		$this->load->model('Show_model');
+        $res = $this->Show_model->get_JO($id);
+        $data['student_res'] = $res;
+
+		$this->load->model('Show_model');
+        $res = $this->Show_model->get_job();
+        $data['job_res'] = $res;
+
 		$this->load->view('Finance_1/start');
 		$this->load->view('Finance_1/Navigation_N');
-		$this->load->view('Finance_1/Selection');
+		$this->load->view('Finance_1/Selection', $data);
 		$this->load->view('Finance_1/footer');
 		$this->load->view('Finance_1/End');
 	}
@@ -360,9 +396,17 @@ class home2 extends CI_Controller {
 
 
 	public function Advisors_announced_1(){
+		$this->load->model('Show_model');
+        $res = $this->Show_model->get_student();
+        $data['student_res'] = $res; 
+
+		$this->load->model('Show_model');
+        $res = $this->Show_model->get_job();
+        $data['job_res'] = $res;
+
 		$this->load->view('Advisors_1/start');
 		$this->load->view('Advisors_1/Navigation_N');
-		$this->load->view('Advisors_1/Advisors_1');
+		$this->load->view('Advisors_1/Advisors_1' ,$data);
 		$this->load->view('Advisors_1/footer');
 		$this->load->view('Advisors_1/End');
 	}

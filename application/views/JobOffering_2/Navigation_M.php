@@ -1,43 +1,36 @@
  <!-- Navigation-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-    <a class="navbar-brand" href="Finance_results_2"><img src="<?php echo base_url(); ?>assets/img/wu.png" width = “40” height="40">&nbsp;&nbsp;ระบบติดตามทุนทำงานพิเศษ</a>
+    <a class="navbar-brand" href="Student_ConfirmJob_2"><img src="<?php echo base_url(); ?>assets/img/wu.png" width = “40” height="40">&nbsp;&nbsp;ระบบติดตามทุนทำงานพิเศษ</a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav navbar-sidenav " id="exampleAccordion">
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
-          <a class="nav-link" href="Finance_edit_2">
-            <font color="#FFFFFF"><i class="fa fa-fw fa-wrench"></i>
-            <span class="nav-link-text">เเก้ไขข้อมูลส่วนตัว</span></font>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+          <a class="nav-link" href="javascript:history.back()">
+            <font color="#FFFFFF"><i class="fa fa-fw fa-dashboard"></i>
+            <span class="nav-link-text">ย้อนกลับ</span></font>
           </a>
         </li>
-
-        <!--<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
-          <a class="nav-link" href="Authorities_confirm_2">
-            <i class="fa fa-fw fa-dashboard"></i>
-            <span class="nav-link-text">ยืนยันการทำงานนักศึกษา</span>
-          </a>
-        </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
-          <a class="nav-link" href="Authorities_results1_2">
-            <i class="fa fa-fw fa-area-chart"></i>
-            <span class="nav-link-text">งาน</span>
-          </a>
-        </li>-->
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
-          <a class="nav-link" href="Finance_results_2">
+        <!--<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
+          <a class="nav-link" href="Student_SaveJob_2">
             <font color="#FFFFFF"><i class="fa fa-fw fa-area-chart"></i>
-            <span class="nav-link-text">สรุปผลการทำงาน</span></font>
+            <span class="nav-link-text">บันทึกการทำงาน</span></font>
+          </a>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
+          <a class="nav-link" href="Student_list_2">
+            <font color="#FFFFFF"><i class="fa fa-fw fa-area-chart"></i>
+            <span class="nav-link-text">รายการปฎิบัติงาน</span></font>
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
-          <a class="nav-link" href="Finance_CA_2">
+          <a class="nav-link" href="Student_CA_2">
             <font color="#FFFFFF"><i class="fa fa-fw fa-table"></i>
             <span class="nav-link-text">ปฏิทินการดำเนินงาน</span></font>
           </a>
         </li>
-        <!--<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-wrench"></i>
             <span class="nav-link-text">Components</span>
@@ -153,9 +146,9 @@
         </li>-->
 
         <!-- เเจ้งเตือน -->
-       <!-- <li class="nav-item dropdown">
+        <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle mr-lg-2" id="alertsDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="fa fa-fw fa-bell"></i>
+            <font color="#FFFFFF"><i class="fa fa-fw fa-bell"></i></font>
             <span class="d-lg-none">Alerts
               <span class="badge badge-pill badge-warning">6 New</span>
             </span>
@@ -167,35 +160,35 @@
             <h6 class="dropdown-header">New Alerts:</h6>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#">
-              <span class="text-success">
+              <span class="text-danger">
                 <strong>
-                  <i class="fa fa-long-arrow-up fa-fw"></i>Status Update</strong>
+                   1 สัปดาห์ ก่อนหมดเวลาบัทึกข้อมูลการทำงาน</strong>
               </span>
-              <span class="small float-right text-muted">11:21 AM</span>
-              <div class="dropdown-message small">This is an automated server response message. All systems are online.</div>
+              <span class="small float-right text-muted">12/ม.ค./61</span>
+              <div class="dropdown-message small">&nbsp;</div>
             </a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#">
               <span class="text-danger">
                 <strong>
-                  <i class="fa fa-long-arrow-down fa-fw"></i>Status Update</strong>
+                   1 เดือน ก่อนหมดเวลาบัทึกข้อมูลการทำงาน</strong>
               </span>
-              <span class="small float-right text-muted">11:21 AM</span>
-              <div class="dropdown-message small">This is an automated server response message. All systems are online.</div>
+              <span class="small float-right text-muted">11/ม.ค./61</span>
+              <div class="dropdown-message small">&nbsp;</div>
             </a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#">
-              <span class="text-success">
+              <span class="text-danger">
                 <strong>
-                  <i class="fa fa-long-arrow-up fa-fw"></i>Status Update</strong>
+                  บันทึกข้อมูลการทำงานภายในวันที่</strong>
               </span>
-              <span class="small float-right text-muted">11:21 AM</span>
-              <div class="dropdown-message small">This is an automated server response message. All systems are online.</div>
+              <span class="small float-right text-muted">05/ม.ค./61</span>
+              <div class="dropdown-message small">&nbsp;</div>
             </a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item small" href="#">View all alerts</a>
           </div>
-        </li>-->
+        </li>
 
         <!-- <li class="nav-item">
           <form class="form-inline my-2 my-lg-0 mr-lg-2">
@@ -212,7 +205,7 @@
         <li class="nav-item">
           
           <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
-            <font color="#FFFFFF">เจ้าหน้าที่การเงิน/อาจารย์ที่ปรึกษา/หัวส่วนกิจ :<?php echo $this -> session -> userdata ( 'OFFICERNAME' ); ?>
+            <font color="#FFFFFF">นักศึกษา : <?php echo $this -> session -> userdata ( 'STUDENTNAME' ); ?>
             <i class="fa fa-fw fa-sign-out"></i>ออกจากระบบ</a></font>
         </li>
       </ul>

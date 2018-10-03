@@ -199,7 +199,7 @@
         <li class="nav-item">
           
           <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
-            <font color="#FFFFFF"> อาจารย์ที่ปรึกษา : ขวัญใจ ศรีไทย </font>
+            <font color="#FFFFFF"> อาจารย์ที่ปรึกษา : <?php echo $this -> session -> userdata ( 'OFFICERNAME' ); ?> </font>
            <font color="#FFFFFF"> <i class="fa fa-fw fa-sign-out"></i>ออกจากระบบ</a> </font>
         </li>
       </ul>

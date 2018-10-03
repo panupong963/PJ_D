@@ -3,6 +3,7 @@
         <ol class="breadcrumb">
           <li class="breadcrumb-item active">ออกรายงานสรุปผลการปฏิบัติงาน</li>
         </ol> 
+        <form action="<?php echo site_url("home/from_s");?>" method="post">
    <table class="table table-borderless">
     <thead>
       <tr>
@@ -10,19 +11,17 @@
       </tr>
     </thead>
     <tbody>
+      
+      <?php foreach ($facultyname_res as $row) { ?>
+
       <tr>
-        <td width="200">สารสนเทศศาสตร์ </td>
-        <td> <a target="_blank" href="from_s"><img src="<?php echo base_url(); ?>assets/img/print.ico" width="50"></a></td>
+        <td width="200"><?php echo $row->FACULTYNAME; ?> </td>
+        <td> <button target="_blank" name="FACULTYNAME" value="<?php echo $row->FACULTYNAME; ?>" ><img src="<?php echo base_url(); ?>assets/img/print.ico" width="50"></button></td>
       </tr>
-      <tr>
-        <td width="200">ศิลปศาสตร์  </td>
-        <td><a target="_blank" href="from_s"><img src="<?php echo base_url(); ?>assets/img/print.ico" width="50"></a></td>
-      </tr>
-      <tr>
-        <td width="200">การจัดการ</td>
-        <td><a target="_blank" href="from_s"><img src="<?php echo base_url(); ?>assets/img/print.ico" width="50"></a></td>
-      </tr>
+    <?php } ?>
+
     </tbody>
   </table>
+  </form>
     </div>
 </div>

@@ -15,52 +15,30 @@
   </tr>
 </thead>
 <tbody>
+    <?php 
+    $id = $this -> session -> userdata ( 'OFFICERID' );
+    $i=1;foreach ($student_res as $row) { 
+        if($row->OFFICERID == $id){
+           foreach ($job_res as $row2) { 
+            if($row->Job_ID == $row2->Job_ID){
+        ?>
     <tr align="center">
-    <th align="center">1</th>
-    <th align="center">บริการ</th>
-    <th align="center">58123333</th>
-    <th align="center">สมหมาย ใจกล้า</th>
-    <th align="center">สารสนเทศศาสตร์</th>
-    <th align="center">การจัดเอกสาร</th>
-    <th align="center">ผ่าน</th>
+    <th align="center"><?php echo $i++; ?></th>
+    <th align="center"><?php echo $row2->Category; ?></th>
+    <th align="center"><?php echo $row->student_code; ?></th>
+    <th align="center"><?php echo $row->STUDENTNAME; ?></th>
+    <th align="center"><?php echo $row->FACULTYNAME; ?></th>
+    <th align="center"><?php echo $row2->Job_Name; ?></th>
+    <th align="center"><?php if($row->Re_status == "1"){
+                                echo "ผ่าน";
+                            }else{
+                                echo "ไม่ผ่าน";
+                            } ?></th>
   </tr>
-</tbody>
-<tbody>
-    <tr align="center">
-    <th align="center">2</th>
-    <th align="center">บริการ</th>
-    <th align="center">58134455</th>
-    <th align="center">สมจิต มากมาย</th>
-    <th align="center">สารสนเทศศาสตร์</th>
-    <th align="center">พิมพ์งานเอกสาร</th>
-    <th align="center">ไม่ผ่าน</th>
-  </tr>
-</tbody>
-<tbody>
-    <tr align="center">
-    <th align="center">3</th>
-    <th align="center">บริการ</th>
-    <th align="center">58135778</th>
-    <th align="center">กนก มากมาย</th>
-    <th align="center">สารสนเทศศาสตร์</th>
-    <th align="center">พิมพ์งานเอกสาร</th>
-    <th align="center">ผ่าน</th>
-  </tr>
-</tbody>
-<tbody>
-    <tr align="center">
-    <th align="center">4</th>
-    <th align="center">ธุรการ</th>
-    <th align="center">58145778</th>
-    <th align="center">นกแก้ว บินดี</th>
-    <th align="center">สารสนเทศศาสตร์</th>
-    <th align="center">จัดชั้นหนังสือ</th>
-    <th align="center">ผ่าน</th>
-  </tr>
+<?php }}}} ?>
 </tbody>
 
-</tbody>
 </table>
-</table>
+
 </div>
 </div>

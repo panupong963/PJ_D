@@ -18,7 +18,7 @@
     <th width="49">ลำดับ</th>
     <th width="150">รหัสนักศึกษา</th>
     <th>ชื่อ - นามสกุล</th>
-    <th>ชั่วโมงงาน</th>
+    <th>ชั่วโมงงาน (นาที)</th>
     <th>ช่องทางติดต่อ</th>
   </tr>
 </thead>
@@ -40,7 +40,7 @@
                   }
                 }
                } 
-              echo floor($sum/60); 
+              echo floor($sum); 
               ?></td>
     <td><?php echo $PARENTPHONENO; ?></td>
   </tr>

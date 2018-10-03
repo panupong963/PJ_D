@@ -1,7 +1,7 @@
 <div class="content-wrapper">
     <div class="container-fluid">
       <h4>จัดสรรงานคงเหลือ</h4>
-      <td width="307" align="left"><font color="red"><b>*ตรวจสอบงานภายในวันที่ 20/เม.ย/60</b></font>
+      <!--<td width="307" align="left"><font color="red"><b>*ตรวจสอบงานภายในวันที่ 20/เม.ย/60</b></font>-->
           </td>
 
       <br><br>

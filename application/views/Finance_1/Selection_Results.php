@@ -20,17 +20,32 @@
   </thead>
 
     <tbody>
+        <?php 
+        $id = $this -> session -> userdata ( 'OFFICERID' );
+        $i=1;foreach ($job_res as $row) { 
+            if($row->OFFICERID == $id){ 
+                 if($this -> session -> userdata ( 'Year' ) == $row->year && $this -> session -> userdata ( 'semester' ) == $row->term){
+            ?>
     <tr align="center">
-    <th>1</th>
-    <th>บริการ</th>
-    <th><a >จัดชั้นวางหนังสือ</a></th>
-    <th>2/5</th>
-    <th><a class="btn btn-info" href="finance_Selection_1">เลือก</a></th>
+    <th><?php echo $i++; ?></th>
+    <th><?php echo $row->Category; ?></th>
+    <th><a ><?php echo $row->Job_Name; ?></a></th>
+    <th><?php
+                                                             $k=0;foreach ($student_res as $row3) { 
+                                                                if($row->Job_ID == $row3->Job_ID){
+                                                                    if($row3->Re_status == "1"){
+                                                                    $k++;  
+                                                                    }
+                                                                }
+                                                            }
+                                                             echo $k."/".$row->Receiving_number; ?></th>
+    <th><a class="btn btn-info" href="<?= site_url("home2/finance_Selection_1/{$row->Job_ID}"); ?>">เลือก</a></th>
     <th>&nbsp;&nbsp;</th>
     <th>&nbsp;&nbsp;</th>
     <th>&nbsp;&nbsp;</th>
     </tr>
-    </tbody>
+<?php }}} ?>
+    <!--</tbody>
     <tbody>
     <tr align="center">
     <th>2</th>
@@ -53,7 +68,7 @@
     <th>&nbsp;&nbsp;</th>
     <th>&nbsp;&nbsp;</th>
     <th>&nbsp;&nbsp;</th>
-   </tr>
+   </tr>-->
 </tbody>
 </table>
     

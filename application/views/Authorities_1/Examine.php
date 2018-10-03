@@ -32,7 +32,7 @@
   <?php $i=1; foreach ($job_res as $row) {
     if($row->Job_status == 0){?>
   <tr align="center">
-    <th><?php echo $i; ?></th>
+    <th><?php echo $i++; ?></th>
     <th><?php echo $row->Department; ?></th>
     
     <td align="left"><b><?php echo $row->Job_Name; ?></b></td>

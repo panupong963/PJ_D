@@ -1,7 +1,7 @@
 <div class="content-wrapper">
     <div class="container-fluid">
       <h4>คัดเลือกผู้สมัครทุนทำงานพิเศษ</h4>
-      <font color="red"><b>*ตรวจสอบงานภายในวันที่ 16/เม.ย/60</b></font>
+      <!--<font color="red"><b>*ตรวจสอบงานภายในวันที่ 16/เม.ย/60</b></font>-->
         </div>
       <!--<td width="307" align="left"><font color="red">*ตรวจสอบงานภายในวันที่ 16/เม.ย/60</font>-->
           </td>
@@ -28,7 +28,9 @@
     $id = $this -> session -> userdata ( 'OFFICERID' );
     $i=1;
     foreach ($job_res as $row) { 
-      if($row->OFFICERID == $id){ ?>
+      if($row->OFFICERID == $id){ 
+        if($this -> session -> userdata ( 'Year' ) == $row->year && $this -> session -> userdata ( 'semester' ) == $row->term){
+        ?>
 
     <tr align="center">
     <th><?php echo $i++; ?></th>
@@ -54,7 +56,7 @@
     <th >&nbsp;&nbsp;</th>
     <th >&nbsp;&nbsp;</th>
     </tr>
-<?php } } ?>
+<?php } } } ?>
     </tbody>
 </table>
     

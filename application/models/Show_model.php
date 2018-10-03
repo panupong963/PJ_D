@@ -13,6 +13,13 @@ class Show_model extends CI_Model {
         return $query->result();
     }
 
+    public function get_facultyname()
+    {
+        //$query = $this->db->query('select * from offices ORDER BY officeCode ');
+        $query = $this->db->query('select * from facultyname ');
+        return $query->result();
+    }
+
     public function get_calendar()
     {
         //$query = $this->db->query('select * from offices ORDER BY officeCode ');
@@ -39,6 +46,26 @@ class Show_model extends CI_Model {
         //$query = $this->db->query('select * from offices ORDER BY officeCode ');
         $query = $this->db->query('select * from job');
         return $query->result();
+    }
+
+    public function get_p($id){
+        //exit($id);
+        $this->db->select('*');
+        $this->db->from('student');
+        $this->db->where("FACULTYNAME LIKE '%".$id."%' ");
+        $query = $this->db->get();
+        $result = $query->result();
+        return $result;
+    }
+
+    public function get_p2($id){
+        //exit($id);
+        $this->db->select('*');
+        $this->db->from('facultyname');
+        $this->db->where("FACULTYNAME LIKE '%".$id."%' ");
+        $query = $this->db->get();
+        $result = $query->result();
+        return $result;
     }
 
     public function get_edit($id)
@@ -68,6 +95,29 @@ class Show_model extends CI_Model {
         $query = $this->db->get();
         $result = $query->result();
         return $result;
+    }
+
+    public function get_edit_WD($id){
+        $this->db->select('*');
+        $this->db->from('job');
+        $this->db->where('Job_ID', $id);
+        $query = $this->db->get();
+        $result = $query->result();
+        return $result;
+    }
+
+    public function get_JO5($id){
+        if($id != "0"){
+        $this->db->select('*');
+        $this->db->from('student');
+        $this->db->where("FACULTYNAME LIKE '%".$id."%' ");
+        $query = $this->db->get();
+        $result = $query->result();
+        return $result;
+        }else{
+        $query = $this->db->query('select * from student ');
+        return $query->result();
+        }
     }
 
     public function get_JO($id){

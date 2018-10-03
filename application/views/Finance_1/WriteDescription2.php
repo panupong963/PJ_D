@@ -153,59 +153,75 @@
 
 <table>
                     <tbody>
+                      <?php foreach ($job_res as $row) {  ?>
                     <tr>
-                     <td>ชื่องาน <font color="red">* </font> <input type="text" name="Job_Name" size="36" required>
+                     <td>ชื่องาน <font color="red">* </font> <input type="text" name="Job_Name" size="36" value="<?php echo $row->Job_Name; ?>" required>
                      ประเภทงาน <font color="red">* </font> <select name="Category">
-                                                      <option value="ธุรการ">ธุรการ</option>
+                                                      <?php if($row->Category  == "ธุรการ"){ ?>
+                                                      <option value="ธุรการ" selected>ธุรการ</option>
                                                       <option value="เชิงวิชาชีพ">เชิงวิชาชีพ</option>
                                                       <option value="เชิงบริการ">เชิงบริการ</option>
                                                       <option value="เชิงวิชาการ">เชิงวิชาการ</option>
                                                     </select>
+                                                  <?php } ?>
+                                                    <?php if($row->Category  == "เชิงวิชาชีพ"){ ?>
+                                                      <option value="ธุรการ">ธุรการ</option>
+                                                      <option value="เชิงวิชาชีพ" selected>เชิงวิชาชีพ</option>
+                                                      <option value="เชิงบริการ">เชิงบริการ</option>
+                                                      <option value="เชิงวิชาการ">เชิงวิชาการ</option>
+                                                    </select>
+                                                    <?php } ?>
+                                                    <?php if($row->Category  == "เชิงบริการ"){ ?>
+                                                      <option value="ธุรการ">ธุรการ</option>
+                                                      <option value="เชิงวิชาชีพ" >เชิงวิชาชีพ</option>
+                                                      <option value="เชิงบริการ" selected>เชิงบริการ</option>
+                                                      <option value="เชิงวิชาการ">เชิงวิชาการ</option>
+                                                    </select>
+                                                    <?php } ?>     
+                                                    <?php if($row->Category  == "เชิงวิชาการ"){ ?>
+                                                      <option value="ธุรการ">ธุรการ</option>
+                                                      <option value="เชิงวิชาชีพ" >เชิงวิชาชีพ</option>
+                                                      <option value="เชิงบริการ" >เชิงบริการ</option>
+                                                      <option value="เชิงวิชาการ" selected>เชิงวิชาการ</option>
+                                                    </select>
+                                                    <?php } ?>  
+
                        สำนักวิชา <font color="red">* </font> <select>
+
                                                       <option value="ไม่จำกัด">ไม่จำกัด</option>
-                                                      <option value="สำนักวิชาการจัดการ">สำนักวิชาการจัดการ</option>
-                                                      <option value="สำนักวิชาพยาบาลศาสตร์">สำนักวิชาพยาบาลศาสตร์</option>
-                                                      <option value="สำนักวิชารัฐศาสตร์และนิติศาสตร์">สำนักวิชารัฐศาสตร์และนิติศาสตร์</option>
-                                                      <option value="สำนักวิชาวิทยาศาสตร์">สำนักวิชาวิทยาศาสตร์</option>
-                                                      <option value="สำนักวิชาวิศวกรรมศาสตร์และทรัพยากร">สำนักวิชาวิศวกรรมศาสตร์และทรัพยากร</option>
-                                                      <option value="สำนักวิชาศิลปศาสตร์">สำนักวิชาศิลปศาสตร์</option>
-                                                      <option value="สำนักวิชาสถาปัตยกรรมศาสตร์และการออกแบบ">สำนักวิชาสถาปัตยกรรมศาสตร์และการออกแบบ</option>
-                                                      <option value="สำนักวิชาสหเวชศาสตร์">สำนักวิชาสหเวชศาสตร์</option>
-                                                      <option value="สำนักวิชาสาธารณสุขศาสตร์">สำนักวิชาสาธารณสุขศาสตร์</option>
-                                                      <option value="สำนักวิชาสารสนเทศศาสตร์">สำนักวิชาสารสนเทศศาสตร์</option>
-                                                      <option value="สำนักวิชาเทคโนโลยีการเกษตร">สำนักวิชาเทคโนโลยีการเกษตร</option>
-                                                      <option value="สำนักวิชาเภสัชศาสตร์">สำนักวิชาเภสัชศาสตร์</option>
-                                                      <option value="สำนักวิชาวิศวกรรมศาสตร์และทรัพยากร">สำนักวิชาวิศวกรรมศาสตร์และทรัพยากร</option>
-                                                      <option value="สำนักวิชาศิลปศาสตร์">สำนักวิชาศิลปศาสตร์</option>
-                                                      <option value="สำนักวิชาแพทยศาสตร์">สำนักวิชาแพทยศาสตร์</option>
-                                                      <option value="ศูนย์นวัตกรรมการเรียนและการสอน">ศูนย์นวัตกรรมการเรียนและการสอน</option>
-                                                      <option value="ศูนย์บรรณสารและสื่อการศึกษา">ศูนย์บรรณสารและสื่อการศึกษา</option>
-                                                      <option value="ศูนย์บริการการศึกษา">ศูนย์บริการการศึกษา</option>
-                                                      <option value="ศูนย์บริการวิชาการ">ศูนย์บริการวิชาการ</option>
-                                                      <option value="ศูนย์สหกิจศึกษาและพัฒนาอาชีพ">ศูนย์สหกิจศึกษาและพัฒนาอาชีพ</option>
-                                                      <option value="ศูนย์เครื่องมือวิทยาศาสตร์และเทคโนโลยี">ศูนย์เครื่องมือวิทยาศาสตร์และเทคโนโลยี</option>
-                                                      <option value="ศูนย์เทคโนโลยีดิจิทัล">ศูนย์เทคโนโลยีดิจิทัล</option>
-                                                      <option value="อุทยานพฤกษศาสตร์">อุทยานพฤกษศาสตร์</option>
-                                                      <option value="อุทยานวิทยาศาสตร์และเทคโนโลยี">อุทยานวิทยาศาสตร์และเทคโนโลยี</option>
+                                                      <option value="สารสนเทศศาสตร์">สารสนเทศศาสตร์</option>
+                                                      <option value="การจัดการ">การจัดการ</option>
+                                                      <option value="ศิลปศาสตร์">ศิลปศาสตร์</option>
                                                     </select></td>
                       </tr>
 
                       <tr>
                        <td ><br>เพศ <font color="red">* </font><select name="Sex">
-                                                      <option value="F">หญิง</option>
+                                                      <?php if($row->Sex == "F"){ ?>
+                                                      <option value="F" selected>หญิง</option>
                                                       <option value="M" >ชาย</option>
                                                       <option value="X">ไม่ระบุ</option>
-                                
+                                                      <?php } ?>
+                                                      <?php if($row->Sex == "M"){ ?>
+                                                      <option value="F" >หญิง</option>
+                                                      <option value="M" selected>ชาย</option>
+                                                      <option value="X">ไม่ระบุ</option>
+                                                      <?php } ?> 
+                                                      <?php if($row->Sex == "X"){ ?>
+                                                      <option value="F" >หญิง</option>
+                                                      <option value="M" >ชาย</option>
+                                                      <option value="X" selected>ไม่ระบุ</option>
+                                                      <?php } ?>                                                                                   
                                                     </select> 
-                                                    &nbsp;&nbsp;&nbsp;&nbsp;จำนวนที่รับ <font color="red">* </font><input type="text" name="Receiving_number" size="2"> คน 
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;จำนวนที่รับ <font color="red">* </font><input type="text" value="<?php echo $row->Receiving_number; ?>" name="Receiving_number" size="2"> คน 
                       
-                      &nbsp;&nbsp;&nbsp;&nbsp; วันที่เริ่มต้นการทำงาน <font color="red">* </font><input id="date" name="Frist_date" type="date"> <br><br>
+                      &nbsp;&nbsp;&nbsp;&nbsp; วันที่เริ่มต้นการทำงาน <font color="red">* </font><input id="date" value="<?php echo $row->Frist_date; ?>" name="Frist_date" type="date"> <br><br>
 
                                       <form action="/action_page.php">
                       คุณสมบัติผู้สมัคร <font color="red">* </font> : 
                        
-                       
-                       
+                      
+                       <?php } ?>
                        
 
 
@@ -301,6 +317,7 @@
              
            
                 </tr>
+
                 </table>
                 </table>
                 </div>

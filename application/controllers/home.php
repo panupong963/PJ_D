@@ -240,6 +240,7 @@ public function testlog(){
 		//$this->load->view('test');
 	}
 	public function Student_Save(){
+
 		$id = $this->uri->segment('3');
 
 		$this->load->model('Show_model');
@@ -251,7 +252,7 @@ public function testlog(){
         $data['work_res'] = $res;*/
 
 		$this->load->view('Student_2/start');
-		$this->load->view('Student_2/Navigation_edit');
+		$this->load->view('Student_2/Navigation_M');
 		$this->load->view('Student_2/Save', $data);
 		$this->load->view('Student_2/footer');
 		$this->load->view('Student_2/End');
@@ -276,9 +277,13 @@ public function testlog(){
 	}
 
 	public function Student_CA_2(){
+		$this->load->model('Show_model');
+        $res = $this->Show_model->get_calendar();
+        $data['calendar_res'] = $res;	
+
 		$this->load->view('Student_2/start');
 		$this->load->view('Student_2/Navigation_N');
-		$this->load->view('Calendar');
+		$this->load->view('Calendar', $data);
 		$this->load->view('Student_2/footer');
 		$this->load->view('Student_2/End');
 	}
@@ -325,60 +330,167 @@ public function testlog(){
 
 
 	public function Authorities_CA_2(){
+		$this->load->model('Show_model');
+        $res = $this->Show_model->get_calendar();
+        $data['calendar_res'] = $res;
+
 		$this->load->view('Authorities_2/start');
 		$this->load->view('Authorities_2/Navigation_N');
-		$this->load->view('Calendar');
+		$this->load->view('Calendar', $data);
 		$this->load->view('Authorities_2/footer');
 		$this->load->view('Authorities_2/End');		
 	}
 
 	public function Authorities_NoConfirm_2(){
+		$id = $this->uri->segment('3');
+
+		$this->load->model('Show_model');
+        $res = $this->Show_model->get_JO($id);
+        $data['student_res'] = $res;
+
+		$this->load->model('Show_model');
+        $res = $this->Show_model->get_JO2($id);
+        $data['job_res'] = $res; 
+
+        $this->load->model('Show_model');
+        $res = $this->Show_model->get_JO3($id);
+        $data['work_res'] = $res;        
+
 		$this->load->view('Authorities_2/start');
 		$this->load->view('Authorities_2/Navigation_N');
-		$this->load->view('Authorities_2/NoConfirm');
+		$this->load->view('Authorities_2/NoConfirm', $data);
 		$this->load->view('Authorities_2/footer');
 		$this->load->view('Authorities_2/End');		
 	}
 
 	public function Authorities_YConfirm_2(){
+		$id = $this->uri->segment('3');
+
+		$this->load->model('Show_model');
+        $res = $this->Show_model->get_JO($id);
+        $data['student_res'] = $res;
+
+		$this->load->model('Show_model');
+        $res = $this->Show_model->get_JO2($id);
+        $data['job_res'] = $res; 
+
+        $this->load->model('Show_model');
+        $res = $this->Show_model->get_JO3($id);
+        $data['work_res'] = $res;        
+
 		$this->load->view('Authorities_2/start');
 		$this->load->view('Authorities_2/Navigation_N');
-		$this->load->view('Authorities_2/YConfirm');
+		$this->load->view('Authorities_2/YConfirm' ,$data);
 		$this->load->view('Authorities_2/footer');
 		$this->load->view('Authorities_2/End');		
 	}
 
 	public function Authorities_job_2(){
+		$id = $this->uri->segment('3');
+		//exit($id);
+		//$this->load->model('Show_model');
+        //$this->Show_model->delete_work($id);		
+
+		$this->load->model('Show_model');
+        $res = $this->Show_model->get_edit_JO($id);
+        $data['job_res'] = $res;
+
+ 		$this->load->model('Show_model');
+        $res = $this->Show_model->get_student();
+        $data['student_res'] = $res; 
+
+        $this->load->model('Show_model');
+        $res = $this->Show_model->get_work();
+        $data['work_res'] = $res;  
+
 		$this->load->view('Authorities_2/start');
-		$this->load->view('Authorities_2/Navigation_N');
-		$this->load->view('Authorities_2/job');
+		$this->load->view('Authorities_2/Navigation_M');
+		$this->load->view('Authorities_2/job', $data);
 		$this->load->view('Authorities_2/footer');
 		$this->load->view('Authorities_2/End');		
 	}
 
 	public function Authorities_confirm_2(){
+		$this->load->model('Show_model');
+        $res = $this->Show_model->get_job();
+        $data['job_res'] = $res;
+
+		$this->load->model('Show_model');
+        $res = $this->Show_model->get_student();
+        $data['student_res'] = $res;
+
+        $this->load->model('Show_model');
+        $res = $this->Show_model->get_work();
+        $data['work_res'] = $res;
+
 		$this->load->view('Authorities_2/start');
 		$this->load->view('Authorities_2/Navigation_N');
-		$this->load->view('Authorities_2/Confirm');
+		$this->load->view('Authorities_2/Confirm', $data);
 		$this->load->view('Authorities_2/footer');
 		$this->load->view('Authorities_2/End');		
 	}	
 
 	public function Authorities_results1_2(){
+		$this->load->model('Show_model');
+        $res = $this->Show_model->get_job();
+        $data['job_res'] = $res;  
+
+        $this->load->model('Show_model');
+        $res = $this->Show_model->get_student();
+        $data['student_res'] = $res;  
+
 		$this->load->view('Authorities_2/start');
 		$this->load->view('Authorities_2/Navigation_N');
-		$this->load->view('Authorities_2/Results_job');
+		$this->load->view('Authorities_2/Results_job' ,$data);
 		$this->load->view('Authorities_2/footer');
 		$this->load->view('Authorities_2/End');		
 	}
 
 	public function Authorities_results2_2(){
+		$this->load->model('Show_model');
+        $res = $this->Show_model->get_student2();
+        $data['student_res'] = $res;
+
+        $this->load->model('Show_model');
+        $res = $this->Show_model->get_work();
+        $data['work_res'] = $res; 
+
+        $this->load->model('Show_model');
+        $res = $this->Show_model->get_job();
+        $data['job_res'] = $res;
+
 		$this->load->view('Authorities_2/start');
 		$this->load->view('Authorities_2/Navigation_N');
-		$this->load->view('Authorities_2/Results_work');
+		$this->load->view('Authorities_2/Results_work', $data);
 		$this->load->view('Authorities_2/footer');
 		$this->load->view('Authorities_2/End');		
 	}
+
+	public function Authorities_results2_23(){
+		$id = $_POST["STUDENTNAME"];
+		//exit($id);
+		$this->load->model('Show_model');
+        $res = $this->Show_model->get_JO5($id);
+        $data['student_res2'] = $res;
+
+		$this->load->model('Show_model');
+        $res = $this->Show_model->get_student2();
+        $data['student_res'] = $res;
+
+        $this->load->model('Show_model');
+        $res = $this->Show_model->get_work();
+        $data['work_res'] = $res; 
+
+        $this->load->model('Show_model');
+        $res = $this->Show_model->get_job();
+        $data['job_res'] = $res;
+
+		$this->load->view('Authorities_2/start');
+		$this->load->view('Authorities_2/Navigation_N');
+		$this->load->view('Authorities_2/Results_W2', $data);
+		$this->load->view('Authorities_2/footer');
+		$this->load->view('Authorities_2/End');		
+	}	
 
 	public function Finance_edit_2(){
 		$this->load->view('Finance_2/start');
@@ -389,9 +501,13 @@ public function testlog(){
 	}
 
 	public function Finance_CA_2(){
+		$this->load->model('Show_model');
+        $res = $this->Show_model->get_calendar();
+        $data['calendar_res'] = $res;	
+
 		$this->load->view('Finance_2/start');
 		$this->load->view('Finance_2/Navigation_N');
-		$this->load->view('Calendar');
+		$this->load->view('Calendar', $data);
 		$this->load->view('Finance_2/footer');
 		$this->load->view('Finance_2/End');		
 	}
@@ -405,12 +521,44 @@ public function testlog(){
         $res = $this->Show_model->get_work();
         $data['work_res'] = $res; 
 
+        $this->load->model('Show_model');
+        $res = $this->Show_model->get_job();
+        $data['job_res'] = $res;
+
+
 		$this->load->view('Finance_2/start');
 		$this->load->view('Finance_2/Navigation_N');
 		$this->load->view('Finance_2/Results_work' ,$data);
 		$this->load->view('Finance_2/footer');
 		$this->load->view('Finance_2/End');		
 	}
+
+	public function Finance_results_23(){
+		
+		$id = $_POST["STUDENTNAME"];
+		//exit($id);
+		$this->load->model('Show_model');
+        $res = $this->Show_model->get_JO5($id);
+        $data['student_res2'] = $res;
+
+		$this->load->model('Show_model');
+        $res = $this->Show_model->get_student2();
+        $data['student_res'] = $res;
+
+        $this->load->model('Show_model');
+        $res = $this->Show_model->get_work();
+        $data['work_res'] = $res; 
+
+        $this->load->model('Show_model');
+        $res = $this->Show_model->get_job();
+        $data['job_res'] = $res;
+
+		$this->load->view('Finance_2/start');
+		$this->load->view('Finance_2/Navigation_N');
+		$this->load->view('Finance_2/Results_W2' ,$data);
+		$this->load->view('Finance_2/footer');
+		$this->load->view('Finance_2/End');			
+	}	
 
 	public function JobOffering_edit_2(){
 		$this->load->view('JobOffering_2/start');
@@ -421,9 +569,13 @@ public function testlog(){
 	}
 
 	public function JobOffering_CA_2(){
+		$this->load->model('Show_model');
+        $res = $this->Show_model->get_calendar();
+        $data['calendar_res'] = $res;	
+
 		$this->load->view('JobOffering_2/start');
 		$this->load->view('JobOffering_2/Navigation_N');
-		$this->load->view('Calendar');
+		$this->load->view('Calendar', $data);
 		$this->load->view('JobOffering_2/footer');
 		$this->load->view('JobOffering_2/End');		
 	}
@@ -467,13 +619,15 @@ public function testlog(){
         $data['work_res'] = $res;      
 
 		$this->load->view('JobOffering_2/start');
-		$this->load->view('JobOffering_2/Navigation_N');
+		$this->load->view('JobOffering_2/Navigation_M');
 		$this->load->view('JobOffering_2/job', $data);
 		$this->load->view('JobOffering_2/footer');
 		$this->load->view('JobOffering_2/End');		
 	}
 
 	public function JobOffering_results_2(){
+
+
 		$this->load->model('Show_model');
         $res = $this->Show_model->get_student2();
         $data['student_res'] = $res;
@@ -482,9 +636,40 @@ public function testlog(){
         $res = $this->Show_model->get_work();
         $data['work_res'] = $res; 
 
+        $this->load->model('Show_model');
+        $res = $this->Show_model->get_job();
+        $data['job_res'] = $res;
+
 		$this->load->view('JobOffering_2/start');
 		$this->load->view('JobOffering_2/Navigation_N');
 		$this->load->view('JobOffering_2/Results_work', $data);
+		$this->load->view('JobOffering_2/footer');
+		$this->load->view('JobOffering_2/End');		
+	}
+
+		public function JobOffering_results_23(){
+		
+		$id = $_POST["STUDENTNAME"];
+		//exit($id);
+		$this->load->model('Show_model');
+        $res = $this->Show_model->get_JO5($id);
+        $data['student_res2'] = $res;
+
+		$this->load->model('Show_model');
+        $res = $this->Show_model->get_student2();
+        $data['student_res'] = $res;
+
+        $this->load->model('Show_model');
+        $res = $this->Show_model->get_work();
+        $data['work_res'] = $res; 
+
+        $this->load->model('Show_model');
+        $res = $this->Show_model->get_job();
+        $data['job_res'] = $res;
+
+		$this->load->view('JobOffering_2/start');
+		$this->load->view('JobOffering_2/Navigation_N');
+		$this->load->view('JobOffering_2/Results_W2', $data);
 		$this->load->view('JobOffering_2/footer');
 		$this->load->view('JobOffering_2/End');		
 	}
@@ -550,8 +735,23 @@ public function testlog(){
 
 
 	public function from_s(){
+        $id = $this->input->post("FACULTYNAME");
+        //$id = $this->uri->segment('3');
+        //exit($id);
+        $this->load->model('Show_model');
+        $res = $this->Show_model->get_p($id);
+        $data['student_res'] = $res;
+
+        $this->load->model('Show_model');
+        $res = $this->Show_model->get_work();
+        $data['work_res'] = $res; 
+
+        $this->load->model('Show_model');
+        $res = $this->Show_model->get_p2($id);
+        $data['work_res2'] = $res; 
+
 		$this->load->view('print/start');
-		$this->load->view('print/from_1');
+		$this->load->view('print/from_1', $data);
 		$this->load->view('print/End');		
 	}
 
@@ -562,9 +762,13 @@ public function testlog(){
 	}
 
 	public function print(){
+        $this->load->model('Show_model');
+        $res = $this->Show_model->get_facultyname();
+        $data['facultyname_res'] = $res;  
+
 		$this->load->view('coordinate/start');
 		$this->load->view('coordinate/Navigation_N');
-		$this->load->view('coordinate/print');
+		$this->load->view('coordinate/print', $data);
 		$this->load->view('coordinate/footer');
 		$this->load->view('coordinate/End');		
 	}
