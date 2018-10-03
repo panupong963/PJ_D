@@ -10,7 +10,7 @@
     <th width="140" align="center">รหัสนักศึกษา</th>
     <th width="250" align="center">ชื่อ - สกุล</th>
     <th width="180" align="center">หลักสูตร</th>
-    <th width="220" align="center">ชื่องาน</th>
+    <th width="200" align="center">ชื่องาน</th>
     <th width="150" align="center">ผลการพิจารณา</th>
   </tr>
 </thead>
