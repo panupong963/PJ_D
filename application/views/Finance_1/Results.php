@@ -1,6 +1,6 @@
 <div class="content-wrapper">
     <div class="container-fluid">
-      <h4>รายชื่อนักศึกษาที่ผ่านการตรวจสอบ</h4>
+      <h4>รายชื่อนักศึกษาที่ผ่านการคัดเลือก</h4>
       <h5>งาน : ขนของ</h5><br>
       
 <table class="table table-striped" >

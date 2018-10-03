@@ -65,7 +65,7 @@
     <td align="left"><input type="text"  class="form-control" name="Create_Data" value="<?php echo $row->Create_Data; ?>"></td>
     <th><input type="date"  value="<?php echo $row->Start_Date; ?>" name="Start_Date" placeholder="<?php echo $row->Start_Date; ?>" required></th>
     <th><input type="date"  value="<?php echo $row->End_Date; ?>" name="End_Date" placeholder="<?php echo $row->End_Date; ?>" required></th>
-    <th><button type="submit" name="id" value="<?php echo $row->Schedule_ID;?>"  class="btn btn-primary" >แก้ไข</button>
+    <th><button type="submit" name="id" value="<?php echo $row->Schedule_ID;?>"  class="btn btn-primary" >บันทึก</button>
         <button type="reset" class="btn btn-danger">ยกเลิก</button></th>
   </tr>
 <?php } ?>

@@ -29,11 +29,12 @@ foreach ($student_res as $row) {
   
   <tr>
     <th >รหัสนักศึกษา <u><?php echo $STUDENTCODE; ?></u></th>
-    <th >ชื่อสกุล - สกุล <u><?php echo $STUDENTNAME; ?></u></th> 
-    <th>สำนักวิชา <u> <?php echo $FACULTYNAME; ?></u></th>
+    <th >ชื่อ - สกุล <u><?php echo $STUDENTNAME; ?></u></th>
+    <th >สาขา <u> <?php echo $PROGRAMNAME; ?></u></th> 
+    
   </tr>
   <tr>
-    <th >สาขา <u> <?php echo $PROGRAMNAME; ?></u></th>
+    <th>สำนักวิชา <u> <?php echo $FACULTYNAME; ?></u></th>
     <th colspan="3">เกรดเฉลี่ย <u> <?php echo $GPAX; ?></u></th>
     
   </tr>
