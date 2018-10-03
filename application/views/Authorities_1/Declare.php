@@ -1,7 +1,7 @@
 <div class="content-wrapper">
     <div class="container-fluid">
       <h4>งานที่ผ่านการตรวจสอบ</h4>
-      <td width="307" align="left"><font color="red"><b>*ตรวจสอบงานภายในวันที่ 06/เม.ย/60</b></font>
+      <!--<td width="307" align="left"><font color="red"><b>*ตรวจสอบงานภายในวันที่ 06/เม.ย/60</b></font>-->
           </td>
 <table class="table table-striped">
   <thead>
@@ -23,7 +23,7 @@
     <th><?php echo $row->Category; ?></th>
     <td align="left"><b><?php echo $row->Job_Name; ?></b></td>
     
-    <th>5</th>
+    <th><?php echo $row->Receiving_number; ?></th>
     <th><button type="button" class="btn btn-primary">แก้ไข</button>
     	<button type="button" class="btn btn-danger">ยกเลิก</button></th>
   </tr>

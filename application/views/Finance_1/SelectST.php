@@ -1,20 +1,20 @@
 <div class="content-wrapper">
     <div class="container-fluid">
       <h4>คัดเลือกผู้สมัคร</h4>
-      <h5>งาน : ขนของ</h5><br>
+      <!--<h5>งาน : ขนของ</h5><br>-->
       
-      
+      <br>
 
 <table class="table table-striped">
   <thead>
   <tr align="center">
     <th width="39">ลำดับ</th>
-    <th width="120">รหัสนักศึกษา</th>
+    <th width="130">รหัสนักศึกษา</th>
     <th width="180">ชื่อ - สกุล</th>
     <th width="159">สาขาวิชา</th>
     <th width="120">เกรดเฉลี่ย</th>
     <th width="125">รายละเอียด</th>
-    <th width="140">การพิจารณา</th>
+    <th width="130">การพิจารณา</th>
     <th>&nbsp;</th>
   </tr>
   </thead>

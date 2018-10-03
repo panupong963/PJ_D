@@ -1,7 +1,7 @@
 <div class="content-wrapper">
     <div class="container-fluid">
       <h4>รายชื่อนักศึกษาที่ผ่านการคัดเลือก</h4>
-      <h5>งาน : ขนของ</h5><br>
+      <!--<h5>งาน : ขนของ</h5>--><br>
       
 <table class="table table-striped" >
   <thead>
