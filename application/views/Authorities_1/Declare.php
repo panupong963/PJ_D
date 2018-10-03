@@ -23,9 +23,9 @@
     <th><?php echo $row->Category; ?></th>
     <td align="left"><b><?php echo $row->Job_Name; ?></b></td>
     
-    <th>5</th>
+    <th><?php echo $row->Receiving_number; ?></th>
     <th><button type="button" class="btn btn-primary">แก้ไข</button>
-    	<button type="button" class="btn btn-danger">ยกเลิก</button></th>
+    	<a href="<?= site_url("home2/authorities_Declare_1/{$row->Job_ID}"); ?>" class="btn btn-danger">ยกเลิก</a></th>
   </tr>
 <?php }} ?>
  <!-- <tr align="center">

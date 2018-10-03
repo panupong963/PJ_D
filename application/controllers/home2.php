@@ -221,6 +221,11 @@ class home2 extends CI_Controller {
 	}	
 
 	public function authorities_Declare_1(){
+		$id = $this->uri->segment('3');
+
+		$this->load->model('Show_model');
+        $this->Show_model->delete_job($id);	
+		
 		$this->load->model('Show_model');
         $res = $this->Show_model->get_job();
         $data['job_res'] = $res;
