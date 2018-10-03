@@ -1,6 +1,6 @@
 <div class="content-wrapper">
     <div class="container-fluid">
-       <h4>ปฏิทินการดำเดินงาน</h4>
+       <h4>ปฏิทินการดำเนินงาน</h4>
       <br>
 <table class="table table-bordered">
   <thead>
@@ -16,7 +16,7 @@
     <?php $i=1;foreach ($calendar_res as $row) { ?>
   <tr align="center">
      <th><?php echo $i++; ?></th>
-    <td align="left"><?php echo $row->Create_Data.$row->Schedule_ID; ?></td>
+    <td align="left"><?php echo $row->Create_Data; ?></td>
      <th><?php echo date("d/m/Y", strtotime($row->Start_Date)); ?></th>
     <th><?php echo date("d/m/Y", strtotime($row->End_Date)); ?></th>
   </tr>
