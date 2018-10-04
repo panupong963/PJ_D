@@ -247,6 +247,10 @@ public function testlog(){
         $res = $this->Show_model->get_edit($id);
         $data['edit_res'] = $res;
 
+        $this->load->model('Show_model');
+        $res = $this->Show_model->get_student();
+        $data['student_res'] = $res;    
+
 		/*$this->load->model('Show_model');
         $res = $this->Show_model->get_work();
         $data['work_res'] = $res;*/
@@ -268,6 +272,10 @@ public function testlog(){
 		$this->load->model('Show_model');
         $res = $this->Show_model->get_work();
         $data['work_res'] = $res;
+
+        $this->load->model('Show_model');
+        $res = $this->Show_model->get_student();
+        $data['student_res'] = $res;   
 
 		$this->load->view('Student_2/start');
 		$this->load->view('Student_2/Navigation_N');

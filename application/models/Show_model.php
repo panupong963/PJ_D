@@ -208,6 +208,11 @@ class Show_model extends CI_Model {
         $this->db->delete('work');
     }
 
+    public function delete_job($id){
+        $this->db->where('Job_ID', $id);
+        $this->db->delete('job');
+    }
+
     public function insert_job($data) //insert ตาราง job
     {
         $this->db->insert('job', $data);

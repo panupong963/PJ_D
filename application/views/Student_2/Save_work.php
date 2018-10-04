@@ -6,7 +6,12 @@
         </ol>
 
 <form action="<?php echo site_url("home/insertwork");?>" method="post">
-
+<?php
+ $id = $this -> session -> userdata ( 'student_code' );        
+foreach ($student_res as $row5) {
+  if($row5->student_code == $id){
+    if($row5->Re_status == 1){
+  ?>  
 <table width="900" border="0" align="center">
   <tr align="center">
     <td width="150">วัน/เดือน/ปี ปฎิบัติงาน</td>
@@ -19,7 +24,6 @@
     <td height="156" valign="top"><input type="date" name="Work_Date" required></td>
     <td valign="top">
       <select name="Work_Start"> 
-     
   <option value="0">ชม.</option>
   <?php for($i=1; $i < 10; $i++){ ?> 
   <option value="<?php echo $i; ?>"><?php echo "0".$i; ?></option>
@@ -64,6 +68,67 @@
     <td align="center"><button type="submit" class="btn btn-success">บันทึก</button></td>
   </tr>
 </table>
+<?php }else{  
+?>
+
+<table width="900" border="0" align="center">
+  <tr align="center">
+    <td width="150">วัน/เดือน/ปี ปฎิบัติงาน</td>
+    <td width="200">เวลาเข้า</td>
+    <td width="200">เวลากลับ</td>
+    <td width="251">รายละเอียดงานที่ทำ</td>
+    <td width="77">&nbsp;</td>
+  </tr>
+  <tr align="center">
+    <td height="156" valign="top"><input type="date" readonly name="Work_Date" required></td>
+    <td valign="top">
+      <select name="Work_Start"> 
+  <option value="0">ชม.</option>
+  <?php for($i=1; $i < 10; $i++){ ?> 
+  <option value="<?php echo $i; ?>"><?php echo "0".$i; ?></option>
+  <?php } ?>
+  <?php for($i=10; $i <= 24; $i++){ ?> 
+  <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+  <?php } ?>
+</select> 
+
+<select name="Work_Start2">
+
+  <option value="0">นาที</option>
+  <?php for($i=0; $i < 10; $i++){ ?>
+  <option value="<?php echo $i; ?>"><?php echo "0".$i; ?></option>
+  <?php } ?>
+  <?php for($i=10; $i <= 59; $i++){ ?> 
+  <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+  <?php } ?>
+</select>ชั่วโมง / นาที <!--  <input type="time" name="Work_Start" required>--></td>
+    
+    <td valign="top"> 
+    <select name="Work_Finish">
+  <option value="0">ชม.</option>
+  <?php for($i=1; $i < 10; $i++){ ?> 
+  <option value="<?php echo $i; ?>"><?php echo "0".$i; ?></option>
+  <?php } ?>
+  <?php for($i=10; $i <= 24; $i++){ ?> 
+  <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+  <?php } ?>
+</select>
+
+<select name="Work_Finish2">
+  <option value="0">นาที</option>
+  <?php for($i=0; $i < 10; $i++){ ?>
+  <option value="<?php echo $i; ?>"><?php echo "0".$i; ?></option>
+  <?php } ?>
+  <?php for($i=10; $i <= 59; $i++){ ?> 
+  <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+  <?php } ?>
+</select>ชั่วโมง / นาที  <!--<input type="time" name="Work_Finish" required>--></td>
+    <td valign="top"><textarea name="Job_Description" readonly placeholder = "พิพ์ข้อความ" required></textarea></td>
+    <td align="center"><button type="button" class="btn btn-success">บันทึก</button></td>
+  </tr>
+</table>
+<h5><font color="#FF0000" size="5">กรุณายืนยันการทำงาน</font></h5>
+<?php }}} ?>
 </form> 
    
 
