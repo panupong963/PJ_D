@@ -26,7 +26,7 @@
     <th><?php echo $i++; ?></th>
     <th><?php echo $row->year; ?></th>
     <th><?php echo $row->term; ?></th>
-    <th><?php echo $row->Job_Name; ?></th>
+    <td align="left"><b><?php echo $row->Job_Name; ?></b></th>
 <th><?php echo $row->Job_description; ?></th>
     <th><button type="submit" name="id" value="<?php echo $row->Job_ID; ?>" class="btn btn-success">เลือก</button></th>
   </tr>

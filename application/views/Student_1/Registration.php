@@ -114,7 +114,7 @@ foreach ($student_res as $row) {
   ?>
 
   <tr>
-  <th colspan="3">ชื่อบัญชี <font color="red">*</font> : 
+  <th colspan="3"><font color="red">*</font>  ชื่อธนาคาร :
                         <?php if($row->Bank_Name == NULL){ ?>  
                         <input type="radio" name="Bank_Name" value="1"> ธนาคารกรุงไทย
                         <input type="radio" name="Bank_Name" value="2"> ธนาคารออมสิน
@@ -127,14 +127,14 @@ foreach ($student_res as $row) {
                         <?php } ?>  
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <?php if($row -> BANKACCOUNT == NULL){ ?>
-                        เลขบัญชี <font color="red">*</font><input type="text" name=" BANKACCOUNT"></th>
+                        <font color="red">*</font>เลขบัญชี : <input type="text" name=" BANKACCOUNT"></th>
                       <?php }else if($row -> BANKACCOUNT != NULL){ ?>
                         เลขบัญชี <font color="red">*</font><input type="text" name="BANKACCOUNT" placeholder = "<?php echo $row->BANKACCOUNT; ?>"></th>
                       <?php } ?>
   </tr>
   <tr>
   
-  <th colspan="3">ค่าใช่จ่ายต่อเดือน <font color="red">*</font>
+  <th colspan="3"><font color="red">*</font>ค่าใช่จ่ายต่อเดือน :
                                                               <?php if($row -> Expenses == NULL){ ?>
                                                               <input type="text" name="Expenses"> บาท</th>
                                                             <?php }else if($row -> Expenses != NULL){ ?>
@@ -144,7 +144,7 @@ foreach ($student_res as $row) {
 
  
     <tr>
-  <th colspan="3">ความสามารถพิเศษ <font color="red">*</font></th>
+  <th colspan="3"><font color="red">*</font>ความสามารถพิเศษ </th>
   </tr>
   <tr>
   <th colspan="3">
@@ -155,7 +155,7 @@ foreach ($student_res as $row) {
                 <?php } ?>
   </tr>
       <tr>
-  <th colspan="3">เหตุผลเเละความจำเป็นในการขอทุน <font color="red">*</font></th>
+  <th colspan="3"><font color="red">*</font>เหตุผลเเละความจำเป็นในการขอทุน </th>
   </tr>
   <tr>
   <th colspan="3">

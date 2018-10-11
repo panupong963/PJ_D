@@ -19,7 +19,7 @@
       if($row->Job_status == "1"){?>
   <tr align="center">
     <th><?php echo $i++; ?></th>
-    <th><?php echo $row->Department; ?></th>
+    <td align="left"><B><?php echo $row->Department; ?><B></td>
     <th><?php echo $row->Category; ?></th>
     <td align="left"><b><?php echo $row->Job_Name; ?></b></td>
     

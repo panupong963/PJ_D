@@ -28,7 +28,7 @@
     <th><?php echo $row->PROGRAMNAME; ?></th>
     <th><?php echo $row->GPAX; ?></th>
     <th><button type="button" class="btn btn-warning">รายละเอียด</button></th>
-    <td width="320"><a href="<?= site_url("home2/update_st2/{$row->student_code}"); ?>" class="btn btn-success" style="width:50px;height:38px">ผ่าน</a>
+    <td width="320"><a href="<?= site_url("home2/update_st2/{$row->student_code}"); ?>" class="btn btn-success" style="width:50px;height:38px">เลือก</a>
    <th>&nbsp;</th>
      </td>
   </tr>

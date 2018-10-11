@@ -6,8 +6,9 @@
   <thead>
   <tr align="center">
     <th width="51" align="center">ลำดับ</th>
-    <th width="110" align="center">ประเภทงาน</th>
     <th width="140" align="center">รหัสนักศึกษา</th>
+    <th width="110" align="center">ประเภทงาน</th>
+    
     <th width="250" align="center">ชื่อ - สกุล</th>
     <th width="180" align="center">หลักสูตร</th>
     <th width="200" align="center">ชื่องาน</th>
@@ -21,13 +22,17 @@
         ?>
     <tr align="center">
     <th align="center"><?php echo $i++; ?></th>
+    
+
     <?php foreach ($job_res as $row2) {
         if($row2->Job_ID == $Job_ID){?>
-    <th align="center"><?php echo $row2->Category; ?></th>
+
         <?php }} ?> 
+
     <th align="center"><?php echo $row->student_code; ?></th>
-    <th align="center"><?php echo $row->STUDENTNAME; ?></th>
-    <th align="center"><?php echo $row->PROGRAMNAME; ?></th>
+    <th align="center"><?php echo $row2->Category; ?></th>
+    <td align="left"><B><?php echo $row->STUDENTNAME; ?></B></td>
+    <td align="left"><B><?php echo $row->PROGRAMNAME; ?></B></td>
     <td align="left"><b><?php echo $row->FACULTYNAME; ?></b></td>
     <th align="center"><?php if($row->Re_status == "1"){
                         echo "ผ่าน";

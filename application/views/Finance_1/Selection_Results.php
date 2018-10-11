@@ -28,8 +28,8 @@
             ?>
     <tr align="center">
     <th><?php echo $i++; ?></th>
-    <th><?php echo $row->Category; ?></th>
-    <th><a ><?php echo $row->Job_Name; ?></a></th>
+    <td align="left"><b><?php echo $row->Category; ?></b></th>
+    <td align="left"><b><?php echo $row->Job_Name; ?></b></th>
     <th><?php
                                                              $k=0;foreach ($student_res as $row3) { 
                                                                 if($row->Job_ID == $row3->Job_ID){
