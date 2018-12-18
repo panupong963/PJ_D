@@ -63,6 +63,7 @@ class Login_model extends CI_Model {
 
                 $this->session->set_userdata('semester', $row5->semester);
                 $this->session->set_userdata('Year', $row5->Year);
+                
 				//$this->session->set_userdata('job_name_ss', $row4->job_name_ss);
  				
  				/*$this -> session -> set_userdata('userautority',$row->autority=1);
