@@ -43,7 +43,7 @@ foreach ($student_res as $row) {
   </tr>
     <tr align="center" class="table-info">
 	<td colspan="2"><button type="submit" class="btn btn-success" name="id" value="<?php echo $this -> session -> userdata ( 'student_code' ); ?>">ยืนยัน</button>
-    				<button type="submit" name="id2" value="<?php echo $this -> session -> userdata ( 'student_code' ); ?>" class="btn btn-danger" onclick="myFunction()">ปฎิเสธ</button></td>
+    				      <button type="submit" name="id2" value="<?php echo $this -> session -> userdata ( 'student_code' ); ?>" class="btn btn-danger" onclick="myFunction()">ปฎิเสธ</button></td>
   </tr>
 <?php } ?>
 </tbody>

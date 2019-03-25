@@ -19,6 +19,7 @@
   </thead>
     <tbody>
         <?php $i=1;foreach ($student_res as $row) { 
+            if ($row->Re_status == '1') {
             foreach ($job_res as $row2) {
                 if($row->Job_ID == $row2->Job_ID){
                     $name = $row2->Job_Name;
@@ -35,7 +36,9 @@
     <td>&nbsp;</td>
     <td>&nbsp;</td>
   </tr>
-<?php } ?>
+<?php }
+} 
+?>
 
 </tbody>
 </table>

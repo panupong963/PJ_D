@@ -1,6 +1,11 @@
 <div class="content-wrapper">
     <div class="container-fluid">
       <h4>คัดเลือกผู้สมัครทุนทำงานพิเศษ</h4>
+      <?php
+      $Start_Date = $this -> session -> userdata ( 'Start_Date4' ); 
+      $End_Date = $this -> session -> userdata ( 'End_Date4' ); 
+      if(date('Y-m-d') >= $Start_Date && date('Y-m-d') <= $End_Date){
+      ?>
       <!--<font color="red"><b>*ตรวจสอบงานภายในวันที่ 16/เม.ย/60</b></font>-->
         </div>
       <!--<td width="307" align="left"><font color="red">*ตรวจสอบงานภายในวันที่ 16/เม.ย/60</font>-->
@@ -61,5 +66,13 @@
 </table>
     
 </table>
+<?php 
+}elseif (date('Y-m-d') < $Start_Date && date('Y-m-d') <= $End_Date) {
+  echo "ยังไม่ถึงเวลา";
+}else{
+  echo "เลยเวลา";
+  echo date('Y-m-d').">=".$Start_Date."=".date('Y-m-d') ."<=". $End_Date;
+}
+?>
     </div>
 </div>

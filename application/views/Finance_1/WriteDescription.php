@@ -62,11 +62,25 @@
 <br>
 <hr color="#000000">
 <br>-->
+<?php 
+$Start_Date = $this -> session -> userdata ( 'Start_Date' ); 
+$End_Date = $this -> session -> userdata ( 'End_Date' ); 
 
+if (date('Y-m-d') >= $Start_Date && date('Y-m-d') <= $End_Date) {
+  # code...
+  echo date('Y-m-d').">=".$Start_Date."=".date('Y-m-d') ."<=". $End_Date;
+/*if(date('Y-m-d') > $Start_Date ){
+  echo date('Y-m-d');
+  echo $Start_Date;
+  echo "ยังไม่ถึงเวลา";
+}*//*elseif ($Start_Date <= date('Y-m-d')   && date('Y-m-d') >= $End_Date) {
+  echo date('Y-m-d');
+  echo $Start_Date;*/
+?>
 <form action="<?php echo site_url("home2/insertjob");?>" method="post">
 <div class="container">
   <br>
-  <h3>กรอกรายละเอียดงาน</h3>
+  <h3>กรอกรายละเอียดงาน <?php $Start_Date ?></h3>
 <div class="stepwizard">
     <div class="stepwizard-row setup-panel">
 
@@ -529,5 +543,26 @@
 <!-- เเยก -->
 
 </form>
+<?php 
+}elseif (date('Y-m-d') < $Start_Date && date('Y-m-d') <= $End_Date) {
+  # code...
+  ?>
+  <h5><?php echo "ยังไม่ถึงเวลาการกรอกรายละเอียดงาน"; ?></h5>
+  
+  <?php
+}else{
+
+    ?>
+
+  <h5 align="center"><?php echo "หมดเวลาการกรอกรายละเอียดงาน"; ?></h5>
+  
+  <?php
+  //echo "เลยเวลา";
+  //echo date('Y-m-d').">=".$Start_Date."=".date('Y-m-d') ."<=". $End_Date;
+}
+ /*}else
+      echo "เลยเวลา";*/
+
+?>
 </div>
 </div>

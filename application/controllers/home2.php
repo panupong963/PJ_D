@@ -318,9 +318,18 @@ class home2 extends CI_Controller {
 	}
 
 	public function finance_TranscendJob_1(){
+		$id = $this->uri->segment('3');
+		$this->load->model('Show_model');
+        $res = $this->Show_model->get_student();
+        $data['st_res'] = $res;
+
+        $this->load->model('Show_model');
+        $res = $this->Show_model->get_edit_WD($id);
+        $data['job_res'] = $res;
+
 		$this->load->view('Finance_1/start');
 		$this->load->view('Finance_1/Navigation_N');
-		$this->load->view('Finance_1/TranscendJob');
+		$this->load->view('Finance_1/TranscendJob', $data);
 		$this->load->view('Finance_1/footer');
 		$this->load->view('Finance_1/End');
 	}
@@ -345,6 +354,8 @@ class home2 extends CI_Controller {
 		$this->load->model('Show_model');
         $res = $this->Show_model->get_student();
         $data['student_res'] = $res;  
+
+
 		$this->load->view('Finance_1/start');
 		$this->load->view('Finance_1/Navigation_N');
 		$this->load->view('Finance_1/job',$data);
@@ -352,10 +363,17 @@ class home2 extends CI_Controller {
 		$this->load->view('Finance_1/End');
 	}
 	public function finance_Remaining_1(){
+		$this->load->model('Show_model');
+        $res = $this->Show_model->get_job();
+        $data['job_res'] = $res;
+
+		$this->load->model('Show_model');
+        $res = $this->Show_model->get_student();
+        $data['student_res'] = $res;  
 
 		$this->load->view('Finance_1/start');
 		$this->load->view('Finance_1/Navigation_N');
-		$this->load->view('Finance_1/Remaining');
+		$this->load->view('Finance_1/Remaining', $data);
 		$this->load->view('Finance_1/footer');
 		$this->load->view('Finance_1/End');
 	}
@@ -392,9 +410,19 @@ class home2 extends CI_Controller {
 		$this->load->view('Finance_1/End');
 	}
 	public function finance_balance_1(){
+		$id = $this->uri->segment('3');
+		$this->load->model('Show_model');
+        $res = $this->Show_model->get_JO($id);
+        $data['student_res'] = $res;
+
+        $this->load->model('Show_model');
+        $res = $this->Show_model->get_edit_WD($id);
+        $data['job_res'] = $res;
+
+
 		$this->load->view('Finance_1/start');
 		$this->load->view('Finance_1/Navigation_N');
-		$this->load->view('Finance_1/balance');
+		$this->load->view('Finance_1/balance', $data);
 		$this->load->view('Finance_1/footer');
 		$this->load->view('Finance_1/End');
 	}
@@ -462,7 +490,8 @@ class home2 extends CI_Controller {
         
          //redirect('customer/index');
          redirect("home2/Student_registration_1");
-    }	
+    }
+   
 
 
     public function update_student(){ // update เเก้ไขข้อมูล
@@ -513,6 +542,38 @@ class home2 extends CI_Controller {
         
          //redirect('customer/index');
          redirect("home2/authorities_BuildCalendar_1");
+    }
+
+    public function update_st_balanec(){ // update เเก้ไขข้อมูล
+    	$id = $this->uri->segment('3');
+
+		$data["Re_status"] = "0";
+		$data["Job_ID"] = NULL;
+         
+         //$id = $this->input->post('id');
+         //exit($id. $_POST["semester"]);
+         $this->load->model('Show_model');   
+         $this->Show_model->update_student($data,$id); 
+        
+         //redirect('customer/index');
+         redirect("home2/finance_Remaining_1");
+    }
+
+       public function update_st_job(){ // update เเก้ไขข้อมูล
+    	//$id = $this->uri->segment('3');
+       	$id = $_POST["joid"];
+		$data["Re_status"] = "3";
+		$data["Job_ID"] = $_POST["idst"];
+		//exit($_POST["idst"]);
+		//$cc = $_POST["idst"];
+//exit($_POST["idst"]);
+         //$id = $this->input->post('id');
+         //exit($id. $_POST["semester"]);
+         $this->load->model('Show_model');   
+         $this->Show_model->update_student($data,$id); 
+        
+         //redirect('customer/index');
+         redirect("home2/finance_Remaining_1");
     }
 
     public function update_st(){ // update เเก้ไขข้อมูล

@@ -63,6 +63,47 @@ class Login_model extends CI_Model {
 
                 $this->session->set_userdata('semester', $row5->semester);
                 $this->session->set_userdata('Year', $row5->Year);
+                $this->session->set_userdata('Start_Date', $row5->Start_Date);
+                $this->session->set_userdata('End_Date', $row5->End_Date);
+
+                $this->db->where('Schedule_ID', '2');
+                $query6 = $this->db->get('calendar'); 
+                $row6 = $query6->row();
+
+                $this->session->set_userdata('semester2', $row6->semester);
+                $this->session->set_userdata('Year2', $row6->Year);
+                $this->session->set_userdata('Start_Date2', $row6->Start_Date);
+                $this->session->set_userdata('End_Date2', $row6->End_Date);
+
+
+                $this->db->where('Schedule_ID', '3');
+                $query7 = $this->db->get('calendar'); 
+                $row7 = $query7->row();
+
+                $this->session->set_userdata('semester3', $row7->semester);
+                $this->session->set_userdata('Year3', $row7->Year);
+                $this->session->set_userdata('Start_Date3', $row7->Start_Date);
+                $this->session->set_userdata('End_Date3', $row7->End_Date);
+
+
+                $this->db->where('Schedule_ID', '4');
+                $query8 = $this->db->get('calendar'); 
+                $row8 = $query8->row();
+
+                $this->session->set_userdata('semester4', $row8->semester);
+                $this->session->set_userdata('Year4', $row8->Year);
+                $this->session->set_userdata('Start_Date4', $row8->Start_Date);
+                $this->session->set_userdata('End_Date4', $row8->End_Date);
+
+
+                $this->db->where('Schedule_ID', '5');
+                $query9 = $this->db->get('calendar'); 
+                $row9 = $query9->row();
+
+                $this->session->set_userdata('semester5', $row9->semester);
+                $this->session->set_userdata('Year5', $row9->Year);
+                $this->session->set_userdata('Start_Date5', $row9->Start_Date);
+                $this->session->set_userdata('End_Date5', $row9->End_Date);
 				//$this->session->set_userdata('job_name_ss', $row4->job_name_ss);
  				
  				/*$this -> session -> set_userdata('userautority',$row->autority=1);

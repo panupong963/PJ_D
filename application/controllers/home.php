@@ -116,12 +116,23 @@ class home extends CI_Controller {
         $data["STUDENTCODE"] =  $this -> session -> userdata ( 'student_code' );
 
 
-        
 
-        
+
         $this->load->model('Show_model');
         $res = $this->Show_model->insert_work($data);
+
+                //ของวันเตือน
+        $id = $this -> session -> userdata ( 'student_code' );
+        $date = date_create($_POST["Work_Date"]);
+        date_add($date, date_interval_create_from_date_string('7 days'));
+        //echo date_format($date, 'Y-m-d');
+        $day_alert = date_format($date, 'Y-m-d');
+        $data2["alert_date"] = $day_alert;
+        $this->load->model('Show_model');   
+        $this->Show_model->update_st($data2,$id); 
         redirect('home/Student_SaveJob_2');
+
+
         
     }
 
@@ -171,6 +182,25 @@ class home extends CI_Controller {
     		$data["Re_status"] = "2";
     		$data["Reason_ST"] = $_POST["txt"];
     	}	
+
+        
+
+         
+         //$id1 = $this->input->post('id');
+         $id = $_POST["id"];
+         $this->load->model('Show_model');   
+         $this->Show_model->update_student2($data,$id); 
+        
+         //redirect('customer/index');
+         redirect("home/Student_ConfirmJob_2");
+    }
+    public function update_student3(){ // update ยืนยันข้อมูล
+        if($_POST["txt"] == Null){
+            $data["Re_status"] = "2";
+        }else{
+            $data["Re_status"] = "2";
+            $data["Reason_ST"] = $_POST["txt"];
+        }   
 
         
 

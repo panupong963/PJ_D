@@ -174,8 +174,10 @@ class Show_model extends CI_Model {
         $this->db->insert('offices', $data);
     }
     
-    public function update_studet($id)
+    public function update_studet($id, $data)
     {
+        
+
     /*$data=array(
         //$this->STUDENTEMAIL    = $_POST['STUDENTEMAIL'];
         //$this->PARENTPHONENO  = $_POST['PARENTPHONENO'];
@@ -223,6 +225,7 @@ class Show_model extends CI_Model {
     } 
 
     public function update_student($data, $id){ // update เเก้ไขข้อมูล นศห
+         //exit($id.$data["Job_ID"].$data[1]);
          $this->db->set($data); 
          $this->db->where("student_code", $id); 
          $this->db->update("student", $data);
@@ -254,5 +257,12 @@ class Show_model extends CI_Model {
          $this->db->where("Job_ID", $id); 
          $this->db->update("job", $data);
     }  
+
+    public function update_st($data2, $id){ // update เเก้ไขข้อมูล นศห
+        $query = $this->db->query("UPDATE student SET alert_date = '%".$data2."%' where student_code = '%".$id."%' ");
+        // $this->db->set($data2); 
+         //$this->db->where("student_code", $id); 
+         //$this->db->update("alert_date", $data2);
+    }
 
 }

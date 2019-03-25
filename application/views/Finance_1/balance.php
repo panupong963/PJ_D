@@ -1,7 +1,12 @@
 <div class="content-wrapper">
     <div class="container-fluid">
       <h4>รายชื่อนักศึกษาที่ผ่านการคัดเลือก</h4>
-      <h5>งาน : จัดชั้นวางหนังสือ</h5>
+      <?php 
+      foreach ($job_res as $row2) {
+        $name = $row2->Job_Name;
+      }
+      ?>
+      <h5>งาน : <?php echo $name; ?></h5>
       <br>
 <table class="table table-striped" >
   <thead>
@@ -15,18 +20,29 @@
     
   </tr>
 </thead>
+<?php
+$i = 1;
+ foreach ($student_res as $row) {
+   if($row->Re_status == "1"){
+ 
+ ?>
 <tbody>
     <tr align="center">
-    <th align="center">1</th>
-    <th align="center">58888888</th>
-    <th align="center">สมหมาย ใจกล้า</th>
-    <th align="center">สารสนเทศศาสตร์</th>
-    <th align="center">4.00</th>
-    <th><button type="button" class="btn btn-danger">ลบ</button><th>
+    <th align="center"><?php echo $i++; ?></th>
+    <th align="center"><?php echo $row->student_code; ?></th>
+    <th align="center"><?php echo $row->STUDENTNAME; ?></th>
+    <th align="center"><?php echo $row->FACULTYNAME; ?></th>
+    <th align="center"><?php echo $row->GPAX; ?></th>
+    <th>
+      <a class="btn btn-danger" href="<?= site_url("home2/update_st_balanec/{$row->student_code}"); ?>">ลบ</a><th>
     <th>
   </tr>
 </tbody>
-<tbody>
+<?php
+}
+}
+?>
+<!--<tbody>
     <tr align="center">
     <th align="center">2</th>
     <th align="center">58999999</th>
@@ -49,7 +65,7 @@
     <th>
     
   </tr>
-</tbody>
+</tbody>-->
 </table>
 </table>
 </div>
