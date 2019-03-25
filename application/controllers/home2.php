@@ -573,7 +573,7 @@ class home2 extends CI_Controller {
          $this->Show_model->update_student($data,$id); 
         
          //redirect('customer/index');
-         redirect("home2/finance_Remaining_1");
+         redirect("home2/finance_TranscendJob_1/{$_POST["idst"]}");
     }
 
     public function update_st(){ // update เเก้ไขข้อมูล
