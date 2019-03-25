@@ -63,6 +63,7 @@ class Login_model extends CI_Model {
 
                 $this->session->set_userdata('semester', $row5->semester);
                 $this->session->set_userdata('Year', $row5->Year);
+
                 $this->session->set_userdata('Start_Date', $row5->Start_Date);
                 $this->session->set_userdata('End_Date', $row5->End_Date);
 
@@ -104,6 +105,7 @@ class Login_model extends CI_Model {
                 $this->session->set_userdata('Year5', $row9->Year);
                 $this->session->set_userdata('Start_Date5', $row9->Start_Date);
                 $this->session->set_userdata('End_Date5', $row9->End_Date);
+
 				//$this->session->set_userdata('job_name_ss', $row4->job_name_ss);
  				
  				/*$this -> session -> set_userdata('userautority',$row->autority=1);
