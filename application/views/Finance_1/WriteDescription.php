@@ -68,7 +68,7 @@ $End_Date = $this -> session -> userdata ( 'End_Date' );
 
 if (date('Y-m-d') >= $Start_Date && date('Y-m-d') <= $End_Date) {
   # code...
-  echo date('Y-m-d').">=".$Start_Date."=".date('Y-m-d') ."<=". $End_Date;
+  //echo date('Y-m-d').">=".$Start_Date."=".date('Y-m-d') ."<=". $End_Date;
 /*if(date('Y-m-d') > $Start_Date ){
   echo date('Y-m-d');
   echo $Start_Date;

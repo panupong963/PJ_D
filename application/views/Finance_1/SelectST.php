@@ -2,7 +2,9 @@
     <div class="container-fluid">
       <h4>คัดเลือกผู้สมัคร</h4>
       <!--<h5>งาน : ขนของ</h5><br>-->
-      
+      <table align="right">
+<td ><button type="reset" onClick='window.history.back()' class="btn btn-danger" >กลับ</button></td>
+</tr></table>
       <br>
 
 <table class="table table-striped">
