@@ -39,7 +39,7 @@ foreach ($student_res as $row) {
   <tr class="table-info">
     <td><font size="3">ช่องทางติดต่อ <u><?php echo $this -> session -> userdata ( 'Contact' ); ?></u></font></td>
     <td>&nbsp;</td>
-    <?php if($Re_status == '0'){ ?>
+    <?php if($Re_status == '0' || $Re_status == '3'){ ?>
   </tr>
     <tr align="center" class="table-info">
 	<td colspan="2"><button type="submit" class="btn btn-success" name="id" value="<?php echo $this -> session -> userdata ( 'student_code' ); ?>">ยืนยัน</button>

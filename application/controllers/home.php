@@ -178,6 +178,11 @@ class home extends CI_Controller {
     public function update_student2(){ // update ยืนยันข้อมูล
     	if($_POST["txt"] == Null){
     		$data["Re_status"] = "1";
+            $date = date_create($this -> session -> userdata ( 'Frist_date' ));
+            date_add($date, date_interval_create_from_date_string('7 days'));
+            //echo date_format($date, 'Y-m-d');
+            $day_alert = date_format($date, 'Y-m-d');
+            $data["alert_date"] = $day_alert;
     	}else{
     		$data["Re_status"] = "2";
     		$data["Reason_ST"] = $_POST["txt"];

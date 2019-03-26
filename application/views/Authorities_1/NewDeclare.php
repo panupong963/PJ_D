@@ -17,23 +17,24 @@
 </thead>
 <tbody>
     <?php $i=1;foreach ($student_res as $row) {
-        if($row->Re_status != "0"){
+        if($row->Re_status != "0" && $row->Re_status != "3"){
         $Job_ID = $row->Job_ID;
+         foreach ($job_res as $row2) {
+        if($row2->Job_ID == $Job_ID){
         ?>
     <tr align="center">
     <th align="center"><?php echo $i++; ?></th>
     
 
-    <?php foreach ($job_res as $row2) {
-        if($row2->Job_ID == $Job_ID){?>
 
-        <?php }} ?> 
+ 
+        
 
     <th align="center"><?php echo $row->student_code; ?></th>
     <th align="center"><?php echo $row2->Category; ?></th>
     <td align="left"><B><?php echo $row->STUDENTNAME; ?></B></td>
     <td align="left"><B><?php echo $row->PROGRAMNAME; ?></B></td>
-    <td align="left"><b><?php echo $row->FACULTYNAME; ?></b></td>
+    <td align="left"><b><?php echo $row2->Job_Name; ?></b></td>
     <th align="center"><?php if($row->Re_status == "1"){
                         echo "ผ่าน";
                          }else if($row->Re_status == "2"){
@@ -41,6 +42,7 @@
                          }
                          ?></th>
   </tr>
+<?php }} ?> 
 <?php }} ?>
 </tbody>
 <!--<tbody>
