@@ -57,7 +57,7 @@
                                                                 }
                                                             }
                                                              echo $k."/".$row->Receiving_number; ?></a></th>
-    <th><a class="btn btn-info" href="<?= site_url("home2/finance_SelectST_1/{$row->Job_ID}"); ?>">เลือก</a></th>
+    <th><a class="btn btn-info" href="<?= site_url("home2/finance_SelectST_1/{$row->Job_ID}"); ?>">พิจารณา</a></th>
     <th >&nbsp;&nbsp;</th>
     <th >&nbsp;&nbsp;</th>
     </tr>

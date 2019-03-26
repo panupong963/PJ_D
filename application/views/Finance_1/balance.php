@@ -10,7 +10,7 @@
       <h5>งาน : <?php echo $name; ?></h5>
       
       <table align="right">
-<td ><button type="reset" onClick='window.history.back()' class="btn btn-danger" >กลับ</button></td>
+<td ><button type="reset" onClick='window.history.back()' class="btn btn-warning" >กลับ</button></td>
 </tr></table>
       <br>
 <table class="table table-striped" >

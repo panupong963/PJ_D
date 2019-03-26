@@ -3,7 +3,8 @@
       <h4>คัดเลือกผู้สมัคร</h4>
       <!--<h5>งาน : ขนของ</h5><br>-->
       <table align="right">
-<td ><button type="reset" onClick='window.history.back()' class="btn btn-danger" >กลับ</button></td>
+<td ><button type="reset" onClick='window.history.back()' 
+  class="btn btn-warning" >กลับ</button></td>
 </tr></table>
       <br>
 
@@ -30,7 +31,8 @@
     <th><?php echo $row->PROGRAMNAME; ?></th>
     <th><?php echo $row->GPAX; ?></th>
     <th><button type="button" class="btn btn-warning">รายละเอียด</button></th>
-    <td width="320"><a href="<?= site_url("home2/update_st2/{$row->student_code}"); ?>" class="btn btn-success" style="width:50px;height:38px">เลือก</a>
+    <td width="320"><a href="<?= site_url("home2/update_st2/{$row->student_code}"); ?>" class="btn btn-success" style="width:60px;height:38px">อนุมัติ</a>
+      <button type="button" class="btn btn-danger">ปฏิเสธ</a>
    <th>&nbsp;</th>
      </td>
   </tr>

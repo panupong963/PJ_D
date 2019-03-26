@@ -12,7 +12,7 @@
         <h5><?php echo "งาน : ".$name; ?> <font color="#00ffff"><input type="text" name="idst" style="border: none ; color:#FFFFFF" readonly value="<?= $id; ?>" ></font></h5>
         
 <table align="right">
-<td ><button type="reset" onClick='window.history.back()' class="btn btn-danger" >กลับ</button></td>
+<td ><button type="reset" onClick='window.history.back()' class="btn btn-warning" >กลับ</button></td>
 </tr></table>
 
         <br>
