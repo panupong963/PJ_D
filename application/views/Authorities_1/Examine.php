@@ -16,9 +16,9 @@
         
   <tr align="center">
     <th width="20">ลำดับ</th>
-    <th width="130">หน่วยงาน</th>
+    <th width="150">หน่วยงาน</th>
     
-    <th width="200">ชื่องาน</th>
+    <th width="160">ชื่องาน</th>
     <th width="120">จำนวนรับ</th>
     <th width="55">เพศ</th>
      <th width="75">ลักษณะงาน</th>

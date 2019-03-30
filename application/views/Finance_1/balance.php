@@ -6,7 +6,12 @@
         $name = $row2->Job_Name;
       }
       ?>
+
       <h5>งาน : <?php echo $name; ?></h5>
+      
+      <table align="right">
+<td ><button type="reset" onClick='window.history.back()' class="btn btn-danger" >กลับ</button></td>
+</tr></table>
       <br>
 <table class="table table-striped" >
   <thead>
@@ -23,7 +28,7 @@
 <?php
 $i = 1;
  foreach ($student_res as $row) {
-   if($row->Re_status == "1"){
+   
  
  ?>
 <tbody>
@@ -39,7 +44,7 @@ $i = 1;
   </tr>
 </tbody>
 <?php
-}
+
 }
 ?>
 <!--<tbody>
