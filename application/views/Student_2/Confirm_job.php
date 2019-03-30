@@ -44,11 +44,18 @@ foreach ($student_res as $row) {
     <tr align="center" class="table-info">
 	<td colspan="2"><button type="submit" class="btn btn-success" name="id" value="<?php echo $this -> session -> userdata ( 'student_code' ); ?>">ยืนยัน</button>
     				      <button type="submit" name="id2" value="<?php echo $this -> session -> userdata ( 'student_code' ); ?>" class="btn btn-danger" onclick="myFunction()">ปฎิเสธ</button></td>
+                <a name="ss"  id="demo"></a>
+                <?php $b = $_POST['da'];
+                echo $b;
+                 ?>
+
+                
   </tr>
 <?php } ?>
 </tbody>
 </table>
 </form>
+
             <h5>วันทีทำงาน <font color="#FF0000" size="5">20/02/60 - 20/05/60 </font></h5>
             <hr color="#000000">
               <br>

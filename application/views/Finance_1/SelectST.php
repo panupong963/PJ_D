@@ -28,7 +28,7 @@
     <th><?php echo $row->PROGRAMNAME; ?></th>
     <th><?php echo $row->GPAX; ?></th>
     <th><button type="button" class="btn btn-warning">รายละเอียด</button></th>
-    <td width="320"><a href="<?= site_url("home2/update_st2/{$row->student_code}"); ?>" class="btn btn-success" style="width:50px;height:38px">เลือก</a>
+    <td width="320"><a href="<?= site_url("home2/update_st2/{$row->student_code}"); ?>" class="btn btn-success" style="width:60px;height:38px">อนุมัติ</a>
    <th>&nbsp;</th>
      </td>
   </tr>
@@ -36,5 +36,6 @@
 
 </tbody>
 </table>
+<button type="button" onclick="history.back();" class="btn btn-warning">ย้อนกลับ</button>
 </div>
 </div>

@@ -24,7 +24,7 @@
     <td align="left"><b><?php echo $row->Job_Name; ?></b></td>
     
     <th><?php echo $row->Receiving_number; ?></th>
-    <th><button type="button" class="btn btn-primary">แก้ไข</button>
+    <th> <a class="btn btn-primary" href="<?= site_url("home2/authorities_edit_2/{$row->Job_ID}"); ?>" style="width:55px;">แก้ไข</a>
     	<a href="<?= site_url("home2/authorities_Declare_1/{$row->Job_ID}"); ?>" class="btn btn-danger">ยกเลิก</a></th>
   </tr>
 <?php }} ?>

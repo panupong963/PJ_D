@@ -27,11 +27,13 @@ require($_SERVER['DOCUMENT_ROOT']."/PJ_D/phpmailer/PHPMailerAutoload.php");
 	}	*/
 	//panupong_963@hotmail.com
 	//panupongklanaja@gmail.com
+  
 	foreach ($st_res as $row) {
+        echo $row->alert_date."==".date('Y-m-d');
 		if($row->alert_date == date('Y-m-d')){
 
-
-
+            
+            echo $row->alert_date."=/=".date('Y-m-d');
 
 
 
@@ -53,8 +55,8 @@ $gmail_password = "k0811883329"; // รหัสผ่าน gmail
  
 $sender = "WU Support"; // ชื่อผู้ส่ง
 $email_sender = "noreply@ibsone.com"; // เมล์ผู้ส่ง 
-$email_receiver = "panupong_963@hotmail.com"; // เมล์ผู้รับ ***
- 
+$email_receiver = $row->STUDENTEMAIL; // เมล์ผู้รับ ***
+ echo $email_receiver;
 $subject = "เปลี่ยนรหัสผ่าน"; // หัวข้อเมล์
  
  

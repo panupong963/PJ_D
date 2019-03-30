@@ -127,18 +127,18 @@ foreach ($student_res as $row) {
                         <?php } ?>  
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <?php if($row -> BANKACCOUNT == NULL){ ?>
-                        <font color="red">*</font>เลขบัญชี : <input type="text" name=" BANKACCOUNT"></th>
+                        <font color="red">*</font>เลขบัญชี : <input type="text" onkeypress="check_number()" name=" BANKACCOUNT"></th>
                       <?php }else if($row -> BANKACCOUNT != NULL){ ?>
-                        เลขบัญชี <font color="red">*</font><input type="text" name="BANKACCOUNT" placeholder = "<?php echo $row->BANKACCOUNT; ?>"></th>
+                        เลขบัญชี <font color="red">*</font><input type="text" name="BANKACCOUNT" onkeypress="check_number()" placeholder = "<?php echo $row->BANKACCOUNT; ?>"></th>
                       <?php } ?>
   </tr>
   <tr>
   
   <th colspan="3"><font color="red">*</font>ค่าใช่จ่ายต่อเดือน :
                                                               <?php if($row -> Expenses == NULL){ ?>
-                                                              <input type="text" name="Expenses"> บาท</th>
+                                                              <input type="text" name="Expenses" onkeypress="check_number()"> บาท</th>
                                                             <?php }else if($row -> Expenses != NULL){ ?>
-                                                               <input type="text" name="Expenses" placeholder = "<?php echo $row->Expenses; ?>"> บาท</th>
+                                                               <input type="text" name="Expenses" placeholder = "<?php echo $row->Expenses; ?>" onkeypress="check_number()"> บาท</th>
                                                             <?php }?>
   </tr>
 
@@ -180,3 +180,13 @@ foreach ($student_res as $row) {
 </table>
 </div>
 </div>
+                                  <SCRIPT language=JavaScript>
+                              function check_number() {
+                              e_k=event.keyCode
+                              //if (((e_k < 48) || (e_k > 57)) && e_k != 46 ) {
+                              if (e_k != 13 && (e_k < 48) || (e_k > 57)) {
+                              event.returnValue = false;
+                              alert("ต้องเป็นตัวเลขเท่านั้น... \nกรุณาตรวจสอบข้อมูลของท่านอีกครั้ง...");
+                              }
+                              }
+                              </script>

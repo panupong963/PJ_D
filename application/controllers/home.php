@@ -176,11 +176,12 @@ class home extends CI_Controller {
     }
 
     public function update_student2(){ // update ยืนยันข้อมูล
-    	if($_POST["txt"] == Null){
+        //exit($_POST["da"]);
+    	if($_POST["da"] == Null){
     		$data["Re_status"] = "1";
     	}else{
     		$data["Re_status"] = "2";
-    		$data["Reason_ST"] = $_POST["txt"];
+    		$data["Reason_ST"] = $_POST["ss"];
     	}	
 
         

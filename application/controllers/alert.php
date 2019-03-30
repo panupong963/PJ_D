@@ -20,6 +20,7 @@ class alert extends CI_Controller {
 	 */
 	public function index()
 	{
+		
 		$this->load->model('alert_model');
         $res = $this->alert_model->get_calendar();
         $data['calendar_res'] = $res;

@@ -71,6 +71,8 @@ class home2 extends CI_Controller {
         	redirect("home2/finance_CA_1");
         	}else if($this -> session -> userdata ( 'ST' )=="4"){
         	redirect("home2/Advisors_announced_1");
+        	}else if($this -> session -> userdata ( 'ST' )=="5"){
+        	redirect("home2/Boss_announced_1");
         	}
 
         }else{
@@ -237,6 +239,44 @@ class home2 extends CI_Controller {
 		$this->load->view('Authorities_1/End');
 	}
 
+	public function authorities_edit_1(){
+		$id = $this->uri->segment('3');
+	
+
+ 		$this->load->model('Show_model');
+        $res = $this->Show_model->get_employees();
+        $data['employees_res'] = $res;
+		
+		$this->load->model('Show_model');
+        $res = $this->Show_model->get_JO2($id);
+        $data['job_res'] = $res;
+
+		$this->load->view('Authorities_1/start');
+		$this->load->view('Authorities_1/Navigation_N');
+		$this->load->view('Authorities_1/edit', $data);
+		$this->load->view('Authorities_1/footer');
+		$this->load->view('Authorities_1/End');
+	}
+
+	public function authorities_edit_2(){
+		$id = $this->uri->segment('3');
+	
+
+ 		$this->load->model('Show_model');
+        $res = $this->Show_model->get_employees();
+        $data['employees_res'] = $res;
+		
+		$this->load->model('Show_model');
+        $res = $this->Show_model->get_JO2($id);
+        $data['job_res'] = $res;
+
+		$this->load->view('Authorities_1/start');
+		$this->load->view('Authorities_1/Navigation_N');
+		$this->load->view('Authorities_1/edit2', $data);
+		$this->load->view('Authorities_1/footer');
+		$this->load->view('Authorities_1/End');
+	}
+
 	public function authorities_NewDeclare_1(){
 		$this->load->model('Show_model');
         $res = $this->Show_model->get_job();
@@ -245,6 +285,14 @@ class home2 extends CI_Controller {
         $this->load->model('Show_model');
         $res = $this->Show_model->get_student();
         $data['student_res'] = $res;  
+
+        $this->load->model('Show_model');
+        $res = $this->Show_model->get_sttt2();
+        $data['st_res'] = $res;  
+
+        $this->load->model('Show_model');
+        $res = $this->Show_model->get_job();
+        $data['job_res'] = $res;
 
 		$this->load->view('Authorities_1/start');
 		$this->load->view('Authorities_1/Navigation_N');
@@ -430,10 +478,18 @@ class home2 extends CI_Controller {
 
 	public function Advisors_announced_1(){
 		$this->load->model('Show_model');
-        $res = $this->Show_model->get_student();
-        $data['student_res'] = $res; 
+        $res = $this->Show_model->get_job();
+        $data['job_res'] = $res;
 
-		$this->load->model('Show_model');
+        $this->load->model('Show_model');
+        $res = $this->Show_model->get_student();
+        $data['student_res'] = $res;  
+
+        $this->load->model('Show_model');
+        $res = $this->Show_model->get_sttt2();
+        $data['st_res'] = $res;  
+
+        $this->load->model('Show_model');
         $res = $this->Show_model->get_job();
         $data['job_res'] = $res;
 
@@ -444,9 +500,25 @@ class home2 extends CI_Controller {
 		$this->load->view('Advisors_1/End');
 	}
 	public function Boss_announced_1(){
+		$this->load->model('Show_model');
+        $res = $this->Show_model->get_job();
+        $data['job_res'] = $res;
+
+        $this->load->model('Show_model');
+        $res = $this->Show_model->get_student();
+        $data['student_res'] = $res;  
+
+        $this->load->model('Show_model');
+        $res = $this->Show_model->get_sttt2();
+        $data['st_res'] = $res;  
+
+        $this->load->model('Show_model');
+        $res = $this->Show_model->get_job();
+        $data['job_res'] = $res;
+
 		$this->load->view('Boss_1/start');
 		$this->load->view('Boss_1/Navigation_N');
-		$this->load->view('Boss_1/Boss_1');
+		$this->load->view('Boss_1/Boss_1', $data);
 		$this->load->view('Boss_1/footer');
 		$this->load->view('Boss_1/End');
 	}	
@@ -490,6 +562,34 @@ class home2 extends CI_Controller {
         
          //redirect('customer/index');
          redirect("home2/Student_registration_1");
+    }
+
+    public function update_job_edit(){ // update เลือกงาน
+        $id = $_POST["id"];
+         $data["Receiving_number"] = $_POST["num"];
+         $data["Reason_job"] = $_POST["Reason_job"];
+         $data["Job_status"] = "1";
+         //$id1 = $this->input->post('id');
+     
+         $this->load->model('Show_model');   
+         $this->Show_model->update_job2($data,$id); 
+        
+         //redirect('customer/index');
+         redirect("home2/authorities_Examine_1");
+    }
+
+     public function update_job_edit2(){ // update เลือกงาน
+        $id = $_POST["id"];
+         $data["Receiving_number"] = $_POST["num"];
+         $data["Reason_job"] = $_POST["Reason_job"];
+         $data["Job_status"] = "1";
+         //$id1 = $this->input->post('id');
+     
+         $this->load->model('Show_model');   
+         $this->Show_model->update_job2($data,$id); 
+        
+         //redirect('customer/index');
+         redirect("home2/authorities_Declare_1");
     }
    
 
@@ -621,6 +721,18 @@ class home2 extends CI_Controller {
         $data["Reason_job"] = $_POST["Reason_job"];;
         $data["Job_status"] = "2"; 
          $id = $this->input->post('id');
+         //exit($id. $_POST["semester"]);
+         $this->load->model('Show_model');   
+         $this->Show_model->update_job2($data,$id); 
+        
+         //redirect('customer/index');
+         redirect("home2/authorities_Examine_1");
+    }
+    public function update_job4(){ // update เเก้ไขข้อมูล
+    	$id = $this->uri->segment('3');
+        $data["Job_status"] = "1";
+         
+         //$id = $this->input->post('id');
          //exit($id. $_POST["semester"]);
          $this->load->model('Show_model');   
          $this->Show_model->update_job2($data,$id); 

@@ -211,8 +211,17 @@ if (date('Y-m-d') >= $Start_Date && date('Y-m-d') <= $End_Date) {
                                                       <option value="X">ไม่ระบุ</option>
                                 
                                                     </select> 
-                                                    &nbsp;&nbsp;&nbsp;&nbsp;จำนวนที่รับ <font color="red">* </font><input type="text" name="Receiving_number" size="2"> คน 
-                      
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;จำนวนที่รับ <font color="red">* </font><input type="text" name="Receiving_number" size="2" onkeypress="check_number()" required> คน 
+                              <SCRIPT language=JavaScript>
+                              function check_number() {
+                              e_k=event.keyCode
+                              //if (((e_k < 48) || (e_k > 57)) && e_k != 46 ) {
+                              if (e_k != 13 && (e_k < 48) || (e_k > 57)) {
+                              event.returnValue = false;
+                              alert("ต้องเป็นตัวเลขเท่านั้น... \nกรุณาตรวจสอบข้อมูลของท่านอีกครั้ง...");
+                              }
+                              }
+                              </script>
                       &nbsp;&nbsp;&nbsp;&nbsp; วันที่เริ่มต้นการทำงาน <font color="red">* </font><input id="date" name="Frist_date" type="date"> <br><br>
 
                                       <form action="/action_page.php">

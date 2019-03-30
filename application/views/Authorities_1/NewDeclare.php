@@ -4,6 +4,26 @@
       <br>
 <table class="table table-striped" >
   <thead>
+<?php 
+      $FACULTYNAME1 = 1;
+        $j = 1;foreach ($student_res as $row) {
+        $FACULTYNAME = $row->FACULTYNAME;
+        if($FACULTYNAME != $FACULTYNAME1){
+          $FACULTYNAME1 = $FACULTYNAME;
+      ?>
+
+
+          <?php $i=1;foreach ($student_res as $row2) {
+        if($row2->Re_status != "0" && $row2->Re_status != "3"){
+            if ($row2->FACULTYNAME == $FACULTYNAME) {
+                
+            
+        $Job_ID = $row2->Job_ID;
+        //echo $Job_ID;
+        ?>
+      <tr bgcolor="#66FFCC">
+        <th colspan="7"><?php echo $j++."."; ?> สำนักวิชา : <?php echo $FACULTYNAME; ?></th>
+      </tr>
   <tr align="center">
     <th width="51" align="center">ลำดับ</th>
     <th width="140" align="center">รหัสนักศึกษา</th>
@@ -16,24 +36,23 @@
   </tr>
 </thead>
 <tbody>
-    <?php $i=1;foreach ($student_res as $row) {
-        if($row->Re_status != "0"){
-        $Job_ID = $row->Job_ID;
-        ?>
+
     <tr align="center">
     <th align="center"><?php echo $i++; ?></th>
     
 
-    <?php foreach ($job_res as $row2) {
-        if($row2->Job_ID == $Job_ID){?>
+    <?php foreach ($job_res as $row3) {
+        if($row3->Job_ID == $Job_ID){
+            //echo $row2->Job_ID ."==". $Job_ID."<br>";
+    ?>
 
-        <?php }} ?> 
+        
 
     <th align="center"><?php echo $row->student_code; ?></th>
-    <th align="center"><?php echo $row2->Category; ?></th>
+    <th align="center"><?php echo $row3->Category; ?></th>
     <td align="left"><B><?php echo $row->STUDENTNAME; ?></B></td>
     <td align="left"><B><?php echo $row->PROGRAMNAME; ?></B></td>
-    <td align="left"><b><?php echo $row->FACULTYNAME; ?></b></td>
+    <td align="left"><b><?php echo $row3->Job_Name; ?></b></td>
     <th align="center"><?php if($row->Re_status == "1"){
                         echo "ผ่าน";
                          }else if($row->Re_status == "2"){
@@ -41,7 +60,10 @@
                          }
                          ?></th>
   </tr>
-<?php }} ?>
+<?php 
+}}
+}}
+}}} ?>
 </tbody>
 <!--<tbody>
     <tr align="center">

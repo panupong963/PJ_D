@@ -13,6 +13,13 @@ class Show_model extends CI_Model {
         return $query->result();
     }
 
+    public function get_sttt2()
+    {
+        //$query = $this->db->query('select * from offices ORDER BY officeCode ');
+        $query = $this->db->query('select * from student ');
+        return $query->result();
+    }
+
     public function get_facultyname()
     {
         //$query = $this->db->query('select * from offices ORDER BY officeCode ');

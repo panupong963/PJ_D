@@ -24,12 +24,14 @@ class alert_model extends CI_Model {
 
     public function get_st()
     {
-    	$this->db->select('*');
+    	/*$this->db->select('*');
         $this->db->from('student');
         $this->db->where('Re_status', '1');
         $query = $this->db->get();
-        $result = $query->result();
-        return $result;
+        $result = $query->result();*/
+        $query = $this->db->query('select * from student ');
+        return $query->result();
+        //return $result;
 	}
 
 	  public function get_date()

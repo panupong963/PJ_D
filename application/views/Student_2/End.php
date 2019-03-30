@@ -1,13 +1,17 @@
 <script>
 function myFunction() {
+
     var txt;
     var person = prompt("กรุณากรอกเหตุผลการยกเลิก");
     if (person == null || person == "") {
-        txt = "User cancelled the prompt.";
+        txt = "ไม่มีเหตุผล";
     } else {
-        txt = "Hello " + person + "! How are you today?";
+        txt = person;
     }
     document.getElementById("demo").innerHTML = txt;
+    $.post('Confirm_job.php',{da:txt});
+
+    return txt;
 }
 </script>
 
