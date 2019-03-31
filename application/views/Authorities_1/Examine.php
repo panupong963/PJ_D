@@ -17,14 +17,13 @@
   <tr align="center">
     <th width="20">ลำดับ</th>
     <th width="130">หน่วยงาน</th>
-    
-    <th width="200">ชื่องาน</th>
+    <th width="150">ชื่องาน</th>
     <th width="120">จำนวนรับ</th>
     <th width="55">เพศ</th>
-     <th width="75">ลักษณะงาน</th>
-     <th width="190">ผู้เสนองาน</th>
+     <th width="120">ลักษณะงาน</th>
+     <th width="120">ผู้เสนองาน</th>
     <th width="105">การพิจารณา</th>
-    <th width="60">คำแนะนำ</th>
+    <th width="90">คำแนะนำ</th>
 
   </tr>
 </thead>
@@ -54,7 +53,7 @@
       }
     } ?></th>
     
-    <td width="320"><a class="btn btn-success" href="<?= site_url("home2/update_job_edit/{$row->Job_ID}"); ?>" style="width:50px;height:38px">ผ่าน</a>
+    <td width="245"><a class="btn btn-success" href="<?= site_url("home2/update_job_edit/{$row->Job_ID}"); ?>" style="width:50px;height:38px">ผ่าน</a>
 
       <a class="btn btn-primary" href="<?= site_url("home2/authorities_edit_1/{$row->Job_ID}"); ?>" style="width:55px;">แก้ไข</a>
 

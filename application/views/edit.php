@@ -52,7 +52,7 @@
   <thead>
   <tr align="center">
     <th width="58">ลำดับ</th>
-    <th width="420">กิจกรรม</th>
+    <th width="360">กิจกรรม</th>
     <th width="109">วันเเรก</th>
     <th width="94">วันสุดท้าย</th>
     <th width="146"></th>
@@ -66,7 +66,7 @@
     <th><input type="date"  value="<?php echo $row->Start_Date; ?>" name="Start_Date" placeholder="<?php echo $row->Start_Date; ?>" required></th>
     <th><input type="date"  value="<?php echo $row->End_Date; ?>" name="End_Date" placeholder="<?php echo $row->End_Date; ?>" required></th>
     <th><button type="submit" name="id" value="<?php echo $row->Schedule_ID;?>"  class="btn btn-primary" >บันทึก</button>
-        <button type="reset" class="btn btn-danger">ยกเลิก</button></th>
+        <button type="reset" onClick='window.history.back()' class="btn btn-danger">   ยกเลิก</button></th>
   </tr>
 <?php } ?>
  <!--<tr align="center">

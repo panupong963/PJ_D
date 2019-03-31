@@ -68,10 +68,10 @@
 </table>
 <?php 
 }elseif (date('Y-m-d') < $Start_Date && date('Y-m-d') <= $End_Date) {
-  echo "ยังไม่ถึงเวลา";
+  echo "ยังไม่ถึงวันเวลาในการคัดเลือกผู้สมัคร";
 }else{
-  echo "เลยเวลา";
-  echo date('Y-m-d').">=".$Start_Date."=".date('Y-m-d') ."<=". $End_Date;
+  echo "เลยช่วงวันเวลาในการคัดเลือกผู้สมัคร";
+  //echo date('Y-m-d').">=".$Start_Date."=".date('Y-m-d') ."<=". $End_Date;
 }
 ?>
     </div>

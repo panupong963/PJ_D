@@ -13,7 +13,7 @@ $offid = $this -> session -> userdata ( 'OFFICERID' );
       <!--<td width="307" align="left"><font color="red"><b>*ตรวจสอบงานภายในวันที่ 20/เม.ย/60</b></font>-->
           </td>
 
-      <br><br>
+      <br>
   <table class="table table-striped">
   	<thead>
   
@@ -21,7 +21,7 @@ $offid = $this -> session -> userdata ( 'OFFICERID' );
     <th width="80">ลำดับ</th>
     <th width="180">ประเภทงาน</th>
     <th width="250">ชื่องาน</th>
-    <th width="230">จำนวนที่ขาด/จำนวนที่รับ</th>
+    <th width="230">จำนวนที่ได้/จำนวนที่รับ</th>
     <th width="230">&nbsp;&nbsp;</th>
   </tr>
   </thead>
@@ -77,9 +77,9 @@ $offid = $this -> session -> userdata ( 'OFFICERID' );
 </table>
 <?php
 }elseif (date('Y-m-d') < $Start_Date && date('Y-m-d') <= $End_Date) {
-echo "ยังไม่ถึงเวลา";
+echo "ยังไม่ถึงวันเวลาในการจัดสรรงานคงเหลือ";
 }else{
-  echo "เลยเวลา";
+  echo "เลยช่วงวันเวลาในการจัดสรรงานคงเหลือ";
   echo date('Y-m-d').">=".$Start_Date."=".date('Y-m-d') ."<=". $End_Date;
 }
 ?>
