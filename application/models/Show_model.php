@@ -48,6 +48,13 @@ class Show_model extends CI_Model {
         return $query->result();
     }
 
+    public function get_student3()//ของ ผู้เสนองาน 
+    {
+        //$query = $this->db->query('select * from offices ORDER BY officeCode ');
+        $query = $this->db->query('select * from student ORDER BY FACULTYNAME asc');
+        return $query->result();
+    }
+
     public function get_job()
     {
         //$query = $this->db->query('select * from offices ORDER BY officeCode ');

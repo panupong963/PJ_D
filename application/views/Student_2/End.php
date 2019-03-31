@@ -9,7 +9,6 @@ function myFunction() {
         txt = person;
     }
     document.getElementById("demo").innerHTML = txt;
-    $.post('Confirm_job.php',{da:txt});
 
     return txt;
 }

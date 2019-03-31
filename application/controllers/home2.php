@@ -283,7 +283,7 @@ class home2 extends CI_Controller {
         $data['job_res'] = $res;
 
         $this->load->model('Show_model');
-        $res = $this->Show_model->get_student();
+        $res = $this->Show_model->get_student3();
         $data['student_res'] = $res;  
 
         $this->load->model('Show_model');

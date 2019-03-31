@@ -45,9 +45,7 @@ foreach ($student_res as $row) {
 	<td colspan="2"><button type="submit" class="btn btn-success" name="id" value="<?php echo $this -> session -> userdata ( 'student_code' ); ?>">ยืนยัน</button>
     				      <button type="submit" name="id2" value="<?php echo $this -> session -> userdata ( 'student_code' ); ?>" class="btn btn-danger" onclick="myFunction()">ปฎิเสธ</button></td>
                 <a name="ss"  id="demo"></a>
-                <?php $b = $_POST['da'];
-                echo $b;
-                 ?>
+        
 
                 
   </tr>
