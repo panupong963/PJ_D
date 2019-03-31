@@ -1,10 +1,6 @@
 <div class="content-wrapper">
     <div class="container-fluid">
         <h4>ผลการคัดเลือกนักศึกษา</h4>
-
-        <table align="right">
-<td ><button type="reset" onClick='window.history.back()' class="btn btn-danger" >กลับ</button></td>
-</tr></table>
 <table class="table table-striped">
   <thead>
   <tr align="center">

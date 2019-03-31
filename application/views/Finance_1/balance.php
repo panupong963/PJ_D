@@ -1,17 +1,12 @@
 <div class="content-wrapper">
     <div class="container-fluid">
-      <h4>รายชื่อผลการคัดเลือกนักศึกษา</h4>
+      <h4>รายชื่อนักศึกษาที่ผ่านการคัดเลือก</h4>
       <?php 
       foreach ($job_res as $row2) {
         $name = $row2->Job_Name;
       }
       ?>
-
       <h5>งาน : <?php echo $name; ?></h5>
-      
-      <table align="right">
-<td ><button type="reset" onClick='window.history.back()' class="btn btn-warning" >กลับ</button></td>
-</tr></table>
       <br>
 <table class="table table-striped" >
   <thead>
@@ -20,15 +15,15 @@
     <th width="140" align="center">รหัสนักศึกษา</th>
     <th width="275" align="center">ชื่อ - สกุล</th>
     <th width="200" align="center">สำนักวิชา</th>
-    <th width="180" align="center">เกรดเฉลี่ย</th>
-    <th width="200" align="center">การพิจารณา</th>
-    <th><button type="button" onclick="history.back();" class="btn btn-warning">ย้อนกลับ</button></th>
+    <th width="275" align="center">เกรดเฉลี่ย</th>
+    <th width="275" align="center">การพิจารณา</th>
+    
   </tr>
 </thead>
 <?php
 $i = 1;
  foreach ($student_res as $row) {
-   
+   if($row->Re_status == "1"){
  
  ?>
 <tbody>
@@ -44,7 +39,7 @@ $i = 1;
   </tr>
 </tbody>
 <?php
-
+}
 }
 ?>
 <!--<tbody>

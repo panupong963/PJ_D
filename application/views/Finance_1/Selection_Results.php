@@ -4,7 +4,6 @@
 
 
       <br>
-
   <table class="table table-striped">
   	<thead>
   
@@ -34,9 +33,9 @@
     <th><?php
                                                              $k=0;foreach ($student_res as $row3) { 
                                                                 if($row->Job_ID == $row3->Job_ID){
-                                        
+                                                                    if($row3->Re_status == "1"){
                                                                     $k++;  
-                                                                    
+                                                                    }
                                                                 }
                                                             }
                                                              echo $k."/".$row->Receiving_number; ?></th>

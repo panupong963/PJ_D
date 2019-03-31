@@ -68,7 +68,7 @@ $End_Date = $this -> session -> userdata ( 'End_Date' );
 
 if (date('Y-m-d') >= $Start_Date && date('Y-m-d') <= $End_Date) {
   # code...
-  //echo date('Y-m-d').">=".$Start_Date."=".date('Y-m-d') ."<=". $End_Date;
+  echo date('Y-m-d').">=".$Start_Date."=".date('Y-m-d') ."<=". $End_Date;
 /*if(date('Y-m-d') > $Start_Date ){
   echo date('Y-m-d');
   echo $Start_Date;
@@ -206,9 +206,9 @@ if (date('Y-m-d') >= $Start_Date && date('Y-m-d') <= $End_Date) {
 
                       <tr>
                        <td ><br>เพศ <font color="red">* </font><select name="Sex">
-                                                      <option value="X">ไม่ระบุ</option>
                                                       <option value="F">หญิง</option>
                                                       <option value="M" >ชาย</option>
+                                                      <option value="X">ไม่ระบุ</option>
                                 
                                                     </select> 
                                                     &nbsp;&nbsp;&nbsp;&nbsp;จำนวนที่รับ <font color="red">* </font><input type="text" name="Receiving_number" size="2" onkeypress="check_number()" required> คน 
@@ -553,19 +553,17 @@ if (date('Y-m-d') >= $Start_Date && date('Y-m-d') <= $End_Date) {
 
 </form>
 <?php 
-}elseif 
-    (date('Y-m-d') < $Start_Date && date('Y-m-d') <= $End_Date) 
-    {
+}elseif (date('Y-m-d') < $Start_Date && date('Y-m-d') <= $End_Date) {
   # code...
   ?>
-  <h5><?php echo "ยังไม่ถึงช่วงวันเวลาการกรอกรายละเอียดงาน"; ?></h5>
+  <h5><?php echo "ยังไม่ถึงเวลาการกรอกรายละเอียดงาน"; ?></h5>
   
   <?php
 }else{
 
     ?>
 
-  <h5 align="center"><?php echo "หมดช่วงวันเวลาการกรอกรายละเอียดงาน"; ?></h5>
+  <h5 align="center"><?php echo "หมดเวลาการกรอกรายละเอียดงาน"; ?></h5>
   
   <?php
   //echo "เลยเวลา";
