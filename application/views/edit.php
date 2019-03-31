@@ -66,7 +66,15 @@
     <th><input type="date"  value="<?php echo $row->Start_Date; ?>" name="Start_Date" placeholder="<?php echo $row->Start_Date; ?>" required></th>
     <th><input type="date"  value="<?php echo $row->End_Date; ?>" name="End_Date" placeholder="<?php echo $row->End_Date; ?>" required></th>
     <th><button type="submit" name="id" value="<?php echo $row->Schedule_ID;?>"  class="btn btn-primary" >บันทึก</button>
+<<<<<<< HEAD
         <button type="reset" onClick='window.history.back()' class="btn btn-danger">   ยกเลิก</button></th>
+=======
+<<<<<<< HEAD
+        <button type="reset" onClick='window.history.back()' class="btn btn-danger">   ยกเลิก</button></th>
+=======
+        <button type="reset" onClick='window.history.back()' class="btn btn-danger">ยกเลิก</button></th>
+>>>>>>> b0fdc98bdc7fdfbc1e37010188d7bf0e383eb357
+>>>>>>> 09408e83f5201a33691e0c52e6faf83e051217ed
   </tr>
 <?php } ?>
  <!--<tr align="center">
