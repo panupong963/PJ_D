@@ -19,12 +19,11 @@
     <th width="130">รหัสนักศึกษา</th>
     <th width="200">ชื่อ - สกุล</th>
     <th width="200">สาขาวิชา</th>
-    <th width="150">เกรดเฉลี่ย</th>
-    <th width="150">รายละเอียด</th>
-    <td>&nbsp;</td>
-    <th width="150">การพิจารณา</th>
-  <td>&nbsp;</td>
- 
+    <th width="130">เกรดเฉลี่ย</th>
+    <th width="130">รายละเอียด</th>
+    <th width="130">การพิจารณา</th>
+  <th><button type="button" onclick="history.back();" class="btn btn-warning">ย้อนกลับ</button></th>
+  <th>&nbsp;</th> 
 
 
   </tr>
@@ -45,19 +44,15 @@
     <th><?php echo $row->STUDENTNAME; ?></th>
     <th><?php echo $row->PROGRAMNAME; ?></th>
     <th><?php echo $row->GPAX; ?></th>
-    <th><button type="button" class="btn btn-warning">รายละเอียด</button></th>
-        <th colspan="8">
-          <?php
-          
-            
-         
-          ?>
-          <button type="submit" class="btn btn-success" name="joid" value="<?php echo $row->student_code; ?>">บันทึก</button>
+    <th><button type="button" class="btn btn-warning">รายละเอียด</button></th>   
+    <td width="150"> <button type="submit" class="btn btn-success" name="joid" value="<?php echo $row->student_code; ?>" style="width:60px;height:38px">บันทึก</button> </td>
             <!--<a class="btn btn-success" href="<?//= site_url("home2/finance_SelectST_1/{$row->Job_ID}"); ?>">เลือก</a>-->
-                    
-                    </th>
- 
+<th>&nbsp;</th> 
+<th>&nbsp;</th> 
+
   </tr>
+</thead>
+</table>
   <?php
  }
   }
