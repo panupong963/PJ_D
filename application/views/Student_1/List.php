@@ -1,5 +1,10 @@
 <div class="content-wrapper">
     <div class="container-fluid">
+      <?php
+      $Start_Date = $this -> session -> userdata ( 'Start_Date3' ); 
+      $End_Date = $this -> session -> userdata ( 'End_Date3' ); 
+      if(date('Y-m-d') >= $Start_Date && date('Y-m-d') <= $End_Date){      
+      ?>
       <h4>รายชื่องานทุน</h4>
       <br>
 <a>หน่วยงาน/สำนักวิชา <select>
@@ -94,5 +99,13 @@
 </tbody>
 </table>
 </form>
+<?php
+}elseif (date('Y-m-d') < $Start_Date && date('Y-m-d') <= $End_Date) {
+echo "ยังไม่ถึงเวลา";
+}else{
+  echo "เลยเวลา";
+  echo date('Y-m-d').">=".$Start_Date."=".date('Y-m-d') ."<=". $End_Date;
+}
+?>
 </div>
 </div>

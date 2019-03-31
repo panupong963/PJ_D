@@ -171,6 +171,7 @@ $sum = $n / 60;
   <?php $i= 1; foreach ($work_res as $row) { 
     if($row->STUDENTCODE == $id){
       if($row->Work_Status == "0"){
+        
   ?>
   <tr align="center">
     <th><?php echo $i++; ?></th>
@@ -227,11 +228,21 @@ $sum = $n / 60;
        }           
 
               ?></th>
-    <th><button type="button" class="btn btn-warning">รายละเอียด</button></th>
+              
+            
+    <th><?php  $dd = $row->Job_Description; ?><a  class="btn btn-warning" onclick="myFunction3('<?php echo $dd; ?>')">รายละเอียด</a> </th>
+
+
     <th><a  href="<?= site_url("home/Student_SaveJob_2/{$row->Work_ID}"); ?>" class="btn btn-danger" onclick="return confirm('ยืนยันการลบข้อมูล')" >ลบ</a>
     <!-- <a href="<?php //echo base_url("home/Student_Save/{$row->Work_ID}"); ?>" class="btn btn-primary">แก้ไข</a>-->
     <a href="<?= site_url("home/Student_Save/{$row->Work_ID}"); ?>" class="btn btn-primary">แก้ไข</a> </th>
   </tr>
+      <script>
+
+    function myFunction3(txt) {
+    alert(txt);
+    }
+    </script>
 <?php 
     }
   }

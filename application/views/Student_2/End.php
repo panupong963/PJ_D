@@ -13,6 +13,7 @@ function myFunction() {
 
     return txt;
 }
+
 </script>
 
     <!-- Bootstrap core JavaScript-->

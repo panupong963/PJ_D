@@ -45,13 +45,8 @@
                 <?php 
               $description = $row->Job_description;
                ?>
-    <th><a class="btn btn-warning" onclick="myFunction2()">รายละเอียด</a></th>
-    <script>
+    <th><a class="btn btn-warning" onclick="myFunction2('<?php echo $description; ?>')"><?php echo $row->Job_ID; ?>รายละเอียด</a></th>
 
-    function myFunction2() {
-    alert("<?php echo $description; ?>");
-    }
-    </script>
 
     <th><?php foreach ($employees_res as $row2) {
       if($row->OFFICERID == $row2->OFFICERID){
@@ -66,6 +61,12 @@
       <button type="submit" name="id" value="<?php echo $row->Job_ID; ?>" class="btn btn-danger">ไม่ผ่าน</button></td>
       <th><input type="text" input name="Reason_job" size="12" required></th>
   </tr>
+      <script>
+
+    function myFunction2(txt) {
+    alert(txt);
+    }
+    </script>
 <?php }} ?>
  <!-- <tr align="center">
     <th>2</th>

@@ -1,4 +1,10 @@
+      <?php
+      $Start_Date = $this -> session -> userdata ( 'Start_Date3' ); 
+      $End_Date = $this -> session -> userdata ( 'End_Date3' ); 
+      if(date('Y-m-d') >= $Start_Date && date('Y-m-d') <= $End_Date){      
+      ?>
 <?php
+
 $id = $this -> session -> userdata ( 'student_code' );
 foreach ($student_res as $row) {
   if($row->student_code == $id){
@@ -190,3 +196,11 @@ foreach ($student_res as $row) {
                               }
                               }
                               </script>
+                              <?php
+}elseif (date('Y-m-d') < $Start_Date && date('Y-m-d') <= $End_Date) {
+echo "ยังไม่ถึงเวลา";
+}else{
+  echo "เลยเวลา";
+  echo date('Y-m-d').">=".$Start_Date."=".date('Y-m-d') ."<=". $End_Date;
+}
+?>

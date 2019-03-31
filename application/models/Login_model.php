@@ -38,6 +38,15 @@ class Login_model extends CI_Model {
  				$this->session->set_userdata('ss', $row3->ss);
  				$this->session->set_userdata('Contact', $row3->Contact);
 
+                $this->db->where('Schedule_ID', '3');
+                $query7 = $this->db->get('calendar'); 
+                $row7 = $query7->row();
+
+                $this->session->set_userdata('semester3', $row7->semester);
+                $this->session->set_userdata('Year3', $row7->Year);
+                $this->session->set_userdata('Start_Date3', $row7->Start_Date);
+                $this->session->set_userdata('End_Date3', $row7->End_Date);
+
 
  				return true;
 

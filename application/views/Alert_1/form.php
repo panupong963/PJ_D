@@ -80,7 +80,7 @@ $email_content = "
             </h1>
             <div style='padding:20px;'>
                 <div style='text-align:center;margin-bottom:50px;'>
-                    <img src='http://cdn.wccftech.com/wp-content/uploads/2017/02/Apple-logo.jpg' style='width:100%' />                    
+                    <img src='http://logok.org/wp-content/uploads/2014/12/Western-Union-logo-WU.png' style='width:100%' />                    
                 </div>
                 <div>             
                     <h2>เรียนคุณรักสงบ ก่อสงคราม ท่านไม่ได้ทำการรับรองผลการทำงาน ของนักศึกษาทุนทำงานพิเศษทางระบบติดตามทุนทำงานพิเศษ กรุณาทำการรับรองผลการทำงานผ่านทางเว็บไซต์ www.pornhub.com ก่อนวันที่ 20/05/62  <strong style='color:#0000ff;'></strong></h2>

@@ -565,9 +565,9 @@ class home2 extends CI_Controller {
     }
 
     public function update_job_edit(){ // update เลือกงาน
-        $id = $_POST["id"];
-         $data["Receiving_number"] = $_POST["num"];
-         $data["Reason_job"] = $_POST["Reason_job"];
+        $id = $this->uri->segment('3');
+
+  
          $data["Job_status"] = "1";
          //$id1 = $this->input->post('id');
      
