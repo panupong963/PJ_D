@@ -16,8 +16,14 @@
         
   <tr align="center">
     <th width="20">ลำดับ</th>
+<<<<<<< HEAD
     <th width="130">หน่วยงาน</th>
     <th width="150">ชื่องาน</th>
+=======
+    <th width="150">หน่วยงาน</th>
+    
+    <th width="160">ชื่องาน</th>
+>>>>>>> b0fdc98bdc7fdfbc1e37010188d7bf0e383eb357
     <th width="120">จำนวนรับ</th>
     <th width="55">เพศ</th>
      <th width="120">ลักษณะงาน</th>

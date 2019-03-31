@@ -3,7 +3,6 @@ $offid = $this -> session -> userdata ( 'OFFICERID' );
 ?>
 <div class="content-wrapper">
     <div class="container-fluid">
-      
       <h4>จัดสรรงานคงเหลือ</h4>
       <?php
       $Start_Date = $this -> session -> userdata ( 'Start_Date5' ); 
@@ -21,7 +20,11 @@ $offid = $this -> session -> userdata ( 'OFFICERID' );
     <th width="80">ลำดับ</th>
     <th width="180">ประเภทงาน</th>
     <th width="250">ชื่องาน</th>
+<<<<<<< HEAD
     <th width="230">จำนวนที่ได้/จำนวนที่รับ</th>
+=======
+    <th width="230">จำนวนสมัคร/จำนวนที่รับ</th>
+>>>>>>> b0fdc98bdc7fdfbc1e37010188d7bf0e383eb357
     <th width="230">&nbsp;&nbsp;</th>
   </tr>
   </thead>
@@ -40,9 +43,9 @@ $offid = $this -> session -> userdata ( 'OFFICERID' );
       $n = 0;
       foreach ($student_res as $row2) {
         if($row->Job_ID == $row2->Job_ID){
-          if ($row2->Re_status == '1') {
+          
             $n +=1;
-          }
+          
         }
       }
     ?>
@@ -77,10 +80,17 @@ $offid = $this -> session -> userdata ( 'OFFICERID' );
 </table>
 <?php
 }elseif (date('Y-m-d') < $Start_Date && date('Y-m-d') <= $End_Date) {
+<<<<<<< HEAD
 echo "ยังไม่ถึงวันเวลาในการจัดสรรงานคงเหลือ";
 }else{
   echo "เลยช่วงวันเวลาในการจัดสรรงานคงเหลือ";
   echo date('Y-m-d').">=".$Start_Date."=".date('Y-m-d') ."<=". $End_Date;
+=======
+echo "ยังไม่ถึงเวลาการคัดเลือก";
+}else{
+  echo "เลยเวลาการคัดเลือก";
+  //echo date('Y-m-d').">=".$Start_Date."=".date('Y-m-d') ."<=". $End_Date;
+>>>>>>> b0fdc98bdc7fdfbc1e37010188d7bf0e383eb357
 }
 ?>
     </div>

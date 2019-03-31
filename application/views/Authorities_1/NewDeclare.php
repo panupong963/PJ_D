@@ -36,23 +36,41 @@
   </tr>
 </thead>
 <tbody>
+<<<<<<< HEAD
 
+=======
+    <?php $i=1;foreach ($student_res as $row) {
+        if($row->Re_status != "0" && $row->Re_status != "3"){
+        $Job_ID = $row->Job_ID;
+         foreach ($job_res as $row2) {
+        if($row2->Job_ID == $Job_ID){
+        ?>
+>>>>>>> b0fdc98bdc7fdfbc1e37010188d7bf0e383eb357
     <tr align="center">
     <th align="center"><?php echo $i++; ?></th>
     
 
+<<<<<<< HEAD
     <?php foreach ($job_res as $row3) {
         if($row3->Job_ID == $Job_ID){
             //echo $row2->Job_ID ."==". $Job_ID."<br>";
     ?>
 
+=======
+
+ 
+>>>>>>> b0fdc98bdc7fdfbc1e37010188d7bf0e383eb357
         
 
     <th align="center"><?php echo $row->student_code; ?></th>
     <th align="center"><?php echo $row3->Category; ?></th>
     <td align="left"><B><?php echo $row->STUDENTNAME; ?></B></td>
     <td align="left"><B><?php echo $row->PROGRAMNAME; ?></B></td>
+<<<<<<< HEAD
     <td align="left"><b><?php echo $row3->Job_Name; ?></b></td>
+=======
+    <td align="left"><b><?php echo $row2->Job_Name; ?></b></td>
+>>>>>>> b0fdc98bdc7fdfbc1e37010188d7bf0e383eb357
     <th align="center"><?php if($row->Re_status == "1"){
                         echo "ผ่าน";
                          }else if($row->Re_status == "2"){
@@ -60,10 +78,15 @@
                          }
                          ?></th>
   </tr>
+<<<<<<< HEAD
 <?php 
 }}
 }}
 }}} ?>
+=======
+<?php }} ?> 
+<?php }} ?>
+>>>>>>> b0fdc98bdc7fdfbc1e37010188d7bf0e383eb357
 </tbody>
 <!--<tbody>
     <tr align="center">

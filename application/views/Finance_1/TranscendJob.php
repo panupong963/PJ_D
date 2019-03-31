@@ -10,6 +10,10 @@
       
       ?>
         <h5><?php echo "งาน : ".$name; ?> <font color="#00ffff"><input type="text" name="idst" style="border: none ; color:#FFFFFF" readonly value="<?= $id; ?>" ></font></h5>
+        
+<table align="right">
+<td ><button type="reset" onClick='window.history.back()' class="btn btn-warning" >กลับ</button></td>
+</tr></table>
 
         <br>
 <table class="table table-striped">
@@ -44,8 +48,19 @@
     <th><?php echo $row->STUDENTNAME; ?></th>
     <th><?php echo $row->PROGRAMNAME; ?></th>
     <th><?php echo $row->GPAX; ?></th>
+<<<<<<< HEAD
     <th><button type="button" class="btn btn-warning">รายละเอียด</button></th>   
     <td width="150"> <button type="submit" class="btn btn-success" name="joid" value="<?php echo $row->student_code; ?>" style="width:60px;height:38px">บันทึก</button> </td>
+=======
+    <th><button type="button" class="btn btn-warning">รายละเอียด</button></th>
+        <th colspan="8">
+          <?php
+          
+            
+         
+          ?>
+          <button type="submit" class="btn btn-success" name="joid" value="<?php echo $row->student_code; ?>">เลือก</button>
+>>>>>>> b0fdc98bdc7fdfbc1e37010188d7bf0e383eb357
             <!--<a class="btn btn-success" href="<?//= site_url("home2/finance_SelectST_1/{$row->Job_ID}"); ?>">เลือก</a>-->
 <th>&nbsp;</th> 
 <th>&nbsp;</th> 
