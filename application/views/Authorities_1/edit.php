@@ -13,17 +13,20 @@
    
     <table class="table table-striped">
       <thead>
+        <button type="reset" onClick='window.history.back()' 
+  class="btn btn-danger">
+  ยกเลิก</button>
         
   <tr align="center">
-    <th width="20">ลำดับ</th>
-    <th width="130">หน่วยงาน</th>
+    <th width="15">ลำดับ</th>
+    <th width="200">หน่วยงาน</th>
     
     <th width="200">ชื่องาน</th>
     <th width="120">จำนวนรับ</th>
-    <th width="55">เพศ</th>
+    <th width="50">เพศ</th>
      <th width="75">ลักษณะงาน</th>
      <th width="190">ผู้เสนองาน</th>
-    <th width="160">คำแนะนำ</th>
+    <th width="120">คำแนะนำ</th>
     <th width="60"></th>
 
   </tr>
@@ -69,7 +72,7 @@
       }
     } ?></th>
     <th><input type="text" size="30" name="Reason_job" size="12" required></th>
-    <td width="320">
+    <td width="130">
       
       <button type="submit" name="id" value="<?php echo $row->Job_ID; ?>" class="btn btn-success">บันทึก</button>
     </td>

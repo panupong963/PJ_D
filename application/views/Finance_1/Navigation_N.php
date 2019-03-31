@@ -1,6 +1,6 @@
  <!-- Navigation-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-    <a class="navbar-brand" href="finance_CA_1"><img src="<?php echo base_url(); ?>assets/img/wu.png" width = “40” height="40">&nbsp;&nbsp;ระบบการจัดการทุนทางานพิเศษ</a>
+    <a class="navbar-brand" href="finance_CA_1"><img src="<?php echo base_url(); ?>assets/img/wu.png" width = “40” height="40">&nbsp;&nbsp;ระบบการจัดการทุนทำงานพิเศษ</a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -174,7 +174,7 @@
         </li>-->
 
         <!-- เเจ้งเตือน -->
-       <li class="nav-item dropdown">
+       <!--li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle mr-lg-2" id="alertsDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
            <font color="#FFFFFF">  <i class="fa fa-fw fa-bell"></i>
             <span class="d-lg-none">Alerts
@@ -216,7 +216,8 @@
             <div class="dropdown-divider"></div>
             <a class="dropdown-item small" href="#">View all alerts</a>
           </div>
-        </li>
+        </li> -->
+
 
         <!-- <li class="nav-item">
           <form class="form-inline my-2 my-lg-0 mr-lg-2">
