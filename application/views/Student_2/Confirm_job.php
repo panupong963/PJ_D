@@ -11,6 +11,7 @@ foreach ($student_res as $row) {
     $Bank_Name = $row->Bank_Name;
     $BANKACCOUNT = $row->BANKACCOUNT;
     $Re_status = $row->Re_status;
+    $Bank_Name_update16 = $row->Bank_Name_update16;
   }
   
 }
@@ -20,40 +21,72 @@ foreach ($student_res as $row) {
         <ol class="breadcrumb">
           <li class="breadcrumb-item active">ยืนยันการทำงาน</li>
         </ol>
+        
+
         <form action="<?php echo site_url("home/update_student2");?>" method="post">  
+         
 		<table class="table table-bordered">
       <tbody>
   <tr class="table-info">
     <td><font size="3">ชื่องาน <u><?php echo $this -> session -> userdata ( 'Job_Name' ); ?></u></font></td>
-    <td>&nbsp;</td>
+    <td ><font size="3">ลักษณะงาน <u><?php echo $this -> session -> userdata ( 'Job_description' ); ?></u></font></td>
   </tr>
   <tr class="table-info">
 
     <td><font size="3">ชื่อผู้เสนองาน <u><?php echo $this -> session -> userdata ( 'job_name_ss' ); ?></u></font></td>
-    <td></td>
+    <td><font size="3">ภาคการศึกษาที่  <u><?php echo $this -> session -> userdata ( 'term' ); ?></u> ปีการศึกษา <u><?php echo $this -> session -> userdata ( 'year' ); ?></u></font></td>
   </tr>
   <tr class="table-info">
     <td><font size="3">สถานที่ทำงาน <u><?php echo $this -> session -> userdata ( 'ss' ); ?></u></font></td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr class="table-info">
     <td><font size="3">ช่องทางติดต่อ <u><?php echo $this -> session -> userdata ( 'Contact' ); ?></u></font></td>
-    <td>&nbsp;</td>
-    <?php if($Re_status == '0'){ ?>
   </tr>
+  
+    <?php if($Re_status == '0'){ 
+      $nn = $this -> session -> userdata ( 'student_code' );
+      ?>
+ 
     <tr align="center" class="table-info">
-	<td colspan="2"><button type="submit" class="btn btn-success" name="id" value="<?php echo $this -> session -> userdata ( 'student_code' ); ?>">ยืนยัน</button>
-    				      <button type="submit" name="id2" value="<?php echo $this -> session -> userdata ( 'student_code' ); ?>" class="btn btn-danger" onclick="myFunction()">ปฎิเสธ</button></td>
-                <a name="ss"  id="demo"></a>
-        
-
-                
+	         <td align="right"><button type="submit" class="btn btn-success" name="id" value="<?php echo $this -> session -> userdata ( 'student_code' ); ?>">ยืนยัน</button></td>
+    	<td align="left"> <font color = "#ffffff"><a name="id2" id="id2"  class="btn btn-danger" onclick="myFunction()">ปฎิเสธ</a></font></td>
+          
   </tr>
 <?php } ?>
 </tbody>
 </table>
-</form>
+                <script>
+                function myFunction() {
+                    var res = "rrr";
+                    var txt;
+                    var person = prompt("กรุณากรอกเหตุผลการยกเลิก");
+                    if (person == null || person == "") {
+                        txt = "0";
+                    } else {
+                        txt = person;
+                    }
+                    
 
+                  
+                                $.ajax({
+                                  url: '<?= site_url("home/update_ja");  ?>',
+                                  type: 'post', //หรือ post (ค่าเริ่มต้นเป็นแบบ get)
+                                  data: {'data' : txt},
+                                  dataType: 'json', //หรือ json หรือ xml
+                                  success: function(response){
+                                      //callbackที่เตรียมไว้รันตอนเซิร์ฟเวอร์ตอบกลับมา
+                                      alert(response.message)
+                                     window.location.reload();
+                                                                       
+                                   }
+                              });
+                }
+  
+
+                </script>
+                <?php
+   
+    ?>
+                
+ </form>
             <h5>วันทีทำงาน <font color="#FF0000" size="5">20/02/60 - 20/05/60 </font></h5>
             <hr color="#000000">
               <br>
@@ -82,7 +115,7 @@ foreach ($student_res as $row) {
     <td colspan="3">&nbsp;</td>
   </tr>
   <tr align="center">
-    <td align="right">ชื่อบัญชี : </td>
+    <td align="right">ชื่อธนาคาร : </td>
     <td>
       <?php if($Bank_Name == "1"){ ?>
         <input type="radio" name="Bank_Name" value="1" checked> ธนาคารกรุงไทย
@@ -91,6 +124,14 @@ foreach ($student_res as $row) {
         <input type="radio" name="Bank_Name" value="1" > ธนาคารกรุงไทย
         <input type="radio" name="Bank_Name" value="2" checked> ธนาคารออมสิน</td>
       <?php } ?>
+  </tr>
+    <tr>
+    <td colspan="3">&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="right">ชื่อบัญชี</td>
+    <td><input type="text" name="Bank_Name_update16" class="form-control" placeholder = "<?php echo $Bank_Name_update16; ?>" required></td>
+    <td>(ตัวอย่าง : ชวนัน ชาญอาวุธ )</td>
   </tr>
   <tr>
     <td colspan="3">&nbsp;</td>

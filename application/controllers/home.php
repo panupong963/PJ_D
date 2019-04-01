@@ -136,6 +136,8 @@ class home extends CI_Controller {
         
     }
 
+
+
     public function update_JO(){ // update เเก้ไขข้อมูล
     	$id = $this->uri->segment('3');
 		$data["Work_Status"] = 1;
@@ -175,14 +177,65 @@ class home extends CI_Controller {
          redirect("home/JobOffering_confirm_2");
     }
 
+    public function update_ja() {
+        if($this->input->post()['data'] != 0){
+        $arr  = array('Reason_ST' => $this->input->post()['data'], 'Re_status' => "2");
+        $this->db->set($arr); 
+         $this->db->where("student_code", $this -> session -> userdata ( 'student_code' )); 
+         $this->db->update("student", $arr); 
+        //$arr  = array('Reason_ST' => $this->input->post()['data']);
+        //$this->db->insert('table' , $arr);
+        Echo json_encode(['message'=> 'เรียบร้อย']);
+        }
+    }
+
+    public function update_ja2() {
+        if($this->input->post()['txt'] != 0){
+        $arr  = array('Reason_certifying' => $this->input->post()['txt'], 'Work_Status' => "2");
+         $this->db->set($arr); 
+         $this->db->where("Work_ID", $this->input->post()['Work_ID']); 
+         $this->db->update("work", $arr); 
+        //$arr  = array('Reason_ST' => $this->input->post()['data']);
+        //$this->db->insert('table' , $arr);
+        Echo json_encode(['message'=> 'เรียบร้อย']);
+
+        }
+    }
+
+    public function update_ja3() {
+        if($this->input->post()['txt'] != "0"){
+         $arr  = array('Reason_certifying' => $this->input->post()['txt'], 'Work_Status' => "2");
+         $this->db->set($arr); 
+         $this->db->where("Work_ID", $this->input->post()['Work_ID']); 
+         $this->db->update("work", $arr); 
+        //$arr  = array('Reason_ST' => $this->input->post()['data']);
+        //$this->db->insert('table' , $arr);
+        Echo json_encode(['message'=> 'เรียบร้อย']);
+
+        }
+    }
+
+    public function update_ja4() {
+        if($this->input->post()['txt'] != "0"){
+         $arr  = array('Reason_job' => $this->input->post()['txt'], 'Job_status' => "2");
+         $this->db->set($arr); 
+         $this->db->where("Job_ID", $this->input->post()['Job_ID']); 
+         $this->db->update("job", $arr); 
+        //$arr  = array('Reason_ST' => $this->input->post()['data']);
+        //$this->db->insert('table' , $arr);
+        Echo json_encode(['message'=> 'เรียบร้อย']);
+
+        }
+    }
+
     public function update_student2(){ // update ยืนยันข้อมูล
+       
+        
         //exit($_POST["da"]);
-    	if($_POST["da"] == Null){
+    	
     		$data["Re_status"] = "1";
-    	}else{
-    		$data["Re_status"] = "2";
-    		$data["Reason_ST"] = $_POST["ss"];
-    	}	
+
+        //echo json_encode($a[]);
 
         
 
@@ -193,7 +246,7 @@ class home extends CI_Controller {
          $this->Show_model->update_student2($data,$id); 
         
          //redirect('customer/index');
-         redirect("home/Student_ConfirmJob_2");
+         // redirect("home/Student_ConfirmJob_2");
     }
     public function update_student3(){ // update ยืนยันข้อมูล
         if($_POST["txt"] == Null){
@@ -435,21 +488,23 @@ public function testlog(){
         $data['job_res'] = $res;
 
  		$this->load->model('Show_model');
-        $res = $this->Show_model->get_student();
+        $res = $this->Show_model->get_JO($id);
         $data['student_res'] = $res; 
 
         $this->load->model('Show_model');
-        $res = $this->Show_model->get_work();
+        $res = $this->Show_model->get_JO3($id);
         $data['work_res'] = $res;  
 
 		$this->load->view('Authorities_2/start');
 		$this->load->view('Authorities_2/Navigation_M');
-		$this->load->view('Authorities_2/job', $data);
+		$this->load->view('Authorities_2/job2', $data);
 		$this->load->view('Authorities_2/footer');
 		$this->load->view('Authorities_2/End');		
 	}
 
 	public function Authorities_confirm_2(){
+
+
 		$this->load->model('Show_model');
         $res = $this->Show_model->get_job();
         $data['job_res'] = $res;
@@ -645,21 +700,21 @@ public function testlog(){
 		//$this->load->model('Show_model');
         //$this->Show_model->delete_work($id);		
 
-		$this->load->model('Show_model');
+        $this->load->model('Show_model');
         $res = $this->Show_model->get_edit_JO($id);
         $data['job_res'] = $res;
 
- 		$this->load->model('Show_model');
-        $res = $this->Show_model->get_student();
+        $this->load->model('Show_model');
+        $res = $this->Show_model->get_JO($id);
         $data['student_res'] = $res; 
 
-         $this->load->model('Show_model');
-        $res = $this->Show_model->get_work();
+        $this->load->model('Show_model');
+        $res = $this->Show_model->get_JO3($id);
         $data['work_res'] = $res;      
 
 		$this->load->view('JobOffering_2/start');
 		$this->load->view('JobOffering_2/Navigation_M');
-		$this->load->view('JobOffering_2/job', $data);
+		$this->load->view('JobOffering_2/job2', $data);
 		$this->load->view('JobOffering_2/footer');
 		$this->load->view('JobOffering_2/End');		
 	}

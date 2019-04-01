@@ -1,5 +1,5 @@
 <script>
-function myFunction() {
+function myFunction2() {
 
     var txt;
     var person = prompt("กรุณากรอกเหตุผลการยกเลิก");

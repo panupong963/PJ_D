@@ -46,4 +46,16 @@ class alert_model extends CI_Model {
         return $result;
 	}
 
+    public function get_warning()
+    {
+        //$query = $this->db->query('select * from offices ORDER BY officeCode ');
+        $query = $this->db->query('select * from warning ');
+        return $query->result();
+    }
+
+    public function insert_warning($data)
+    {
+        $this->db->insert('warning', $data);
+    }
+
 }

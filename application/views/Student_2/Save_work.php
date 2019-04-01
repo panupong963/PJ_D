@@ -12,11 +12,11 @@ foreach ($student_res as $row5) {
   if($row5->student_code == $id){
     if($row5->Re_status == 1){
   ?>  
-<table width="900" border="0" align="center">
+<table width="1000" border="0" >
   <tr align="center">
-    <td width="150">วัน/เดือน/ปี ปฎิบัติงาน</td>
-    <td width="200">เวลาเข้า</td>
-    <td width="200">เวลากลับ</td>
+    <td width="220">วัน/เดือน/ปี ปฎิบัติงาน</td>
+    <td width="220">เวลาเข้า</td>
+    <td width="220">เวลากลับ</td>
     <td width="251">รายละเอียดงานที่ทำ</td>
     <td width="77">&nbsp;</td>
   </tr>
@@ -42,7 +42,7 @@ foreach ($student_res as $row5) {
   <?php for($i=10; $i <= 59; $i++){ ?> 
   <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
   <?php } ?>
-</select>ชั่วโมง / นาที <!--  <input type="time" name="Work_Start" required>--></td>
+</select>&nbsp;&nbsp;&nbsp;ชั่วโมง / นาที <!--  <input type="time" name="Work_Start" required>--></td>
     
     <td valign="top"> 
     <select name="Work_Finish">
@@ -63,7 +63,7 @@ foreach ($student_res as $row5) {
   <?php for($i=10; $i <= 59; $i++){ ?> 
   <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
   <?php } ?>
-</select>ชั่วโมง / นาที  <!--<input type="time" name="Work_Finish" required>--></td>
+</select>&nbsp;&nbsp;&nbsp;ชั่วโมง / นาที  <!--<input type="time" name="Work_Finish" required>--></td>
     <td valign="top"><textarea name="Job_Description" placeholder = "พิพ์ข้อความ" required></textarea></td>
     <td align="center"><button type="submit" class="btn btn-success">บันทึก</button></td>
   </tr>
@@ -309,7 +309,7 @@ $sum = $n / 60;
 </tbody>
 </table>
 
-<h6><font color="#FF0000">*หมายเหตุ </font>นักศึกษาสามารถเเก้ไขข้อมูลการทำงานก่อน ผู้เสนองานรับรองผล</h6>
+<h6><font color="#FF0000">*หมายเหตุ </font>นักศึกษาสามารถเเก้ไขข้อมูลการทำงานก่อน ผู้เสนองานรับรองผล เเละ เเละนักศึกจะบันทึกชั่วโมงการทำงานได้ไม่เกิน 100 ชั่วโมงต่อ 1 เทอมการศึกษา</h6>
 </form>
 </div>
 

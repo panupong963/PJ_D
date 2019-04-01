@@ -27,11 +27,17 @@
     <th><?php echo $row->STUDENTNAME; ?></th>
     <th><?php echo $row->PROGRAMNAME; ?></th>
     <th><?php echo $row->GPAX; ?></th>
-    <th><button type="button" class="btn btn-warning">รายละเอียด</button></th>
+    <th><button type="button" class="btn btn-warning" onclick="myFunction3('<?php echo $row->Talent; ?>')">รายละเอียด</button></th>
     <td width="140"><a href="<?= site_url("home2/update_st2/{$row->student_code}"); ?>" class="btn btn-success" style="width:60px;height:38px">อนุมัติ</a>
    <th>&nbsp;</th>
      </td>
   </tr>
+  <script>
+
+    function myFunction3(txt) {
+    alert(txt);
+    }
+    </script>
 <?php }} ?>
 
 </tbody>

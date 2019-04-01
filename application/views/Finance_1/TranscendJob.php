@@ -23,7 +23,7 @@
     <th width="130">รายละเอียด</th>
     <th width="130">การพิจารณา</th>
   <th><button type="button" onclick="history.back();" class="btn btn-warning">ย้อนกลับ</button></th>
-  <th>&nbsp;</th> 
+  
 
 
   </tr>
@@ -44,20 +44,29 @@
     <th><?php echo $row->STUDENTNAME; ?></th>
     <th><?php echo $row->PROGRAMNAME; ?></th>
     <th><?php echo $row->GPAX; ?></th>
-    <th><button type="button" class="btn btn-warning">รายละเอียด</button></th>   
+    <th><button type="button" class="btn btn-warning" onclick="myFunction3('<?php echo $row->Talent; ?>')">รายละเอียด</button></th>   
     <td width="150"> <button type="submit" class="btn btn-success" name="joid" value="<?php echo $row->student_code; ?>" style="width:60px;height:38px">บันทึก</button> </td>
             <!--<a class="btn btn-success" href="<?//= site_url("home2/finance_SelectST_1/{$row->Job_ID}"); ?>">เลือก</a>-->
 <th>&nbsp;</th> 
 <th>&nbsp;</th> 
 
+
   </tr>
 </thead>
-</table>
+
+<script>
+
+    function myFunction3(txt) {
+    alert(txt);
+    }
+    </script>
   <?php
  }
   }
   } 
    ?>
+</table>
+
 
   <!--<tr align="center">
     <th>2</th>

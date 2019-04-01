@@ -1,6 +1,7 @@
 <div class="content-wrapper">
     <div class="container-fluid">
       <form action="<?php echo site_url("home2/update_job3");?>" method="post">
+        </form>
     <h4>ตรวจสอบงาน</h4>
     <br>
       
@@ -44,7 +45,7 @@
                 <?php 
               $description = $row->Job_description;
                ?>
-    <th><a class="btn btn-warning" onclick="myFunction2('<?php echo $description; ?>')"><?php echo $row->Job_ID; ?>รายละเอียด</a></th>
+    <th><a class="btn btn-warning" onclick="myFunction2('<?php echo $description; ?>')">รายละเอียด</a></th>
 
 
     <th><?php foreach ($employees_res as $row2) {
@@ -57,7 +58,7 @@
 
       <a class="btn btn-primary" href="<?= site_url("home2/authorities_edit_1/{$row->Job_ID}"); ?>" style="width:55px;">แก้ไข</a>
 
-      <button type="submit" name="id" value="<?php echo $row->Job_ID; ?>" class="btn btn-danger">ไม่ผ่าน</button></td>
+      <button  class="btn btn-danger" name="id" onclick="myFunction()">ไม่ผ่าน</button></td>
       <th><input type="text" input name="Reason_job" size="12" required></th>
   </tr>
       <script>
@@ -65,6 +66,32 @@
     function myFunction2(txt) {
     alert(txt);
     }
+
+    function myFunction() {
+                    var res = "rrr";
+                    var txt;
+                    var person = prompt("กรุณากรอกเหตุผลการยกเลิก");
+                    if (person == null || person == "") {
+                        txt = "0";
+                    } else {
+                        txt = person;
+                    }
+                    
+
+                  
+                                $.ajax({
+                                  url: '<?= site_url("home/update_ja4");  ?>',
+                                  type: 'post', //หรือ post (ค่าเริ่มต้นเป็นแบบ get)
+                                  data: {'txt' : txt, 'Job_ID' : <?= $row->Job_ID; ?>},
+                                  dataType: 'json', //หรือ json หรือ xml
+                                  success: function(response){
+                                      //callbackที่เตรียมไว้รันตอนเซิร์ฟเวอร์ตอบกลับมา
+                                      alert(response.message)
+                                     window.location.reload();
+                                                                       
+                                   }
+                              });
+                }
     </script>
 <?php }} ?>
  <!-- <tr align="center">
@@ -138,6 +165,6 @@
   </tr> -->
 </tbody>
 </table>
-</form>
+
 </div>
 </div>

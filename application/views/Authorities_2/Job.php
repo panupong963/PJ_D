@@ -21,6 +21,7 @@
 <div class="content-wrapper">
     <div class="container-fluid">
       <form action="<?php echo site_url("home/update_student_confirm");?>" method="post">
+        </form>
         <ol class="breadcrumb">
           <li class="breadcrumb-item active">ยืนยันการทำงานนักศึกษา</li>
         </ol>   
@@ -29,6 +30,13 @@
     <tr align="center">
       <th colspan="7">ชื่องาน : <?php echo $Job_Name; ?></th>
     </tr>
+    <tr align="center">
+      <th colspan="7">ชื่องาน : <?php echo $STUDENTNAME; ?></th>
+    </tr>
+
+
+
+
   <tr align="center">
     <th >ลำดับ</th>
     <th>ชื่อ-นามสกุล</th>
@@ -40,6 +48,7 @@
   </tr>
 </thead>
 <tbody>
+
 
   <?php 
 
@@ -58,7 +67,6 @@
         }
       }*/
     ?>
-
 
 
 
@@ -121,19 +129,54 @@
     <th><?php echo date("d/m/Y", strtotime($row->Work_Date)); ?></th>
 
 
-    <th><button type="button" class="btn btn-warning">รายละเอียด</button></th>
+    <th><?php  $dd = $row->Job_Description; ?><button type="button" class="btn btn-warning" onclick="myFunction3('<?php echo $dd; ?>')">รายละเอียด</button></th>
     <th><input type="text" name="Reason_certifying"></th>
     <th><a class="btn btn-success" href="<?= site_url("home/update_JO/{$row->Work_ID}"); ?>">ผ่าน</a>
       <a class="btn btn-primary" href="<?= site_url("home/Student_Save/{$row->Work_ID}"); ?>">แก้ไข</a>
-      <button type="submit" class="btn btn-danger" name="id" value="<?php echo $row->Work_ID; ?>">ไม่ผ่าน</button></th>
+      <button name="id2" id="id2"  class="btn btn-danger" onclick= "myFunction()">ปฎิเสธ</button></th>
   </tr>
-<?php 
+  <?php 
 }
 }
 }
        ?>
+        
+
 </tbody>
 </table>
-</form>
+<script>
+
+
+
+
+    function myFunction() {
+                    var res = "rrr";
+                    var txt;
+                    var person = prompt("กรุณากรอกเหตุผลการยกเลิก");
+                    if (person == null || person == "") {
+                        txt = "ไม่มีเหตุผล";
+                    } else {
+                        txt = "0";
+                    }
+                    
+
+                  
+                                $.ajax({
+                                  url: '<?= site_url("home/update_ja2");  ?>',
+                                  type: 'post', //หรือ post (ค่าเริ่มต้นเป็นแบบ get)
+                                  data: {'txt' : txt, 'Work_ID' : <?php echo $row->Work_ID; ?>},
+                                  dataType: 'json', //หรือ json หรือ xml
+                                  success: function(response){
+                                      //callbackที่เตรียมไว้รันตอนเซิร์ฟเวอร์ตอบกลับมา
+                                      alert(response.message)
+                                     window.location.reload();
+                                                                       
+                                   }
+                              });
+                }
+    function myFunction3(txt) {
+    alert(txt);
+    }
+    </script>
 </div>
 </div>
