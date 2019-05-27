@@ -48,7 +48,7 @@ $offid = $this -> session -> userdata ( 'OFFICERID' );
       }
     ?>
     <th><a class="btn btn-info" href="<?= site_url("home2/finance_balance_1/{$row->Job_ID}"); ?>"><?php echo $n."/".$row->Receiving_number; ?></a></th>
-    <th><a class="btn btn-info" href="<?= site_url("home2/finance_TranscendJob_1/{$row->Job_ID}"); ?>">เลือก</a></th>
+    <th><a class="btn btn-info" href="<?= site_url("home2/finance_TranscendJob_1/{$row->Job_ID}"); ?>">พิจารณา</a></th>
     </tr>
     <?php 
   }

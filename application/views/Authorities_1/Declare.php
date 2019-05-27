@@ -10,6 +10,7 @@
     <th width="120">หน่วยงาน</th>
     <th width="110">ประเภทงาน</th>
     <th width="130">ชื่องาน</th>
+    <th width="70">เพศ</th>
     <th width="70">จำนวนรับ</th>
     <th width="160">&nbsp;</th>
   </tr>
@@ -22,9 +23,15 @@
     <td align="left"><B><?php echo $row->Department; ?><B></td>
     <th><?php echo $row->Category; ?></th>
     <td align="left"><b><?php echo $row->Job_Name; ?></b></td>
-    
+     <th><?php if ($row->Sex == "M") {
+       echo "ชาย";
+        }elseif ($row->Sex == "F") {
+          echo "หญิง";
+        }elseif ($row->Sex == "X") {
+          echo "ไม่ระบุ";
+        } ?></th>
     <th><?php echo $row->Receiving_number; ?></th>
-    <th> <a class="btn btn-primary" href="<?= site_url("home2/authorities_edit_2/{$row->Job_ID}"); ?>" style="width:55px;">แก้ไข</a>
+    <th> <a class="btn btn-primary" href="<?= site_url("home2/authorities_edit_2/{$row->Job_ID}"); ?>" style="width:61px;height:38px">แก้ไข</a>
     	<a href="<?= site_url("home2/authorities_Declare_1/{$row->Job_ID}"); ?>" class="btn btn-danger">ยกเลิก</a></th>
   </tr>
 <?php }} ?>

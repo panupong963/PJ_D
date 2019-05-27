@@ -13,14 +13,7 @@
       ?>
 
 
-          <?php $i=1;foreach ($student_res as $row2) {
-        if($row2->Re_status != "0" && $row2->Re_status != "3"){
-            if ($row2->FACULTYNAME == $FACULTYNAME) {
-                
-            
-        $Job_ID = $row2->Job_ID;
-        //echo $Job_ID;
-        ?>
+
       <tr bgcolor="#66FFCC">
         <th colspan="7"><?php echo $j++."."; ?> สำนักวิชา : <?php echo $FACULTYNAME; ?></th>
       </tr>
@@ -35,7 +28,16 @@
     <th width="150" align="center">ผลการพิจารณา</th>
   </tr>
 </thead>
+
 <tbody>
+              <?php $i=1;foreach ($student_res as $row2) {
+        if($row2->Re_status != "0" && $row2->Re_status != "3"){
+            if ($row2->FACULTYNAME == $FACULTYNAME) {
+                
+            
+        $Job_ID = $row2->Job_ID;
+        //echo $Job_ID;
+        ?>
 
     <tr align="center">
     <th align="center"><?php echo $i++; ?></th>
@@ -48,14 +50,14 @@
 
         
 
-    <th align="center"><?php echo $row->student_code; ?></th>
+    <th align="center"><?php echo $row2->student_code; ?></th>
     <th align="center"><?php echo $row3->Category; ?></th>
-    <td align="left"><B><?php echo $row->STUDENTNAME; ?></B></td>
-    <td align="left"><B><?php echo $row->PROGRAMNAME; ?></B></td>
+    <td align="left"><B><?php echo $row2->STUDENTNAME; ?></B></td>
+    <td align="left"><B><?php echo $row2->PROGRAMNAME; ?></B></td>
     <td align="left"><b><?php echo $row3->Job_Name; ?></b></td>
-    <th align="center"><?php if($row->Re_status == "1"){
+    <th align="center"><?php if($row2->Re_status == "1"){
                         echo "ผ่าน";
-                         }else if($row->Re_status == "2"){
+                         }else if($row2->Re_status == "2"){
                             echo "ไม่ผ่าน";
                          }
                          ?></th>

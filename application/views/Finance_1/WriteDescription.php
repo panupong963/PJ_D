@@ -423,7 +423,7 @@ if (date('Y-m-d') >= $Start_Date && date('Y-m-d') <= $End_Date) {
     <th width="100">เพศ</th>
     <th width="120">จำนวนรับ</th>
     <th width="120">ลักษณะงาน</th>
-    <th>&nbsp;</th>
+    <th>ผลพิจารณา</th>
     <th>&nbsp;</th>
   </tr>
   </thead>
@@ -434,6 +434,7 @@ if (date('Y-m-d') >= $Start_Date && date('Y-m-d') <= $End_Date) {
     foreach ($job_res as $row) { 
       if($row->OFFICERID == $id){
         if($this -> session -> userdata ( 'semester' ) == $row->term && $this -> session -> userdata ( 'Year' ) == $row->year){
+  
         ?>
 
   <tr align="center">
@@ -454,7 +455,11 @@ if (date('Y-m-d') >= $Start_Date && date('Y-m-d') <= $End_Date) {
   <th>&nbsp;</th>
   <th>&nbsp;</th>
   </tr>
-<?php }}} ?>
+
+<?php 
+}
+}
+} ?>
   <!--<tr align="center">
     <th>2</th>
     <th>พิมพ์งาน</th>

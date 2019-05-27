@@ -58,7 +58,7 @@
 
       <a class="btn btn-primary" href="<?= site_url("home2/authorities_edit_1/{$row->Job_ID}"); ?>" style="width:55px;">แก้ไข</a>
 
-      <button  class="btn btn-danger" name="id" onclick="myFunction()">ไม่ผ่าน</button></td>
+      <button  class="btn btn-danger" name="id" onclick="myFunction()" style="width:61px;height:38px">ไม่ผ่าน</button></td>
       <th><input type="text" input name="Reason_job" size="12" required></th>
   </tr>
       <script>
