@@ -211,7 +211,7 @@
         <li class="nav-item">
           
           <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
-            <font color="#FFFFFF">เจ้าหน้าที่ : สมคิด ใจเย็น
+            <font color="#FFFFFF">เจ้าหน้าที่ : <?php echo $this -> session -> userdata ( 'OFFICERNAME' ); ?>
             <i class="fa fa-fw fa-sign-out"></i>ออกจากระบบ</a></font>
         </li>
       </ul>

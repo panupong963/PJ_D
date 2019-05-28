@@ -13,13 +13,6 @@ class Show_model extends CI_Model {
         return $query->result();
     }
 
-    public function get_warning()
-    {
-        //$query = $this->db->query('select * from offices ORDER BY officeCode ');
-        $query = $this->db->query('select * from warning ');
-        return $query->result();
-    }
-
     public function get_sttt2()
     {
         //$query = $this->db->query('select * from offices ORDER BY officeCode ');
@@ -169,15 +162,6 @@ class Show_model extends CI_Model {
     } 
 
     public function get_AU($id){
-        $this->db->select('*');
-        $this->db->from('calendar');
-        $this->db->where('Schedule_ID', $id);
-        $query = $this->db->get();
-        $result = $query->result();
-        return $result;
-    }    
-
-    public function get_Autho($id){
         $this->db->select('*');
         $this->db->from('calendar');
         $this->db->where('Schedule_ID', $id);

@@ -98,7 +98,7 @@
     <th><?php  $dd = $row3->Job_Description; ?><button type="button" class="btn btn-warning" onclick="myFunction3('<?php echo $dd; ?>')">รายละเอียด</button></th>
     
     <th><a class="btn btn-success" href="<?= site_url("home/update_JO/{$row3->Work_ID}"); ?>">ผ่าน</a>
-      <a class="btn btn-primary" href="<?= site_url("home/Student_Save/{$row3->Work_ID}"); ?>">แก้ไข</a>
+      <a class="btn btn-primary" href="<?= site_url("home/Student_Save2/{$row3->Work_ID}"); ?>">แก้ไข</a>
       <button  class="btn btn-danger" name="id" onclick="myFunction()">ไม่ผ่าน</button></th>
   </tr>
 

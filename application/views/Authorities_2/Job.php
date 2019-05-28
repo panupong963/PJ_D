@@ -132,7 +132,7 @@
     <th><?php  $dd = $row->Job_Description; ?><button type="button" class="btn btn-warning" onclick="myFunction3('<?php echo $dd; ?>')">รายละเอียด</button></th>
     <th><input type="text" name="Reason_certifying"></th>
     <th><a class="btn btn-success" href="<?= site_url("home/update_JO/{$row->Work_ID}"); ?>">ผ่าน</a>
-      <a class="btn btn-primary" href="<?= site_url("home/Student_Save/{$row->Work_ID}"); ?>">แก้ไข</a>
+      <a class="btn btn-primary" href="<?= site_url("home/Student_Save2/{$row->Work_ID}"); ?>">แก้ไข</a>
       <button name="id2" id="id2"  class="btn btn-danger" onclick= "myFunction()">ปฎิเสธ</button></th>
   </tr>
   <?php 

@@ -13,15 +13,14 @@
     <th>เลขประจำตัว</th>
     <th width="300">ชื่อ-สกุล</th>
     <th width="300">สาขาวิชา</th>
-    <th>ปฎิบัติงาน(นาที)</th>
-    <th>จำนวนเงิน(บาท)</th>
-    <th width="100">คิดเป็น ชม.</th>
+
+    <th width="100">ปฎิบัติงาน(ชม.)</th>
     <th>คิดเป็นเงิน(บาท)</th>
     <th>ลงชื่อผู้ควบคุมงาน</th>
   </tr>
 </thead>
 <tbody>
-  <?php $sum = 0; $i=1;foreach ($student_res as $row) { 
+  <?php  $i=1;foreach ($student_res as $row) { 
       $n=0;foreach ($work_res as $row3) { 
                 if($row->student_code == $row3->STUDENTCODE){
                   $n += $row3->Work_Hour;
@@ -35,14 +34,7 @@
     <td><?php echo $row->student_code; ?></td>
     <td align="left"><?php echo $row->STUDENTNAME; ?></td>
     <td><?php echo $row->PROGRAMNAME; ?></td>
-    <td>
-        <?php $n=0;foreach ($work_res as $row2) { 
-                if($row->student_code == $row2->STUDENTCODE){
-                  $n += $row2->Work_Hour;
-              }
-            }echo $n; ?>
-        </td>
-    <td><?php echo $n/60*30; ?></td>
+    
     <td><?php echo floor($n/60); ?></td>
     <td><?php   
               $m = floor($n/60);
@@ -50,7 +42,12 @@
               echo floor($m*30); ?></td>
     <td>&nbsp;</td>
   </tr>
+
 <?php }} ?>
+  <tr>
+    <td align="center" colspan="5"><b>รวม</b></td>
+    <td align="center" colspan="2"><b><?php echo floor($sum*30); ?> </b></td>
+  </tr>
   <!--<tr align="center">
     <td>2</td>
     <td>58118696</td>

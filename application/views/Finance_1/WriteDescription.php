@@ -65,10 +65,11 @@
 <?php 
 $Start_Date = $this -> session -> userdata ( 'Start_Date' ); 
 $End_Date = $this -> session -> userdata ( 'End_Date' ); 
+$Year3 = $this -> session -> userdata ( 'Year3' );
 
 if (date('Y-m-d') >= $Start_Date && date('Y-m-d') <= $End_Date) {
   # code...
-  echo date('Y-m-d').">=".$Start_Date."=".date('Y-m-d') ."<=". $End_Date;
+  //echo date('Y-m-d').">=".$Start_Date."=".date('Y-m-d') ."<=". $End_Date;
 /*if(date('Y-m-d') > $Start_Date ){
   echo date('Y-m-d');
   echo $Start_Date;
@@ -80,7 +81,7 @@ if (date('Y-m-d') >= $Start_Date && date('Y-m-d') <= $End_Date) {
 <form action="<?php echo site_url("home2/insertjob");?>" method="post">
 <div class="container">
   <br>
-  <h3>กรอกรายละเอียดงาน <?php $Start_Date ?></h3>
+  <h3>กรอกรายละเอียดงาน ปีการศึกษา <?php echo $Year3; ?></h3>
 <div class="stepwizard">
     <div class="stepwizard-row setup-panel">
 
@@ -422,6 +423,7 @@ if (date('Y-m-d') >= $Start_Date && date('Y-m-d') <= $End_Date) {
     <th width="120">จำนวนรับ</th>
     <th width="120">ลักษณะงาน</th>
     <th>&nbsp;</th>
+    <th>&nbsp;</th>
   </tr>
   </thead>
   <tbody>
@@ -440,15 +442,16 @@ if (date('Y-m-d') >= $Start_Date && date('Y-m-d') <= $End_Date) {
     <th><?php echo date("d/m/Y", strtotime($row->Frist_date)); ?></th>
     <th><?php if($row->Sex == "M"){
                 echo "ชาย";
-              }else if($row->Sex == "Y"){
+              }else if($row->Sex == "F"){
                 echo "หญิง";
               }else{
-                echo "ชาย/หญิง";
+                echo "ไม่ระบุ";
               } ?>
         </th>
     <th><?php echo $row->Receiving_number; ?></th>
     <th><button type="button" class="btn btn-warning">รายละเอียด</button></th>
-
+  <th>&nbsp;</th>
+  <th>&nbsp;</th>
   </tr>
 <?php }}} ?>
   <!--<tr align="center">
@@ -568,7 +571,7 @@ if (date('Y-m-d') >= $Start_Date && date('Y-m-d') <= $End_Date) {
   <h5 align="center"><?php echo "หมดช่วงวันเวลาการกรอกรายละเอียดงาน"; ?></h5>
   
   <?php
-  //echo "เลยเวลา";
+  
   //echo date('Y-m-d').">=".$Start_Date."=".date('Y-m-d') ."<=". $End_Date;
 }
  /*}else

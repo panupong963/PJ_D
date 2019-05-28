@@ -3,41 +3,19 @@
         <ol class="breadcrumb">
           <li class="breadcrumb-item active">สรุปผลการทำงาน/ ภาเรียนที่ 1 ปีการศึกษา 2560</li>
         </ol>   
-<form action="<?php echo site_url("home/Authorities_results2_23");?>" method="post">  
-<table width="900" border="0" align="center">
-   <tr align="center">
-   <!--tr <td>ชื่องาน : <select name="">
-  <option value="volvo">--- ทั้งหมด ---</option>
-  <?php //foreach ($job_res as $row3) { ?>
-
-  <option value="<?php //echo $row3->Job_Name; ?>"><?php //echo $row3->Job_Name; ?></option>
-  <?php //} ?>
-</select></td>-->
-    <td>สำนักวิชา : <select name="STUDENTNAME">
-  <option value="0">--- ทั้งหมด ---</option>
-        <?php 
-        $FACULTYNAME4 = 1;
-        foreach ($student_res as $row4) {
-        $FACULTYNAME3 = $row4->FACULTYNAME;
-        if($FACULTYNAME3 != $FACULTYNAME4){
-          $FACULTYNAME4 = $FACULTYNAME3;
-      ?>
-  <option value="<?php echo $row4->FACULTYNAME; ?>"><?php echo $row4->FACULTYNAME; ?></option>
-
-<?php }} ?>
-</select></td>
-    <td><button type="submit" class="btn btn-warning">เเสดงผล</button></td>
-  </tr>
-</table>
-</form>
 
               <br> 
       <div>
-  <table class="table table-bordered">
+        <p align="center"><input type="text" id="myInput" onkeyup="myFunction412()" placeholder="----ค้นหาชื่อหน่วยงาน----" title="Type in a name">
+<img src="<?php echo base_url(); ?>assets/img/vv.png" width = “40” height="40"></p>
+  <table id = "myTable" class="table table-bordered">
     <thead>
       <?php 
       $FACULTYNAME1 = 1;
-        $i=1; $j = 1;foreach ($student_res2 as $row) {
+        $i=1; $j = 1;foreach ($facultyname_res as $row6) {
+          foreach ($student_res as $row) {
+            
+            if($row->FACULTYNAME == $row6->FACULTYNAME){
         $FACULTYNAME = $row->FACULTYNAME;
         if($FACULTYNAME != $FACULTYNAME1){
           $FACULTYNAME1 = $FACULTYNAME;
@@ -80,7 +58,7 @@
   }
   $j=1;
 }
- } ?>
+ } } } ?>
   <!-- <tr align="center">
     <th>2</th>
     <th>58112848</th>

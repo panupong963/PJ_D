@@ -5,21 +5,20 @@
   <thead>
   <tr align="center">
     <th width="39">ลำดับ</th>
-    <th width="119">ชื่องาน</th>
-    <th width="105">รหัสนักศึกษา</th>
-    <th width="160">ชื่อ - สกุล</th>
-    <th width="159">สาขาวิชา</th>
-    <th width="90">เกรดเฉลี่ย</th>
+    <th width="160">ชื่องาน</th>
+    <th width="120">รหัสนักศึกษา</th>
+    <th width="200">ชื่อ - สกุล</th>
+    <th width="180">สาขาวิชา</th>
+    <th width="100">เกรดเฉลี่ย</th>
+    <th><button type="button" onclick="history.back();" class="btn btn-warning">ย้อนกลับ</button></th>
     
- 
-    <th width="110">&nbsp;</th>
     <th width="110">&nbsp;</th>
 
   </tr>
   </thead>
     <tbody>
         <?php $i=1;foreach ($student_res as $row) { 
-            if ($row->Re_status == '1') {
+            if ($row->Re_status == '1' || $row->Re_status == '3') {
             foreach ($job_res as $row2) {
                 if($row->Job_ID == $row2->Job_ID){
                     $name = $row2->Job_Name;

@@ -213,8 +213,7 @@
           
           <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
             <font color="#FFFFFF">ผู้เสนองาน : <?php echo $this -> session -> userdata ( 'OFFICERNAME' ); ?>
-            <i class="fa fa-fw fa-sign-out"></i>ออกจากระบบ</a></font>fdf
-        </li>
+            <i class="fa fa-fw fa-sign-out"></i>ออกจากระบบ</a></font>
       </ul>
     </div>
   </nav>

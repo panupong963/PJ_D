@@ -7,28 +7,19 @@
       ?>
       <h4>รายชื่องานทุน</h4>
       <br>
-<a>หน่วยงาน/สำนักวิชา <select>
-  <option value="volvo">ศูนย์บรรณาสารเเละสื่อการศึกษา</option>
-  <option value="volvo">ส่วนพัสดุ</option>
-  <option value="saab">ส่วนกิจการนักศึกษา</option>
-  <option value="mercedes">ส่วนการเงิน</option>
-  <option value="audi">หอพัก</option>
-</select>&nbsp;&nbsp; ประเภทงาน : <select>
-  <option value="volvo">ทั้งหมด</option>
-  <option value="volvo">บริการ</option>
-  <option value="saab">ธุรการ</option>
-  <option value="mercedes">วิชาชีพ</option>
-  <option value="audi">วิชาการ</option></select></a>
-  &nbsp;&nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-warning">ค้นหา</button>
+<a>ค้นหาชื่อหน่วยงานหรือประเภทงาน</a>      
+<input type="text" id="myInput" onkeyup="myFunction412()" placeholder="----ค้นหาชื่อหน่วยงาน----" title="Type in a name">
+<img src="<?php echo base_url(); ?>assets/img/vv.png" width = “40” height="40">
+
 <br>
 <br>
 <form action="<?php echo site_url("home2/update_job");?>" method="post">   		
-<table class="table table-borderless">
+<table id = "myTable" class="table table-borderless">
   <thead>
   <tr align="center">
   	<th width="90">ลำดับ</th>
-    <th width="200">หน่วยงาน</th>
-    <th width="120">ประเภทงาน</th>
+    <th width="210">หน่วยงาน</th>
+    <th width="130">ประเภทงาน</th>
     <th width="200">ชื่องาน</th>
     <th width="200">ผู้ควบคุมงาน</th>
     <th width="150">จำนวนรับ</th>
@@ -40,10 +31,10 @@
   <?php $i= 1; foreach ($job_res as $row) { 
   $n = $row->Job_ID; ?>
   <tr align="center">
-  	<th><?php echo $i++; ?></th>
-    <th><?php echo $row->Department; ?></th>
-    <th><?php echo $row->Category; ?></th>
-     <td align="left"><b><?php echo $row->Job_Name; ?></b></td>
+  	<td><b><?php echo $i++; ?></b></td>
+    <td><b><?php echo $row->Department; ?></b></td>
+    <td><b><?php echo $row->Category; ?></b></td>
+     <th align="left"><b><?php echo $row->Job_Name; ?></b></th>
      <th><?php echo $row->job_name_ss; ?></th>
     <th><?php echo $row->Receiving_number; ?></th>
     <th><?php $j = 0; foreach ($student_res as $row) { 
@@ -55,6 +46,7 @@
     <th><button type="submit" class="btn btn-info" name="Job_ID" value="<?php echo $n; ?>">เลือกงาน</button></th>
   </tr>
 <?php } ?>
+
   <!-- <tr align="center">
   	<th>2</th>
     <th>ศูนย์บรรณาสารเเละสื่อการศึกษา</th>
@@ -98,13 +90,43 @@
   </tr>-->
 </tbody>
 </table>
+<script>
+function myFunction412() {
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[1];
+    td2 = tr[i].getElementsByTagName("td")[2];
+    if (td || td2) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1 || td2.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
 </form>
+
 <?php
 }elseif (date('Y-m-d') < $Start_Date && date('Y-m-d') <= $End_Date) {
-echo "ยังไม่ถึงเวลา";
+?>
+<h5 align="center"><?php echo "ยังไม่ถึงวันเวลาในการคัดเลือกผู้สมัคร"; ?></h5>
+<?php
+
 }else{
-  echo "เลยเวลา";
-  echo date('Y-m-d').">=".$Start_Date."=".date('Y-m-d') ."<=". $End_Date;
+
+  ?>
+ 
+  <h5 align="center"><?php echo "เลยช่วงวันเวลาในการสมัคร"; ?></h5>
+
+  <?php
+  //echo date('Y-m-d').">=".$Start_Date."=".date('Y-m-d') ."<=". $End_Date;
+
 }
 ?>
 </div>

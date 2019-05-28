@@ -51,7 +51,7 @@
     <th><a class="btn btn-info" href="<?= site_url("home2/finance_Results_1/{$row->Job_ID}"); ?>"><?php
                                                              $k=0;foreach ($student_res as $row3) { 
                                                                 if($row->Job_ID == $row3->Job_ID){
-                                                                    if($row3->Re_status == "1"){
+                                                                    if($row3->Re_status == "1" || $row3->Re_status == "3"){
                                                                     $k++;  
                                                                     }
                                                                 }
@@ -68,9 +68,15 @@
 </table>
 <?php 
 }elseif (date('Y-m-d') < $Start_Date && date('Y-m-d') <= $End_Date) {
-  echo "ยังไม่ถึงวันเวลาในการคัดเลือกผู้สมัคร";
+
+  ?>
+  <h5 align="center"><?php echo "เลยช่วงวันเวลาในการคัดเลือกผู้สมัคร"; ?></h5>
+<?php
 }else{
-  echo "เลยช่วงวันเวลาในการคัดเลือกผู้สมัคร";
+?>
+  
+  <h5 align="center"><?php echo "เลยช่วงวันเวลาในการคัดเลือกผู้สมัคร"; ?></h5>
+  <?php 
   //echo date('Y-m-d').">=".$Start_Date."=".date('Y-m-d') ."<=". $End_Date;
 }
 ?>

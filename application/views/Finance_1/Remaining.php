@@ -25,11 +25,12 @@ $offid = $this -> session -> userdata ( 'OFFICERID' );
     <th width="230">&nbsp;&nbsp;</th>
   </tr>
   </thead>
-    <?php  
+    <?php 
+
     $i = 1;
     foreach ($job_res as $row) { 
       if($row->OFFICERID == $offid){
-
+        if($this -> session -> userdata ( 'Year' ) == $row->year && $this -> session -> userdata ( 'semester' ) == $row->term){
     ?>
     <tbody>
     <tr align="center">
@@ -40,7 +41,7 @@ $offid = $this -> session -> userdata ( 'OFFICERID' );
       $n = 0;
       foreach ($student_res as $row2) {
         if($row->Job_ID == $row2->Job_ID){
-          if ($row2->Re_status == '1') {
+          if ($row2->Re_status == '3' || $row2->Re_status == '1') {
             $n +=1;
           }
         }
@@ -51,6 +52,7 @@ $offid = $this -> session -> userdata ( 'OFFICERID' );
     </tr>
     <?php 
   }
+}
 }
     ?>
     <!--</tbody>
@@ -77,10 +79,16 @@ $offid = $this -> session -> userdata ( 'OFFICERID' );
 </table>
 <?php
 }elseif (date('Y-m-d') < $Start_Date && date('Y-m-d') <= $End_Date) {
-echo "ยังไม่ถึงวันเวลาในการจัดสรรงานคงเหลือ";
+  ?>
+
+<h5 align="center"><?php echo "ยังไม่ถึงวันเวลาในการจัดสรรงานคงเหลือ"; ?></h5>
+<?php
 }else{
-  echo "เลยช่วงวันเวลาในการจัดสรรงานคงเหลือ";
-  echo date('Y-m-d').">=".$Start_Date."=".date('Y-m-d') ."<=". $End_Date;
+  ?>
+<h5 align="center"><?php echo "เลยช่วงวันเวลาในการจัดสรรงานคงเหลือ"; ?></h5>
+  <?php
+  
+  //echo date('Y-m-d').">=".$Start_Date."=".date('Y-m-d') ."<=". $End_Date;
 }
 ?>
     </div>

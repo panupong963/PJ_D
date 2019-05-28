@@ -29,7 +29,7 @@ require($_SERVER['DOCUMENT_ROOT']."/PJ_D/phpmailer/PHPMailerAutoload.php");
 	//panupongklanaja@gmail.com
   
 	foreach ($st_res as $row) {
-        echo $row->alert_date."==".date('Y-m-d');
+        echo $row->alert_date."==".date('Y-m-d')."<br>";
 		if($row->alert_date == date('Y-m-d')){
             //นับครั้ง
             $i = 1;
@@ -49,6 +49,7 @@ require($_SERVER['DOCUMENT_ROOT']."/PJ_D/phpmailer/PHPMailerAutoload.php");
         date_add($date, date_interval_create_from_date_string('7 days'));
         //echo date_format($date, 'Y-m-d');
         $day_alert = date_format($date, 'Y-m-d');
+        echo $day_alert;
 
    
 
@@ -93,7 +94,7 @@ $email_content = '
     <meta content="telephone=no" name="format-detection">
     <title></title>
 
-    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+    <link href=" '.base_url().'https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
 
 </head>
 
@@ -153,7 +154,7 @@ $email_content = '
                                                                             <tbody>
                                                                                 <tr>
                                                                                     <td class="esd-block-image" align="center">
-                                                                                        <a href="" target="_blank"><img src="https://www.wu.ac.th/images/theme2018/images/logo2561_100518.png" alt="Fashion logo" title="Fashion logo" width="200"></a>
+                                                                                        <a href="" target="_blank"><img src=" '.base_url().'assets/img/wu.png" alt="Fashion logo" title="Fashion logo" width="200"></a>
                                                                                     </td>
                                                                                 </tr>
                                                                             </tbody>

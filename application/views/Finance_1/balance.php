@@ -23,7 +23,7 @@
 <?php
 $i = 1;
  foreach ($student_res as $row) {
-   if($row->Re_status == "1"){
+   if($row->Re_status == "1" || $row->Re_status == "3"){
  
  ?>
 <tbody>

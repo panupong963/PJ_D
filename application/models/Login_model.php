@@ -37,9 +37,6 @@ class Login_model extends CI_Model {
  				$this->session->set_userdata('Job_Name', $row3->Job_Name);
  				$this->session->set_userdata('ss', $row3->ss);
  				$this->session->set_userdata('Contact', $row3->Contact);
-                $this->session->set_userdata('Job_description', $row3->Job_description);
-                $this->session->set_userdata('term', $row3->term);
-                $this->session->set_userdata('year', $row3->year);
 
                 $this->db->where('Schedule_ID', '3');
                 $query7 = $this->db->get('calendar'); 

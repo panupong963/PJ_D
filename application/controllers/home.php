@@ -246,7 +246,7 @@ class home extends CI_Controller {
          $this->Show_model->update_student2($data,$id); 
         
          //redirect('customer/index');
-         // redirect("home/Student_ConfirmJob_2");
+         redirect("home/Student_ConfirmJob_2");
     }
     public function update_student3(){ // update ยืนยันข้อมูล
         if($_POST["txt"] == Null){
@@ -323,6 +323,7 @@ public function testlog(){
 		$this->load->view('End');
 		//$this->load->view('test');
 	}
+
 	public function Student_Save(){
 
 		$id = $this->uri->segment('3');
@@ -346,6 +347,30 @@ public function testlog(){
 		$this->load->view('Student_2/End');
 
 	}
+
+    public function Student_Save2(){
+
+        $id = $this->uri->segment('3');
+
+        $this->load->model('Show_model');
+        $res = $this->Show_model->get_edit($id);
+        $data['edit_res'] = $res;
+
+        $this->load->model('Show_model');
+        $res = $this->Show_model->get_student();
+        $data['student_res'] = $res;    
+
+        /*$this->load->model('Show_model');
+        $res = $this->Show_model->get_work();
+        $data['work_res'] = $res;*/
+
+        $this->load->view('Authorities_2/start');
+        $this->load->view('Authorities_2/Navigation_M');
+        $this->load->view('Student_2/Save', $data);
+        $this->load->view('Authorities_2/footer');
+        $this->load->view('Authorities_2/End');
+
+    }
 
 	public function Student_SaveJob_2(){
 		$id = $this->uri->segment('3');
@@ -553,6 +578,10 @@ public function testlog(){
         $res = $this->Show_model->get_job();
         $data['job_res'] = $res;
 
+        $this->load->model('Show_model');
+        $res = $this->Show_model->get_facultyname();
+        $data['facultyname_res'] = $res;
+
 		$this->load->view('Authorities_2/start');
 		$this->load->view('Authorities_2/Navigation_N');
 		$this->load->view('Authorities_2/Results_work', $data);
@@ -618,6 +647,10 @@ public function testlog(){
         $this->load->model('Show_model');
         $res = $this->Show_model->get_job();
         $data['job_res'] = $res;
+
+        $this->load->model('Show_model');
+        $res = $this->Show_model->get_facultyname();
+        $data['facultyname_res'] = $res;
 
 
 		$this->load->view('Finance_2/start');
@@ -850,8 +883,20 @@ public function testlog(){
 	}
 
 	public function from_l(){
+        $this->load->model('Show_model');
+        $res = $this->Show_model->get_job();
+        $data['job_res'] = $res;  
+
+        $this->load->model('Show_model');
+        $res = $this->Show_model->get_student();
+        $data['student_res'] = $res; 
+
+        $this->load->model('Show_model');
+        $res = $this->Show_model->get_work();
+        $data['work_res'] = $res; 
+
 		$this->load->view('print/start');
-		$this->load->view('print/from_2');
+		$this->load->view('print/from_2', $data);
 		$this->load->view('print/End');		
 	}
 

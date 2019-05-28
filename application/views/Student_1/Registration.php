@@ -133,18 +133,18 @@ foreach ($student_res as $row) {
                         <?php } ?>  
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <?php if($row -> BANKACCOUNT == NULL){ ?>
-                        <font color="red">*</font>เลขบัญชี : <input type="text" onkeypress="check_number()" name=" BANKACCOUNT"></th>
+                        <font color="red">*</font>เลขบัญชี : <input type="text" onkeypress="check_number()" name=" BANKACCOUNT" required></th>
                       <?php }else if($row -> BANKACCOUNT != NULL){ ?>
-                        เลขบัญชี <font color="red">*</font><input type="text" name="BANKACCOUNT" onkeypress="check_number()" placeholder = "<?php echo $row->BANKACCOUNT; ?>"></th>
+                        เลขบัญชี <font color="red">*</font><input type="text" name="BANKACCOUNT" onkeypress="check_number()" placeholder = "<?php echo $row->BANKACCOUNT; ?>"> </th>
                       <?php } ?>
   </tr>
   <tr>
   
   <th colspan="3"><font color="red">*</font>ค่าใช่จ่ายต่อเดือน :
                                                               <?php if($row -> Expenses == NULL){ ?>
-                                                              <input type="text" name="Expenses" onkeypress="check_number()"> บาท</th>
+                                                              <input type="text" name="Expenses" onkeypress="check_number()" > บาท</th>
                                                             <?php }else if($row -> Expenses != NULL){ ?>
-                                                               <input type="text" name="Expenses" placeholder = "<?php echo $row->Expenses; ?>" onkeypress="check_number()"> บาท</th>
+                                                               <input type="text" name="Expenses" placeholder = "<?php echo $row->Expenses; ?>" onkeypress="check_number()"required> บาท</th>
                                                             <?php }?>
   </tr>
 
@@ -155,9 +155,9 @@ foreach ($student_res as $row) {
   <tr>
   <th colspan="3">
                   <?php if($row -> Talent == NULL){ ?>
-                  <textarea name="Talent" placeholder = "พิมพ์ข้อความ"></textarea></th>
+                  <textarea name="Talent" placeholder = "พิมพ์ข้อความ" required></textarea></th>
                 <?php }else if($row -> Talent != NULL){ ?>
-                   <textarea name="Talent" placeholder = "<?php echo $row->Talent; ?>"></textarea></th>
+                   <textarea name="Talent" placeholder = "<?php echo $row->Talent; ?>" required></textarea></th>
                 <?php } ?>
   </tr>
       <tr>
@@ -166,9 +166,9 @@ foreach ($student_res as $row) {
   <tr>
   <th colspan="3">
                   <?php if($row -> Necessary == NULL){ ?>
-                  <textarea name="Necessary" placeholder = "พิมพ์ข้อความ"></textarea></th>
+                  <textarea name="Necessary" placeholder = "พิมพ์ข้อความ" required></textarea></th>
                 <?php }else if($row -> Necessary != NULL){ ?>
-                   <textarea name="Necessary" placeholder = "<?php echo $row->Necessary; ?>"></textarea></th>
+                   <textarea name="Necessary" placeholder = "<?php echo $row->Necessary; ?>" required></textarea></th>
                 <?php } ?>
   </tr>
    <tr align="center">
@@ -198,9 +198,13 @@ foreach ($student_res as $row) {
                               </script>
                               <?php
 }elseif (date('Y-m-d') < $Start_Date && date('Y-m-d') <= $End_Date) {
-echo "ยังไม่ถึงเวลา";
+  ?>
+<h5 align="center"><?php echo "ยังไม่ถึงวันเวลาในการสมัคร"; ?></h5>
+<?php
 }else{
-  echo "เลยเวลา";
-  echo date('Y-m-d').">=".$Start_Date."=".date('Y-m-d') ."<=". $End_Date;
+  ?>
+  <h5 align="center"><?php echo "เลยเวลาการสมัคร"; ?></h5>
+  <?php
+  //echo date('Y-m-d').">=".$Start_Date."=".date('Y-m-d') ."<=". $End_Date;
 }
 ?>

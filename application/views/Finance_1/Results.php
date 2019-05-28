@@ -17,7 +17,7 @@
 </thead>
 <tbody>
   <?php $i=1;foreach ($student_res as $row) { 
-    if($row->Re_status == "1"){ ?>
+    if($row->Re_status == "1" || $row->Re_status == "3"){ ?>
   <tr align="center">
     <th align="center"><?php echo $i++; ?></th>
     <th align="center"><?php echo $row->student_code; ?></th>
