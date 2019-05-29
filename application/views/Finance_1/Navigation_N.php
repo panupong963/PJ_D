@@ -14,38 +14,38 @@
           </a>-->
           
            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
-          <a class="nav-link" href="finance_CA_1">
+          <a class="nav-link" href="<?= site_url("home2/finance_CA_1"); ?>">
             <font color="#FFFFFF"><i class="fa fa-fw fa-dashboard"></i>
             <span class="nav-link-text">ปฏิทินการดำเนินงาน</span>
           </a></font>
         </li>
 <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
-          <a class="nav-link" href="finance_work_1">
+          <a class="nav-link" href="<?= site_url("home2/finance_work_1"); ?>">
             <font color="#FFFFFF"><i class="fa fa-fw fa-table"></i>
             <span class="nav-link-text">ประวัติการเสนองาน</span>
           </a></font>
         </li>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
-          <a class="nav-link" href="finance_WriteDescription_1">
+          <a class="nav-link" href="<?= site_url("home2/finance_WriteDescription_1"); ?>">
             <font color="#FFFFFF"><i class="fa fa-fw fa-wrench"></i>
             <span class="nav-link-text">กรอกรายละเอียดงาน</span>
           </a></font>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
-          <a class="nav-link" href="finance_job_1">
+          <a class="nav-link" href="<?= site_url("home2/finance_job_1"); ?>">
             <font color="#FFFFFF"><i class="fa fa-fw fa-table"></i>
             <span class="nav-link-text">คัดเลือกผู้สมัคร</span>
           </a></font>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
-          <a class="nav-link" href="finance_Remaining_1">
+          <a class="nav-link" href="<?= site_url("home2/finance_Remaining_1"); ?>">
             <font color="#FFFFFF"><i class="fa fa-fw fa-dashboard"></i>
             <span class="nav-link-text">จัดสรรงานคงเหลือ</span>
           </a></font>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
-          <a class="nav-link" href="finance_Selection_Results_1">
+          <a class="nav-link" href="<?= site_url("home2/finance_Selection_Results_1"); ?>">
             <font color="#FFFFFF"><i class="fa fa-fw fa-dashboard"></i>
             <span class="nav-link-text">สรุปผลการคัดเลือกนักศึกษา</span>
           </a></font>

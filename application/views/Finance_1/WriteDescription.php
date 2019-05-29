@@ -212,7 +212,7 @@ if (date('Y-m-d') >= $Start_Date && date('Y-m-d') <= $End_Date) {
                                                       <option value="M" >ชาย</option>
                                 
                                                     </select> 
-                                                    &nbsp;&nbsp;&nbsp;&nbsp;จำนวนที่รับ <font color="red">* </font><input type="text" name="Receiving_number" size="2" onkeypress="check_number()" required> คน 
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;จำนวนที่รับ <font color="red">* </font><input type="text" name="Receiving_number" size="2" onkeypress="check_number()" maxlength="3" required> คน 
                               <SCRIPT language=JavaScript>
                               function check_number() {
                               e_k=event.keyCode
@@ -321,6 +321,7 @@ if (date('Y-m-d') >= $Start_Date && date('Y-m-d') <= $End_Date) {
                 <tr>
                 <!-- <td><button class="btn btn-info btn-lg pull-right" type="button"  style="width:90px;height:40px"<a href="localhost/PJ_D/index.php/home2/finance_WriteDescription_1" ><h6>ย้อนกลับ</h6></button>
                  </td>--><td>
+                 <button class="btn btn-danger nextBtn btn-lg pull-right" type="reset"  style="width:70px;height:40px" ><h6>ยกเลิก</h6></button></td> <td>
                  <button class="btn btn-info nextBtn btn-lg pull-right" type="submit"  style="width:70px;height:40px" ><h6>บันทึก</h6></button></td> 
              
            

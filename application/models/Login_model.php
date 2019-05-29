@@ -28,6 +28,7 @@ class Login_model extends CI_Model {
  				$this->session->set_userdata('BANKACCOUNT', $row2->BANKACCOUNT);
  				$this->session->set_userdata('Bank_Name', $row2->Bank_Name);
  				$this->session->set_userdata('Job_ID',$row2->Job_ID);
+                $this->session->set_userdata('STUDENTSEX',$row2->STUDENTSEX);
  				
  				$this->db->where('Job_ID', $row2->Job_ID);
  				$query3 = $this->db->get('Job'); 

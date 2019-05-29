@@ -22,13 +22,15 @@
     <th width="130">ประเภทงาน</th>
     <th width="200">ชื่องาน</th>
     <th width="200">ผู้ควบคุมงาน</th>
+    <th width="90">เพศ</th>
     <th width="150">จำนวนรับ</th>
     <th width="150">จำนวนสมัคร</th>
     <th>&nbsp;</th>
   </tr>
 </thead>
 <tbody>
-  <?php $i= 1; foreach ($job_res as $row) { 
+  <?php $i= 1; foreach ($job_res as $row) {
+  if ($row->Sex == $this -> session -> userdata ( 'STUDENTSEX' ) || $row->Sex == "X") {
   $n = $row->Job_ID; ?>
   <tr align="center">
   	<td><b><?php echo $i++; ?></b></td>
@@ -36,6 +38,13 @@
     <td><b><?php echo $row->Category; ?></b></td>
      <th align="left"><b><?php echo $row->Job_Name; ?></b></th>
      <th><?php echo $row->job_name_ss; ?></th>
+     <th><?php if ($row->Sex == "M") {
+       echo "ชาย";
+        }elseif ($row->Sex == "F") {
+          echo "หญิง";
+        }elseif ($row->Sex == "X") {
+          echo "ไม่ระบุ";
+        } ?></th>
     <th><?php echo $row->Receiving_number; ?></th>
     <th><?php $j = 0; foreach ($student_res as $row) { 
         if($row->Job_ID == $n){
@@ -45,7 +54,7 @@
         echo $j; ?></th>
     <th><button type="submit" class="btn btn-info" name="Job_ID" value="<?php echo $n; ?>">เลือกงาน</button></th>
   </tr>
-<?php } ?>
+<?php }} ?>
 
   <!-- <tr align="center">
   	<th>2</th>

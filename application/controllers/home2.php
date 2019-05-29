@@ -375,9 +375,28 @@ class home2 extends CI_Controller {
         $res = $this->Show_model->get_edit_WD($id);
         $data['job_res'] = $res;
 
+         $data['vb'] = $id;
+
 		$this->load->view('Finance_1/start');
 		$this->load->view('Finance_1/Navigation_N');
 		$this->load->view('Finance_1/TranscendJob', $data);
+		$this->load->view('Finance_1/footer');
+		$this->load->view('Finance_1/End');
+	}
+
+	public function finance_TranscendJob_2(){
+		$id = $this->uri->segment('3');
+		$this->load->model('Show_model');
+        $res = $this->Show_model->get_student();
+        $data['st_res'] = $res;
+
+        $this->load->model('Show_model');
+        $res = $this->Show_model->get_edit_WD($id);
+        $data['job_res'] = $res;
+
+		$this->load->view('Finance_1/start');
+		$this->load->view('Finance_1/Navigation_N');
+		$this->load->view('Finance_1/TranscendJob_2', $data);
 		$this->load->view('Finance_1/footer');
 		$this->load->view('Finance_1/End');
 	}

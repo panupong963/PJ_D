@@ -9,11 +9,9 @@
       }
       
       ?>
-
         <h5><?php echo "งาน : ".$name; ?> <font color="#00ffff"><input type="text" name="idst" style="border: none ; color:#FFFFFF" readonly value="<?= $id; ?>" ></font></h5>
 
-        
-      <br>
+        <br>
 <table class="table table-striped">
   <thead>
   <tr align="center">
