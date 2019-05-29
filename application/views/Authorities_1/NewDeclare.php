@@ -23,8 +23,8 @@
     <th width="110" align="center">ประเภทงาน</th>
     
     <th width="250" align="center">ชื่อ - สกุล</th>
-    <th width="180" align="center">หลักสูตร</th>
-    <th width="200" align="center">ชื่องาน</th>
+    <th width="200" align="center">หลักสูตร</th>
+    <th width="190" align="center">ชื่องาน</th>
     <th width="150" align="center">ผลการพิจารณา</th>
   </tr>
 </thead>

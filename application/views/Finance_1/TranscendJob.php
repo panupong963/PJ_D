@@ -11,7 +11,6 @@
       ?>
 
         <h5><?php echo "งาน : ".$name; ?> <font color="#00ffff"><input type="text" name="idst" style="border: none ; color:#FFFFFF" readonly value="<?= $id; ?>" ></font></h5>
-
         
       <br>
 <table class="table table-striped">
@@ -19,7 +18,7 @@
   <tr align="center">
     <th width="39">ลำดับ</th>
     <th width="130">รหัสนักศึกษา</th>
-    <th width="200">ชื่อ - สกุล</th>
+    <th width="220">ชื่อ - สกุล</th>
     <th width="200">สาขาวิชา</th>
     <th width="130">เกรดเฉลี่ย</th>
     <th width="130">รายละเอียด</th>
