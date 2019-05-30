@@ -37,11 +37,13 @@
     
     <td align="left"><b><?php echo $row->Job_Name; ?></b></td>
     <th><?php echo $row->Receiving_number; ?></th>
-    <th><?php if($row->Sex == "M"){ 
-              echo "ชาย";
-              }else {
-                echo "หญิง";
-              }?> </th>
+    <th><?php if ($row->Sex == "M") {
+       echo "ชาย";
+        }elseif ($row->Sex == "F") {
+          echo "หญิง";
+        }elseif ($row->Sex == "X") {
+          echo "ไม่ระบุ";
+        } ?></th>
                 <?php 
               $description = $row->Job_description;
                ?>
